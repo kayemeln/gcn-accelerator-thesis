@@ -6,7 +6,7 @@
 #include "hls_vector.h"
 
 static const int M = 256;
-typedef ap_fixed<16, 2> DTYPE;
+typedef ap_fixed<16, 4> DTYPE;
 const int DSIZE = 64/sizeof(DTYPE);
 
 void block_gemm_kernel(

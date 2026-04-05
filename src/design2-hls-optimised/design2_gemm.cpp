@@ -2,8 +2,8 @@
 #include "hls_vector.h"
 
 // #define rows 2816    // rows of A (2708)
-// #define shared 2816         // shared dimension (1433)
-// #define cols 1536     // cols of B (16)
+// #define shared 1536         // shared dimension (1433)
+// #define cols 256     // cols of B (256)
 
 void block_gemm_kernel(
     DTYPE* A,

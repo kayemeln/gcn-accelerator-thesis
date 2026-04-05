@@ -7,7 +7,7 @@
 //   2. compute:   for each NNZ, vector-load X[col] into BRAM, MAC into accumulator
 //   3. store:     write completed rows back to DRAM
 //
-// X is stored as hls::vector<fix16_t, 32> so each AXI beat fetches
+// X is stored as hls::vector<DTYPE, 32> so each AXI beat fetches
 // 32 × 16-bit = 512 bits. Loading one X row takes F_IN_VECS = 45 beats
 // instead of 1433 scalar reads.
 //
@@ -15,7 +15,7 @@
 //
 #include "design2_spmm.h"
 
-#define nnz_total 13264
+//#define nnz_total 13264
 
 // ----------------------------------------------------------------
 // Input stage: burst-read CSR arrays from DRAM into FIFOs
@@ -23,11 +23,11 @@
 static void load_csr(
     idx_t*   row_length,
     idx_t*   colind,
-    fix16_t* values,
-//    int      nnz_total,
+    DTYPE* values,
+    int      nnz_total,
     hls::stream<idx_t>&   row_fifo,
     hls::stream<idx_t>&   col_fifo,
-    hls::stream<fix16_t>& val_fifo
+    hls::stream<DTYPE>& val_fifo
 ){
     LOAD_ROWS:
     for (int i = 0; i < NODES; i++) {
@@ -56,16 +56,16 @@ static void load_csr(
 // = 180 times with UF=8 parallel MACs.
 // ----------------------------------------------------------------
 static void compute_spmm(
-    hls::vector<fix16_t, VSIZE>* X,
-    //int      nnz_total,
+    hls::vector<DTYPE, DSIZE>* X,
+    int      nnz_total,
     hls::stream<idx_t>&   row_fifo,
     hls::stream<idx_t>&   col_fifo,
-    hls::stream<fix16_t>& val_fifo,
-    hls::stream<fix16_t>& result_fifo
+    hls::stream<DTYPE>& val_fifo,
+    hls::stream<DTYPE>& result_fifo
 ){
     // On-chip buffers
     acc32_t acc[F_IN_PAD];
-    fix16_t x_buf[F_IN_PAD];
+    DTYPE x_buf[F_IN_PAD];
 #pragma HLS ARRAY_PARTITION variable=acc   cyclic factor=UF
 #pragma HLS ARRAY_PARTITION variable=x_buf cyclic factor=UF
 
@@ -88,16 +88,16 @@ static void compute_spmm(
 #pragma HLS LOOP_TRIPCOUNT min=0 max=86 avg=3
 
             idx_t   col = col_fifo.read();
-            fix16_t val = val_fifo.read();
+            DTYPE val = val_fifo.read();
 
             // Vector-load X[col] row: 45 beats × 32 elements = 1440
             COMPUTE_LOAD_X:
             for (int v = 0; v < F_IN_VECS; v++) {
 #pragma HLS PIPELINE II=1
-                hls::vector<fix16_t, VSIZE> x_vec = X[col * F_IN_VECS + v];
-                for (int d = 0; d < VSIZE; d++) {
+                hls::vector<DTYPE, DSIZE> x_vec = X[col * F_IN_VECS + v];
+                for (int d = 0; d < DSIZE; d++) {
 #pragma HLS UNROLL
-                    x_buf[v * VSIZE + d] = x_vec[d];
+                    x_buf[v * DSIZE + d] = x_vec[d];
                 }
             }
 
@@ -114,7 +114,7 @@ static void compute_spmm(
         COMPUTE_WRITE:
         for (int f = 0; f < F_IN; f++) {
 #pragma HLS PIPELINE II=1
-            result_fifo.write((fix16_t)acc[f]);
+            result_fifo.write((DTYPE)acc[f]);
         }
     }
 }
@@ -123,11 +123,11 @@ static void compute_spmm(
 // Output stage: write results back to DRAM as vectors
 // ----------------------------------------------------------------
 static void store_result(
-    hls::vector<fix16_t, VSIZE>* H_out,
-    hls::stream<fix16_t>& result_fifo
+    hls::vector<DTYPE, DSIZE>* H_out,
+    hls::stream<DTYPE>& result_fifo
 ){
-    fix16_t row_buf[F_IN_PAD];
-#pragma HLS ARRAY_PARTITION variable=row_buf cyclic factor=VSIZE
+    DTYPE row_buf[F_IN_PAD];
+#pragma HLS ARRAY_PARTITION variable=row_buf cyclic factor=DSIZE
 
     STORE_ROWS:
     for (int i = 0; i < NODES; i++) {
@@ -145,10 +145,10 @@ static void store_result(
         STORE_WRITE:
         for (int v = 0; v < F_IN_VECS; v++) {
 #pragma HLS PIPELINE II=1
-            hls::vector<fix16_t, VSIZE> out_vec;
-            for (int d = 0; d < VSIZE; d++) {
+            hls::vector<DTYPE, DSIZE> out_vec;
+            for (int d = 0; d < DSIZE; d++) {
 #pragma HLS UNROLL
-                out_vec[d] = row_buf[v * VSIZE + d];
+                out_vec[d] = row_buf[v * DSIZE + d];
             }
             H_out[i * F_IN_VECS + v] = out_vec;
         }
@@ -161,10 +161,10 @@ static void store_result(
 void design2_spmm(
     idx_t*   row_length,
     idx_t*   colind,
-    fix16_t* values,
-    hls::vector<fix16_t, VSIZE>* X,
-    hls::vector<fix16_t, VSIZE>* H_out//,
-//    int      nnz_total
+    DTYPE* values,
+    hls::vector<DTYPE, DSIZE>* X,
+    hls::vector<DTYPE, DSIZE>* H_out,
+    int      nnz_total
 ){
 #pragma HLS INTERFACE mode=m_axi bundle=gmem0 port=row_length
 #pragma HLS INTERFACE mode=m_axi bundle=gmem1 port=colind
@@ -176,18 +176,18 @@ void design2_spmm(
 
     hls::stream<idx_t>   row_fifo("row_fifo");
     hls::stream<idx_t>   col_fifo("col_fifo");
-    hls::stream<fix16_t> val_fifo("val_fifo");
-    hls::stream<fix16_t> result_fifo("result_fifo");
+    hls::stream<DTYPE> val_fifo("val_fifo");
+    hls::stream<DTYPE> result_fifo("result_fifo");
 
 #pragma HLS STREAM variable=row_fifo    depth=64
 #pragma HLS STREAM variable=col_fifo    depth=256
 #pragma HLS STREAM variable=val_fifo    depth=256
 #pragma HLS STREAM variable=result_fifo depth=2048
 
-    load_csr(row_length, colind, values,
+    load_csr(row_length, colind, values, nnz_total,
              row_fifo, col_fifo, val_fifo);
 
-    compute_spmm(X,
+    compute_spmm(X, nnz_total,
                  row_fifo, col_fifo, val_fifo,
                  result_fifo);
 

@@ -1,184 +1,207 @@
-#include "naive_gcn.h"
-#include "hls_vector.h"
+// design2_gcn_tb.cpp
+//
+// Testbench for the integrated GCN layer: H_out = ReLU((A * X) * W)
+//
+// Input files:
+//   A_rowptr.bin   -- int32[NODES+1]
+//   A_colind.bin   -- int32[NNZ]
+//   A_values.bin   -- float32[NNZ]
+//   X.bin          -- float32[NODES x F_IN]
+//   W1.bin         -- float32[F_IN x F_OUT]
+//   H1.bin         -- float32[NODES x F_OUT]  (golden: ReLU((A*X)*W))
+//
+#include "design2_gcn.h"
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
 #include <cmath>
 #include <string>
 
-// Load count float32 values from a .bin file into a flat float array.
-bool load_bin_float(const char* filename, float* dst, int count) {
-	std::ifstream fin(filename, std::ios::binary);
-	if (!fin) {
-		std::cerr << "ERROR: cannot open " << filename << std::endl;
-		return false;
-	}
-	fin.read(reinterpret_cast<char*>(dst), count * sizeof(float));
-	if (!fin) {
-		std::cerr << "ERROR: failed to read " << count
-		          << " floats from " << filename << std::endl;
-		return false;
-	}
-	fin.close();
-	return true;
+// ----------------------------------------------------------------
+// Utility: load binary file
+// ----------------------------------------------------------------
+template<typename T>
+bool load_bin(const char* filename, T* dst, int count) {
+    std::ifstream fin(filename, std::ios::binary);
+    if (!fin) {
+        std::cerr << "ERROR: cannot open " << filename << std::endl;
+        return false;
+    }
+    fin.read(reinterpret_cast<char*>(dst), count * sizeof(T));
+    if (!fin) {
+        std::cerr << "ERROR: failed to read " << count
+                  << " elements from " << filename << std::endl;
+        return false;
+    }
+    fin.close();
+    return true;
 }
 
-// Load a float32 .bin file (row-major, rows x cols) into a zero-padded
-// hls::vector<DTYPE,DSIZE> array with padded dimensions (rows_pad x cols_pad).
-bool load_bin(const char* filename,
-              hls::vector<DTYPE, DSIZE>* dst,
-              int rows, int cols,
-              int rows_pad, int cols_pad) {
-	float* buf = new float[rows * cols];
-	if (!load_bin_float(filename, buf, rows * cols)) {
-		delete[] buf;
-		return false;
-	}
+// ----------------------------------------------------------------
+// Compare DUT output against golden reference
+// ----------------------------------------------------------------
+int compare(const char* label, float* dut, float* ref,
+            int rows, int cols, float tol = 1.0f) {
+    int errors = 0;
+    float max_err = 0;
+    float mse = 0;
+    int total = rows * cols;
 
-	// Zero-fill the destination
-	int vec_size = rows_pad * cols_pad / DSIZE;
-	for (int v = 0; v < vec_size; v++)
-		for (int d = 0; d < DSIZE; d++)
-			dst[v][d] = (DTYPE)0;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            float dut_val = dut[i * cols + j];
+            float ref_val = ref[i * cols + j];
+            float err = fabs(dut_val - ref_val);
+            mse += err * err;
+            if (err > max_err) max_err = err;
+            if (err > tol) {
+                if (errors < 20) {
+                    std::cout << "  MISMATCH at (" << i << "," << j << "): "
+                              << "DUT=" << dut_val
+                              << " REF=" << ref_val
+                              << " ERR=" << err << std::endl;
+                }
+                errors++;
+            }
+        }
+    }
+    mse /= (float)total;
 
-	// Scatter into the padded, vectorised layout
-	for (int i = 0; i < rows; i++) {
-		for (int j = 0; j < cols; j++) {
-			int flat = i * cols_pad + j;
-			dst[flat / DSIZE][flat % DSIZE] = (DTYPE)buf[i * cols + j];
-		}
-	}
+    std::cout << "-----------------------------" << std::endl;
+    std::cout << label << std::endl;
+    std::cout << "Max error: " << max_err << std::endl;
+    std::cout << "Errors (>" << tol << "): " << errors << " / " << total << std::endl;
+    std::cout << "MSE: " << mse << std::endl;
+    std::cout << (errors == 0 ? "TEST PASSED" : "TEST FAILED") << std::endl;
+    std::cout << "-----------------------------" << std::endl;
 
-	delete[] buf;
-	return true;
-}
-
-void gemm_ref(float* A, float* B, float* C, int rows, int shared, int cols) {
-	for (int i = 0; i < rows; i++) {
-		for (int j = 0; j < cols; j++) {
-			float sum = 0;
-			for (int k = 0; k < shared; k++) {
-				sum += A[i * shared + k] * B[k * cols + j];
-			}
-			C[i * cols + j] = sum;
-		}
-	}
+    return errors;
 }
 
 int main(int argc, char* argv[]) {
-	const char* data_dir = "/home/nat/dev/trinners/mai_proj/hls/gcn_hls/cora_bin";
+    const char* data_dir = "/home/nat/dev/trinners/mai_proj/hls/gcn_hls/cora_bin";
 
-	// Float arrays (real dimensions, for reference)
-	float* A_f      = new float[NODES * NODES];
-	float* X_f      = new float[NODES * F_IN];
-	float* W_f      = new float[F_IN * F_OUT];
-	float* Ht_ref   = new float[NODES * F_IN]();
-	float* Hout_ref = new float[NODES * F_OUT]();
+    // ----------------------------------------------------------
+    // 1. Load CSR arrays
+    // ----------------------------------------------------------
+    int* rowptr_i32 = new int[NODES + 1];
+    if (!load_bin((std::string(data_dir) + "/A_rowptr.bin").c_str(),
+                  rowptr_i32, NODES + 1)) return 1;
 
-	// Fixed-point arrays (padded dimensions, for DUT)
-	DTYPE* A_d = new DTYPE[NODES_PAD * NODES_PAD]();
+    int nnz = rowptr_i32[NODES];
+    std::cout << "NNZ = " << nnz << std::endl;
 
-	const int X_vec_size     = NODES_PAD * F_IN_PAD / DSIZE;
-	const int W_vec_size     = F_IN_PAD  * F_OUT_PAD / DSIZE;
-	const int Ht_vec_size    = NODES_PAD * F_IN_PAD / DSIZE;
-	const int Hout_vec_size  = NODES_PAD * F_OUT_PAD / DSIZE;
+    int*   colind_i32 = new int[nnz];
+    float* values_f32 = new float[nnz];
+    if (!load_bin((std::string(data_dir) + "/A_colind.bin").c_str(),
+                  colind_i32, nnz)) return 1;
+    if (!load_bin((std::string(data_dir) + "/A_values.bin").c_str(),
+                  values_f32, nnz)) return 1;
 
-	hls::vector<DTYPE, DSIZE>* X_d      = new hls::vector<DTYPE, DSIZE>[X_vec_size]();
-	hls::vector<DTYPE, DSIZE>* W_d      = new hls::vector<DTYPE, DSIZE>[W_vec_size]();
-	hls::vector<DTYPE, DSIZE>* Ht_dut   = new hls::vector<DTYPE, DSIZE>[Ht_vec_size]();
-	hls::vector<DTYPE, DSIZE>* Hout_dut = new hls::vector<DTYPE, DSIZE>[Hout_vec_size]();
+    // ----------------------------------------------------------
+    // 2. Load X, W, and golden reference
+    // ----------------------------------------------------------
+    float* X_f32   = new float[NODES * F_IN];
+    float* W_f32   = new float[F_IN * F_OUT];
+    float* H1_ref  = new float[NODES * F_OUT];
 
-	// Load data from binary files
-	std::string A_path = std::string(data_dir) + "/A_dense.bin";
-	std::string X_path = std::string(data_dir) + "/X.bin";
-	std::string W_path = std::string(data_dir) + "/W1.bin";
+    if (!load_bin((std::string(data_dir) + "/X.bin").c_str(),
+                  X_f32, NODES * F_IN)) return 1;
+    if (!load_bin((std::string(data_dir) + "/W1.bin").c_str(),
+                  W_f32, F_IN * F_OUT)) return 1;
+    if (!load_bin((std::string(data_dir) + "/H1.bin").c_str(),
+                  H1_ref, NODES * F_OUT)) return 1;
 
-	if (!load_bin_float(A_path.c_str(), A_f, NODES * NODES) ||
-	    !load_bin_float(X_path.c_str(), X_f, NODES * F_IN)  ||
-	    !load_bin_float(W_path.c_str(), W_f, F_IN  * F_OUT)) {
-		std::cerr << "Failed to load input data" << std::endl;
-		return 1;
-	}
+    // ----------------------------------------------------------
+    // 3. Convert to fixed-point / packed formats
+    // ----------------------------------------------------------
 
-	// Convert A_f to fixed-point (dense, not vectorised)
-	for (int i = 0; i < NODES; i++)
-		for (int j = 0; j < NODES; j++)
-			A_d[i * NODES_PAD + j] = (DTYPE)A_f[i * NODES + j];
+    // CSR arrays
+    idx_t* row_length = new idx_t[NODES];
+    idx_t* colind_d   = new idx_t[nnz];
+    DTYPE* values_d   = new DTYPE[nnz];
 
-	// Load X and W into vectorised fixed-point arrays
-	if (!load_bin(X_path.c_str(), X_d, NODES, F_IN, NODES_PAD, F_IN_PAD) ||
-	    !load_bin(W_path.c_str(), W_d, F_IN, F_OUT, F_IN_PAD, F_OUT_PAD)) {
-		std::cerr << "Failed to load vectorised data" << std::endl;
-		return 1;
-	}
+    for (int i = 0; i < NODES; i++)
+        row_length[i] = (idx_t)(rowptr_i32[i + 1] - rowptr_i32[i]);
+    for (int i = 0; i < nnz; i++) {
+        colind_d[i] = (idx_t)colind_i32[i];
+        values_d[i] = (DTYPE)values_f32[i];
+    }
 
-	// Load golden reference output
-	std::string H1_path = std::string(data_dir) + "/H1.bin";
-	if (!load_bin_float(H1_path.c_str(), Hout_ref, NODES * F_OUT)) {
-		std::cerr << "Failed to load reference output" << std::endl;
-		return 1;
-	}
+    // X: pack into hls::vector [NODES x F_IN_VECS]
+    const int X_vec_count = NODES * F_IN_VECS;
+    hls::vector<DTYPE, DSIZE>* X_vec = new hls::vector<DTYPE, DSIZE>[X_vec_count]();
+    for (int i = 0; i < NODES; i++) {
+        for (int f = 0; f < F_IN; f++) {
+            int v = f / DSIZE;
+            int d = f % DSIZE;
+            X_vec[i * F_IN_VECS + v][d] = (DTYPE)X_f32[i * F_IN + f];
+        }
+    }
 
-	// Run DUT
-	std::cout << "Running naive_gcn kernel..." << std::endl;
-	naive_gcn(A_d, X_d, W_d, Ht_dut, Hout_dut);
+    // W: pack into hls::vector [F_IN_PAD_GEMM x F_OUT_PAD / DSIZE]
+    const int W_vecs_per_row = F_OUT_PAD / DSIZE;  // 256/32 = 8
+    const int W_vec_count = F_IN_PAD_GEMM * W_vecs_per_row;
+    hls::vector<DTYPE, DSIZE>* W_vec = new hls::vector<DTYPE, DSIZE>[W_vec_count]();
+    for (int i = 0; i < F_IN; i++) {
+        for (int j = 0; j < F_OUT; j++) {
+            int v = j / DSIZE;
+            int d = j % DSIZE;
+            W_vec[i * W_vecs_per_row + v][d] = (DTYPE)W_f32[i * F_OUT + j];
+        }
+    }
+    // Rows F_IN..F_IN_PAD_GEMM-1 are zero (padding), already from ()
 
-	// Compare H_out (only real, non-padded elements)
-	int errors = 0;
-	float max_err = 0;
-	float mse = 0;
-	int total = NODES * F_OUT;
+    // H_out: [NODES x F_OUT_PAD / DSIZE]
+    const int H_vecs_per_row = F_OUT_PAD / DSIZE;  // 8
+    const int H_vec_count = NODES * H_vecs_per_row;
+    hls::vector<DTYPE, DSIZE>* H_out_vec = new hls::vector<DTYPE, DSIZE>[H_vec_count]();
 
-	for (int i = 0; i < NODES; i++) {
-		for (int j = 0; j < F_OUT; j++) {
-			int flat = i * F_OUT_PAD + j;
-			float dut_val = (float)Hout_dut[flat / DSIZE][flat % DSIZE];
-			float ref_val = Hout_ref[i * F_OUT + j];
-			float err = fabs(dut_val - ref_val);
-			mse += err * err;
-			if (err > max_err) max_err = err;
-			if (err > 1.0) {
-				if (errors < 20) {
-					std::cout << "MISMATCH at (" << i << "," << j << "): "
-					          << "DUT=" << dut_val
-					          << " REF=" << ref_val
-					          << " ERR=" << err << std::endl;
-				}
-				errors++;
-			}
-		}
-	}
-	mse /= (float)total;
+    DTYPE* H_temp = new DTYPE[NODES * F_IN_PAD_GEMM]();
 
-	std::cout << "-----------------------------" << std::endl;
-	std::cout << "Naive GCN: H_out = (A * X) * W" << std::endl;
-	std::cout << "A: " << NODES << "x" << NODES
-	          << " (padded " << NODES_PAD << "x" << NODES_PAD << ")" << std::endl;
-	std::cout << "X: " << NODES << "x" << F_IN
-	          << " (padded " << NODES_PAD << "x" << F_IN_PAD << ")" << std::endl;
-	std::cout << "W: " << F_IN  << "x" << F_OUT
-	          << " (padded " << F_IN_PAD << "x" << F_OUT_PAD << ")" << std::endl;
-	std::cout << "Block size M: " << M << std::endl;
-	std::cout << "Max error: " << max_err << std::endl;
-	std::cout << "Errors: " << errors << " / " << total << std::endl;
-	std::cout << "MSE: " << mse << std::endl;
+    // ----------------------------------------------------------
+    // 4. Run DUT
+    // ----------------------------------------------------------
+    std::cout << "\nRunning design2_gcn..." << std::endl;
+    std::cout << "  SpMM: A(" << NODES << "x" << NODES << ") * X("
+              << NODES << "x" << F_IN << ")" << std::endl;
+    std::cout << "  GEMM: H_temp(" << NODES << "x" << F_IN
+              << ") * W(" << F_IN << "x" << F_OUT << ")" << std::endl;
 
-	if (errors == 0) {
-		std::cout << "TEST PASSED" << std::endl;
-	} else {
-		std::cout << "TEST FAILED" << std::endl;
-	}
+    design2_gcn(row_length, colind_d, values_d, X_vec, nnz,
+                H_temp, W_vec, H_out_vec);
 
-	delete[] A_f;
-	delete[] X_f;
-	delete[] W_f;
-	delete[] Ht_ref;
-	delete[] Hout_ref;
-	delete[] A_d;
-	delete[] X_d;
-	delete[] W_d;
-	delete[] Ht_dut;
-	delete[] Hout_dut;
+    // ----------------------------------------------------------
+    // 5. Unpack and compare
+    // ----------------------------------------------------------
+    float* H_out_f = new float[NODES * F_OUT];
+    for (int i = 0; i < NODES; i++) {
+        for (int j = 0; j < F_OUT; j++) {
+            int v = j / DSIZE;
+            int d = j % DSIZE;
+            H_out_f[i * F_OUT + j] = (float)H_out_vec[i * H_vecs_per_row + v][d];
+        }
+    }
 
-	return (errors == 0) ? 0 : 1;
+    int errors = compare("GCN Layer: (A*X)*W", H_out_f, H1_ref, NODES, F_OUT);
+
+    // ----------------------------------------------------------
+    // Cleanup
+    // ----------------------------------------------------------
+    delete[] rowptr_i32;
+    delete[] colind_i32;
+    delete[] values_f32;
+    delete[] X_f32;
+    delete[] W_f32;
+    delete[] H1_ref;
+    delete[] row_length;
+    delete[] colind_d;
+    delete[] values_d;
+    delete[] X_vec;
+    delete[] W_vec;
+    delete[] H_temp;
+    delete[] H_out_vec;
+    delete[] H_out_f;
+
+    return (errors == 0) ? 0 : 1;
 }

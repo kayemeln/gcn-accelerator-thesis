@@ -79,7 +79,7 @@ int compare(const char* label, float* dut, float* ref,
 }
 
 int main(int argc, char* argv[]) {
-    const char* data_dir = "/home/nat/dev/trinners/mai_proj/hls/gcn_hls/cora_bin";
+    const char* data_dir = "/home/nat/dev/trinners/mai_proj/hls/gcn_hls/cora_bin_sparse"; 
 
     // ----------------------------------------------------------
     // 1. Load CSR arrays
@@ -117,21 +117,21 @@ int main(int argc, char* argv[]) {
     // --- Common CSR arrays ---
     idx_t*   rowptr_d  = new idx_t[NODES + 1];
     idx_t*   colind_d  = new idx_t[nnz];
-    fix16_t* values_d  = new fix16_t[nnz];
+    DTYPE* values_d  = new DTYPE[nnz];
 
     for (int i = 0; i <= NODES; i++)
         rowptr_d[i] = (idx_t)rowptr_i32[i];
     for (int i = 0; i < nnz; i++) {
         colind_d[i] = (idx_t)colind_i32[i];
-        values_d[i] = (fix16_t)values_f32[i];
+        values_d[i] = (DTYPE)values_f32[i];
     }
 
     // --- Baseline: scalar X and H_out ---
-    fix16_t* X_scalar    = new fix16_t[NODES * F_IN];
-    fix16_t* H_out_bl    = new fix16_t[NODES * F_IN]();
+    DTYPE* X_scalar    = new DTYPE[NODES * F_IN];
+    DTYPE* H_out_bl    = new DTYPE[NODES * F_IN]();
 
     for (int i = 0; i < NODES * F_IN; i++)
-        X_scalar[i] = (fix16_t)X_f32[i];
+        X_scalar[i] = (DTYPE)X_f32[i];
 
     // --- Optimised: vectorised X and H_out ---
     // MCSR row_length
@@ -141,19 +141,19 @@ int main(int argc, char* argv[]) {
 
     // Pack X into hls::vector layout [NODES x F_IN_VECS]
     const int X_vec_count = NODES * F_IN_VECS;
-    hls::vector<fix16_t, VSIZE>* X_vec = new hls::vector<fix16_t, VSIZE>[X_vec_count]();
+    hls::vector<DTYPE, DSIZE>* X_vec = new hls::vector<DTYPE, DSIZE>[X_vec_count]();
 
     for (int i = 0; i < NODES; i++) {
         for (int f = 0; f < F_IN; f++) {
-            int v = f / VSIZE;
-            int d = f % VSIZE;
-            X_vec[i * F_IN_VECS + v][d] = (fix16_t)X_f32[i * F_IN + f];
+            int v = f / DSIZE;
+            int d = f % DSIZE;
+            X_vec[i * F_IN_VECS + v][d] = (DTYPE)X_f32[i * F_IN + f];
         }
         // Padding elements (F_IN..F_IN_PAD-1) are already zero from ()
     }
 
     const int H_vec_count = NODES * F_IN_VECS;
-    hls::vector<fix16_t, VSIZE>* H_out_vec = new hls::vector<fix16_t, VSIZE>[H_vec_count]();
+    hls::vector<DTYPE, DSIZE>* H_out_vec = new hls::vector<DTYPE, DSIZE>[H_vec_count]();
 
     // ----------------------------------------------------------
     // 4. Run baseline SpMM
@@ -178,8 +178,8 @@ int main(int argc, char* argv[]) {
     float* H_out_fs_f = new float[NODES * F_IN];
     for (int i = 0; i < NODES; i++) {
         for (int f = 0; f < F_IN; f++) {
-            int v = f / VSIZE;
-            int d = f % VSIZE;
+            int v = f / DSIZE;
+            int d = f % DSIZE;
             H_out_fs_f[i * F_IN + f] = (float)H_out_vec[i * F_IN_VECS + v][d];
         }
     }

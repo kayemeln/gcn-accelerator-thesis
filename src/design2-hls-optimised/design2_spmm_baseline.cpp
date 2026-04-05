@@ -9,9 +9,9 @@
 void design2_spmm_baseline(
     idx_t*   rowptr,
     idx_t*   colind,
-    fix16_t* values,
-    fix16_t* X,
-    fix16_t* H_out,
+    DTYPE* values,
+    DTYPE* X,
+    DTYPE* H_out,
     int      nnz
 ){
 #pragma HLS INTERFACE mode=m_axi bundle=gmem0 port=rowptr
@@ -37,7 +37,7 @@ void design2_spmm_baseline(
         for (idx_t jj = row_start; jj < row_end; jj++) {
 #pragma HLS LOOP_TRIPCOUNT min=1 max=168 avg=4
             idx_t   col = colind[jj];
-            fix16_t val = values[jj];
+            DTYPE val = values[jj];
 
             SPMM_FEAT:
             for (int f = 0; f < F_IN; f++) {
@@ -47,7 +47,7 @@ void design2_spmm_baseline(
 
         SPMM_WRITE:
         for (int f = 0; f < F_IN; f++) {
-            H_out[i * F_IN + f] = (fix16_t)acc[f];
+            H_out[i * F_IN + f] = (DTYPE)acc[f];
         }
     }
 }
