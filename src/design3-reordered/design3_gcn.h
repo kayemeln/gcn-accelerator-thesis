@@ -22,14 +22,20 @@ typedef int              idx_t;
 #define DSIZE    32
 
 // ---------- GEMM parameters (X * W, done first) ----------
-#define M              64   // Block/tile size
-// Pad F_IN to multiple of M: ceil(1433/64)*64 = 1472
+// Decoupled tile dims. MJ is pinned to F_OUT so the fully-unrolled j loop
+// never wastes MACs on padding; MI/MK are free to grow for data reuse.
+#define MI             64   // rows per tile (i axis, NODES dim)
+#define MJ             64   // cols per tile (j axis, F_OUT dim) — must equal F_OUT_PAD
+#define MK             64   // shared per tile (k axis, F_IN dim)
+// Unroll factor for the i loop in the MAC kernel. Each pipelined cycle
+// issues UI * MJ parallel multiplies — with UI=4, MJ=64 that's 256 DSPs.
+#define UI             4
+// Pad F_IN to multiple of MK: ceil(1433/64)*64 = 1472
 #define F_IN_PAD_GEMM  1472
-// Pad NODES (rows of X) to multiple of M: ceil(2708/64)*64 = 2752.
-// Needed because X is now stored transposed + vectorised, so the row
-// dimension must be a multiple of M (and DSIZE) for aligned wide reads.
+// Pad NODES (rows of X) to multiple of MI: ceil(2708/64)*64 = 2752.
+// Needed because X is stored transposed + vectorised, so the row
+// dimension must be a multiple of MI (and DSIZE) for aligned wide reads.
 #define NODES_PAD      2752
-// F_OUT = 256 = 4*M, no padding needed
 #define F_OUT_PAD      64
 
 // ---------- SpMM parameters (A * H_temp, done second) ----------
