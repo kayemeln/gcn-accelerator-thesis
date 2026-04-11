@@ -8,22 +8,28 @@
 // ================================================================
 //  STAGE 1: GEMM  (tiled block matrix multiply)
 //  H_temp = X * W
-//  X:      [NODES x F_IN_PAD_GEMM] scalar, A-side
+//  X:      [F_IN_PAD_GEMM x NODES_PAD] transposed + vectorised (A-side)
 //  W:      [F_IN_PAD_GEMM x F_OUT_PAD] vectorised, B-side
 //  H_temp: [NODES x F_OUT_PAD] vectorised
+//
+//  Transposing X lets the kb -> k -> i loop fetch consecutive X elements
+//  (one k, sweeping i) as a wide vector, removing the strided per-i scalar
+//  load that was bottlenecking DRAM bandwidth.
 // ================================================================
 
 static void gemm_stage(
-    DTYPE* X,
+    hls::vector<DTYPE, DSIZE>* X,
     hls::vector<DTYPE, DSIZE>* W,
     hls::vector<DTYPE, DSIZE>* H_temp
 ){
     acc32_t AB_block[M][M];
     DTYPE B_line[M];
+    DTYPE A_line[M];
 #pragma HLS ARRAY_PARTITION dim=2 type=complete variable=AB_block
 #pragma HLS ARRAY_PARTITION dim=1 type=complete variable=B_line
+#pragma HLS ARRAY_PARTITION dim=1 type=complete variable=A_line
 
-    const int rows   = ((NODES + M - 1) / M) * M;    // 2752
+    const int rows   = NODES_PAD;                     // 2752
     const int shared = F_IN_PAD_GEMM;                 // 1472
     const int cols   = F_OUT_PAD;                     // 64
 
@@ -59,11 +65,25 @@ static void gemm_stage(
                         }
                     }
 
+                    // Load X^T tile column (A_line): M consecutive elements
+                    // corresponding to i = ib*M .. ib*M+M-1 for this (kb, k).
+                    // Since rows and M are multiples of DSIZE, this is aligned.
+                    GEMM_LOAD_A:
+                    for (int ii = 0; ii < M / DSIZE; ii++) {
+#pragma HLS PIPELINE II=1
+                        hls::vector<DTYPE, DSIZE> A_temp
+                            = X[((kb * M + k) * rows + ib * M) / DSIZE + ii];
+                        for (int i = 0; i < DSIZE; i++) {
+#pragma HLS UNROLL
+                            A_line[ii * DSIZE + i] = A_temp[i];
+                        }
+                    }
+
                     // MAC across rows
                     GEMM_I:
                     for (int i = 0; i < M; i++) {
 #pragma HLS PIPELINE II=1
-                        DTYPE A_temp = X[(ib * M + i) * shared + kb * M + k];
+                        DTYPE A_temp = A_line[i];
                         GEMM_J:
                         for (int j = 0; j < M; j++) {
 #pragma HLS UNROLL
@@ -229,7 +249,7 @@ static void spmm_stage(
 // ================================================================
 
 void design3_gcn(
-    DTYPE*   X,
+    hls::vector<DTYPE, DSIZE>* X,
     hls::vector<DTYPE, DSIZE>* W,
     hls::vector<DTYPE, DSIZE>* H_temp,
     idx_t*   row_length,
