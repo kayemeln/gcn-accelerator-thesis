@@ -107,23 +107,20 @@ static void gemm_compute(
                 COMP_K:
                 for (int k = 0; k < MK; k++) {
 
-                    COMP_LOAD_B:
-                    for (int jj = 0; jj < GEMM_B_VECS_PER_K; jj++) {
-#pragma HLS PIPELINE II=1
-                        hls::vector<DTYPE, DSIZE> B_temp = B_stream.read();
-                        for (int j = 0; j < DSIZE; j++) {
-#pragma HLS UNROLL
-                            B_line[jj * DSIZE + j] = B_temp[j];
-                        }
-                    }
-
-                    COMP_LOAD_A:
-                    for (int ii = 0; ii < GEMM_A_VECS_PER_K; ii++) {
+                    // Fused A+B load. MI == MJ (and therefore
+                    // GEMM_A_VECS_PER_K == GEMM_B_VECS_PER_K), so both streams
+                    // are drained in the same 2-iteration pipeline. Saves one
+                    // full pipeline fill per (kb, k) versus two sibling loops.
+                    // A and B have no inter-dependency, so this merge is free.
+                    COMP_LOAD_AB:
+                    for (int xx = 0; xx < GEMM_A_VECS_PER_K; xx++) {
 #pragma HLS PIPELINE II=1
                         hls::vector<DTYPE, DSIZE> A_temp = A_stream.read();
-                        for (int i = 0; i < DSIZE; i++) {
+                        hls::vector<DTYPE, DSIZE> B_temp = B_stream.read();
+                        for (int d = 0; d < DSIZE; d++) {
 #pragma HLS UNROLL
-                            A_line[ii * DSIZE + i] = A_temp[i];
+                            A_line[xx * DSIZE + d] = A_temp[d];
+                            B_line[xx * DSIZE + d] = B_temp[d];
                         }
                     }
 
