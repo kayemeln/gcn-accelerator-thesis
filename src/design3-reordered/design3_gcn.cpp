@@ -17,10 +17,60 @@
 //  load that was bottlenecking DRAM bandwidth.
 // ================================================================
 
-static void gemm_stage(
+// ---- GEMM dataflow sub-stages ---------------------------------------------
+// Iteration counts reused by all sub-stages so traffic stays in lockstep.
+static constexpr int GEMM_IB_COUNT = NODES_PAD     / M;   // 43
+static constexpr int GEMM_KB_COUNT = F_IN_PAD_GEMM / M;   // 23
+static constexpr int GEMM_JB_COUNT = F_OUT_PAD     / M;   // 1
+static constexpr int GEMM_A_VECS_PER_K = M / DSIZE;       // 2
+static constexpr int GEMM_B_VECS_PER_K = M / DSIZE;       // 2
+static constexpr int GEMM_AB_VECS_PER_ROW = M / DSIZE;    // 2
+
+// ReadA: stream X^T as wide vectors (one A_line = M/DSIZE vectors per (kb,k)).
+static void gemm_read_A(
     hls::vector<DTYPE, DSIZE>* X,
+    hls::stream<hls::vector<DTYPE, DSIZE>>& A_stream
+){
+    for (int ib = 0; ib < GEMM_IB_COUNT; ib++) {
+        for (int jb = 0; jb < GEMM_JB_COUNT; jb++) {
+            for (int kb = 0; kb < GEMM_KB_COUNT; kb++) {
+                for (int k = 0; k < M; k++) {
+                    for (int ii = 0; ii < GEMM_A_VECS_PER_K; ii++) {
+#pragma HLS PIPELINE II=1
+                        A_stream.write(
+                            X[((kb * M + k) * NODES_PAD + ib * M) / DSIZE + ii]);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ReadB: stream W as wide vectors (one B_line = M/DSIZE vectors per (kb,k)).
+static void gemm_read_B(
     hls::vector<DTYPE, DSIZE>* W,
-    hls::vector<DTYPE, DSIZE>* H_temp
+    hls::stream<hls::vector<DTYPE, DSIZE>>& B_stream
+){
+    for (int ib = 0; ib < GEMM_IB_COUNT; ib++) {
+        for (int jb = 0; jb < GEMM_JB_COUNT; jb++) {
+            for (int kb = 0; kb < GEMM_KB_COUNT; kb++) {
+                for (int k = 0; k < M; k++) {
+                    for (int jj = 0; jj < GEMM_B_VECS_PER_K; jj++) {
+#pragma HLS PIPELINE II=1
+                        B_stream.write(
+                            W[((kb * M + k) * F_OUT_PAD + jb * M) / DSIZE + jj]);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Comp: consume A/B streams, accumulate in AB_block, stream result block out.
+static void gemm_compute(
+    hls::stream<hls::vector<DTYPE, DSIZE>>& A_stream,
+    hls::stream<hls::vector<DTYPE, DSIZE>>& B_stream,
+    hls::stream<hls::vector<DTYPE, DSIZE>>& AB_stream
 ){
     acc32_t AB_block[M][M];
     DTYPE B_line[M];
@@ -29,62 +79,46 @@ static void gemm_stage(
 #pragma HLS ARRAY_PARTITION dim=1 type=complete variable=B_line
 #pragma HLS ARRAY_PARTITION dim=1 type=complete variable=A_line
 
-    const int rows   = NODES_PAD;                     // 2752
-    const int shared = F_IN_PAD_GEMM;                 // 1472
-    const int cols   = F_OUT_PAD;                     // 64
+    COMP_IB:
+    for (int ib = 0; ib < GEMM_IB_COUNT; ib++) {
+        COMP_JB:
+        for (int jb = 0; jb < GEMM_JB_COUNT; jb++) {
 
-    int ib_count = rows / M;
-    int kb_count = shared / M;
-    int jb_count = cols / M;
-
-    GEMM_IB:
-    for (int ib = 0; ib < ib_count; ib++) {
-        GEMM_JB:
-        for (int jb = 0; jb < jb_count; jb++) {
-
-            // Init block
-            GEMM_INIT:
+            COMP_INIT:
             for (int i = 0; i < M; i++)
                 for (int j = 0; j < M; j++)
                     AB_block[i][j] = 0;
 
-            GEMM_KB:
-            for (int kb = 0; kb < kb_count; kb++) {
-                GEMM_K:
+            COMP_KB:
+            for (int kb = 0; kb < GEMM_KB_COUNT; kb++) {
+                COMP_K:
                 for (int k = 0; k < M; k++) {
 
-                    // Load W tile row (vectorised)
-                    GEMM_LOAD_B:
-                    for (int jj = 0; jj < M / DSIZE; jj++) {
+                    COMP_LOAD_B:
+                    for (int jj = 0; jj < GEMM_B_VECS_PER_K; jj++) {
 #pragma HLS PIPELINE II=1
-                        hls::vector<DTYPE, DSIZE> B_temp
-                            = W[((kb * M + k) * cols + jb * M) / DSIZE + jj];
+                        hls::vector<DTYPE, DSIZE> B_temp = B_stream.read();
                         for (int j = 0; j < DSIZE; j++) {
 #pragma HLS UNROLL
                             B_line[jj * DSIZE + j] = B_temp[j];
                         }
                     }
 
-                    // Load X^T tile column (A_line): M consecutive elements
-                    // corresponding to i = ib*M .. ib*M+M-1 for this (kb, k).
-                    // Since rows and M are multiples of DSIZE, this is aligned.
-                    GEMM_LOAD_A:
-                    for (int ii = 0; ii < M / DSIZE; ii++) {
+                    COMP_LOAD_A:
+                    for (int ii = 0; ii < GEMM_A_VECS_PER_K; ii++) {
 #pragma HLS PIPELINE II=1
-                        hls::vector<DTYPE, DSIZE> A_temp
-                            = X[((kb * M + k) * rows + ib * M) / DSIZE + ii];
+                        hls::vector<DTYPE, DSIZE> A_temp = A_stream.read();
                         for (int i = 0; i < DSIZE; i++) {
 #pragma HLS UNROLL
                             A_line[ii * DSIZE + i] = A_temp[i];
                         }
                     }
 
-                    // MAC across rows
-                    GEMM_I:
+                    COMP_I:
                     for (int i = 0; i < M; i++) {
 #pragma HLS PIPELINE II=1
                         DTYPE A_temp = A_line[i];
-                        GEMM_J:
+                        COMP_J:
                         for (int j = 0; j < M; j++) {
 #pragma HLS UNROLL
                             AB_block[i][j] += A_temp * B_line[j];
@@ -93,23 +127,60 @@ static void gemm_stage(
                 }
             }
 
-            // Write result tile (vectorised)
-            GEMM_WRITE:
+            COMP_EMIT:
             for (int i = 0; i < M; i++) {
-                for (int jj = 0; jj < M / DSIZE; jj++) {
+                for (int jj = 0; jj < GEMM_AB_VECS_PER_ROW; jj++) {
 #pragma HLS PIPELINE II=1
                     hls::vector<DTYPE, DSIZE> AB_temp;
                     for (int j = 0; j < DSIZE; j++) {
 #pragma HLS UNROLL
                         AB_temp[j] = (DTYPE)AB_block[i][jj * DSIZE + j];
                     }
-                    // Only write if within real node range
-                    if (ib * M + i < NODES)
-                        H_temp[((ib * M + i) * cols + jb * M) / DSIZE + jj] = AB_temp;
+                    AB_stream.write(AB_temp);
                 }
             }
         }
     }
+}
+
+// WriteAB: drain AB stream to DRAM, dropping rows past NODES (padding).
+static void gemm_write(
+    hls::stream<hls::vector<DTYPE, DSIZE>>& AB_stream,
+    hls::vector<DTYPE, DSIZE>* H_temp
+){
+    for (int ib = 0; ib < GEMM_IB_COUNT; ib++) {
+        for (int jb = 0; jb < GEMM_JB_COUNT; jb++) {
+            for (int i = 0; i < M; i++) {
+                for (int jj = 0; jj < GEMM_AB_VECS_PER_ROW; jj++) {
+#pragma HLS PIPELINE II=1
+                    hls::vector<DTYPE, DSIZE> AB_temp = AB_stream.read();
+                    if (ib * M + i < NODES)
+                        H_temp[((ib * M + i) * F_OUT_PAD + jb * M) / DSIZE + jj]
+                            = AB_temp;
+                }
+            }
+        }
+    }
+}
+
+// Dataflow wrapper: ReadA || ReadB || Comp || WriteAB, chained by FIFOs.
+static void gemm_stage(
+    hls::vector<DTYPE, DSIZE>* X,
+    hls::vector<DTYPE, DSIZE>* W,
+    hls::vector<DTYPE, DSIZE>* H_temp
+){
+#pragma HLS DATAFLOW
+    hls::stream<hls::vector<DTYPE, DSIZE>> A_stream("A_stream");
+    hls::stream<hls::vector<DTYPE, DSIZE>> B_stream("B_stream");
+    hls::stream<hls::vector<DTYPE, DSIZE>> AB_stream("AB_stream");
+#pragma HLS STREAM variable=A_stream  depth=16
+#pragma HLS STREAM variable=B_stream  depth=16
+#pragma HLS STREAM variable=AB_stream depth=16
+
+    gemm_read_A(X, A_stream);
+    gemm_read_B(W, B_stream);
+    gemm_compute(A_stream, B_stream, AB_stream);
+    gemm_write(AB_stream, H_temp);
 }
 
 static void spmm_load_csr(
