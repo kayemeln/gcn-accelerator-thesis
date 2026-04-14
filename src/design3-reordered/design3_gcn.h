@@ -9,17 +9,27 @@
 #include "hls_vector.h"
 
 // ---------- Data types ----------
-typedef ap_fixed<16, 4>  DTYPE;      // range [-8, +8)
-typedef ap_fixed<32, 8>  acc32_t;    // wider accumulator
+typedef ap_fixed<16, 6>  DTYPE;      // range [-8, +8)
+typedef ap_fixed<32, 12>  acc32_t;    // wider accumulator
 typedef int              idx_t;
 
 // ---------- Graph / layer dimensions ----------
+// Uncomment ONE layer configuration:
+
+// --- Layer 1: X(2708x1433) * W(1433x64) ---
 #define NODES    2708
 #define F_IN     1433
-#define F_OUT    64 // changed from 256 for testing
+#define F_OUT    64
+#define F_IN_PAD_GEMM  1472  // ceil(1433/64)*64
+
+// --- Layer 2: H_bn_relu(2708x64) * W(64x7) ---
+// #define NODES    2708
+// #define F_IN     64
+// #define F_OUT    7
+// #define F_IN_PAD_GEMM  64   // ceil(64/64)*64
 
 // ---------- Vectorisation (512-bit AXI / 16-bit = 32 elements) ----------
-#define DSIZE    32
+const int DSIZE = 64/sizeof(DTYPE);
 
 // ---------- GEMM parameters (X * W, done first) ----------
 // Decoupled tile dims. MJ is pinned to F_OUT so the fully-unrolled j loop
@@ -30,8 +40,6 @@ typedef int              idx_t;
 // Unroll factor for the i loop in the MAC kernel. Each pipelined cycle
 // issues UI * MJ parallel multiplies — with UI=4, MJ=64 that's 256 DSPs.
 #define UI             4
-// Pad F_IN to multiple of MK: ceil(1433/64)*64 = 1472
-#define F_IN_PAD_GEMM  1472
 // Pad NODES (rows of X) to multiple of MI: ceil(2708/64)*64 = 2752.
 // Needed because X is stored transposed + vectorised, so the row
 // dimension must be a multiple of MI (and DSIZE) for aligned wide reads.
@@ -39,9 +47,9 @@ typedef int              idx_t;
 #define F_OUT_PAD      64
 
 // ---------- SpMM parameters (A * H_temp, done second) ----------
-// SpMM now operates on F_OUT features (256) instead of F_IN (1433)
-#define F_OUT_PAD_SPMM 64   // ceil(256/32)*32 = 256, already aligned
-#define F_OUT_VECS     (F_OUT_PAD_SPMM / DSIZE)  // 8
+// SpMM now operates on F_OUT features instead of F_IN
+#define F_OUT_PAD_SPMM 64   // ceil(F_OUT/32)*32, already aligned for both layers
+#define F_OUT_VECS     (F_OUT_PAD_SPMM / DSIZE)  // 2
 #define UF             32    // Unroll factor for SpMM MAC
 
 // ---------- Top-level function ----------

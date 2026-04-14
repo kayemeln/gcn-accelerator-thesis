@@ -100,16 +100,29 @@ int main(int argc, char* argv[]) {
 
     // ----------------------------------------------------------
     // 2. Load X, W, and golden reference
+    //    Uncomment ONE layer (must match design3_gcn.h config)
     // ----------------------------------------------------------
     float* X_f32   = new float[NODES * F_IN];
     float* W_f32   = new float[F_IN * F_OUT];
     float* H1_ref  = new float[NODES * F_OUT];
 
-    if (!load_bin((std::string(data_dir) + "/X.bin").c_str(),
+    // --- Layer 1 ---
+    const char* X_file   = "/X.bin";
+    const char* W_file   = "/W1.bin";
+    const char* ref_file = "/H1.bin";
+    const char* out_file = "/H_out_design3.bin";
+
+    // --- Layer 2 ---
+    // const char* X_file   = "/H1_bn_relu.bin";
+    // const char* W_file   = "/W2.bin";
+    // const char* ref_file = "/H2.bin";
+    // const char* out_file = "/H_out_layer2.bin";
+
+    if (!load_bin((std::string(data_dir) + X_file).c_str(),
                   X_f32, NODES * F_IN)) return 1;
-    if (!load_bin((std::string(data_dir) + "/W1.bin").c_str(),
+    if (!load_bin((std::string(data_dir) + W_file).c_str(),
                   W_f32, F_IN * F_OUT)) return 1;
-    if (!load_bin((std::string(data_dir) + "/H1.bin").c_str(),
+    if (!load_bin((std::string(data_dir) + ref_file).c_str(),
                   H1_ref, NODES * F_OUT)) return 1;
 
     // ----------------------------------------------------------
@@ -184,6 +197,18 @@ int main(int argc, char* argv[]) {
             int v = j / DSIZE;
             int d = j % DSIZE;
             H_out_f[i * F_OUT + j] = (float)H_out_vec[i * F_OUT_VECS + v][d];
+        }
+    }
+
+    // Write H_out to binary file for downstream comparison
+    {
+        std::string out_path = std::string(data_dir) + out_file;
+        std::ofstream fout(out_path, std::ios::binary);
+        if (!fout) {
+            std::cerr << "ERROR: cannot open " << out_path << " for writing" << std::endl;
+        } else {
+            fout.write(reinterpret_cast<char*>(H_out_f), NODES * F_OUT * sizeof(float));
+            std::cout << "Wrote H_out to " << out_path << std::endl;
         }
     }
 
