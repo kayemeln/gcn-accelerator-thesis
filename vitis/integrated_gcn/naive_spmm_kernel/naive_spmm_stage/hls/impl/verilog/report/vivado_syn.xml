@@ -1,0 +1,221 @@
+<profile>
+<RunData>
+  <RUN_TYPE>synth</RUN_TYPE>
+  <VIVADO_VERSION>v.2025.2</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>10.000</TargetClockPeriod>
+  <AchievedClockPeriod>5.825</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>5.825</CP_FINAL>
+  <CP_ROUTE>NA</CP_ROUTE>
+  <CP_SYNTH>5.825</CP_SYNTH>
+  <CP_TARGET>10.000</CP_TARGET>
+  <SLACK_FINAL>4.175</SLACK_FINAL>
+  <SLACK_ROUTE></SLACK_ROUTE>
+  <SLACK_SYNTH>4.175</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>NA</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>4.175</WNS_FINAL>
+  <WNS_ROUTE>NA</WNS_ROUTE>
+  <WNS_SYNTH>4.175</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>6</BRAM>
+    <CLB>0</CLB>
+    <DSP>2</DSP>
+    <FF>10107</FF>
+    <LATCH>0</LATCH>
+    <LUT>8391</LUT>
+    <SRL>546</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>288</BRAM>
+    <CLB>0</CLB>
+    <DSP>1248</DSP>
+    <FF>234240</FF>
+    <LUT>117120</LUT>
+    <URAM>64</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="naive_spmm_stage" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="10">acc_U control_s_axi_U gmem0_m_axi_U gmem1_m_axi_U gmem2_m_axi_U gmem3_m_axi_U gmem4_m_axi_U grp_naive_spmm_stage_Pipeline_SPMM_INIT_fu_1041 grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046 grp_naive_spmm_stage_Pipeline_SPMM_WRITE_fu_1191</SubModules>
+    <Resources BRAM="6" DSP="2" FF="10107" LUT="8391" LogicLUT="7845" RAMB18="4" RAMB36="1" SRL="546"/>
+    <LocalResources FF="2752" LUT="195" LogicLUT="191" SRL="4"/>
+  </RtlModule>
+  <RtlModule CELL="inst/acc_U" DEPTH="1" FILE_NAME="naive_spmm_stage.v" ORIG_REF_NAME="naive_spmm_stage_acc_RAM_AUTO_1R1W">
+    <Resources BRAM="2" LUT="78" LogicLUT="78" RAMB36="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/control_s_axi_U" DEPTH="1" FILE_NAME="naive_spmm_stage.v" ORIG_REF_NAME="naive_spmm_stage_control_s_axi">
+    <Resources FF="362" LUT="337" LogicLUT="337"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem0_m_axi_U" DEPTH="1" FILE_NAME="naive_spmm_stage.v" ORIG_REF_NAME="naive_spmm_stage_gmem0_m_axi">
+    <Resources BRAM="1" FF="739" LUT="480" LogicLUT="417" RAMB18="1" SRL="63"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem1_m_axi_U" DEPTH="1" FILE_NAME="naive_spmm_stage.v" ORIG_REF_NAME="naive_spmm_stage_gmem1_m_axi">
+    <Resources BRAM="1" FF="862" LUT="577" LogicLUT="483" RAMB18="1" SRL="94"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem2_m_axi_U" DEPTH="1" FILE_NAME="naive_spmm_stage.v" ORIG_REF_NAME="naive_spmm_stage_gmem2_m_axi">
+    <Resources BRAM="1" FF="995" LUT="757" LogicLUT="660" RAMB18="1" SRL="97"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem3_m_axi_U" DEPTH="1" FILE_NAME="naive_spmm_stage.v" ORIG_REF_NAME="naive_spmm_stage_gmem3_m_axi">
+    <Resources BRAM="1" FF="855" LUT="575" LogicLUT="509" RAMB18="1" SRL="66"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem4_m_axi_U" DEPTH="1" FILE_NAME="naive_spmm_stage.v" ORIG_REF_NAME="naive_spmm_stage_gmem4_m_axi">
+    <Resources FF="1235" LUT="949" LogicLUT="727" SRL="222"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_naive_spmm_stage_Pipeline_SPMM_INIT_fu_1041" DEPTH="1" FILE_NAME="naive_spmm_stage.v" ORIG_REF_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_INIT">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_naive_spmm_stage_Pipeline_SPMM_INIT_fu_1041/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_INIT.v" ORIG_REF_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046" DEPTH="1" FILE_NAME="naive_spmm_stage.v" ORIG_REF_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ">
+    <SubModules count="2">flow_control_loop_pipe_sequential_init_U mul_26s_26s_52_1_1_U2</SubModules>
+    <Resources DSP="2" FF="2270" LUT="4377" LogicLUT="4377"/>
+    <LocalResources FF="2268" LUT="1046" LogicLUT="1046"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ.v" ORIG_REF_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="1242" LogicLUT="1242"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2" DEPTH="2" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ.v" ORIG_REF_NAME="naive_spmm_stage_mul_26s_26s_52_1_1">
+    <Resources DSP="2" LUT="2089" LogicLUT="2089"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_naive_spmm_stage_Pipeline_SPMM_WRITE_fu_1191" DEPTH="1" FILE_NAME="naive_spmm_stage.v" ORIG_REF_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_WRITE">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_naive_spmm_stage_Pipeline_SPMM_WRITE_fu_1191/flow_control_loop_pipe_sequential_init_U" DEPTH="2" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_WRITE.v" ORIG_REF_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="5.822" DATAPATH_LOGIC_DELAY="4.051" DATAPATH_NET_DELAY="1.771" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_1625_fu_422_reg[31]/D" LOGIC_LEVELS="19" MAX_FANOUT="64" SLACK="4.175" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ.v" LINE_NUMBER="1620"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65" PRIMITIVE_TYPE="CLB.LUT.LUT4" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_51" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39" PRIMITIVE_TYPE="CLB.LUT.LUT4" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_11" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1625_fu_422[6]_i_6" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ.v" LINE_NUMBER="3496"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1625_fu_422_reg[6]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1625_fu_422_reg[14]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1625_fu_422_reg[22]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1625_fu_422_reg[30]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1625_fu_422_reg[31]_i_4" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/conv_i_i13_1625_fu_422[31]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT3" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_1625_fu_422_reg[31]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ.v" LINE_NUMBER="1728"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="5.822" DATAPATH_LOGIC_DELAY="4.051" DATAPATH_NET_DELAY="1.771" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_1726_fu_426_reg[31]/D" LOGIC_LEVELS="19" MAX_FANOUT="64" SLACK="4.175" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ.v" LINE_NUMBER="1620"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65" PRIMITIVE_TYPE="CLB.LUT.LUT4" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_51" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39" PRIMITIVE_TYPE="CLB.LUT.LUT4" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_11" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1726_fu_426[6]_i_6" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ.v" LINE_NUMBER="3498"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1726_fu_426_reg[6]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1726_fu_426_reg[14]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1726_fu_426_reg[22]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1726_fu_426_reg[30]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1726_fu_426_reg[31]_i_4" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/conv_i_i13_1726_fu_426[31]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT3" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_1726_fu_426_reg[31]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ.v" LINE_NUMBER="1736"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="5.822" DATAPATH_LOGIC_DELAY="4.051" DATAPATH_NET_DELAY="1.771" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2231_fu_446_reg[31]/D" LOGIC_LEVELS="19" MAX_FANOUT="64" SLACK="4.175" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ.v" LINE_NUMBER="1620"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65" PRIMITIVE_TYPE="CLB.LUT.LUT4" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_51" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39" PRIMITIVE_TYPE="CLB.LUT.LUT4" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_11" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2231_fu_446[6]_i_6" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ.v" LINE_NUMBER="3510"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2231_fu_446_reg[6]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2231_fu_446_reg[14]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2231_fu_446_reg[22]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2231_fu_446_reg[30]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2231_fu_446_reg[31]_i_4" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/conv_i_i13_2231_fu_446[31]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT3" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2231_fu_446_reg[31]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ.v" LINE_NUMBER="1784"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="5.822" DATAPATH_LOGIC_DELAY="4.051" DATAPATH_NET_DELAY="1.771" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2332_fu_450_reg[31]/D" LOGIC_LEVELS="19" MAX_FANOUT="64" SLACK="4.175" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ.v" LINE_NUMBER="1620"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65" PRIMITIVE_TYPE="CLB.LUT.LUT4" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_51" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39" PRIMITIVE_TYPE="CLB.LUT.LUT4" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_11" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2332_fu_450[6]_i_6" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ.v" LINE_NUMBER="3512"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2332_fu_450_reg[6]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2332_fu_450_reg[14]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2332_fu_450_reg[22]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2332_fu_450_reg[30]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2332_fu_450_reg[31]_i_4" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/conv_i_i13_2332_fu_450[31]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT3" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2332_fu_450_reg[31]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ.v" LINE_NUMBER="1792"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="5.822" DATAPATH_LOGIC_DELAY="4.051" DATAPATH_NET_DELAY="1.771" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2837_fu_470_reg[31]/D" LOGIC_LEVELS="19" MAX_FANOUT="64" SLACK="4.175" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ.v" LINE_NUMBER="1620"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65" PRIMITIVE_TYPE="CLB.LUT.LUT4" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_51" PRIMITIVE_TYPE="CLB.LUT.LUT5" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39" PRIMITIVE_TYPE="CLB.LUT.LUT4" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_11" PRIMITIVE_TYPE="CLB.LUT.LUT6" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2837_fu_470[6]_i_6" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ.v" LINE_NUMBER="3522"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2837_fu_470_reg[6]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2837_fu_470_reg[14]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2837_fu_470_reg[22]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2837_fu_470_reg[30]_i_2" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2837_fu_470_reg[31]_i_4" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/conv_i_i13_2837_fu_470[31]_i_2" PRIMITIVE_TYPE="CLB.LUT.LUT3" FILE_NAME="naive_spmm_stage_flow_control_loop_pipe_sequential_init.v" LINE_NUMBER="70"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2837_fu_470_reg[31]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ.v" LINE_NUMBER="1832"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/naive_spmm_stage_design_analysis_synth.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/naive_spmm_stage_failfast_synth.rpt"/>
+  <ReportFile TYPE="power" PATH="verilog/report/naive_spmm_stage_power_synth.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/naive_spmm_stage_timing_synth.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/naive_spmm_stage_timing_paths_synth.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/naive_spmm_stage_utilization_synth.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/naive_spmm_stage_utilization_hierarchical_synth.rpt"/>
+</VivadoReportFiles>
+</profile>

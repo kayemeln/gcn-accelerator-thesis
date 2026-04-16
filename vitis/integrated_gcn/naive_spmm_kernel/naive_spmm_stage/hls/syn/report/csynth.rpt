@@ -1,0 +1,356 @@
+
+
+================================================================
+== Synthesis Summary Report of 'naive_spmm_stage'
+================================================================
++ General Information: 
+    * Date:           Wed Apr 15 15:14:50 2026
+    * Version:        2025.2 (Build 6295257 on Nov 14 2025)
+    * Project:        naive_spmm_stage
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xck26-sfvc784-2LV-c
+    
+
+* Performance & Resource Estimates: 
++------------------------------------------+------+---------------------+----------+----------+------+----------+----------+-----------+------+---------+---------+------------+------------+-----+
+|                  Modules                 | Issue|                     | Iteration|          | Trip |          |        Latency       |      |         |         |            |            |     |
+|                  & Loops                 | Type |    Violation Type   |  Latency | Interval | Count| Pipelined| (cycles) |    (ns)   | Slack|  BRAM   |   DSP   |     FF     |     LUT    | URAM|
++------------------------------------------+------+---------------------+----------+----------+------+----------+----------+-----------+------+---------+---------+------------+------------+-----+
+|+ naive_spmm_stage                        |     -|                    -|         -|  29701352|     -|        no|  29701351|  2.970e+08|  0.00|  10 (3%)|  2 (~0%)|   8857 (3%)|  11336 (9%)|    -|
+| o SPMM_ROW                               |     -|                    -|     10968|         -|  2708|        no|  29701344|  2.970e+08|  7.30|        -|        -|           -|           -|    -|
+|  + naive_spmm_stage_Pipeline_SPMM_INIT   |     -|                    -|         -|         -|     -|       yes|        66|    660.000|  4.86|        -|        -|     9 (~0%)|    56 (~0%)|    -|
+|   o SPMM_INIT                            |     -|                    -|         1|         1|    64|       yes|        64|    640.000|  7.30|        -|        -|           -|           -|    -|
+|  + naive_spmm_stage_Pipeline_SPMM_NNZ    |     -|                    -|         -|         -|     -|       yes|     10765|  1.076e+05|  0.00|        -|  2 (~0%)|  2312 (~0%)|   5354 (4%)|    -|
+|   o SPMM_NNZ                             |    II|  Resource Limitation|        76|        64|   168|       yes|     10763|  1.076e+05|  7.30|        -|        -|           -|           -|    -|
+|  + naive_spmm_stage_Pipeline_SPMM_WRITE  |     -|                    -|         -|         -|     -|       yes|        67|    670.000|  0.00|        -|        -|    28 (~0%)|    78 (~0%)|    -|
+|   o SPMM_WRITE                           |     -|                    -|         3|         1|    64|       yes|        65|    650.000|  7.30|        -|        -|           -|           -|    -|
++------------------------------------------+------+---------------------+----------+----------+------+----------+----------+-----------+------+---------+---------+------------+------------+-----+
+    II Violation Information: docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-880.html
+    Name Prefix: '+' for module, 'o' for loop, '*' for dataflow
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface   | Read/Write | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|             |            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem0 | READ_ONLY  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_gmem1 | READ_ONLY  | 32 -> 32   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_gmem2 | READ_ONLY  | 16 -> 16   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_gmem3 | READ_ONLY  | 16 -> 16   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=2            |
+| m_axi_gmem4 | WRITE_ONLY | 16 -> 16   | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          |                   |
++-------------+------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+-----------------------+
+| Interface     | Register | Offset | Width | Access | Description           |
++---------------+----------+--------+-------+--------+-----------------------+
+| s_axi_control | rowptr_1 | 0x10   | 32    | W      | Data signal of rowptr |
+| s_axi_control | rowptr_2 | 0x14   | 32    | W      | Data signal of rowptr |
+| s_axi_control | colind_1 | 0x1c   | 32    | W      | Data signal of colind |
+| s_axi_control | colind_2 | 0x20   | 32    | W      | Data signal of colind |
+| s_axi_control | values_1 | 0x28   | 32    | W      | Data signal of values |
+| s_axi_control | values_2 | 0x2c   | 32    | W      | Data signal of values |
+| s_axi_control | H_temp_1 | 0x34   | 32    | W      | Data signal of H_temp |
+| s_axi_control | H_temp_2 | 0x38   | 32    | W      | Data signal of H_temp |
+| s_axi_control | H_out_1  | 0x40   | 32    | W      | Data signal of H_out  |
+| s_axi_control | H_out_2  | 0x44   | 32    | W      | Data signal of H_out  |
++---------------+----------+--------+-------+--------+-----------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst_n  | reset      | ap_rst_n                          |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+-------------------------------------------------+
+| Argument | Direction | Datatype                                        |
++----------+-----------+-------------------------------------------------+
+| rowptr   | in        | int*                                            |
+| colind   | in        | int*                                            |
+| values   | in        | ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>* |
+| H_temp   | in        | ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>* |
+| H_out    | out       | ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>* |
++----------+-----------+-------------------------------------------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+------------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                            |
++----------+---------------+-----------+----------+------------------------------------+
+| rowptr   | m_axi_gmem0   | interface |          | channel=0                          |
+| rowptr   | s_axi_control | register  | offset   | name=rowptr_1 offset=0x10 range=32 |
+| rowptr   | s_axi_control | register  | offset   | name=rowptr_2 offset=0x14 range=32 |
+| colind   | m_axi_gmem1   | interface |          | channel=0                          |
+| colind   | s_axi_control | register  | offset   | name=colind_1 offset=0x1c range=32 |
+| colind   | s_axi_control | register  | offset   | name=colind_2 offset=0x20 range=32 |
+| values   | m_axi_gmem2   | interface |          | channel=0                          |
+| values   | s_axi_control | register  | offset   | name=values_1 offset=0x28 range=32 |
+| values   | s_axi_control | register  | offset   | name=values_2 offset=0x2c range=32 |
+| H_temp   | m_axi_gmem3   | interface |          | channel=0                          |
+| H_temp   | s_axi_control | register  | offset   | name=H_temp_1 offset=0x34 range=32 |
+| H_temp   | s_axi_control | register  | offset   | name=H_temp_2 offset=0x38 range=32 |
+| H_out    | m_axi_gmem4   | interface |          | channel=0                          |
+| H_out    | s_axi_control | register  | offset   | name=H_out_1 offset=0x40 range=32  |
+| H_out    | s_axi_control | register  | offset   | name=H_out_2 offset=0x44 range=32  |
++----------+---------------+-----------+----------+------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+----------+-------+----------+----------------------------------------------+
+| HW Interface | Direction | Length   | Width | Loop     | Loop Location                                |
++--------------+-----------+----------+-------+----------+----------------------------------------------+
+| m_axi_gmem0  | read      | 2        | 32    |          |                                              |
+| m_axi_gmem1  | read      | variable | 32    | SPMM_NNZ | src/integrated-gcn/naive_spmm_stage.cpp:31:9 |
+| m_axi_gmem2  | read      | variable | 16    | SPMM_NNZ | src/integrated-gcn/naive_spmm_stage.cpp:31:9 |
+| m_axi_gmem3  | read      | 64       | 16    |          |                                              |
+| m_axi_gmem4  | write     | 173312   | 16    | SPMM_ROW | src/integrated-gcn/naive_spmm_stage.cpp:23:5 |
++--------------+-----------+----------+-------+----------+----------------------------------------------+
+
+* All M_AXI Variable Accesses
++--------------+----------+-----------------------------------------------+-----------+--------------+----------+------------+-----------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable | Access Location                               | Direction | Burst Status | Length   | Loop       | Loop Location                                 | Resolution | Problem                                                                                               |
++--------------+----------+-----------------------------------------------+-----------+--------------+----------+------------+-----------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
+| m_axi_gmem0  | rowptr   | src/integrated-gcn/naive_spmm_stage.cpp:28:27 | read      | Widen Fail   |          |            |                                               | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | rowptr   | src/integrated-gcn/naive_spmm_stage.cpp:28:27 | read      | Fail         |          | SPMM_ROW   | src/integrated-gcn/naive_spmm_stage.cpp:23:5  | 214-230    | Stride is incompatible                                                                                |
+| m_axi_gmem0  | rowptr   | src/integrated-gcn/naive_spmm_stage.cpp:28:27 | read      | Inferred     | 2        | SPMM_ROW   | src/integrated-gcn/naive_spmm_stage.cpp:23:5  |            |                                                                                                       |
+| m_axi_gmem0  | rowptr   | src/integrated-gcn/naive_spmm_stage.cpp:29:25 | read      | Widen Fail   |          |            |                                               | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem0  | rowptr   | src/integrated-gcn/naive_spmm_stage.cpp:29:25 | read      | Fail         |          | SPMM_ROW   | src/integrated-gcn/naive_spmm_stage.cpp:23:5  | 214-230    | Stride is incompatible                                                                                |
+| m_axi_gmem0  | rowptr   | src/integrated-gcn/naive_spmm_stage.cpp:29:25 | read      | Inferred     | 2        | SPMM_ROW   | src/integrated-gcn/naive_spmm_stage.cpp:23:5  |            |                                                                                                       |
+| m_axi_gmem1  | colind   | src/integrated-gcn/naive_spmm_stage.cpp:33:25 | read      | Widen Fail   |          | SPMM_NNZ   | src/integrated-gcn/naive_spmm_stage.cpp:31:9  | 214-353    | Could not widen since type i32 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem1  | colind   | src/integrated-gcn/naive_spmm_stage.cpp:33:25 | read      | Fail         |          | SPMM_ROW   | src/integrated-gcn/naive_spmm_stage.cpp:23:5  | 214-232    | Access call is in the conditional branch                                                              |
+| m_axi_gmem1  | colind   | src/integrated-gcn/naive_spmm_stage.cpp:33:25 | read      | Inferred     | variable | SPMM_NNZ   | src/integrated-gcn/naive_spmm_stage.cpp:31:9  |            |                                                                                                       |
+| m_axi_gmem2  | values   | src/integrated-gcn/naive_spmm_stage.cpp:34:25 | read      | Widen Fail   |          | SPMM_NNZ   | src/integrated-gcn/naive_spmm_stage.cpp:31:9  | 214-353    | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem2  | values   | src/integrated-gcn/naive_spmm_stage.cpp:34:25 | read      | Fail         |          | SPMM_ROW   | src/integrated-gcn/naive_spmm_stage.cpp:23:5  | 214-232    | Access call is in the conditional branch                                                              |
+| m_axi_gmem2  | values   | src/integrated-gcn/naive_spmm_stage.cpp:34:25 | read      | Inferred     | variable | SPMM_NNZ   | src/integrated-gcn/naive_spmm_stage.cpp:31:9  |            |                                                                                                       |
+| m_axi_gmem3  | H_temp   | src/integrated-gcn/naive_spmm_stage.cpp:37:42 | read      | Widen Fail   |          | SPMM_FEAT  | src/integrated-gcn/naive_spmm_stage.cpp:36:13 | 214-353    | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem3  | H_temp   | src/integrated-gcn/naive_spmm_stage.cpp:37:42 | read      | Fail         |          | SPMM_NNZ   | src/integrated-gcn/naive_spmm_stage.cpp:31:9  | 214-229    | Could not analyze pattern                                                                             |
+| m_axi_gmem3  | H_temp   | src/integrated-gcn/naive_spmm_stage.cpp:37:42 | read      | Inferred     | 64       | SPMM_FEAT  | src/integrated-gcn/naive_spmm_stage.cpp:36:13 |            |                                                                                                       |
+| m_axi_gmem4  | H_out    | src/integrated-gcn/naive_spmm_stage.cpp:42:31 | write     | Widen Fail   |          | SPMM_WRITE | src/integrated-gcn/naive_spmm_stage.cpp:41:9  | 214-353    | Could not widen since type i16 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem4  | H_out    | src/integrated-gcn/naive_spmm_stage.cpp:42:31 | write     | Inferred     | 173312   | SPMM_ROW   | src/integrated-gcn/naive_spmm_stage.cpp:23:5  |            |                                                                                                       |
++--------------+----------+-----------------------------------------------+-----------+--------------+----------+------------+-----------------------------------------------+------------+-------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------+-----+--------+-------------+--------+----------+---------+
+| Name                                    | DSP | Pragma | Variable    | Op     | Impl     | Latency |
++-----------------------------------------+-----+--------+-------------+--------+----------+---------+
+| + naive_spmm_stage                      | 2   |        |             |        |          |         |
+|   icmp_ln23_fu_1227_p2                  |     |        | icmp_ln23   | seteq  | auto     | 0       |
+|   add_ln29_fu_1233_p2                   |     |        | add_ln29    | add    | fabric   | 0       |
+|   add_ln25_fu_1251_p2                   |     |        | add_ln25    | add    | fabric   | 0       |
+|   icmp_ln31_fu_1328_p2                  |     |        | icmp_ln31   | setlt  | auto     | 0       |
+|   sub_ln31_fu_1338_p2                   |     |        | sub_ln31    | sub    | fabric   | 0       |
+|   add_ln31_fu_1287_p2                   |     |        | add_ln31    | add    | fabric   | 0       |
+|   empty_31_fu_1344_p3                   |     |        | empty_31    | select | auto_sel | 0       |
+|   add_ln31_1_fu_1313_p2                 |     |        | add_ln31_1  | add    | fabric   | 0       |
+|  + naive_spmm_stage_Pipeline_SPMM_INIT  | 0   |        |             |        |          |         |
+|    icmp_ln25_fu_54_p2                   |     |        | icmp_ln25   | seteq  | auto     | 0       |
+|    add_ln25_fu_60_p2                    |     |        | add_ln25    | add    | fabric   | 0       |
+|  + naive_spmm_stage_Pipeline_SPMM_NNZ   | 2   |        |             |        |          |         |
+|    icmp_ln31_fu_1842_p2                 |     |        | icmp_ln31   | setlt  | auto     | 0       |
+|    add_ln36_fu_1886_p2                  |     |        | add_ln36    | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37    | mul    | auto     | 0       |
+|    add_ln37_fu_1947_p2                  |     |        | add_ln37    | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_1  | mul    | auto     | 0       |
+|    add_ln37_1_fu_1992_p2                |     |        | add_ln37_1  | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_2  | mul    | auto     | 0       |
+|    add_ln37_2_fu_2037_p2                |     |        | add_ln37_2  | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_3  | mul    | auto     | 0       |
+|    add_ln37_3_fu_2082_p2                |     |        | add_ln37_3  | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_4  | mul    | auto     | 0       |
+|    add_ln37_4_fu_2127_p2                |     |        | add_ln37_4  | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_5  | mul    | auto     | 0       |
+|    add_ln37_5_fu_2172_p2                |     |        | add_ln37_5  | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_6  | mul    | auto     | 0       |
+|    add_ln37_6_fu_2217_p2                |     |        | add_ln37_6  | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_7  | mul    | auto     | 0       |
+|    add_ln37_7_fu_2262_p2                |     |        | add_ln37_7  | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_8  | mul    | auto     | 0       |
+|    add_ln37_8_fu_2307_p2                |     |        | add_ln37_8  | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_9  | mul    | auto     | 0       |
+|    add_ln37_9_fu_2352_p2                |     |        | add_ln37_9  | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_10 | mul    | auto     | 0       |
+|    add_ln37_10_fu_2397_p2               |     |        | add_ln37_10 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_11 | mul    | auto     | 0       |
+|    add_ln37_11_fu_2442_p2               |     |        | add_ln37_11 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_12 | mul    | auto     | 0       |
+|    add_ln37_12_fu_2487_p2               |     |        | add_ln37_12 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_13 | mul    | auto     | 0       |
+|    add_ln37_13_fu_2532_p2               |     |        | add_ln37_13 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_14 | mul    | auto     | 0       |
+|    add_ln37_14_fu_2577_p2               |     |        | add_ln37_14 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_15 | mul    | auto     | 0       |
+|    add_ln37_15_fu_2622_p2               |     |        | add_ln37_15 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_16 | mul    | auto     | 0       |
+|    add_ln37_16_fu_2667_p2               |     |        | add_ln37_16 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_17 | mul    | auto     | 0       |
+|    add_ln37_17_fu_2712_p2               |     |        | add_ln37_17 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_18 | mul    | auto     | 0       |
+|    add_ln37_18_fu_2757_p2               |     |        | add_ln37_18 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_19 | mul    | auto     | 0       |
+|    add_ln37_19_fu_2802_p2               |     |        | add_ln37_19 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_20 | mul    | auto     | 0       |
+|    add_ln37_20_fu_2847_p2               |     |        | add_ln37_20 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_21 | mul    | auto     | 0       |
+|    add_ln37_21_fu_2892_p2               |     |        | add_ln37_21 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_22 | mul    | auto     | 0       |
+|    add_ln37_22_fu_2937_p2               |     |        | add_ln37_22 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_23 | mul    | auto     | 0       |
+|    add_ln37_23_fu_2982_p2               |     |        | add_ln37_23 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_24 | mul    | auto     | 0       |
+|    add_ln37_24_fu_3027_p2               |     |        | add_ln37_24 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_25 | mul    | auto     | 0       |
+|    add_ln37_25_fu_3072_p2               |     |        | add_ln37_25 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_26 | mul    | auto     | 0       |
+|    add_ln37_26_fu_3117_p2               |     |        | add_ln37_26 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_27 | mul    | auto     | 0       |
+|    add_ln37_27_fu_3162_p2               |     |        | add_ln37_27 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_28 | mul    | auto     | 0       |
+|    add_ln37_28_fu_3207_p2               |     |        | add_ln37_28 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_29 | mul    | auto     | 0       |
+|    add_ln37_29_fu_3252_p2               |     |        | add_ln37_29 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_30 | mul    | auto     | 0       |
+|    add_ln37_30_fu_3297_p2               |     |        | add_ln37_30 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_31 | mul    | auto     | 0       |
+|    add_ln37_31_fu_3342_p2               |     |        | add_ln37_31 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_32 | mul    | auto     | 0       |
+|    add_ln37_32_fu_3387_p2               |     |        | add_ln37_32 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_33 | mul    | auto     | 0       |
+|    add_ln37_33_fu_3432_p2               |     |        | add_ln37_33 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_34 | mul    | auto     | 0       |
+|    add_ln37_34_fu_3477_p2               |     |        | add_ln37_34 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_35 | mul    | auto     | 0       |
+|    add_ln37_35_fu_3522_p2               |     |        | add_ln37_35 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_36 | mul    | auto     | 0       |
+|    add_ln37_36_fu_3567_p2               |     |        | add_ln37_36 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_37 | mul    | auto     | 0       |
+|    add_ln37_37_fu_3612_p2               |     |        | add_ln37_37 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_38 | mul    | auto     | 0       |
+|    add_ln37_38_fu_3657_p2               |     |        | add_ln37_38 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_39 | mul    | auto     | 0       |
+|    add_ln37_39_fu_3702_p2               |     |        | add_ln37_39 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_40 | mul    | auto     | 0       |
+|    add_ln37_40_fu_3747_p2               |     |        | add_ln37_40 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_41 | mul    | auto     | 0       |
+|    add_ln37_41_fu_3792_p2               |     |        | add_ln37_41 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_42 | mul    | auto     | 0       |
+|    add_ln37_42_fu_3837_p2               |     |        | add_ln37_42 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_43 | mul    | auto     | 0       |
+|    add_ln37_43_fu_3882_p2               |     |        | add_ln37_43 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_44 | mul    | auto     | 0       |
+|    add_ln37_44_fu_3927_p2               |     |        | add_ln37_44 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_45 | mul    | auto     | 0       |
+|    add_ln37_45_fu_3972_p2               |     |        | add_ln37_45 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_46 | mul    | auto     | 0       |
+|    add_ln37_46_fu_4017_p2               |     |        | add_ln37_46 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_47 | mul    | auto     | 0       |
+|    add_ln37_47_fu_4062_p2               |     |        | add_ln37_47 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_48 | mul    | auto     | 0       |
+|    add_ln37_48_fu_4107_p2               |     |        | add_ln37_48 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_49 | mul    | auto     | 0       |
+|    add_ln37_49_fu_4152_p2               |     |        | add_ln37_49 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_50 | mul    | auto     | 0       |
+|    add_ln37_50_fu_4197_p2               |     |        | add_ln37_50 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_51 | mul    | auto     | 0       |
+|    add_ln37_51_fu_4242_p2               |     |        | add_ln37_51 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_52 | mul    | auto     | 0       |
+|    add_ln37_52_fu_4287_p2               |     |        | add_ln37_52 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_53 | mul    | auto     | 0       |
+|    add_ln37_53_fu_4332_p2               |     |        | add_ln37_53 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_54 | mul    | auto     | 0       |
+|    add_ln37_54_fu_4377_p2               |     |        | add_ln37_54 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_55 | mul    | auto     | 0       |
+|    add_ln37_55_fu_4422_p2               |     |        | add_ln37_55 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_56 | mul    | auto     | 0       |
+|    add_ln37_56_fu_4467_p2               |     |        | add_ln37_56 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_57 | mul    | auto     | 0       |
+|    add_ln37_57_fu_4512_p2               |     |        | add_ln37_57 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_58 | mul    | auto     | 0       |
+|    add_ln37_58_fu_4557_p2               |     |        | add_ln37_58 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_59 | mul    | auto     | 0       |
+|    add_ln37_59_fu_4602_p2               |     |        | add_ln37_59 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_60 | mul    | auto     | 0       |
+|    add_ln37_60_fu_4647_p2               |     |        | add_ln37_60 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_61 | mul    | auto     | 0       |
+|    add_ln37_61_fu_4692_p2               |     |        | add_ln37_61 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_62 | mul    | auto     | 0       |
+|    add_ln37_62_fu_4737_p2               |     |        | add_ln37_62 | add    | fabric   | 0       |
+|    mul_26s_26s_52_1_1_U2                | 2   |        | mul_ln37_63 | mul    | auto     | 0       |
+|    add_ln37_63_fu_4782_p2               |     |        | add_ln37_63 | add    | fabric   | 0       |
+|    add_ln31_fu_1860_p2                  |     |        | add_ln31    | add    | fabric   | 0       |
+|  + naive_spmm_stage_Pipeline_SPMM_WRITE | 0   |        |             |        |          |         |
+|    icmp_ln41_fu_101_p2                  |     |        | icmp_ln41   | seteq  | auto     | 0       |
+|    add_ln41_fu_107_p2                   |     |        | add_ln41    | add    | fabric   | 0       |
++-----------------------------------------+-----+--------+-------------+--------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++--------------------+---------------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name               | Usage         | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                    |               |           |      |      |        |          |      |         | Banks            |
++--------------------+---------------+-----------+------+------+--------+----------+------+---------+------------------+
+| + naive_spmm_stage |               |           | 10   | 0    |        |          |      |         |                  |
+|   control_s_axi_U  | interface     | s_axilite |      |      |        |          |      |         |                  |
+|   gmem0_m_axi_U    | interface     | m_axi     | 2    |      |        |          |      |         |                  |
+|   gmem1_m_axi_U    | interface     | m_axi     | 2    |      |        |          |      |         |                  |
+|   gmem2_m_axi_U    | interface     | m_axi     | 2    |      |        |          |      |         |                  |
+|   gmem3_m_axi_U    | interface     | m_axi     | 2    |      |        |          |      |         |                  |
+|   gmem4_m_axi_U    | interface     | m_axi     |      |      |        |          |      |         |                  |
+|   acc_U            | ram_t2p array |           | 2    |      |        | acc      | auto | 1       | 32, 64, 1        |
++--------------------+---------------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Inferred Pragmas
++----------+---------+---------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
+| Type     | Options | Location                                                                                                                        | Inferred From                 |
++----------+---------+---------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
+| PIPELINE |         | loop SPMM_NNZ (src/integrated-gcn/naive_spmm_stage.cpp:31:9) in naive_spmm_stage (src/integrated-gcn/naive_spmm_stage.cpp:31)   | syn.compile.pipeline_loops=64 |
+| PIPELINE |         | loop SPMM_INIT (src/integrated-gcn/naive_spmm_stage.cpp:25:9) in naive_spmm_stage (src/integrated-gcn/naive_spmm_stage.cpp:25)  | syn.compile.pipeline_loops=64 |
+| PIPELINE |         | loop SPMM_WRITE (src/integrated-gcn/naive_spmm_stage.cpp:41:9) in naive_spmm_stage (src/integrated-gcn/naive_spmm_stage.cpp:41) | syn.compile.pipeline_loops=64 |
++----------+---------+---------------------------------------------------------------------------------------------------------------------------------+-------------------------------+
+
+* Valid Pragma Syntax
++----------------+-------------------------------------+---------------------------------------------------------------------------+
+| Type           | Options                             | Location                                                                  |
++----------------+-------------------------------------+---------------------------------------------------------------------------+
+| INTERFACE      | mode=m_axi bundle=gmem0 port=rowptr | in naive_spmm_stage (../../../src/integrated-gcn/naive_spmm_stage.cpp:15) |
+| INTERFACE      | mode=m_axi bundle=gmem1 port=colind | in naive_spmm_stage (../../../src/integrated-gcn/naive_spmm_stage.cpp:16) |
+| INTERFACE      | mode=m_axi bundle=gmem2 port=values | in naive_spmm_stage (../../../src/integrated-gcn/naive_spmm_stage.cpp:17) |
+| INTERFACE      | mode=m_axi bundle=gmem3 port=H_temp | in naive_spmm_stage (../../../src/integrated-gcn/naive_spmm_stage.cpp:18) |
+| INTERFACE      | mode=m_axi bundle=gmem4 port=H_out  | in naive_spmm_stage (../../../src/integrated-gcn/naive_spmm_stage.cpp:19) |
+| LOOP_TRIPCOUNT | min=1 max=168 avg=4                 | in naive_spmm_stage (../../../src/integrated-gcn/naive_spmm_stage.cpp:32) |
++----------------+-------------------------------------+---------------------------------------------------------------------------+
+
+

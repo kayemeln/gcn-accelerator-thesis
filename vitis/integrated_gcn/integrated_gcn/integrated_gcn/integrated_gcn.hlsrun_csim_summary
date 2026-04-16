@@ -1,0 +1,156 @@
+<ENTRY>
+{
+ "thisFile": "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/integrated_gcn.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Thu Apr 16 00:08:25 2026",
+ "timestampMillis": "1776294505729",
+ "buildStep": {
+  "cmdId": "230bac9d-a88f-42b7-a2f5-75e58ce17431",
+  "name": "vitis-run",
+  "logFile": "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/logs/integrated_gcn.steps.log",
+  "commandLine": "/opt/Xilinx/2025.2/Vitis/bin/unwrapped/lnx64.o/vitis-run  --mode hls --csim --config /home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/hls_config.cfg --work_dir integrated_gcn ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/hls_config.cfg",
+   "--work_dir",
+   "integrated_gcn"
+  ],
+  "iniFiles": [],
+  "cwd": "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 16 00:08:25 2026",
+ "timestampMillis": "1776294505729",
+ "status": {
+  "cmdId": "230bac9d-a88f-42b7-a2f5-75e58ce17431",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Thu Apr 16 00:08:28 2026",
+ "timestampMillis": "1776294508568",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "integrated_gcn",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2025.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Thu Apr 16 00:08:28 2026",
+ "timestampMillis": "1776294508569",
+ "buildStep": {
+  "cmdId": "d140163a-766c-4b3f-96d2-dababc6cae4a",
+  "name": "",
+  "logFile": "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/hls.log",
+  "commandLine": "",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 16 00:08:28 2026",
+ "timestampMillis": "1776294508569",
+ "status": {
+  "cmdId": "d140163a-766c-4b3f-96d2-dababc6cae4a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 16 00:08:32 2026",
+ "timestampMillis": "1776294512343",
+ "status": {
+  "cmdId": "d140163a-766c-4b3f-96d2-dababc6cae4a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Thu Apr 16 00:08:32 2026",
+ "timestampMillis": "1776294512428",
+ "status": {
+  "cmdId": "230bac9d-a88f-42b7-a2f5-75e58ce17431",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 16 00:08:32 2026",
+ "timestampMillis": "1776294512429",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Thu Apr 16 00:08:32 2026",
+ "timestampMillis": "1776294512429",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

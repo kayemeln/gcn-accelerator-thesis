@@ -1,0 +1,155 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "8 9",
+    "control_depth": 0,
+    "def_use_depth": 0,
+    "file": "integrated_gcn_approx.cpp",
+    "fileloc": 325,
+    "instructions": 17,
+    "memory_accesses": 0,
+    "name": "integrated_gcn_approx",
+    "total_instructions": 136734
+  },
+  "1": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "integrated_gcn_approx.cpp",
+    "fileloc": 192,
+    "instructions": 27,
+    "memory_accesses": 6,
+    "name": "spmm_load_csr",
+    "total_instructions": 27
+  },
+  "10": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 7,
+    "file": "integrated_gcn_approx.cpp",
+    "fileloc": 49,
+    "instructions": 26,
+    "memory_accesses": 2,
+    "name": "gemm_read_W",
+    "total_instructions": 859
+  },
+  "2": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 5,
+    "file": "integrated_gcn_approx.cpp",
+    "fileloc": 149,
+    "instructions": 25,
+    "memory_accesses": 2,
+    "name": "gemm_write",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 858
+  },
+  "3": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 66,
+    "file": "integrated_gcn_approx.cpp",
+    "fileloc": 272,
+    "instructions": 219,
+    "memory_accesses": 4,
+    "name": "spmm_store",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 668
+  },
+  "4": {
+    "basicblocks": 76,
+    "calls": "7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7",
+    "control_depth": 4,
+    "def_use_depth": 16,
+    "file": "integrated_gcn_approx.cpp",
+    "fileloc": 215,
+    "instructions": 1229,
+    "loads": {
+      "L": 97
+    },
+    "memory_accesses": 193,
+    "name": "spmm_compute",
+    "stores": {
+      "L": 160
+    },
+    "total_instructions": 15149
+  },
+  "5": {
+    "basicblocks": 530,
+    "calls": "7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7",
+    "control_depth": 4,
+    "def_use_depth": 81,
+    "file": "integrated_gcn_approx.cpp",
+    "fileloc": 70,
+    "instructions": 8761,
+    "loads": {
+      "L": 512
+    },
+    "memory_accesses": 1282,
+    "name": "gemm_compute",
+    "stores": {
+      "L": 768
+    },
+    "total_instructions": 118266
+  },
+  "6": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 9,
+    "file": "integrated_gcn_approx.cpp",
+    "fileloc": 29,
+    "instructions": 27,
+    "loads": {
+      "L": 1
+    },
+    "memory_accesses": 2,
+    "name": "gemm_read_X",
+    "total_instructions": 860
+  },
+  "7": {
+    "basicblocks": 1,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 51,
+    "file": "mul8s_1KV8.c",
+    "fileloc": 20,
+    "instructions": 423,
+    "memory_accesses": 0,
+    "name": "mul8s_1KV8",
+    "total_instructions": 423
+  },
+  "8": {
+    "basicblocks": 1,
+    "calls": "6 10 5 2",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "integrated_gcn_approx.cpp",
+    "fileloc": 169,
+    "instructions": 14,
+    "memory_accesses": 0,
+    "name": "gemm_stage",
+    "total_instructions": 120857
+  },
+  "9": {
+    "basicblocks": 1,
+    "calls": "1 4 3",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "integrated_gcn_approx.cpp",
+    "fileloc": 293,
+    "instructions": 16,
+    "memory_accesses": 0,
+    "name": "spmm_stage",
+    "total_instructions": 15860
+  }
+}

@@ -1,0 +1,4 @@
+# Inferred from syn.compile.pipeline_loops=64
+set_directive_pipeline naive_spmm_stage/SPMM_NNZ
+set_directive_pipeline naive_spmm_stage/SPMM_INIT
+set_directive_pipeline naive_spmm_stage/SPMM_WRITE

@@ -1,0 +1,3 @@
+relativeroot=/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn_approx
+original_argv=--mode hls --impl --config /home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn_approx/hls_config.cfg --work_dir integrated_gcn_approx 
+

@@ -1,0 +1,274 @@
+
+
+================================================================
+== Vitis HLS Report for 'spmm_compute_Pipeline_SPMM_WRITE'
+================================================================
+* Date:           Wed Apr 15 14:24:43 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        spmm_stage
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  3.102 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |      Pipeline     |
+    |   min   |   max   |    min   |    max   | min | max |        Type       |
+    +---------+---------+----------+----------+-----+-----+-------------------+
+    |       66|       66|  0.660 us|  0.660 us|    0|    0|  loop pipeline stp|
+    +---------+---------+----------+----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
+        |              |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |   Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- SPMM_WRITE  |       64|       64|         2|          1|          1|    64|       yes|
+        +--------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.62>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%f_2 = alloca i32 1" [src/integrated-gcn/spmm_stage.cpp:80]   --->   Operation 5 'alloca' 'f_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %result_fifo, void @empty_18, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.42ns)   --->   "%store_ln80 = store i7 0, i7 %f_2" [src/integrated-gcn/spmm_stage.cpp:80]   --->   Operation 7 'store' 'store_ln80' <Predicate = true> <Delay = 0.42>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body54"   --->   Operation 8 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%f = load i7 %f_2" [src/integrated-gcn/spmm_stage.cpp:80]   --->   Operation 9 'load' 'f' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.77ns)   --->   "%icmp_ln80 = icmp_eq  i7 %f, i7 64" [src/integrated-gcn/spmm_stage.cpp:80]   --->   Operation 10 'icmp' 'icmp_ln80' <Predicate = true> <Delay = 0.77> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'seteq' 'setne' 'setle' 'setge' 'setlt' 'setgt'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.77ns)   --->   "%add_ln80 = add i7 %f, i7 1" [src/integrated-gcn/spmm_stage.cpp:80]   --->   Operation 11 'add' 'add_ln80' <Predicate = true> <Delay = 0.77> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.77> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln80 = br i1 %icmp_ln80, void %for.body54.split, void %for.inc61.exitStub" [src/integrated-gcn/spmm_stage.cpp:80]   --->   Operation 12 'br' 'br_ln80' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%trunc_ln80 = trunc i7 %f" [src/integrated-gcn/spmm_stage.cpp:80]   --->   Operation 13 'trunc' 'trunc_ln80' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i7.i32, i7 %f, i32 5" [src/integrated-gcn/spmm_stage.cpp:80]   --->   Operation 14 'bitselect' 'tmp' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%zext_ln80 = zext i1 %tmp" [src/integrated-gcn/spmm_stage.cpp:80]   --->   Operation 15 'zext' 'zext_ln80' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%acc_addr = getelementptr i32 %acc, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 16 'getelementptr' 'acc_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%acc_1_addr = getelementptr i32 %acc_1, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 17 'getelementptr' 'acc_1_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%acc_2_addr = getelementptr i32 %acc_2, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 18 'getelementptr' 'acc_2_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%acc_3_addr = getelementptr i32 %acc_3, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 19 'getelementptr' 'acc_3_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%acc_4_addr = getelementptr i32 %acc_4, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 20 'getelementptr' 'acc_4_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%acc_5_addr = getelementptr i32 %acc_5, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 21 'getelementptr' 'acc_5_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%acc_6_addr = getelementptr i32 %acc_6, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 22 'getelementptr' 'acc_6_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%acc_7_addr = getelementptr i32 %acc_7, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 23 'getelementptr' 'acc_7_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%acc_8_addr = getelementptr i32 %acc_8, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 24 'getelementptr' 'acc_8_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%acc_9_addr = getelementptr i32 %acc_9, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 25 'getelementptr' 'acc_9_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%acc_10_addr = getelementptr i32 %acc_10, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 26 'getelementptr' 'acc_10_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%acc_11_addr = getelementptr i32 %acc_11, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 27 'getelementptr' 'acc_11_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%acc_12_addr = getelementptr i32 %acc_12, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 28 'getelementptr' 'acc_12_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%acc_13_addr = getelementptr i32 %acc_13, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 29 'getelementptr' 'acc_13_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%acc_14_addr = getelementptr i32 %acc_14, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 30 'getelementptr' 'acc_14_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%acc_15_addr = getelementptr i32 %acc_15, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 31 'getelementptr' 'acc_15_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%acc_16_addr = getelementptr i32 %acc_16, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 32 'getelementptr' 'acc_16_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%acc_17_addr = getelementptr i32 %acc_17, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 33 'getelementptr' 'acc_17_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%acc_18_addr = getelementptr i32 %acc_18, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 34 'getelementptr' 'acc_18_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%acc_19_addr = getelementptr i32 %acc_19, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 35 'getelementptr' 'acc_19_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%acc_20_addr = getelementptr i32 %acc_20, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 36 'getelementptr' 'acc_20_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%acc_21_addr = getelementptr i32 %acc_21, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 37 'getelementptr' 'acc_21_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%acc_22_addr = getelementptr i32 %acc_22, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 38 'getelementptr' 'acc_22_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%acc_23_addr = getelementptr i32 %acc_23, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 39 'getelementptr' 'acc_23_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%acc_24_addr = getelementptr i32 %acc_24, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 40 'getelementptr' 'acc_24_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%acc_25_addr = getelementptr i32 %acc_25, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 41 'getelementptr' 'acc_25_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%acc_26_addr = getelementptr i32 %acc_26, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 42 'getelementptr' 'acc_26_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%acc_27_addr = getelementptr i32 %acc_27, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 43 'getelementptr' 'acc_27_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%acc_28_addr = getelementptr i32 %acc_28, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 44 'getelementptr' 'acc_28_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%acc_29_addr = getelementptr i32 %acc_29, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 45 'getelementptr' 'acc_29_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%acc_30_addr = getelementptr i32 %acc_30, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 46 'getelementptr' 'acc_30_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%acc_31_addr = getelementptr i32 %acc_31, i64 0, i64 %zext_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 47 'getelementptr' 'acc_31_addr' <Predicate = (!icmp_ln80)> <Delay = 0.00>
+ST_1 : Operation 48 [2/2] (0.67ns)   --->   "%acc_load = load i1 %acc_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 48 'load' 'acc_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 49 [2/2] (0.67ns)   --->   "%acc_1_load = load i1 %acc_1_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 49 'load' 'acc_1_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 50 [2/2] (0.67ns)   --->   "%acc_2_load = load i1 %acc_2_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 50 'load' 'acc_2_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 51 [2/2] (0.67ns)   --->   "%acc_3_load = load i1 %acc_3_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 51 'load' 'acc_3_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 52 [2/2] (0.67ns)   --->   "%acc_4_load = load i1 %acc_4_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 52 'load' 'acc_4_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 53 [2/2] (0.67ns)   --->   "%acc_5_load = load i1 %acc_5_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 53 'load' 'acc_5_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 54 [2/2] (0.67ns)   --->   "%acc_6_load = load i1 %acc_6_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 54 'load' 'acc_6_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 55 [2/2] (0.67ns)   --->   "%acc_7_load = load i1 %acc_7_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 55 'load' 'acc_7_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 56 [2/2] (0.67ns)   --->   "%acc_8_load = load i1 %acc_8_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 56 'load' 'acc_8_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 57 [2/2] (0.67ns)   --->   "%acc_9_load = load i1 %acc_9_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 57 'load' 'acc_9_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 58 [2/2] (0.67ns)   --->   "%acc_10_load = load i1 %acc_10_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 58 'load' 'acc_10_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 59 [2/2] (0.67ns)   --->   "%acc_11_load = load i1 %acc_11_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 59 'load' 'acc_11_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 60 [2/2] (0.67ns)   --->   "%acc_12_load = load i1 %acc_12_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 60 'load' 'acc_12_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 61 [2/2] (0.67ns)   --->   "%acc_13_load = load i1 %acc_13_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 61 'load' 'acc_13_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 62 [2/2] (0.67ns)   --->   "%acc_14_load = load i1 %acc_14_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 62 'load' 'acc_14_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 63 [2/2] (0.67ns)   --->   "%acc_15_load = load i1 %acc_15_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 63 'load' 'acc_15_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 64 [2/2] (0.67ns)   --->   "%acc_16_load = load i1 %acc_16_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 64 'load' 'acc_16_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 65 [2/2] (0.67ns)   --->   "%acc_17_load = load i1 %acc_17_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 65 'load' 'acc_17_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 66 [2/2] (0.67ns)   --->   "%acc_18_load = load i1 %acc_18_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 66 'load' 'acc_18_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 67 [2/2] (0.67ns)   --->   "%acc_19_load = load i1 %acc_19_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 67 'load' 'acc_19_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 68 [2/2] (0.67ns)   --->   "%acc_20_load = load i1 %acc_20_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 68 'load' 'acc_20_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 69 [2/2] (0.67ns)   --->   "%acc_21_load = load i1 %acc_21_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 69 'load' 'acc_21_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 70 [2/2] (0.67ns)   --->   "%acc_22_load = load i1 %acc_22_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 70 'load' 'acc_22_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 71 [2/2] (0.67ns)   --->   "%acc_23_load = load i1 %acc_23_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 71 'load' 'acc_23_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 72 [2/2] (0.67ns)   --->   "%acc_24_load = load i1 %acc_24_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 72 'load' 'acc_24_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 73 [2/2] (0.67ns)   --->   "%acc_25_load = load i1 %acc_25_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 73 'load' 'acc_25_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 74 [2/2] (0.67ns)   --->   "%acc_26_load = load i1 %acc_26_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 74 'load' 'acc_26_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 75 [2/2] (0.67ns)   --->   "%acc_27_load = load i1 %acc_27_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 75 'load' 'acc_27_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 76 [2/2] (0.67ns)   --->   "%acc_28_load = load i1 %acc_28_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 76 'load' 'acc_28_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 77 [2/2] (0.67ns)   --->   "%acc_29_load = load i1 %acc_29_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 77 'load' 'acc_29_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 78 [2/2] (0.67ns)   --->   "%acc_30_load = load i1 %acc_30_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 78 'load' 'acc_30_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 79 [2/2] (0.67ns)   --->   "%acc_31_load = load i1 %acc_31_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 79 'load' 'acc_31_load' <Predicate = (!icmp_ln80)> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_1 : Operation 80 [1/1] (0.42ns)   --->   "%store_ln80 = store i7 %add_ln80, i7 %f_2" [src/integrated-gcn/spmm_stage.cpp:80]   --->   Operation 80 'store' 'store_ln80' <Predicate = (!icmp_ln80)> <Delay = 0.42>
+ST_1 : Operation 152 [1/1] (0.42ns)   --->   "%ret_ln0 = ret"   --->   Operation 152 'ret' 'ret_ln0' <Predicate = (icmp_ln80)> <Delay = 0.42>
+
+State 2 <SV = 1> <Delay = 3.10>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%specpipeline_ln81 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, i32 4294967295, void @empty_7" [src/integrated-gcn/spmm_stage.cpp:81]   --->   Operation 81 'specpipeline' 'specpipeline_ln81' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%speclooptripcount_ln80 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 64, i64 64, i64 64" [src/integrated-gcn/spmm_stage.cpp:80]   --->   Operation 82 'speclooptripcount' 'speclooptripcount_ln80' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%specloopname_ln80 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14" [src/integrated-gcn/spmm_stage.cpp:80]   --->   Operation 83 'specloopname' 'specloopname_ln80' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 84 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_load = load i1 %acc_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 84 'load' 'acc_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "%empty = trunc i32 %acc_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 85 'trunc' 'empty' <Predicate = (trunc_ln80 == 0)> <Delay = 0.00>
+ST_2 : Operation 86 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_1_load = load i1 %acc_1_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 86 'load' 'acc_1_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 87 [1/1] (0.00ns)   --->   "%empty_105 = trunc i32 %acc_1_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 87 'trunc' 'empty_105' <Predicate = (trunc_ln80 == 1)> <Delay = 0.00>
+ST_2 : Operation 88 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_2_load = load i1 %acc_2_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 88 'load' 'acc_2_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 89 [1/1] (0.00ns)   --->   "%empty_106 = trunc i32 %acc_2_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 89 'trunc' 'empty_106' <Predicate = (trunc_ln80 == 2)> <Delay = 0.00>
+ST_2 : Operation 90 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_3_load = load i1 %acc_3_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 90 'load' 'acc_3_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%empty_107 = trunc i32 %acc_3_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 91 'trunc' 'empty_107' <Predicate = (trunc_ln80 == 3)> <Delay = 0.00>
+ST_2 : Operation 92 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_4_load = load i1 %acc_4_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 92 'load' 'acc_4_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 93 [1/1] (0.00ns)   --->   "%empty_108 = trunc i32 %acc_4_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 93 'trunc' 'empty_108' <Predicate = (trunc_ln80 == 4)> <Delay = 0.00>
+ST_2 : Operation 94 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_5_load = load i1 %acc_5_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 94 'load' 'acc_5_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 95 [1/1] (0.00ns)   --->   "%empty_109 = trunc i32 %acc_5_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 95 'trunc' 'empty_109' <Predicate = (trunc_ln80 == 5)> <Delay = 0.00>
+ST_2 : Operation 96 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_6_load = load i1 %acc_6_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 96 'load' 'acc_6_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 97 [1/1] (0.00ns)   --->   "%empty_110 = trunc i32 %acc_6_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 97 'trunc' 'empty_110' <Predicate = (trunc_ln80 == 6)> <Delay = 0.00>
+ST_2 : Operation 98 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_7_load = load i1 %acc_7_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 98 'load' 'acc_7_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 99 [1/1] (0.00ns)   --->   "%empty_111 = trunc i32 %acc_7_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 99 'trunc' 'empty_111' <Predicate = (trunc_ln80 == 7)> <Delay = 0.00>
+ST_2 : Operation 100 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_8_load = load i1 %acc_8_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 100 'load' 'acc_8_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 101 [1/1] (0.00ns)   --->   "%empty_112 = trunc i32 %acc_8_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 101 'trunc' 'empty_112' <Predicate = (trunc_ln80 == 8)> <Delay = 0.00>
+ST_2 : Operation 102 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_9_load = load i1 %acc_9_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 102 'load' 'acc_9_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%empty_113 = trunc i32 %acc_9_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 103 'trunc' 'empty_113' <Predicate = (trunc_ln80 == 9)> <Delay = 0.00>
+ST_2 : Operation 104 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_10_load = load i1 %acc_10_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 104 'load' 'acc_10_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 105 [1/1] (0.00ns)   --->   "%empty_114 = trunc i32 %acc_10_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 105 'trunc' 'empty_114' <Predicate = (trunc_ln80 == 10)> <Delay = 0.00>
+ST_2 : Operation 106 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_11_load = load i1 %acc_11_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 106 'load' 'acc_11_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%empty_115 = trunc i32 %acc_11_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 107 'trunc' 'empty_115' <Predicate = (trunc_ln80 == 11)> <Delay = 0.00>
+ST_2 : Operation 108 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_12_load = load i1 %acc_12_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 108 'load' 'acc_12_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 109 [1/1] (0.00ns)   --->   "%empty_116 = trunc i32 %acc_12_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 109 'trunc' 'empty_116' <Predicate = (trunc_ln80 == 12)> <Delay = 0.00>
+ST_2 : Operation 110 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_13_load = load i1 %acc_13_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 110 'load' 'acc_13_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 111 [1/1] (0.00ns)   --->   "%empty_117 = trunc i32 %acc_13_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 111 'trunc' 'empty_117' <Predicate = (trunc_ln80 == 13)> <Delay = 0.00>
+ST_2 : Operation 112 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_14_load = load i1 %acc_14_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 112 'load' 'acc_14_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 113 [1/1] (0.00ns)   --->   "%empty_118 = trunc i32 %acc_14_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 113 'trunc' 'empty_118' <Predicate = (trunc_ln80 == 14)> <Delay = 0.00>
+ST_2 : Operation 114 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_15_load = load i1 %acc_15_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 114 'load' 'acc_15_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 115 [1/1] (0.00ns)   --->   "%empty_119 = trunc i32 %acc_15_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 115 'trunc' 'empty_119' <Predicate = (trunc_ln80 == 15)> <Delay = 0.00>
+ST_2 : Operation 116 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_16_load = load i1 %acc_16_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 116 'load' 'acc_16_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 117 [1/1] (0.00ns)   --->   "%empty_120 = trunc i32 %acc_16_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 117 'trunc' 'empty_120' <Predicate = (trunc_ln80 == 16)> <Delay = 0.00>
+ST_2 : Operation 118 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_17_load = load i1 %acc_17_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 118 'load' 'acc_17_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 119 [1/1] (0.00ns)   --->   "%empty_121 = trunc i32 %acc_17_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 119 'trunc' 'empty_121' <Predicate = (trunc_ln80 == 17)> <Delay = 0.00>
+ST_2 : Operation 120 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_18_load = load i1 %acc_18_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 120 'load' 'acc_18_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 121 [1/1] (0.00ns)   --->   "%empty_122 = trunc i32 %acc_18_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 121 'trunc' 'empty_122' <Predicate = (trunc_ln80 == 18)> <Delay = 0.00>
+ST_2 : Operation 122 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_19_load = load i1 %acc_19_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 122 'load' 'acc_19_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 123 [1/1] (0.00ns)   --->   "%empty_123 = trunc i32 %acc_19_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 123 'trunc' 'empty_123' <Predicate = (trunc_ln80 == 19)> <Delay = 0.00>
+ST_2 : Operation 124 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_20_load = load i1 %acc_20_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 124 'load' 'acc_20_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 125 [1/1] (0.00ns)   --->   "%empty_124 = trunc i32 %acc_20_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 125 'trunc' 'empty_124' <Predicate = (trunc_ln80 == 20)> <Delay = 0.00>
+ST_2 : Operation 126 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_21_load = load i1 %acc_21_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 126 'load' 'acc_21_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 127 [1/1] (0.00ns)   --->   "%empty_125 = trunc i32 %acc_21_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 127 'trunc' 'empty_125' <Predicate = (trunc_ln80 == 21)> <Delay = 0.00>
+ST_2 : Operation 128 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_22_load = load i1 %acc_22_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 128 'load' 'acc_22_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 129 [1/1] (0.00ns)   --->   "%empty_126 = trunc i32 %acc_22_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 129 'trunc' 'empty_126' <Predicate = (trunc_ln80 == 22)> <Delay = 0.00>
+ST_2 : Operation 130 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_23_load = load i1 %acc_23_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 130 'load' 'acc_23_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 131 [1/1] (0.00ns)   --->   "%empty_127 = trunc i32 %acc_23_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 131 'trunc' 'empty_127' <Predicate = (trunc_ln80 == 23)> <Delay = 0.00>
+ST_2 : Operation 132 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_24_load = load i1 %acc_24_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 132 'load' 'acc_24_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 133 [1/1] (0.00ns)   --->   "%empty_128 = trunc i32 %acc_24_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 133 'trunc' 'empty_128' <Predicate = (trunc_ln80 == 24)> <Delay = 0.00>
+ST_2 : Operation 134 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_25_load = load i1 %acc_25_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 134 'load' 'acc_25_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 135 [1/1] (0.00ns)   --->   "%empty_129 = trunc i32 %acc_25_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 135 'trunc' 'empty_129' <Predicate = (trunc_ln80 == 25)> <Delay = 0.00>
+ST_2 : Operation 136 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_26_load = load i1 %acc_26_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 136 'load' 'acc_26_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 137 [1/1] (0.00ns)   --->   "%empty_130 = trunc i32 %acc_26_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 137 'trunc' 'empty_130' <Predicate = (trunc_ln80 == 26)> <Delay = 0.00>
+ST_2 : Operation 138 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_27_load = load i1 %acc_27_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 138 'load' 'acc_27_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 139 [1/1] (0.00ns)   --->   "%empty_131 = trunc i32 %acc_27_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 139 'trunc' 'empty_131' <Predicate = (trunc_ln80 == 27)> <Delay = 0.00>
+ST_2 : Operation 140 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_28_load = load i1 %acc_28_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 140 'load' 'acc_28_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 141 [1/1] (0.00ns)   --->   "%empty_132 = trunc i32 %acc_28_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 141 'trunc' 'empty_132' <Predicate = (trunc_ln80 == 28)> <Delay = 0.00>
+ST_2 : Operation 142 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_29_load = load i1 %acc_29_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 142 'load' 'acc_29_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 143 [1/1] (0.00ns)   --->   "%empty_133 = trunc i32 %acc_29_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 143 'trunc' 'empty_133' <Predicate = (trunc_ln80 == 29)> <Delay = 0.00>
+ST_2 : Operation 144 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_30_load = load i1 %acc_30_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 144 'load' 'acc_30_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 145 [1/1] (0.00ns)   --->   "%empty_134 = trunc i32 %acc_30_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 145 'trunc' 'empty_134' <Predicate = (trunc_ln80 == 30)> <Delay = 0.00>
+ST_2 : Operation 146 [1/2] ( I:0.67ns O:0.67ns )   --->   "%acc_31_load = load i1 %acc_31_addr" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 146 'load' 'acc_31_load' <Predicate = true> <Delay = 0.67> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 0.67> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 2> <RAM>
+ST_2 : Operation 147 [1/1] (0.00ns)   --->   "%empty_135 = trunc i32 %acc_31_load" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 147 'trunc' 'empty_135' <Predicate = (trunc_ln80 == 31)> <Delay = 0.00>
+ST_2 : Operation 148 [1/1] (0.78ns)   --->   "%tmp_s = sparsemux i26 @_ssdm_op_SparseMux.ap_auto.32i26.i26.i5, i5 0, i26 %empty, i5 1, i26 %empty_105, i5 2, i26 %empty_106, i5 3, i26 %empty_107, i5 4, i26 %empty_108, i5 5, i26 %empty_109, i5 6, i26 %empty_110, i5 7, i26 %empty_111, i5 8, i26 %empty_112, i5 9, i26 %empty_113, i5 10, i26 %empty_114, i5 11, i26 %empty_115, i5 12, i26 %empty_116, i5 13, i26 %empty_117, i5 14, i26 %empty_118, i5 15, i26 %empty_119, i5 16, i26 %empty_120, i5 17, i26 %empty_121, i5 18, i26 %empty_122, i5 19, i26 %empty_123, i5 20, i26 %empty_124, i5 21, i26 %empty_125, i5 22, i26 %empty_126, i5 23, i26 %empty_127, i5 24, i26 %empty_128, i5 25, i26 %empty_129, i5 26, i26 %empty_130, i5 27, i26 %empty_131, i5 28, i26 %empty_132, i5 29, i26 %empty_133, i5 30, i26 %empty_134, i5 31, i26 %empty_135, i26 0, i5 %trunc_ln80" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 148 'sparsemux' 'tmp_s' <Predicate = true> <Delay = 0.78> <CoreInst = "BinarySparseMux_DontCare">   --->   Core 149 'BinarySparseMux_DontCare' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'sparsemux'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 149 [1/1] (0.00ns)   --->   "%p_0 = partselect i16 @_ssdm_op_PartSelect.i16.i26.i32.i32, i26 %tmp_s, i32 10, i32 25" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 149 'partselect' 'p_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 150 [1/1] ( I:1.63ns O:1.63ns )   --->   "%write_ln82 = write void @_ssdm_op_Write.ap_fifo.volatile.i16P0A, i16 %result_fifo, i16 %p_0" [src/integrated-gcn/spmm_stage.cpp:82]   --->   Operation 150 'write' 'write_ln82' <Predicate = true> <Delay = 1.63> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 32> <FIFO>
+ST_2 : Operation 151 [1/1] (0.00ns)   --->   "%br_ln80 = br void %for.body54" [src/integrated-gcn/spmm_stage.cpp:80]   --->   Operation 151 'br' 'br_ln80' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 1.627ns
+The critical path consists of the following:
+	'store' operation ('store_ln80', src/integrated-gcn/spmm_stage.cpp:80) of constant 0 7 bit on local variable 'f', src/integrated-gcn/spmm_stage.cpp:80 [36]  (0.427 ns)
+	'load' operation 7 bit ('f', src/integrated-gcn/spmm_stage.cpp:80) on local variable 'f', src/integrated-gcn/spmm_stage.cpp:80 [39]  (0.000 ns)
+	'add' operation 7 bit ('add_ln80', src/integrated-gcn/spmm_stage.cpp:80) [41]  (0.773 ns)
+	'store' operation ('store_ln80', src/integrated-gcn/spmm_stage.cpp:80) of variable 'add_ln80', src/integrated-gcn/spmm_stage.cpp:80 7 bit on local variable 'f', src/integrated-gcn/spmm_stage.cpp:80 [149]  (0.427 ns)
+
+ <State 2>: 3.102ns
+The critical path consists of the following:
+	'load' operation 32 bit ('acc_load', src/integrated-gcn/spmm_stage.cpp:82) on array 'acc' [82]  (0.677 ns)
+	'sparsemux' operation 26 bit ('tmp_s', src/integrated-gcn/spmm_stage.cpp:82) [146]  (0.789 ns)
+	fifo write operation ('write_ln82', src/integrated-gcn/spmm_stage.cpp:82) on port 'result_fifo' (src/integrated-gcn/spmm_stage.cpp:82) [148]  (1.636 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,72 @@
+  **** HLS Build v2025.2 6295257
+INFO: [HLS 200-2005] Using work_dir /home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn_approx/integrated_gcn_approx 
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn_approx/integrated_gcn_approx/vitis-comp.json
+INFO: [HLS 200-10] Creating and opening component '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn_approx/integrated_gcn_approx'.
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-2174] Applying component config ini file hls_config.cfg
+INFO: [HLS 200-1465] Applying config ini 'syn.file=/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn_approx.cpp' from hls_config.cfg(8)
+INFO: [HLS 200-10] Adding design file '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn_approx.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'tb.file=/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn_approx_tb.cpp' from hls_config.cfg(9)
+INFO: [HLS 200-10] Adding test bench file '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn_approx_tb.cpp' to the project
+INFO: [HLS 200-1465] Applying config ini 'syn.top=integrated_gcn_approx' from hls_config.cfg(7)
+INFO: [HLS 200-1465] Applying config ini 'flow_target=vivado' from hls_config.cfg(4)
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2025.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-1465] Applying config ini 'part=xck26-sfvc784-2LV-c' from hls_config.cfg(1)
+INFO: [HLS 200-1611] Setting target device to 'xck26-sfvc784-2LV-c'
+INFO: [HLS 200-1465] Applying config ini 'clock=10' from hls_config.cfg(10)
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1465] Applying config ini 'package.output.format=ip_catalog' from hls_config.cfg(5)
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn_approx/integrated_gcn_approx/vitis-comp.json
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../../../src/integrated-gcn/integrated_gcn_approx_tb.cpp in debug mode
+   Compiling ../../../../../../../src/integrated-gcn/integrated_gcn_approx.cpp in debug mode
+   Generating csim.exe
+NNZ = 13264
+
+Running integrated_gcn_approx (A*(X*W), 8-bit approx)...
+  DTYPE:  ap_fixed<8,6>
+  DSIZE:  64
+  GEMM:   X(2708x64) * W(64x7)
+  SpMM:   A(2708x2708) * H_temp(2708x7)
+Wrote H_out to /home/nat/dev/trinners/mai_proj/hls/gcn_hls/cora_bin/H_out_approx_layer2.bin
+  MISMATCH at (0,3): DUT=0 REF=9.00823 ERR=9.00823
+  MISMATCH at (1,1): DUT=0 REF=-5.06259 ERR=5.06259
+  MISMATCH at (1,4): DUT=0 REF=16.7889 ERR=16.7889
+  MISMATCH at (2,4): DUT=0 REF=12.2524 ERR=12.2524
+  MISMATCH at (3,0): DUT=0 REF=16.4892 ERR=16.4892
+  MISMATCH at (3,3): DUT=0 REF=-6.31464 ERR=6.31464
+  MISMATCH at (3,5): DUT=0 REF=-5.78119 ERR=5.78119
+  MISMATCH at (4,3): DUT=0 REF=7.66514 ERR=7.66514
+  MISMATCH at (5,2): DUT=0 REF=10.3945 ERR=10.3945
+  MISMATCH at (5,3): DUT=0 REF=-5.05264 ERR=5.05264
+  MISMATCH at (6,0): DUT=0 REF=9.1296 ERR=9.1296
+  MISMATCH at (7,3): DUT=0 REF=10.4859 ERR=10.4859
+  MISMATCH at (8,3): DUT=0 REF=8.01971 ERR=8.01971
+  MISMATCH at (9,2): DUT=0 REF=9.78668 ERR=9.78668
+  MISMATCH at (10,0): DUT=0 REF=13.9125 ERR=13.9125
+  MISMATCH at (10,4): DUT=0 REF=-6.2533 ERR=6.2533
+  MISMATCH at (11,0): DUT=0 REF=9.13292 ERR=9.13292
+  MISMATCH at (12,4): DUT=0 REF=9.01645 ERR=9.01645
+  MISMATCH at (13,3): DUT=0 REF=6.91827 ERR=6.91827
+  MISMATCH at (14,3): DUT=0 REF=9.03565 ERR=9.03565
+-----------------------------
+GCN Layer (approx): A*(X*W)
+Max error:       32.5359
+MSE:             9.77948
+RMSE:            3.12722
+Frobenius(diff): 430.557
+Frobenius(ref):  430.659
+Relative Frob:   0.999763
+Errors (>5): 1562 / 18956
+TEST FAILED
+-----------------------------
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 18956
+@E Simulation failed: Function 'main' returns nonzero value '1'.
+ERROR: [SIM 211-100] 'csim_design' failed: nonzero return value.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+ERROR: CSIM Failed
+INFO: [HLS 200-112] Total CPU user time: 6.66 seconds. Total CPU system time: 0.58 seconds. Total elapsed time: 7.07 seconds; peak allocated memory: 273.207 MB.

@@ -1,0 +1,978 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date              : Wed Apr 15 15:23:35 2026
+| Host              : nat-Yoga-Pro-9-16IAH10 running 64-bit Ubuntu 24.04.3 LTS
+| Command           : report_timing -max_paths 10 -file ./report/naive_spmm_stage_timing_paths_synth.rpt
+| Design            : bd_0_wrapper
+| Device            : xck26-sfvc784
+| Speed File        : -2LV  PRODUCTION 1.30 05-15-2022
+| Design State      : Synthesized
+| Temperature Grade : C
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             4.175ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_1625_fu_422_reg[31]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.822ns  (logic 4.051ns (69.581%)  route 1.771ns (30.419%))
+  Logic Levels:           19  (CARRY8=5 DSP_A_B_DATA=1 DSP_ALU=2 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD_DATA=1 LUT2=1 LUT3=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.029ns = ( 10.029 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.041ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.041     0.041    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.114     0.155 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/Q
+                         net (fo=3, unplaced)         0.113     0.268    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_pp0_stage28
+                         LUT4 (Prop_LUT4_I0_O)        0.152     0.420 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65/O
+                         net (fo=1, unplaced)         0.211     0.631    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.689 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_51/O
+                         net (fo=3, unplaced)         0.217     0.906    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_reg[20]
+                         LUT4 (Prop_LUT4_I1_O)        0.058     0.964 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39/O
+                         net (fo=16, unplaced)        0.255     1.219    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39_n_0
+                         LUT6 (Prop_LUT6_I4_O)        0.058     1.277 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_11/O
+                         net (fo=1, unplaced)         0.248     1.525    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/A[24]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[24]_A2_DATA[24])
+                                                      0.258     1.783 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA_INST/A2_DATA[24]
+                         net (fo=1, unplaced)         0.000     1.783    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA.A2_DATA<24>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[24]_A2A1[24])
+                                                      0.114     1.897 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA_INST/A2A1[24]
+                         net (fo=1, unplaced)         0.000     1.897    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA.A2A1<24>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[24]_U[42])
+                                                      0.700     2.597 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER_INST/U[42]
+                         net (fo=1, unplaced)         0.000     2.597    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER.U<42>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[42]_U_DATA[42])
+                                                      0.067     2.664 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA_INST/U_DATA[42]
+                         net (fo=1, unplaced)         0.000     2.664    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA.U_DATA<42>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[42]_ALU_OUT[47])
+                                                      0.727     3.391 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     3.391    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.167     3.558 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     3.572    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.739     4.311 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     4.311    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.146     4.457 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_OUTPUT_INST/P[6]
+                         net (fo=64, unplaced)        0.385     4.842    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/grp_fu_1498_p2[23]
+                         LUT2 (Prop_LUT2_I1_O)        0.057     4.899 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1625_fu_422[6]_i_6/O
+                         net (fo=1, unplaced)         0.026     4.925    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1625_fu_422[6]_i_6_n_0
+                         CARRY8 (Prop_CARRY8_S[4]_CO[7])
+                                                      0.244     5.169 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1625_fu_422_reg[6]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.175    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1625_fu_422_reg[6]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.248 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1625_fu_422_reg[14]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.254    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1625_fu_422_reg[14]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.327 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1625_fu_422_reg[22]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.333    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1625_fu_422_reg[22]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.406 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1625_fu_422_reg[30]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.412    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1625_fu_422_reg[30]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[0])
+                                                      0.078     5.490 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1625_fu_422_reg[31]_i_4/O[0]
+                         net (fo=1, unplaced)         0.211     5.701    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/add_ln37_16_fu_2667_p2[31]
+                         LUT3 (Prop_LUT3_I2_O)        0.095     5.796 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/conv_i_i13_1625_fu_422[31]_i_2/O
+                         net (fo=1, unplaced)         0.067     5.863    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U_n_577
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_1625_fu_422_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.029    10.029    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_1625_fu_422_reg[31]/C
+                         clock pessimism              0.000    10.029    
+                         clock uncertainty           -0.035     9.994    
+                         FDRE (Setup_FDRE_C_D)        0.044    10.038    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_1625_fu_422_reg[31]
+  -------------------------------------------------------------------
+                         required time                         10.038    
+                         arrival time                          -5.863    
+  -------------------------------------------------------------------
+                         slack                                  4.175    
+
+Slack (MET) :             4.175ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_1726_fu_426_reg[31]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.822ns  (logic 4.051ns (69.581%)  route 1.771ns (30.419%))
+  Logic Levels:           19  (CARRY8=5 DSP_A_B_DATA=1 DSP_ALU=2 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD_DATA=1 LUT2=1 LUT3=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.029ns = ( 10.029 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.041ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.041     0.041    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.114     0.155 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/Q
+                         net (fo=3, unplaced)         0.113     0.268    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_pp0_stage28
+                         LUT4 (Prop_LUT4_I0_O)        0.152     0.420 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65/O
+                         net (fo=1, unplaced)         0.211     0.631    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.689 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_51/O
+                         net (fo=3, unplaced)         0.217     0.906    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_reg[20]
+                         LUT4 (Prop_LUT4_I1_O)        0.058     0.964 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39/O
+                         net (fo=16, unplaced)        0.255     1.219    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39_n_0
+                         LUT6 (Prop_LUT6_I4_O)        0.058     1.277 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_11/O
+                         net (fo=1, unplaced)         0.248     1.525    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/A[24]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[24]_A2_DATA[24])
+                                                      0.258     1.783 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA_INST/A2_DATA[24]
+                         net (fo=1, unplaced)         0.000     1.783    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA.A2_DATA<24>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[24]_A2A1[24])
+                                                      0.114     1.897 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA_INST/A2A1[24]
+                         net (fo=1, unplaced)         0.000     1.897    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA.A2A1<24>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[24]_U[42])
+                                                      0.700     2.597 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER_INST/U[42]
+                         net (fo=1, unplaced)         0.000     2.597    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER.U<42>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[42]_U_DATA[42])
+                                                      0.067     2.664 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA_INST/U_DATA[42]
+                         net (fo=1, unplaced)         0.000     2.664    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA.U_DATA<42>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[42]_ALU_OUT[47])
+                                                      0.727     3.391 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     3.391    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.167     3.558 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     3.572    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.739     4.311 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     4.311    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.146     4.457 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_OUTPUT_INST/P[6]
+                         net (fo=64, unplaced)        0.385     4.842    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/grp_fu_1498_p2[23]
+                         LUT2 (Prop_LUT2_I1_O)        0.057     4.899 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1726_fu_426[6]_i_6/O
+                         net (fo=1, unplaced)         0.026     4.925    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1726_fu_426[6]_i_6_n_0
+                         CARRY8 (Prop_CARRY8_S[4]_CO[7])
+                                                      0.244     5.169 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1726_fu_426_reg[6]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.175    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1726_fu_426_reg[6]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.248 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1726_fu_426_reg[14]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.254    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1726_fu_426_reg[14]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.327 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1726_fu_426_reg[22]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.333    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1726_fu_426_reg[22]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.406 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1726_fu_426_reg[30]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.412    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1726_fu_426_reg[30]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[0])
+                                                      0.078     5.490 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_1726_fu_426_reg[31]_i_4/O[0]
+                         net (fo=1, unplaced)         0.211     5.701    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/add_ln37_17_fu_2712_p2[31]
+                         LUT3 (Prop_LUT3_I2_O)        0.095     5.796 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/conv_i_i13_1726_fu_426[31]_i_2/O
+                         net (fo=1, unplaced)         0.067     5.863    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U_n_609
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_1726_fu_426_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.029    10.029    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_1726_fu_426_reg[31]/C
+                         clock pessimism              0.000    10.029    
+                         clock uncertainty           -0.035     9.994    
+                         FDRE (Setup_FDRE_C_D)        0.044    10.038    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_1726_fu_426_reg[31]
+  -------------------------------------------------------------------
+                         required time                         10.038    
+                         arrival time                          -5.863    
+  -------------------------------------------------------------------
+                         slack                                  4.175    
+
+Slack (MET) :             4.175ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2231_fu_446_reg[31]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.822ns  (logic 4.051ns (69.581%)  route 1.771ns (30.419%))
+  Logic Levels:           19  (CARRY8=5 DSP_A_B_DATA=1 DSP_ALU=2 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD_DATA=1 LUT2=1 LUT3=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.029ns = ( 10.029 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.041ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.041     0.041    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.114     0.155 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/Q
+                         net (fo=3, unplaced)         0.113     0.268    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_pp0_stage28
+                         LUT4 (Prop_LUT4_I0_O)        0.152     0.420 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65/O
+                         net (fo=1, unplaced)         0.211     0.631    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.689 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_51/O
+                         net (fo=3, unplaced)         0.217     0.906    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_reg[20]
+                         LUT4 (Prop_LUT4_I1_O)        0.058     0.964 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39/O
+                         net (fo=16, unplaced)        0.255     1.219    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39_n_0
+                         LUT6 (Prop_LUT6_I4_O)        0.058     1.277 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_11/O
+                         net (fo=1, unplaced)         0.248     1.525    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/A[24]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[24]_A2_DATA[24])
+                                                      0.258     1.783 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA_INST/A2_DATA[24]
+                         net (fo=1, unplaced)         0.000     1.783    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA.A2_DATA<24>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[24]_A2A1[24])
+                                                      0.114     1.897 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA_INST/A2A1[24]
+                         net (fo=1, unplaced)         0.000     1.897    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA.A2A1<24>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[24]_U[42])
+                                                      0.700     2.597 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER_INST/U[42]
+                         net (fo=1, unplaced)         0.000     2.597    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER.U<42>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[42]_U_DATA[42])
+                                                      0.067     2.664 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA_INST/U_DATA[42]
+                         net (fo=1, unplaced)         0.000     2.664    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA.U_DATA<42>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[42]_ALU_OUT[47])
+                                                      0.727     3.391 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     3.391    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.167     3.558 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     3.572    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.739     4.311 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     4.311    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.146     4.457 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_OUTPUT_INST/P[6]
+                         net (fo=64, unplaced)        0.385     4.842    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/grp_fu_1498_p2[23]
+                         LUT2 (Prop_LUT2_I1_O)        0.057     4.899 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2231_fu_446[6]_i_6/O
+                         net (fo=1, unplaced)         0.026     4.925    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2231_fu_446[6]_i_6_n_0
+                         CARRY8 (Prop_CARRY8_S[4]_CO[7])
+                                                      0.244     5.169 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2231_fu_446_reg[6]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.175    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2231_fu_446_reg[6]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.248 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2231_fu_446_reg[14]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.254    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2231_fu_446_reg[14]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.327 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2231_fu_446_reg[22]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.333    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2231_fu_446_reg[22]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.406 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2231_fu_446_reg[30]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.412    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2231_fu_446_reg[30]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[0])
+                                                      0.078     5.490 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2231_fu_446_reg[31]_i_4/O[0]
+                         net (fo=1, unplaced)         0.211     5.701    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/add_ln37_22_fu_2937_p2[31]
+                         LUT3 (Prop_LUT3_I2_O)        0.095     5.796 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/conv_i_i13_2231_fu_446[31]_i_2/O
+                         net (fo=1, unplaced)         0.067     5.863    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U_n_769
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2231_fu_446_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.029    10.029    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2231_fu_446_reg[31]/C
+                         clock pessimism              0.000    10.029    
+                         clock uncertainty           -0.035     9.994    
+                         FDRE (Setup_FDRE_C_D)        0.044    10.038    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2231_fu_446_reg[31]
+  -------------------------------------------------------------------
+                         required time                         10.038    
+                         arrival time                          -5.863    
+  -------------------------------------------------------------------
+                         slack                                  4.175    
+
+Slack (MET) :             4.175ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2332_fu_450_reg[31]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.822ns  (logic 4.051ns (69.581%)  route 1.771ns (30.419%))
+  Logic Levels:           19  (CARRY8=5 DSP_A_B_DATA=1 DSP_ALU=2 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD_DATA=1 LUT2=1 LUT3=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.029ns = ( 10.029 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.041ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.041     0.041    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.114     0.155 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/Q
+                         net (fo=3, unplaced)         0.113     0.268    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_pp0_stage28
+                         LUT4 (Prop_LUT4_I0_O)        0.152     0.420 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65/O
+                         net (fo=1, unplaced)         0.211     0.631    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.689 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_51/O
+                         net (fo=3, unplaced)         0.217     0.906    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_reg[20]
+                         LUT4 (Prop_LUT4_I1_O)        0.058     0.964 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39/O
+                         net (fo=16, unplaced)        0.255     1.219    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39_n_0
+                         LUT6 (Prop_LUT6_I4_O)        0.058     1.277 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_11/O
+                         net (fo=1, unplaced)         0.248     1.525    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/A[24]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[24]_A2_DATA[24])
+                                                      0.258     1.783 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA_INST/A2_DATA[24]
+                         net (fo=1, unplaced)         0.000     1.783    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA.A2_DATA<24>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[24]_A2A1[24])
+                                                      0.114     1.897 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA_INST/A2A1[24]
+                         net (fo=1, unplaced)         0.000     1.897    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA.A2A1<24>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[24]_U[42])
+                                                      0.700     2.597 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER_INST/U[42]
+                         net (fo=1, unplaced)         0.000     2.597    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER.U<42>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[42]_U_DATA[42])
+                                                      0.067     2.664 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA_INST/U_DATA[42]
+                         net (fo=1, unplaced)         0.000     2.664    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA.U_DATA<42>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[42]_ALU_OUT[47])
+                                                      0.727     3.391 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     3.391    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.167     3.558 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     3.572    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.739     4.311 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     4.311    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.146     4.457 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_OUTPUT_INST/P[6]
+                         net (fo=64, unplaced)        0.385     4.842    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/grp_fu_1498_p2[23]
+                         LUT2 (Prop_LUT2_I1_O)        0.057     4.899 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2332_fu_450[6]_i_6/O
+                         net (fo=1, unplaced)         0.026     4.925    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2332_fu_450[6]_i_6_n_0
+                         CARRY8 (Prop_CARRY8_S[4]_CO[7])
+                                                      0.244     5.169 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2332_fu_450_reg[6]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.175    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2332_fu_450_reg[6]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.248 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2332_fu_450_reg[14]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.254    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2332_fu_450_reg[14]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.327 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2332_fu_450_reg[22]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.333    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2332_fu_450_reg[22]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.406 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2332_fu_450_reg[30]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.412    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2332_fu_450_reg[30]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[0])
+                                                      0.078     5.490 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2332_fu_450_reg[31]_i_4/O[0]
+                         net (fo=1, unplaced)         0.211     5.701    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/add_ln37_23_fu_2982_p2[31]
+                         LUT3 (Prop_LUT3_I2_O)        0.095     5.796 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/conv_i_i13_2332_fu_450[31]_i_2/O
+                         net (fo=1, unplaced)         0.067     5.863    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U_n_801
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2332_fu_450_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.029    10.029    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2332_fu_450_reg[31]/C
+                         clock pessimism              0.000    10.029    
+                         clock uncertainty           -0.035     9.994    
+                         FDRE (Setup_FDRE_C_D)        0.044    10.038    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2332_fu_450_reg[31]
+  -------------------------------------------------------------------
+                         required time                         10.038    
+                         arrival time                          -5.863    
+  -------------------------------------------------------------------
+                         slack                                  4.175    
+
+Slack (MET) :             4.175ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2837_fu_470_reg[31]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.822ns  (logic 4.051ns (69.581%)  route 1.771ns (30.419%))
+  Logic Levels:           19  (CARRY8=5 DSP_A_B_DATA=1 DSP_ALU=2 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD_DATA=1 LUT2=1 LUT3=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.029ns = ( 10.029 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.041ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.041     0.041    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.114     0.155 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/Q
+                         net (fo=3, unplaced)         0.113     0.268    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_pp0_stage28
+                         LUT4 (Prop_LUT4_I0_O)        0.152     0.420 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65/O
+                         net (fo=1, unplaced)         0.211     0.631    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.689 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_51/O
+                         net (fo=3, unplaced)         0.217     0.906    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_reg[20]
+                         LUT4 (Prop_LUT4_I1_O)        0.058     0.964 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39/O
+                         net (fo=16, unplaced)        0.255     1.219    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39_n_0
+                         LUT6 (Prop_LUT6_I4_O)        0.058     1.277 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_11/O
+                         net (fo=1, unplaced)         0.248     1.525    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/A[24]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[24]_A2_DATA[24])
+                                                      0.258     1.783 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA_INST/A2_DATA[24]
+                         net (fo=1, unplaced)         0.000     1.783    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA.A2_DATA<24>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[24]_A2A1[24])
+                                                      0.114     1.897 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA_INST/A2A1[24]
+                         net (fo=1, unplaced)         0.000     1.897    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA.A2A1<24>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[24]_U[42])
+                                                      0.700     2.597 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER_INST/U[42]
+                         net (fo=1, unplaced)         0.000     2.597    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER.U<42>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[42]_U_DATA[42])
+                                                      0.067     2.664 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA_INST/U_DATA[42]
+                         net (fo=1, unplaced)         0.000     2.664    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA.U_DATA<42>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[42]_ALU_OUT[47])
+                                                      0.727     3.391 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     3.391    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.167     3.558 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     3.572    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.739     4.311 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     4.311    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.146     4.457 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_OUTPUT_INST/P[6]
+                         net (fo=64, unplaced)        0.385     4.842    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/grp_fu_1498_p2[23]
+                         LUT2 (Prop_LUT2_I1_O)        0.057     4.899 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2837_fu_470[6]_i_6/O
+                         net (fo=1, unplaced)         0.026     4.925    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2837_fu_470[6]_i_6_n_0
+                         CARRY8 (Prop_CARRY8_S[4]_CO[7])
+                                                      0.244     5.169 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2837_fu_470_reg[6]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.175    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2837_fu_470_reg[6]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.248 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2837_fu_470_reg[14]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.254    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2837_fu_470_reg[14]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.327 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2837_fu_470_reg[22]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.333    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2837_fu_470_reg[22]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.406 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2837_fu_470_reg[30]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.412    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2837_fu_470_reg[30]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[0])
+                                                      0.078     5.490 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2837_fu_470_reg[31]_i_4/O[0]
+                         net (fo=1, unplaced)         0.211     5.701    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/add_ln37_28_fu_3207_p2[31]
+                         LUT3 (Prop_LUT3_I2_O)        0.095     5.796 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/conv_i_i13_2837_fu_470[31]_i_2/O
+                         net (fo=1, unplaced)         0.067     5.863    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U_n_961
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2837_fu_470_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.029    10.029    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2837_fu_470_reg[31]/C
+                         clock pessimism              0.000    10.029    
+                         clock uncertainty           -0.035     9.994    
+                         FDRE (Setup_FDRE_C_D)        0.044    10.038    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2837_fu_470_reg[31]
+  -------------------------------------------------------------------
+                         required time                         10.038    
+                         arrival time                          -5.863    
+  -------------------------------------------------------------------
+                         slack                                  4.175    
+
+Slack (MET) :             4.175ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2938_fu_474_reg[31]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.822ns  (logic 4.051ns (69.581%)  route 1.771ns (30.419%))
+  Logic Levels:           19  (CARRY8=5 DSP_A_B_DATA=1 DSP_ALU=2 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD_DATA=1 LUT2=1 LUT3=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.029ns = ( 10.029 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.041ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.041     0.041    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.114     0.155 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/Q
+                         net (fo=3, unplaced)         0.113     0.268    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_pp0_stage28
+                         LUT4 (Prop_LUT4_I0_O)        0.152     0.420 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65/O
+                         net (fo=1, unplaced)         0.211     0.631    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.689 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_51/O
+                         net (fo=3, unplaced)         0.217     0.906    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_reg[20]
+                         LUT4 (Prop_LUT4_I1_O)        0.058     0.964 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39/O
+                         net (fo=16, unplaced)        0.255     1.219    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39_n_0
+                         LUT6 (Prop_LUT6_I4_O)        0.058     1.277 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_11/O
+                         net (fo=1, unplaced)         0.248     1.525    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/A[24]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[24]_A2_DATA[24])
+                                                      0.258     1.783 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA_INST/A2_DATA[24]
+                         net (fo=1, unplaced)         0.000     1.783    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA.A2_DATA<24>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[24]_A2A1[24])
+                                                      0.114     1.897 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA_INST/A2A1[24]
+                         net (fo=1, unplaced)         0.000     1.897    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA.A2A1<24>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[24]_U[42])
+                                                      0.700     2.597 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER_INST/U[42]
+                         net (fo=1, unplaced)         0.000     2.597    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER.U<42>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[42]_U_DATA[42])
+                                                      0.067     2.664 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA_INST/U_DATA[42]
+                         net (fo=1, unplaced)         0.000     2.664    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA.U_DATA<42>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[42]_ALU_OUT[47])
+                                                      0.727     3.391 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     3.391    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.167     3.558 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     3.572    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.739     4.311 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     4.311    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.146     4.457 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_OUTPUT_INST/P[6]
+                         net (fo=64, unplaced)        0.385     4.842    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/grp_fu_1498_p2[23]
+                         LUT2 (Prop_LUT2_I1_O)        0.057     4.899 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2938_fu_474[6]_i_6/O
+                         net (fo=1, unplaced)         0.026     4.925    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2938_fu_474[6]_i_6_n_0
+                         CARRY8 (Prop_CARRY8_S[4]_CO[7])
+                                                      0.244     5.169 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2938_fu_474_reg[6]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.175    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2938_fu_474_reg[6]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.248 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2938_fu_474_reg[14]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.254    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2938_fu_474_reg[14]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.327 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2938_fu_474_reg[22]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.333    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2938_fu_474_reg[22]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.406 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2938_fu_474_reg[30]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.412    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2938_fu_474_reg[30]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[0])
+                                                      0.078     5.490 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_2938_fu_474_reg[31]_i_4/O[0]
+                         net (fo=1, unplaced)         0.211     5.701    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/add_ln37_29_fu_3252_p2[31]
+                         LUT3 (Prop_LUT3_I2_O)        0.095     5.796 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/conv_i_i13_2938_fu_474[31]_i_2/O
+                         net (fo=1, unplaced)         0.067     5.863    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U_n_993
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2938_fu_474_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.029    10.029    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2938_fu_474_reg[31]/C
+                         clock pessimism              0.000    10.029    
+                         clock uncertainty           -0.035     9.994    
+                         FDRE (Setup_FDRE_C_D)        0.044    10.038    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_2938_fu_474_reg[31]
+  -------------------------------------------------------------------
+                         required time                         10.038    
+                         arrival time                          -5.863    
+  -------------------------------------------------------------------
+                         slack                                  4.175    
+
+Slack (MET) :             4.175ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_3443_fu_494_reg[31]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.822ns  (logic 4.051ns (69.581%)  route 1.771ns (30.419%))
+  Logic Levels:           19  (CARRY8=5 DSP_A_B_DATA=1 DSP_ALU=2 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD_DATA=1 LUT2=1 LUT3=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.029ns = ( 10.029 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.041ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.041     0.041    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.114     0.155 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/Q
+                         net (fo=3, unplaced)         0.113     0.268    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_pp0_stage28
+                         LUT4 (Prop_LUT4_I0_O)        0.152     0.420 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65/O
+                         net (fo=1, unplaced)         0.211     0.631    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.689 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_51/O
+                         net (fo=3, unplaced)         0.217     0.906    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_reg[20]
+                         LUT4 (Prop_LUT4_I1_O)        0.058     0.964 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39/O
+                         net (fo=16, unplaced)        0.255     1.219    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39_n_0
+                         LUT6 (Prop_LUT6_I4_O)        0.058     1.277 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_11/O
+                         net (fo=1, unplaced)         0.248     1.525    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/A[24]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[24]_A2_DATA[24])
+                                                      0.258     1.783 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA_INST/A2_DATA[24]
+                         net (fo=1, unplaced)         0.000     1.783    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA.A2_DATA<24>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[24]_A2A1[24])
+                                                      0.114     1.897 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA_INST/A2A1[24]
+                         net (fo=1, unplaced)         0.000     1.897    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA.A2A1<24>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[24]_U[42])
+                                                      0.700     2.597 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER_INST/U[42]
+                         net (fo=1, unplaced)         0.000     2.597    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER.U<42>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[42]_U_DATA[42])
+                                                      0.067     2.664 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA_INST/U_DATA[42]
+                         net (fo=1, unplaced)         0.000     2.664    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA.U_DATA<42>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[42]_ALU_OUT[47])
+                                                      0.727     3.391 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     3.391    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.167     3.558 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     3.572    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.739     4.311 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     4.311    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.146     4.457 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_OUTPUT_INST/P[6]
+                         net (fo=64, unplaced)        0.385     4.842    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/grp_fu_1498_p2[23]
+                         LUT2 (Prop_LUT2_I1_O)        0.057     4.899 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3443_fu_494[6]_i_6/O
+                         net (fo=1, unplaced)         0.026     4.925    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3443_fu_494[6]_i_6_n_0
+                         CARRY8 (Prop_CARRY8_S[4]_CO[7])
+                                                      0.244     5.169 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3443_fu_494_reg[6]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.175    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3443_fu_494_reg[6]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.248 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3443_fu_494_reg[14]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.254    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3443_fu_494_reg[14]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.327 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3443_fu_494_reg[22]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.333    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3443_fu_494_reg[22]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.406 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3443_fu_494_reg[30]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.412    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3443_fu_494_reg[30]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[0])
+                                                      0.078     5.490 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3443_fu_494_reg[31]_i_4/O[0]
+                         net (fo=1, unplaced)         0.211     5.701    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/add_ln37_34_fu_3477_p2[31]
+                         LUT3 (Prop_LUT3_I2_O)        0.095     5.796 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/conv_i_i13_3443_fu_494[31]_i_2/O
+                         net (fo=1, unplaced)         0.067     5.863    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U_n_1153
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_3443_fu_494_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.029    10.029    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_3443_fu_494_reg[31]/C
+                         clock pessimism              0.000    10.029    
+                         clock uncertainty           -0.035     9.994    
+                         FDRE (Setup_FDRE_C_D)        0.044    10.038    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_3443_fu_494_reg[31]
+  -------------------------------------------------------------------
+                         required time                         10.038    
+                         arrival time                          -5.863    
+  -------------------------------------------------------------------
+                         slack                                  4.175    
+
+Slack (MET) :             4.175ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_3544_fu_498_reg[31]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.822ns  (logic 4.051ns (69.581%)  route 1.771ns (30.419%))
+  Logic Levels:           19  (CARRY8=5 DSP_A_B_DATA=1 DSP_ALU=2 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD_DATA=1 LUT2=1 LUT3=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.029ns = ( 10.029 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.041ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.041     0.041    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.114     0.155 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/Q
+                         net (fo=3, unplaced)         0.113     0.268    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_pp0_stage28
+                         LUT4 (Prop_LUT4_I0_O)        0.152     0.420 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65/O
+                         net (fo=1, unplaced)         0.211     0.631    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.689 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_51/O
+                         net (fo=3, unplaced)         0.217     0.906    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_reg[20]
+                         LUT4 (Prop_LUT4_I1_O)        0.058     0.964 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39/O
+                         net (fo=16, unplaced)        0.255     1.219    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39_n_0
+                         LUT6 (Prop_LUT6_I4_O)        0.058     1.277 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_11/O
+                         net (fo=1, unplaced)         0.248     1.525    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/A[24]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[24]_A2_DATA[24])
+                                                      0.258     1.783 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA_INST/A2_DATA[24]
+                         net (fo=1, unplaced)         0.000     1.783    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA.A2_DATA<24>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[24]_A2A1[24])
+                                                      0.114     1.897 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA_INST/A2A1[24]
+                         net (fo=1, unplaced)         0.000     1.897    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA.A2A1<24>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[24]_U[42])
+                                                      0.700     2.597 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER_INST/U[42]
+                         net (fo=1, unplaced)         0.000     2.597    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER.U<42>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[42]_U_DATA[42])
+                                                      0.067     2.664 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA_INST/U_DATA[42]
+                         net (fo=1, unplaced)         0.000     2.664    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA.U_DATA<42>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[42]_ALU_OUT[47])
+                                                      0.727     3.391 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     3.391    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.167     3.558 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     3.572    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.739     4.311 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     4.311    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.146     4.457 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_OUTPUT_INST/P[6]
+                         net (fo=64, unplaced)        0.385     4.842    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/grp_fu_1498_p2[23]
+                         LUT2 (Prop_LUT2_I1_O)        0.057     4.899 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3544_fu_498[6]_i_6/O
+                         net (fo=1, unplaced)         0.026     4.925    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3544_fu_498[6]_i_6_n_0
+                         CARRY8 (Prop_CARRY8_S[4]_CO[7])
+                                                      0.244     5.169 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3544_fu_498_reg[6]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.175    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3544_fu_498_reg[6]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.248 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3544_fu_498_reg[14]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.254    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3544_fu_498_reg[14]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.327 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3544_fu_498_reg[22]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.333    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3544_fu_498_reg[22]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.406 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3544_fu_498_reg[30]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.412    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3544_fu_498_reg[30]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[0])
+                                                      0.078     5.490 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_3544_fu_498_reg[31]_i_4/O[0]
+                         net (fo=1, unplaced)         0.211     5.701    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/add_ln37_35_fu_3522_p2[31]
+                         LUT3 (Prop_LUT3_I2_O)        0.095     5.796 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/conv_i_i13_3544_fu_498[31]_i_2/O
+                         net (fo=1, unplaced)         0.067     5.863    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U_n_1185
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_3544_fu_498_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.029    10.029    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_3544_fu_498_reg[31]/C
+                         clock pessimism              0.000    10.029    
+                         clock uncertainty           -0.035     9.994    
+                         FDRE (Setup_FDRE_C_D)        0.044    10.038    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_3544_fu_498_reg[31]
+  -------------------------------------------------------------------
+                         required time                         10.038    
+                         arrival time                          -5.863    
+  -------------------------------------------------------------------
+                         slack                                  4.175    
+
+Slack (MET) :             4.175ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_4049_fu_518_reg[31]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.822ns  (logic 4.051ns (69.581%)  route 1.771ns (30.419%))
+  Logic Levels:           19  (CARRY8=5 DSP_A_B_DATA=1 DSP_ALU=2 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD_DATA=1 LUT2=1 LUT3=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.029ns = ( 10.029 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.041ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.041     0.041    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.114     0.155 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/Q
+                         net (fo=3, unplaced)         0.113     0.268    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_pp0_stage28
+                         LUT4 (Prop_LUT4_I0_O)        0.152     0.420 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65/O
+                         net (fo=1, unplaced)         0.211     0.631    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.689 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_51/O
+                         net (fo=3, unplaced)         0.217     0.906    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_reg[20]
+                         LUT4 (Prop_LUT4_I1_O)        0.058     0.964 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39/O
+                         net (fo=16, unplaced)        0.255     1.219    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39_n_0
+                         LUT6 (Prop_LUT6_I4_O)        0.058     1.277 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_11/O
+                         net (fo=1, unplaced)         0.248     1.525    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/A[24]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[24]_A2_DATA[24])
+                                                      0.258     1.783 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA_INST/A2_DATA[24]
+                         net (fo=1, unplaced)         0.000     1.783    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA.A2_DATA<24>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[24]_A2A1[24])
+                                                      0.114     1.897 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA_INST/A2A1[24]
+                         net (fo=1, unplaced)         0.000     1.897    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA.A2A1<24>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[24]_U[42])
+                                                      0.700     2.597 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER_INST/U[42]
+                         net (fo=1, unplaced)         0.000     2.597    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER.U<42>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[42]_U_DATA[42])
+                                                      0.067     2.664 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA_INST/U_DATA[42]
+                         net (fo=1, unplaced)         0.000     2.664    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA.U_DATA<42>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[42]_ALU_OUT[47])
+                                                      0.727     3.391 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     3.391    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.167     3.558 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     3.572    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.739     4.311 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     4.311    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.146     4.457 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_OUTPUT_INST/P[6]
+                         net (fo=64, unplaced)        0.385     4.842    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/grp_fu_1498_p2[23]
+                         LUT2 (Prop_LUT2_I1_O)        0.057     4.899 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_4049_fu_518[6]_i_6/O
+                         net (fo=1, unplaced)         0.026     4.925    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_4049_fu_518[6]_i_6_n_0
+                         CARRY8 (Prop_CARRY8_S[4]_CO[7])
+                                                      0.244     5.169 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_4049_fu_518_reg[6]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.175    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_4049_fu_518_reg[6]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.248 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_4049_fu_518_reg[14]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.254    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_4049_fu_518_reg[14]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.327 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_4049_fu_518_reg[22]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.333    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_4049_fu_518_reg[22]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.406 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_4049_fu_518_reg[30]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.412    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_4049_fu_518_reg[30]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[0])
+                                                      0.078     5.490 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_4049_fu_518_reg[31]_i_4/O[0]
+                         net (fo=1, unplaced)         0.211     5.701    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/add_ln37_40_fu_3747_p2[31]
+                         LUT3 (Prop_LUT3_I2_O)        0.095     5.796 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/conv_i_i13_4049_fu_518[31]_i_2/O
+                         net (fo=1, unplaced)         0.067     5.863    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U_n_1345
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_4049_fu_518_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.029    10.029    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_4049_fu_518_reg[31]/C
+                         clock pessimism              0.000    10.029    
+                         clock uncertainty           -0.035     9.994    
+                         FDRE (Setup_FDRE_C_D)        0.044    10.038    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_4049_fu_518_reg[31]
+  -------------------------------------------------------------------
+                         required time                         10.038    
+                         arrival time                          -5.863    
+  -------------------------------------------------------------------
+                         slack                                  4.175    
+
+Slack (MET) :             4.175ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_413_fu_374_reg[31]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.822ns  (logic 4.051ns (69.581%)  route 1.771ns (30.419%))
+  Logic Levels:           19  (CARRY8=5 DSP_A_B_DATA=1 DSP_ALU=2 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=2 DSP_PREADD_DATA=1 LUT2=1 LUT3=1 LUT4=2 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.029ns = ( 10.029 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.041ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.041     0.041    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.114     0.155 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_CS_fsm_reg[28]/Q
+                         net (fo=3, unplaced)         0.113     0.268    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_pp0_stage28
+                         LUT4 (Prop_LUT4_I0_O)        0.152     0.420 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65/O
+                         net (fo=1, unplaced)         0.211     0.631    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_65_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.689 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_51/O
+                         net (fo=3, unplaced)         0.217     0.906    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/ap_CS_fsm_reg[20]
+                         LUT4 (Prop_LUT4_I1_O)        0.058     0.964 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39/O
+                         net (fo=16, unplaced)        0.255     1.219    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_39_n_0
+                         LUT6 (Prop_LUT6_I4_O)        0.058     1.277 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product_i_11/O
+                         net (fo=1, unplaced)         0.248     1.525    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/A[24]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[24]_A2_DATA[24])
+                                                      0.258     1.783 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA_INST/A2_DATA[24]
+                         net (fo=1, unplaced)         0.000     1.783    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_A_B_DATA.A2_DATA<24>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[24]_A2A1[24])
+                                                      0.114     1.897 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA_INST/A2A1[24]
+                         net (fo=1, unplaced)         0.000     1.897    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_PREADD_DATA.A2A1<24>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[24]_U[42])
+                                                      0.700     2.597 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER_INST/U[42]
+                         net (fo=1, unplaced)         0.000     2.597    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_MULTIPLIER.U<42>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[42]_U_DATA[42])
+                                                      0.067     2.664 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA_INST/U_DATA[42]
+                         net (fo=1, unplaced)         0.000     2.664    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_M_DATA.U_DATA<42>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[42]_ALU_OUT[47])
+                                                      0.727     3.391 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU_INST/ALU_OUT[47]
+                         net (fo=1, unplaced)         0.000     3.391    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_ALU.ALU_OUT<47>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[47]_PCOUT[47])
+                                                      0.167     3.558 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product/DSP_OUTPUT_INST/PCOUT[47]
+                         net (fo=1, unplaced)         0.014     3.572    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/PCIN[47]
+                         DSP_ALU (Prop_DSP_ALU_PCIN[47]_ALU_OUT[6])
+                                                      0.739     4.311 f  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU_INST/ALU_OUT[6]
+                         net (fo=1, unplaced)         0.000     4.311    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_ALU.ALU_OUT<6>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[6]_P[6])
+                                                      0.146     4.457 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/tmp_product__0/DSP_OUTPUT_INST/P[6]
+                         net (fo=64, unplaced)        0.385     4.842    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/grp_fu_1498_p2[23]
+                         LUT2 (Prop_LUT2_I1_O)        0.057     4.899 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_413_fu_374[6]_i_6/O
+                         net (fo=1, unplaced)         0.026     4.925    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_413_fu_374[6]_i_6_n_0
+                         CARRY8 (Prop_CARRY8_S[4]_CO[7])
+                                                      0.244     5.169 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_413_fu_374_reg[6]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.175    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_413_fu_374_reg[6]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.248 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_413_fu_374_reg[14]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.254    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_413_fu_374_reg[14]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.327 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_413_fu_374_reg[22]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.333    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_413_fu_374_reg[22]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     5.406 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_413_fu_374_reg[30]_i_2/CO[7]
+                         net (fo=1, unplaced)         0.006     5.412    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_413_fu_374_reg[30]_i_2_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[0])
+                                                      0.078     5.490 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/mul_26s_26s_52_1_1_U2/conv_i_i13_413_fu_374_reg[31]_i_4/O[0]
+                         net (fo=1, unplaced)         0.211     5.701    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/add_ln37_4_fu_2127_p2[31]
+                         LUT3 (Prop_LUT3_I2_O)        0.095     5.796 r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U/conv_i_i13_413_fu_374[31]_i_2/O
+                         net (fo=1, unplaced)         0.067     5.863    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/flow_control_loop_pipe_sequential_init_U_n_193
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_413_fu_374_reg[31]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=10674, unset)        0.029    10.029    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_413_fu_374_reg[31]/C
+                         clock pessimism              0.000    10.029    
+                         clock uncertainty           -0.035     9.994    
+                         FDRE (Setup_FDRE_C_D)        0.044    10.038    bd_0_i/hls_inst/inst/grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046/conv_i_i13_413_fu_374_reg[31]
+  -------------------------------------------------------------------
+                         required time                         10.038    
+                         arrival time                          -5.863    
+  -------------------------------------------------------------------
+                         slack                                  4.175    
+
+
+
+

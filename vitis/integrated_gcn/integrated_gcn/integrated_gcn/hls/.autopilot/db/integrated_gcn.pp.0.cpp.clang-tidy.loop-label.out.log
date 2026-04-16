@@ -1,0 +1,302 @@
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:2276:5: remark: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_676_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:2276:5: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:2290:5: remark: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_690_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:2290:5: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:2304:5: remark: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high+1; ++i) {
+    ^
+    VITIS_LOOP_704_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:2304:5: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:5843:7: remark: Added loop label VITIS_LOOP_1251_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^
+      VITIS_LOOP_1251_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:5843:7: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55340:5: remark: Added loop label VITIS_LOOP_176_1:   [xilinx-label-all-loops]
+    for (size_t i = 0; i < _N; ++i) {
+    ^
+    VITIS_LOOP_176_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55340:5: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55356:5: remark: Added loop label VITIS_LOOP_192_1:   [xilinx-label-all-loops]
+    for (size_t i = 0; i < _N; ++i) {
+    ^
+    VITIS_LOOP_192_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55356:5: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55370:5: remark: Added loop label VITIS_LOOP_206_1:   [xilinx-label-all-loops]
+    for (size_t i = 0; i < _N; ++i) {
+    ^
+    VITIS_LOOP_206_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55370:5: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55386:100: remark: Added loop label VITIS_LOOP_232_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) vector &operator ++() { pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                   ^
+                                                                                                   VITIS_LOOP_232_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55386:100: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55391:100: remark: Added loop label VITIS_LOOP_233_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) vector &operator --() { pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                   ^
+                                                                                                   VITIS_LOOP_233_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55391:100: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55400:131: remark: Added loop label VITIS_LOOP_261_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) vector &operator +=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                                                  ^
+                                                                                                                                  VITIS_LOOP_261_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55400:131: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55405:131: remark: Added loop label VITIS_LOOP_262_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) vector &operator -=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                                                  ^
+                                                                                                                                  VITIS_LOOP_262_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55405:131: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55410:131: remark: Added loop label VITIS_LOOP_263_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) vector &operator *=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                                                  ^
+                                                                                                                                  VITIS_LOOP_263_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55410:131: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55415:131: remark: Added loop label VITIS_LOOP_264_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) vector &operator /=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                                                  ^
+                                                                                                                                  VITIS_LOOP_264_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55415:131: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55420:131: remark: Added loop label VITIS_LOOP_265_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) vector &operator %=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                                                  ^
+                                                                                                                                  VITIS_LOOP_265_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55420:131: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55425:131: remark: Added loop label VITIS_LOOP_266_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) vector &operator &=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                                                  ^
+                                                                                                                                  VITIS_LOOP_266_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55425:131: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55430:131: remark: Added loop label VITIS_LOOP_267_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) vector &operator |=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                                                  ^
+                                                                                                                                  VITIS_LOOP_267_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55430:131: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55435:131: remark: Added loop label VITIS_LOOP_268_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) vector &operator ^=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                                                  ^
+                                                                                                                                  VITIS_LOOP_268_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55435:131: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55440:132: remark: Added loop label VITIS_LOOP_269_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) vector &operator <<=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                                                   ^
+                                                                                                                                   VITIS_LOOP_269_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55440:132: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55445:132: remark: Added loop label VITIS_LOOP_270_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) vector &operator >>=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                                                   ^
+                                                                                                                                   VITIS_LOOP_270_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55445:132: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55451:118: remark: Added loop label VITIS_LOOP_285_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) _T reduce_add() const { pragma(); _T res = data[0]; for (size_t i = 1; i < _N; ++i) {
+                                                                                                                     ^
+                                                                                                                     VITIS_LOOP_285_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55451:118: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55456:119: remark: Added loop label VITIS_LOOP_286_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) _T reduce_mult() const { pragma(); _T res = data[0]; for (size_t i = 1; i < _N; ++i) {
+                                                                                                                      ^
+                                                                                                                      VITIS_LOOP_286_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55456:119: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55461:118: remark: Added loop label VITIS_LOOP_287_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) _T reduce_and() const { pragma(); _T res = data[0]; for (size_t i = 1; i < _N; ++i) {
+                                                                                                                     ^
+                                                                                                                     VITIS_LOOP_287_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55461:118: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55466:117: remark: Added loop label VITIS_LOOP_288_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) _T reduce_or() const { pragma(); _T res = data[0]; for (size_t i = 1; i < _N; ++i) {
+                                                                                                                    ^
+                                                                                                                    VITIS_LOOP_288_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55466:117: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55471:118: remark: Added loop label VITIS_LOOP_289_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) _T reduce_xor() const { pragma(); _T res = data[0]; for (size_t i = 1; i < _N; ++i) {
+                                                                                                                     ^
+                                                                                                                     VITIS_LOOP_289_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55471:118: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55477:157: remark: Added loop label VITIS_LOOP_320_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) friend bool operator <(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                                                                            ^
+                                                                                                                                                            VITIS_LOOP_320_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55477:157: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55482:158: remark: Added loop label VITIS_LOOP_321_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) friend bool operator <=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                                                                             ^
+                                                                                                                                                             VITIS_LOOP_321_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55482:158: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55487:158: remark: Added loop label VITIS_LOOP_322_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) friend bool operator ==(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                                                                             ^
+                                                                                                                                                             VITIS_LOOP_322_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55487:158: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55492:158: remark: Added loop label VITIS_LOOP_323_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) friend bool operator !=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                                                                             ^
+                                                                                                                                                             VITIS_LOOP_323_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55492:158: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55497:158: remark: Added loop label VITIS_LOOP_324_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) friend bool operator >=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                                                                             ^
+                                                                                                                                                             VITIS_LOOP_324_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55497:158: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55502:157: remark: Added loop label VITIS_LOOP_325_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) __attribute__((nodebug)) friend bool operator >(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < _N; ++i) {
+                                                                                                                                                            ^
+                                                                                                                                                            VITIS_LOOP_325_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55502:157: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55564:5: remark: Added loop label VITIS_LOOP_35_1:   [xilinx-label-all-loops]
+    for (int ib = 0; ib < GEMM_IB_COUNT; ib++) {
+    ^
+    VITIS_LOOP_35_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55564:5: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55565:9: remark: Added loop label VITIS_LOOP_36_2:   [xilinx-label-all-loops]
+        for (int jb = 0; jb < GEMM_JB_COUNT; jb++) {
+        ^
+        VITIS_LOOP_36_2: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55565:9: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55566:13: remark: Added loop label VITIS_LOOP_37_3:   [xilinx-label-all-loops]
+            for (int kb = 0; kb < GEMM_KB_COUNT; kb++) {
+            ^
+            VITIS_LOOP_37_3: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55566:13: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55567:17: remark: Added loop label VITIS_LOOP_38_4:   [xilinx-label-all-loops]
+                for (int k = 0; k < 64; k++) {
+                ^
+                VITIS_LOOP_38_4: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55567:17: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55568:21: remark: Added loop label VITIS_LOOP_39_5:   [xilinx-label-all-loops]
+                    for (int ii = 0; ii < GEMM_X_VECS_PER_K; ii++) {
+                    ^
+                    VITIS_LOOP_39_5: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55568:21: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55584:5: remark: Added loop label VITIS_LOOP_55_1:   [xilinx-label-all-loops]
+    for (int ib = 0; ib < GEMM_IB_COUNT; ib++) {
+    ^
+    VITIS_LOOP_55_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55584:5: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55585:9: remark: Added loop label VITIS_LOOP_56_2:   [xilinx-label-all-loops]
+        for (int jb = 0; jb < GEMM_JB_COUNT; jb++) {
+        ^
+        VITIS_LOOP_56_2: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55585:9: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55586:13: remark: Added loop label VITIS_LOOP_57_3:   [xilinx-label-all-loops]
+            for (int kb = 0; kb < GEMM_KB_COUNT; kb++) {
+            ^
+            VITIS_LOOP_57_3: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55586:13: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55587:17: remark: Added loop label VITIS_LOOP_58_4:   [xilinx-label-all-loops]
+                for (int k = 0; k < 64; k++) {
+                ^
+                VITIS_LOOP_58_4: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55587:17: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55588:21: remark: Added loop label VITIS_LOOP_59_5:   [xilinx-label-all-loops]
+                    for (int jj = 0; jj < GEMM_W_VECS_PER_K; jj++) {
+                    ^
+                    VITIS_LOOP_59_5: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55588:21: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55627:17: remark: Added loop label VITIS_LOOP_98_1:   [xilinx-label-all-loops]
+                for (int j = 0; j < 64; j++) {
+                ^
+                VITIS_LOOP_98_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55627:17: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55648:25: remark: Added loop label VITIS_LOOP_119_2:   [xilinx-label-all-loops]
+                        for (int d = 0; d < DSIZE; d++) {
+                        ^
+                        VITIS_LOOP_119_2: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55648:25: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55659:25: remark: Added loop label VITIS_LOOP_130_3:   [xilinx-label-all-loops]
+                        for (int iu = 0; iu < 4; iu++) {
+                        ^
+                        VITIS_LOOP_130_3: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55659:25: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55675:17: remark: Added loop label VITIS_LOOP_146_4:   [xilinx-label-all-loops]
+                for (int jj = 0; jj < GEMM_XW_VECS_PER_ROW; jj++) {
+                ^
+                VITIS_LOOP_146_4: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55675:17: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55678:21: remark: Added loop label VITIS_LOOP_149_5:   [xilinx-label-all-loops]
+                    for (int j = 0; j < DSIZE; j++) {
+                    ^
+                    VITIS_LOOP_149_5: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55678:21: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55694:5: remark: Added loop label VITIS_LOOP_165_1:   [xilinx-label-all-loops]
+    for (int ib = 0; ib < GEMM_IB_COUNT; ib++) {
+    ^
+    VITIS_LOOP_165_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55694:5: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55695:9: remark: Added loop label VITIS_LOOP_166_2:   [xilinx-label-all-loops]
+        for (int jb = 0; jb < GEMM_JB_COUNT; jb++) {
+        ^
+        VITIS_LOOP_166_2: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55695:9: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55696:13: remark: Added loop label VITIS_LOOP_167_3:   [xilinx-label-all-loops]
+            for (int i = 0; i < 64; i++) {
+            ^
+            VITIS_LOOP_167_3: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55696:13: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55697:17: remark: Added loop label VITIS_LOOP_168_4:   [xilinx-label-all-loops]
+                for (int jj = 0; jj < GEMM_XW_VECS_PER_ROW; jj++) {
+                ^
+                VITIS_LOOP_168_4: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55697:17: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55787:17: remark: Added loop label VITIS_LOOP_258_1:   [xilinx-label-all-loops]
+                for (int d = 0; d < DSIZE; d++) {
+                ^
+                VITIS_LOOP_258_1: 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55787:17: note: FIX-IT applied suggested code changes
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55865:32: warning:  hls::vector type top function variable X requires aggregation [xilinx-aggregate-on-hls-vector]
+    hls::vector<DTYPE, DSIZE>* X,
+                               ^
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55873:3: note: FIX-IT applied suggested code changes
+){
+  ^
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55865:32: warning:  hls::vector type top function variable X requires align attribute [xilinx-aggregate-on-hls-vector]
+    hls::vector<DTYPE, DSIZE>* X,
+                               ^
+                                 __attribute__((align_value(alignof(hls::vector<DTYPE, DSIZE>)))) 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55865:33: note: FIX-IT applied suggested code changes
+    hls::vector<DTYPE, DSIZE>* X,
+                                ^
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55866:32: warning:  hls::vector type top function variable W requires aggregation [xilinx-aggregate-on-hls-vector]
+    hls::vector<DTYPE, DSIZE>* W,
+                               ^
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55873:3: note: FIX-IT applied suggested code changes
+){
+  ^
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55866:32: warning:  hls::vector type top function variable W requires align attribute [xilinx-aggregate-on-hls-vector]
+    hls::vector<DTYPE, DSIZE>* W,
+                               ^
+                                 __attribute__((align_value(alignof(hls::vector<DTYPE, DSIZE>)))) 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55866:33: note: FIX-IT applied suggested code changes
+    hls::vector<DTYPE, DSIZE>* W,
+                                ^
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55867:32: warning:  hls::vector type top function variable H_temp requires aggregation [xilinx-aggregate-on-hls-vector]
+    hls::vector<DTYPE, DSIZE>* H_temp,
+                               ^
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55873:3: note: FIX-IT applied suggested code changes
+){
+  ^
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55867:32: warning:  hls::vector type top function variable H_temp requires align attribute [xilinx-aggregate-on-hls-vector]
+    hls::vector<DTYPE, DSIZE>* H_temp,
+                               ^
+                                      __attribute__((align_value(alignof(hls::vector<DTYPE, DSIZE>)))) 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55867:38: note: FIX-IT applied suggested code changes
+    hls::vector<DTYPE, DSIZE>* H_temp,
+                                     ^
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55872:32: warning:  hls::vector type top function variable H_out requires aggregation [xilinx-aggregate-on-hls-vector]
+    hls::vector<DTYPE, DSIZE>* H_out
+                               ^
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55873:3: note: FIX-IT applied suggested code changes
+){
+  ^
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55872:32: warning:  hls::vector type top function variable H_out requires align attribute [xilinx-aggregate-on-hls-vector]
+    hls::vector<DTYPE, DSIZE>* H_out
+                               ^
+                                     __attribute__((align_value(alignof(hls::vector<DTYPE, DSIZE>)))) 
+/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp:55872:37: note: FIX-IT applied suggested code changes
+    hls::vector<DTYPE, DSIZE>* H_out
+                                    ^

@@ -1,0 +1,700 @@
+---
+MainSourceFile:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_676_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/etc/ap_int_ref.h'
+      FileOffset:      676
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          280187
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_676_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_690_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/etc/ap_int_ref.h'
+      FileOffset:      690
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          280658
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_690_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_704_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/etc/ap_int_ref.h'
+      FileOffset:      704
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          281130
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_704_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1251_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/etc/ap_fixed_base.h'
+      FileOffset:      1251
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          627626
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1251_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_176_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      176
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2352932
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_176_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_192_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      192
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2353414
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_192_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_206_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      206
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2353805
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_206_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_232_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      232
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2354348
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_232_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_233_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      233
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2354680
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_233_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_261_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      261
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2355485
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_261_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_262_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      262
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2355855
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_262_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_263_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      263
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2356225
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_263_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_264_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      264
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2356595
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_264_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_265_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      265
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2356965
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_265_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_266_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      266
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2357335
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_266_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_267_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      267
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2357705
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_267_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_268_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      268
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2358075
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_268_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_269_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      269
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2358446
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_269_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_270_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      270
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2358818
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_270_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_285_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      285
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2359250
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_285_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_286_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      286
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2359603
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_286_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_287_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      287
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2359955
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_287_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_288_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      288
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2360306
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_288_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_289_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      289
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2360658
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_289_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_320_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      320
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2361123
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_320_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_321_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      321
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2361563
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_321_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_322_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      322
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2362005
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_322_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_323_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      323
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2362447
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_323_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_324_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      324
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2362889
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_324_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_325_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      325
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2363330
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_325_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_35_1:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      35
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2366966
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_35_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_36_2:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      36
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2367019
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_36_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_37_3:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      37
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2367076
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_37_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_38_4:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      38
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2367137
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_38_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_39_5:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      39
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2367188
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_39_5: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_55_1:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      55
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2367575
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_55_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_56_2:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      56
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2367628
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_56_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_57_3:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      57
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2367685
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_57_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_58_4:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      58
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2367746
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_58_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_59_5:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      59
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2367797
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_59_5: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_98_1:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      98
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2368843
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_98_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_119_2:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      119
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2369426
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_119_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_130_3:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      130
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2369807
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_130_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_146_4:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      146
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2370346
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_146_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_149_5:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      149
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2370499
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_149_5: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_165_1:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      165
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2370869
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_165_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_166_2:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      166
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2370922
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_166_2: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_167_3:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      167
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2370979
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_167_3: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_168_4:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      168
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2371026
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_168_4: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_258_1:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      258
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2373522
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_258_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    DiagnosticMessage:
+      Message:         ' hls::vector type top function variable X requires aggregation'
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      336
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2375633
+          Length:          0
+          ReplacementText: "\n#pragma HLS aggregate variable = X\n"
+    Level:           Warning
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    DiagnosticMessage:
+      Message:         ' hls::vector type top function variable X requires align attribute'
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      336
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2375439
+          Length:          0
+          ReplacementText: ' __attribute__((align_value(alignof(hls::vector<DTYPE, DSIZE>)))) '
+    Level:           Warning
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    DiagnosticMessage:
+      Message:         ' hls::vector type top function variable W requires aggregation'
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      337
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2375633
+          Length:          0
+          ReplacementText: "\n#pragma HLS aggregate variable = W\n"
+    Level:           Warning
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    DiagnosticMessage:
+      Message:         ' hls::vector type top function variable W requires align attribute'
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      337
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2375473
+          Length:          0
+          ReplacementText: ' __attribute__((align_value(alignof(hls::vector<DTYPE, DSIZE>)))) '
+    Level:           Warning
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    DiagnosticMessage:
+      Message:         ' hls::vector type top function variable H_temp requires aggregation'
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      338
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2375633
+          Length:          0
+          ReplacementText: "\n#pragma HLS aggregate variable = H_temp\n"
+    Level:           Warning
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    DiagnosticMessage:
+      Message:         ' hls::vector type top function variable H_temp requires align attribute'
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      338
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2375512
+          Length:          0
+          ReplacementText: ' __attribute__((align_value(alignof(hls::vector<DTYPE, DSIZE>)))) '
+    Level:           Warning
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    DiagnosticMessage:
+      Message:         ' hls::vector type top function variable H_out requires aggregation'
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      343
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2375633
+          Length:          0
+          ReplacementText: "\n#pragma HLS aggregate variable = H_out\n"
+    Level:           Warning
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    DiagnosticMessage:
+      Message:         ' hls::vector type top function variable H_out requires align attribute'
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp'
+      FileOffset:      343
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn/integrated_gcn/hls/.autopilot/db/integrated_gcn.pp.0.cpp'
+          Offset:          2375630
+          Length:          0
+          ReplacementText: ' __attribute__((align_value(alignof(hls::vector<DTYPE, DSIZE>)))) '
+    Level:           Warning
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn'
+...

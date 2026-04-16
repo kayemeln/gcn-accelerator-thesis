@@ -1,0 +1,79 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Wed Apr 15 15:25:14 2026
+| Host         : nat-Yoga-Pro-9-16IAH10 running 64-bit Ubuntu 24.04.3 LTS
+| Command      : report_utilization -hierarchical -hierarchical_depth 6 -file ./report/naive_spmm_stage_utilization_hierarchical_routed.rpt
+| Design       : bd_0_wrapper
+| Device       : xck26-sfvc784-2LV-c
+| Speed File   : -2LV
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++------------------------------------------------------------+---------------------------------------------------------------------------+------------+------------+---------+------+-------+--------+--------+------+------------+
+|                          Instance                          |                                   Module                                  | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs  | RAMB36 | RAMB18 | URAM | DSP Blocks |
++------------------------------------------------------------+---------------------------------------------------------------------------+------------+------------+---------+------+-------+--------+--------+------+------------+
+| bd_0_wrapper                                               |                                                                     (top) |       8053 |       7754 |       0 |  299 | 10107 |      1 |      4 |    0 |          2 |
+|   bd_0_i                                                   |                                                                      bd_0 |       8053 |       7754 |       0 |  299 | 10107 |      1 |      4 |    0 |          2 |
+|     hls_inst                                               |                                                           bd_0_hls_inst_0 |       8053 |       7754 |       0 |  299 | 10107 |      1 |      4 |    0 |          2 |
+|       inst                                                 |                                          bd_0_hls_inst_0_naive_spmm_stage |       8053 |       7754 |       0 |  299 | 10107 |      1 |      4 |    0 |          2 |
+|         (inst)                                             |                                          bd_0_hls_inst_0_naive_spmm_stage |        195 |        191 |       0 |    4 |  2752 |      0 |      0 |    0 |          0 |
+|         acc_U                                              |                        bd_0_hls_inst_0_naive_spmm_stage_acc_RAM_AUTO_1R1W |         78 |         78 |       0 |    0 |     0 |      1 |      0 |    0 |          0 |
+|         control_s_axi_U                                    |                            bd_0_hls_inst_0_naive_spmm_stage_control_s_axi |        336 |        336 |       0 |    0 |   362 |      0 |      0 |    0 |          0 |
+|         gmem0_m_axi_U                                      |                              bd_0_hls_inst_0_naive_spmm_stage_gmem0_m_axi |        441 |        408 |       0 |   33 |   739 |      0 |      1 |    0 |          0 |
+|           bus_read                                         |                         bd_0_hls_inst_0_naive_spmm_stage_gmem0_m_axi_read |        334 |        334 |       0 |    0 |   559 |      0 |      0 |    0 |          0 |
+|             rreq_burst_conv                                |              bd_0_hls_inst_0_naive_spmm_stage_gmem0_m_axi_burst_converter |        259 |        259 |       0 |    0 |   457 |      0 |      0 |    0 |          0 |
+|             rs_rdata                                       |    bd_0_hls_inst_0_naive_spmm_stage_gmem0_m_axi_reg_slice__parameterized0 |         39 |         39 |       0 |    0 |    71 |      0 |      0 |    0 |          0 |
+|           load_unit_0                                      |                         bd_0_hls_inst_0_naive_spmm_stage_gmem0_m_axi_load |        108 |         75 |       0 |   33 |   180 |      0 |      1 |    0 |          0 |
+|             (load_unit_0)                                  |                         bd_0_hls_inst_0_naive_spmm_stage_gmem0_m_axi_load |          1 |          1 |       0 |    0 |    66 |      0 |      0 |    0 |          0 |
+|             buff_rdata                                     |         bd_0_hls_inst_0_naive_spmm_stage_gmem0_m_axi_fifo__parameterized0 |         51 |         51 |       0 |    0 |    37 |      0 |      1 |    0 |          0 |
+|             fifo_rreq                                      |                         bd_0_hls_inst_0_naive_spmm_stage_gmem0_m_axi_fifo |         57 |         24 |       0 |   33 |    77 |      0 |      0 |    0 |          0 |
+|         gmem1_m_axi_U                                      |                              bd_0_hls_inst_0_naive_spmm_stage_gmem1_m_axi |        519 |        471 |       0 |   48 |   862 |      0 |      1 |    0 |          0 |
+|           bus_read                                         |                         bd_0_hls_inst_0_naive_spmm_stage_gmem1_m_axi_read |        366 |        366 |       0 |    0 |   623 |      0 |      0 |    0 |          0 |
+|             rreq_burst_conv                                |              bd_0_hls_inst_0_naive_spmm_stage_gmem1_m_axi_burst_converter |        289 |        289 |       0 |    0 |   521 |      0 |      0 |    0 |          0 |
+|             rs_rdata                                       |    bd_0_hls_inst_0_naive_spmm_stage_gmem1_m_axi_reg_slice__parameterized0 |         39 |         39 |       0 |    0 |    71 |      0 |      0 |    0 |          0 |
+|           load_unit_0                                      |                         bd_0_hls_inst_0_naive_spmm_stage_gmem1_m_axi_load |        154 |        106 |       0 |   48 |   239 |      0 |      1 |    0 |          0 |
+|             (load_unit_0)                                  |                         bd_0_hls_inst_0_naive_spmm_stage_gmem1_m_axi_load |          1 |          1 |       0 |    0 |    94 |      0 |      0 |    0 |          0 |
+|             fifo_rreq                                      |                         bd_0_hls_inst_0_naive_spmm_stage_gmem1_m_axi_fifo |        107 |         59 |       0 |   48 |   108 |      0 |      0 |    0 |          0 |
+|         gmem2_m_axi_U                                      |                              bd_0_hls_inst_0_naive_spmm_stage_gmem2_m_axi |        697 |        647 |       0 |   50 |   995 |      0 |      1 |    0 |          0 |
+|           bus_read                                         |                         bd_0_hls_inst_0_naive_spmm_stage_gmem2_m_axi_read |        376 |        376 |       0 |    0 |   627 |      0 |      0 |    0 |          0 |
+|             rreq_burst_conv                                |              bd_0_hls_inst_0_naive_spmm_stage_gmem2_m_axi_burst_converter |        299 |        299 |       0 |    0 |   525 |      0 |      0 |    0 |          0 |
+|             rs_rdata                                       |    bd_0_hls_inst_0_naive_spmm_stage_gmem2_m_axi_reg_slice__parameterized1 |         39 |         39 |       0 |    0 |    71 |      0 |      0 |    0 |          0 |
+|           load_unit_0                                      |                         bd_0_hls_inst_0_naive_spmm_stage_gmem2_m_axi_load |        322 |        272 |       0 |   50 |   368 |      0 |      1 |    0 |          0 |
+|             (load_unit_0)                                  |                         bd_0_hls_inst_0_naive_spmm_stage_gmem2_m_axi_load |          0 |          0 |       0 |    0 |   132 |      0 |      0 |    0 |          0 |
+|             bus_wide_gen.rs_rdata_int                      |                    bd_0_hls_inst_0_naive_spmm_stage_gmem2_m_axi_reg_slice |         40 |         40 |       0 |    0 |    71 |      0 |      0 |    0 |          0 |
+|             fifo_rreq                                      |         bd_0_hls_inst_0_naive_spmm_stage_gmem2_m_axi_fifo__parameterized0 |        186 |        138 |       0 |   48 |   109 |      0 |      0 |    0 |          0 |
+|         gmem3_m_axi_U                                      |                              bd_0_hls_inst_0_naive_spmm_stage_gmem3_m_axi |        530 |        495 |       0 |   35 |   855 |      0 |      1 |    0 |          0 |
+|           bus_read                                         |                         bd_0_hls_inst_0_naive_spmm_stage_gmem3_m_axi_read |        339 |        339 |       0 |    0 |   563 |      0 |      0 |    0 |          0 |
+|             rreq_burst_conv                                |              bd_0_hls_inst_0_naive_spmm_stage_gmem3_m_axi_burst_converter |        262 |        262 |       0 |    0 |   461 |      0 |      0 |    0 |          0 |
+|             rs_rdata                                       |    bd_0_hls_inst_0_naive_spmm_stage_gmem3_m_axi_reg_slice__parameterized1 |         39 |         39 |       0 |    0 |    71 |      0 |      0 |    0 |          0 |
+|           load_unit_0                                      |                         bd_0_hls_inst_0_naive_spmm_stage_gmem3_m_axi_load |        192 |        157 |       0 |   35 |   292 |      0 |      1 |    0 |          0 |
+|             (load_unit_0)                                  |                         bd_0_hls_inst_0_naive_spmm_stage_gmem3_m_axi_load |          1 |          1 |       0 |    0 |    87 |      0 |      0 |    0 |          0 |
+|             bus_wide_gen.rs_rdata_int                      |                    bd_0_hls_inst_0_naive_spmm_stage_gmem3_m_axi_reg_slice |         42 |         42 |       0 |    0 |    71 |      0 |      0 |    0 |          0 |
+|             fifo_rreq                                      |         bd_0_hls_inst_0_naive_spmm_stage_gmem3_m_axi_fifo__parameterized0 |         54 |         21 |       0 |   33 |    78 |      0 |      0 |    0 |          0 |
+|         gmem4_m_axi_U                                      |                              bd_0_hls_inst_0_naive_spmm_stage_gmem4_m_axi |        836 |        707 |       0 |  129 |  1235 |      0 |      0 |    0 |          0 |
+|           bus_write                                        |                        bd_0_hls_inst_0_naive_spmm_stage_gmem4_m_axi_write |        450 |        417 |       0 |   33 |   776 |      0 |      0 |    0 |          0 |
+|             wreq_burst_conv                                |              bd_0_hls_inst_0_naive_spmm_stage_gmem4_m_axi_burst_converter |        272 |        272 |       0 |    0 |   477 |      0 |      0 |    0 |          0 |
+|             wreq_throttle                                  |                     bd_0_hls_inst_0_naive_spmm_stage_gmem4_m_axi_throttle |        152 |        120 |       0 |   32 |   276 |      0 |      0 |    0 |          0 |
+|           store_unit_0                                     |                        bd_0_hls_inst_0_naive_spmm_stage_gmem4_m_axi_store |        388 |        292 |       0 |   96 |   459 |      0 |      0 |    0 |          0 |
+|             (store_unit_0)                                 |                        bd_0_hls_inst_0_naive_spmm_stage_gmem4_m_axi_store |         55 |         55 |       0 |    0 |   192 |      0 |      0 |    0 |          0 |
+|             buff_wdata                                     |         bd_0_hls_inst_0_naive_spmm_stage_gmem4_m_axi_fifo__parameterized3 |         47 |         27 |       0 |   20 |    53 |      0 |      0 |    0 |          0 |
+|             bus_wide_gen.buff_wdata_in                     |         bd_0_hls_inst_0_naive_spmm_stage_gmem4_m_axi_fifo__parameterized1 |         55 |         37 |       0 |   18 |    38 |      0 |      0 |    0 |          0 |
+|             fifo_wreq                                      |         bd_0_hls_inst_0_naive_spmm_stage_gmem4_m_axi_fifo__parameterized2 |        111 |         74 |       0 |   37 |    79 |      0 |      0 |    0 |          0 |
+|         grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046     |       bd_0_hls_inst_0_naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ |       4361 |       4361 |       0 |    0 |  2270 |      0 |      0 |    0 |          2 |
+|           (grp_naive_spmm_stage_Pipeline_SPMM_NNZ_fu_1046) |       bd_0_hls_inst_0_naive_spmm_stage_naive_spmm_stage_Pipeline_SPMM_NNZ |       1045 |       1045 |       0 |    0 |  2268 |      0 |      0 |    0 |          0 |
+|           flow_control_loop_pipe_sequential_init_U         | bd_0_hls_inst_0_naive_spmm_stage_flow_control_loop_pipe_sequential_init_0 |       1231 |       1231 |       0 |    0 |     2 |      0 |      0 |    0 |          0 |
+|           mul_26s_26s_52_1_1_U2                            |                       bd_0_hls_inst_0_naive_spmm_stage_mul_26s_26s_52_1_1 |       2089 |       2089 |       0 |    0 |     0 |      0 |      0 |    0 |          2 |
++------------------------------------------------------------+---------------------------------------------------------------------------+------------+------------+---------+------+-------+--------+--------+------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

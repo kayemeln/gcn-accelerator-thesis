@@ -1,0 +1,62 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Thu Apr 16 10:28:17 2026
+| Host         : nat-Yoga-Pro-9-16IAH10 running 64-bit Ubuntu 24.04.3 LTS
+| Command      : report_drc -file bd_0_wrapper_drc_routed.rpt -pb bd_0_wrapper_drc_routed.pb -rpx bd_0_wrapper_drc_routed.rpx
+| Design       : bd_0_wrapper
+| Device       : xck26-sfvc784-2LV-c
+| Speed File   : -2LV
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_bd_0_wrapper
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 2
++-----------+----------+-------------------+--------+
+| Rule      | Severity | Description       | Checks |
++-----------+----------+-------------------+--------+
+| DPIP-2    | Warning  | Input pipelining  | 1      |
+| RTSTAT-10 | Warning  | No routable loads | 1      |
++-----------+----------+-------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-2#1 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_read_X_U0/mac_muladd_11ns_6ns_6ns_16_4_1_U1/integrated_gcn_approx_mac_muladd_11ns_6ns_6ns_16_4_1_DSP48_0_U/p_reg_reg input bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_read_X_U0/mac_muladd_11ns_6ns_6ns_16_4_1_U1/integrated_gcn_approx_mac_muladd_11ns_6ns_6ns_16_4_1_DSP48_0_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+1669 net(s) have no routable loads. The problem bus(es) and/or net(s) are bd_0_i/hls_inst/inst/ap_idle,
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[0],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[10],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[11],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[12],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[13],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[1],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[2],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[3],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[6],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[7],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[8],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[9],
+bd_0_i/hls_inst/inst/gmem2_m_axi_U/bus_write/wreq_throttle/rs_req/data_p1_reg[67]_0[61:0],
+bd_0_i/hls_inst/inst/gmem6_m_axi_U/bus_write/wreq_throttle/rs_req/data_p1_reg[67]_0[61:0]
+ (the first 15 of 350 listed nets/buses).
+Related violations: <none>
+
+

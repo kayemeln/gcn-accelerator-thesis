@@ -1,0 +1,1117 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: '/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 16 }
+Function:        _ZNSt5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEixEm
+Args:            
+  - Callee:          'std::__array_traits<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>::_S_ref(ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> const (&) [32], unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'std::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        _ZN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEixEm
+Args:            
+  - Callee:          'std::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>::operator[](unsigned long)'
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 124, 
+                   Column: 25 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - Callee:          'std::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'gemm_compute(hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 60, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 171, 
+                   Column: 5 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - Callee:          'gemm_read_X(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 19, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'gemm_stage(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 172, 
+                   Column: 5 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - Callee:          'gemm_read_W(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 39, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'gemm_stage(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 173, 
+                   Column: 5 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - Callee:          'gemm_compute(hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 60, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'gemm_stage(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 174, 
+                   Column: 5 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - Callee:          'gemm_write(hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 137, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'gemm_stage(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 77, Column: 34 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_77_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 93, Column: 42 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_93_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 103, 
+                   Column: 43 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_103_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 107, 
+                   Column: 29 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        COMP_J
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 122, 
+                   Column: 39 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_122_5
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 60, Column: 0 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_77_1
+  - String:          ''' ('
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:77:34'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gemm_compute
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 60, Column: 0 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_93_2
+  - String:          ''' ('
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:93:42'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gemm_compute
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 60, Column: 0 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_103_3
+  - String:          ''' ('
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:103:43'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gemm_compute
+  - String:          ''' completely with a factor of '
+  - Factor:          '4'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 60, Column: 0 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        COMP_J
+  - String:          ''' ('
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:107:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gemm_compute
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 60, Column: 0 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        COMP_J
+  - String:          ''' ('
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:107:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gemm_compute
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 60, Column: 0 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        COMP_J
+  - String:          ''' ('
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:107:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gemm_compute
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 60, Column: 0 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        COMP_J
+  - String:          ''' ('
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:107:29'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gemm_compute
+  - String:          ''' completely with a factor of '
+  - Factor:          '64'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 60, Column: 0 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_122_5
+  - String:          ''' ('
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:122:39'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          gemm_compute
+  - String:          ''' completely with a factor of '
+  - Factor:          '32'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: '/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 16 }
+Function:        _ZNSt5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEixEm
+Args:            
+  - Callee:          'std::__array_traits<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>::_S_ref(ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> const (&) [32], unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'std::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 95, Column: 54 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - Callee:          'std::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'gemm_compute(hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 60, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 171, 
+                   Column: 5 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - Callee:          'gemm_read_X(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 19, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'gemm_stage(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 172, 
+                   Column: 5 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - Callee:          'gemm_read_W(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 39, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'gemm_stage(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 173, 
+                   Column: 5 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - Callee:          'gemm_compute(hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 60, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'gemm_stage(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 174, 
+                   Column: 5 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - Callee:          'gemm_write(hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 137, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'gemm_stage(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_gemm_stage_ir
+Args:            
+  - Callee:          'gemm_stage(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_gemm_stage_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: '/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 0 }
+Function:        _ZNSt5arrayI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEixEm
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::__array_traits<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>::_S_ref(ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0> const (&) [32], unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'std::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 60, Column: 0 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'gemm_compute(hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 60, 
+                       Column: 0 }
+  - String:          ''''
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                   Column: 0 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       X
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                   Column: 0 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       W
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                   Column: 0 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       H_temp
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 61, Column: 13 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          XW_block
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Cyclic
+  - String:          ' partitioning'
+  - String:          ' with factor '
+  - Factor:          '4'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 62, Column: 11 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          W_line
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 63, Column: 11 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          X_line
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 166, 
+                   Column: 44 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            XW_stream
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 165, 
+                   Column: 44 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            W_stream
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 164, 
+                   Column: 44 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            X_stream
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                   Column: 0 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            X
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                   Column: 0 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            W
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                   Column: 0 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            H_temp
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 24, Column: 38 }
+Function:        _ZL11gemm_read_XPN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEERNS_6streamIS5_Li0EEE
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       X
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_5
+  - String:          ' '
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:24:38'
+  - String:          ' '
+  - Function:        'gemm_read_X(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 19, 
+                       Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 26, 
+                       Column: 34 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.5
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 24, Column: 38 }
+Function:        _ZL11gemm_read_XPN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEERNS_6streamIS5_Li0EEE
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 24, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       X
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_23_4
+  - String:          ' '
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:23:34'
+  - String:          ' '
+  - Function:        'gemm_read_X(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 19, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 42, Column: 30 }
+Function:        _ZL11gemm_read_WPN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEERNS_6streamIS5_Li0EEE
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '2944'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        Wseq
+  - ArrayName:       W
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_42_3
+  - String:          ' '
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:42:30'
+  - String:          ' '
+  - Function:        'gemm_read_W(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 39, 
+                       Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 46, 
+                       Column: 34 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.6
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 42, Column: 30 }
+Function:        _ZL11gemm_read_WPN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEERNS_6streamIS5_Li0EEE
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 42, 
+                       Column: 30 }
+  - OrigDirection:   read
+  - OrigID:          Wseq
+  - ArrayName:       W
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_40_1
+  - String:          ' '
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:40:22'
+  - String:          ' '
+  - Function:        'gemm_read_W(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 39, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 141, 
+                   Column: 35 }
+Function:        _ZL10gemm_writeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEEPS6_
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       H_temp
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_141_4
+  - String:          ' '
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:141:35'
+  - String:          ' '
+  - Function:        'gemm_write(hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 137, 
+                       Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 146, 
+                       Column: 29 }
+  - OrigDirection:   write
+  - OrigID:          if.then.store.4
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            AccessInCondBranch
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 141, 
+                   Column: 35 }
+Function:        _ZL10gemm_writeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEEPS6_
+Args:            
+  - String:          'Access '
+  - Access:          call
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 141, 
+                       Column: 35 }
+  - String:          ' is in the conditional branch'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 141, 
+                       Column: 35 }
+  - OrigDirection:   write
+  - OrigID:          scevgepseq
+  - ArrayName:       H_temp
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_140_3
+  - String:          ' '
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:140:31'
+  - String:          ' '
+  - Function:        'gemm_write(hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 137, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 24, Column: 38 }
+Function:        _ZL11gemm_read_XPN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEERNS_6streamIS5_Li0EEE
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i512
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 24, 
+                       Column: 38 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       X
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_5
+  - String:          ' '
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:24:38'
+  - String:          ' '
+  - Function:        'gemm_read_X(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 19, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 42, Column: 30 }
+Function:        _ZL11gemm_read_WPN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEERNS_6streamIS5_Li0EEE
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i512
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 42, 
+                       Column: 30 }
+  - OrigDirection:   read
+  - OrigID:          Wseq
+  - ArrayName:       W
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_44_5
+  - String:          ' '
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:44:38'
+  - String:          ' '
+  - Function:        'gemm_read_W(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 39, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Failure
+Pass:            reflow-occurrence-inference
+Name:            NonComputableLoopForm
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 89, Column: 21 }
+Function:        _ZL12gemm_computeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEES8_S8_
+Args:            
+  - String:          'Could not analyze occurrence information within '''
+  - LoopName:        COMP_LOAD_XW
+  - String:          '''('
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:89:21'
+  - String:          ') . Requires loop in simplify form and with single exit.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                   Column: 0 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       X
+  - String:          '''.'
+...
+--- !Failure
+Pass:            reflow-array-undecay
+Name:            WarnOnUnsupportedVLAUnDecay
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                   Column: 0 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - String:          'Skipping array undecay on variable length array '''
+  - ArrayName:       H_temp
+  - String:          '''.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 24, Column: 38 }
+Function:        _ZL11gemm_read_XPN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEERNS_6streamIS5_Li0EEE.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem0
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_24_5
+  - String:          ' '
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:24:38'
+  - String:          ' '
+  - Function:        'gemm_read_X(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&) (.1)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 19, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 24, Column: 38 }
+Function:        _ZL11gemm_read_XPN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEERNS_6streamIS5_Li0EEE.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_24_5
+  - String:          '''('
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:24:38'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem0
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 42, Column: 30 }
+Function:        _ZL11gemm_read_WPN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEERNS_6streamIS5_Li0EEE.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2944'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem1
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_42_3
+  - String:          ' '
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:42:30'
+  - String:          ' '
+  - Function:        'gemm_read_W(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&) (.1)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 39, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 42, Column: 30 }
+Function:        _ZL11gemm_read_WPN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEERNS_6streamIS5_Li0EEE.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '2944'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_42_3
+  - String:          '''('
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:42:30'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem1
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 141, 
+                   Column: 35 }
+Function:        _ZL10gemm_writeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEEPS6_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem2
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_141_4
+  - String:          ' '
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:141:35'
+  - String:          ' '
+  - Function:        'gemm_write(hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*) (.1)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 137, 
+                       Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 141, 
+                   Column: 35 }
+Function:        _ZL10gemm_writeRN3hls6streamINS_6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEELi0EEEPS6_.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_141_4
+  - String:          '''('
+  - LoopLoc:         'src/integrated-gcn/gemm_stage.cpp:141:35'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem2
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 171, 
+                   Column: 5 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - Callee:          'gemm_read_X(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&) (.1)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 19, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'gemm_stage(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 172, 
+                   Column: 5 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - Callee:          'gemm_read_W(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&) (.1)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 39, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'gemm_stage(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 173, 
+                   Column: 5 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - Callee:          'gemm_compute(hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 60, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'gemm_stage(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 174, 
+                   Column: 5 }
+Function:        _Z10gemm_stagePN3hls6vectorI8ap_fixedILi16ELi6EL9ap_q_mode5EL9ap_o_mode3ELi0EELm32EEES6_S6_
+Args:            
+  - Callee:          'gemm_write(hls::stream<hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>, 0>&, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*) (.1)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 137, 
+                       Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          'gemm_stage(hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*, hls::vector<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 32ul>*)'
+    DebugLoc:        { File: src/integrated-gcn/gemm_stage.cpp, Line: 158, 
+                       Column: 0 }
+  - String:          ' because it should never be inlined (cost=never)'
+...

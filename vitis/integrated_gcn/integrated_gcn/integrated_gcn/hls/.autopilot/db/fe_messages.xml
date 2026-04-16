@@ -1,0 +1,371 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:145:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="pragma" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=this" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:177:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="vector&lt;_T, _N&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:193:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="vector&lt;_T, _N&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:207:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="vector&lt;_T, _N&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:232:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator++" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:233:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator--" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:261:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator+=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:262:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator-=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:263:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator*=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:264:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator/=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:265:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator%=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:266:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator&amp;=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:267:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator|=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:268:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator^=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:269:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator&lt;&lt;=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:270:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator&gt;&gt;=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:285:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="reduce_add" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:286:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="reduce_mult" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:287:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="reduce_and" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:288:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="reduce_or" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:289:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="reduce_xor" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:320:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator&lt;" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:321:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator&lt;=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:322:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator==" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:323:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator!=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:324:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator&gt;=" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h:325:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="operator&gt;" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:40:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_read_X" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:60:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_read_W" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:85:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="dim=2 type=complete variable=XW_block" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:86:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="dim=1 type=cyclic factor=4 variable=XW_block" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:87:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="dim=1 type=complete variable=W_line" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:88:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="dim=1 type=complete variable=X_line" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:97:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:99:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_compute" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:116:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:120:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_compute" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:129:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:131:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_compute" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:135:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_compute" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:147:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:150:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_compute" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:169:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_write" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:186:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_stage" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:190:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=X_stream depth=16" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:191:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=W_stream depth=16" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:192:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="gemm_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=XW_stream depth=16" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:211:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_load_csr" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:217:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_load_csr" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:232:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=acc cyclic factor=32" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:233:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=h_buf cyclic factor=32" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:242:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:243:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=32" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:249:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="min=1 max=168 avg=4" ARG_PragmaType="loop_tripcount" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:256:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:259:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_compute" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:266:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:267:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=32" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:275:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_compute" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:292:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_store" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:311:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_stage" ARG_PragmaIsValid="1" ARG_PragmaType="dataflow" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:318:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=row_fifo depth=16" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:319:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=col_fifo depth=256" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:320:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=val_fifo depth=256" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:321:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="spmm_stage" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=result_fifo depth=32" ARG_PragmaType="stream" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:345:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="integrated_gcn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = X" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:347:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="integrated_gcn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = W" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:349:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="integrated_gcn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = H_temp" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:351:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="integrated_gcn" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable = H_out" ARG_PragmaType="aggregate" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="directive:1:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="integrated_gcn" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=integrated_gcn" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:345:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="integrated_gcn" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi bundle=gmem0 port=X" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:346:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="integrated_gcn" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi bundle=gmem1 port=W" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:347:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="integrated_gcn" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi bundle=gmem2 port=H_temp" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:348:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="integrated_gcn" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi bundle=gmem3 port=row_length" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:349:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="integrated_gcn" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi bundle=gmem4 port=colind" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:350:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="integrated_gcn" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi bundle=gmem5 port=values" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-6999" msg_severity="WARNING" msg_loc="/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/integrated_gcn.cpp:351:1" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="hls" ARG_PragmaFunction="integrated_gcn" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi bundle=gmem6 port=H_out" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:258:35" msg_body="Loop 'VITIS_LOOP_258_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_258_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:98:34" msg_body="Loop 'VITIS_LOOP_98_1' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_98_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:119:43" msg_body="Loop 'VITIS_LOOP_119_2' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_119_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:130:43" msg_body="Loop 'VITIS_LOOP_130_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_130_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:134:29" msg_body="Loop 'COMP_J' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="COMP_J"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:149:39" msg_body="Loop 'VITIS_LOOP_149_5' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_149_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:229:0" msg_body="Unrolling loop 'SPMM_INIT' (src/integrated-gcn/integrated_gcn.cpp:241:9) in function 'spmm_compute' partially with a factor of 32">
+        <args Factor="32" LoopLoc="src/integrated-gcn/integrated_gcn.cpp:241:9" LoopName="SPMM_INIT"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:229:0" msg_body="Unrolling loop 'VITIS_LOOP_258_1' (src/integrated-gcn/integrated_gcn.cpp:258:35) in function 'spmm_compute' completely with a factor of 32">
+        <args Factor="32" LoopLoc="src/integrated-gcn/integrated_gcn.cpp:258:35" LoopName="VITIS_LOOP_258_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-188" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:229:0" msg_body="Unrolling loop 'SPMM_MAC' (src/integrated-gcn/integrated_gcn.cpp:265:13) in function 'spmm_compute' partially with a factor of 32">
+        <args Factor="32" LoopLoc="src/integrated-gcn/integrated_gcn.cpp:265:13" LoopName="SPMM_MAC"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:77:0" msg_body="Unrolling loop 'VITIS_LOOP_98_1' (src/integrated-gcn/integrated_gcn.cpp:98:34) in function 'gemm_compute' completely with a factor of 64">
+        <args Factor="64" LoopLoc="src/integrated-gcn/integrated_gcn.cpp:98:34" LoopName="VITIS_LOOP_98_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:77:0" msg_body="Unrolling loop 'VITIS_LOOP_119_2' (src/integrated-gcn/integrated_gcn.cpp:119:43) in function 'gemm_compute' completely with a factor of 32">
+        <args Factor="32" LoopLoc="src/integrated-gcn/integrated_gcn.cpp:119:43" LoopName="VITIS_LOOP_119_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:77:0" msg_body="Unrolling loop 'VITIS_LOOP_130_3' (src/integrated-gcn/integrated_gcn.cpp:130:43) in function 'gemm_compute' completely with a factor of 4">
+        <args Factor="4" LoopLoc="src/integrated-gcn/integrated_gcn.cpp:130:43" LoopName="VITIS_LOOP_130_3"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:77:0" msg_body="Unrolling loop 'COMP_J' (src/integrated-gcn/integrated_gcn.cpp:134:29) in function 'gemm_compute' completely with a factor of 64">
+        <args Factor="64" LoopLoc="src/integrated-gcn/integrated_gcn.cpp:134:29" LoopName="COMP_J"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:77:0" msg_body="Unrolling loop 'VITIS_LOOP_149_5' (src/integrated-gcn/integrated_gcn.cpp:149:39) in function 'gemm_compute' completely with a factor of 32">
+        <args Factor="32" LoopLoc="src/integrated-gcn/integrated_gcn.cpp:149:39" LoopName="VITIS_LOOP_149_5"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array:186:0" msg_body="Inlining function 'std::__array_traits&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;::_S_ref(ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const (&amp;) [32], unsigned long)' into 'std::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;::operator[](unsigned long)'">
+        <args Callee="std::__array_traits&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;::_S_ref(ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt; const (&amp;) [32], unsigned long)" Callee-DebugLoc="File /opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 56 Column 0" Caller="std::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;::operator[](unsigned long)" Caller-DebugLoc="File /opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 186 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:77:0" msg_body="Inlining function 'std::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;::operator[](unsigned long)' into 'gemm_compute(hls::stream&lt;hls::vector&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::vector&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::vector&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;, 0&gt;&amp;)'">
+        <args Callee="std::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;::operator[](unsigned long)" Callee-DebugLoc="File /opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 186 Column 0" Caller="gemm_compute(hls::stream&lt;hls::vector&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::vector&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;, 0&gt;&amp;, hls::stream&lt;hls::vector&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;, 0&gt;&amp;)" Caller-DebugLoc="File src/integrated-gcn/integrated_gcn.cpp Line 77 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:229:0" msg_body="Inlining function 'std::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;::operator[](unsigned long)' into 'spmm_compute(hls::vector&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 0&gt;&amp;, hls::stream&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 0&gt;&amp;)'">
+        <args Callee="std::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;::operator[](unsigned long)" Callee-DebugLoc="File /opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 186 Column 0" Caller="spmm_compute(hls::vector&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;*, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;int, 0&gt;&amp;, hls::stream&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 0&gt;&amp;, hls::stream&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 0&gt;&amp;)" Caller-DebugLoc="File src/integrated-gcn/integrated_gcn.cpp Line 229 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:285:0" msg_body="Inlining function 'std::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;::operator[](unsigned long)' into 'spmm_store(hls::vector&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;*, hls::stream&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 0&gt;&amp;)'">
+        <args Callee="std::array&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;::operator[](unsigned long)" Callee-DebugLoc="File /opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array Line 186 Column 0" Caller="spmm_store(hls::vector&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 32ul&gt;*, hls::stream&lt;ap_fixed&lt;16, 6, (ap_q_mode)0, (ap_o_mode)0, 0&gt;, 0&gt;&amp;)" Caller-DebugLoc="File src/integrated-gcn/integrated_gcn.cpp Line 285 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="src/integrated-gcn/integrated_gcn.cpp:344:0" msg_body="Skipping array undecay on variable length array 'X'.">
+        <args ArrayName="X"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="src/integrated-gcn/integrated_gcn.cpp:344:0" msg_body="Skipping array undecay on variable length array 'W'.">
+        <args ArrayName="W"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="src/integrated-gcn/integrated_gcn.cpp:344:0" msg_body="Skipping array undecay on variable length array 'H_temp'.">
+        <args ArrayName="H_temp"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="src/integrated-gcn/integrated_gcn.cpp:344:0" msg_body="Skipping array undecay on variable length array 'row_length'.">
+        <args ArrayName="row_length"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="src/integrated-gcn/integrated_gcn.cpp:344:0" msg_body="Skipping array undecay on variable length array 'colind'.">
+        <args ArrayName="colind"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="src/integrated-gcn/integrated_gcn.cpp:344:0" msg_body="Skipping array undecay on variable length array 'values'.">
+        <args ArrayName="values"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="src/integrated-gcn/integrated_gcn.cpp:344:0" msg_body="Skipping array undecay on variable length array 'H_out'.">
+        <args ArrayName="H_out"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="src/integrated-gcn/integrated_gcn.cpp:310:0" msg_body="Skipping array undecay on variable length array 'row_length'.">
+        <args ArrayName="row_length"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="src/integrated-gcn/integrated_gcn.cpp:310:0" msg_body="Skipping array undecay on variable length array 'colind'.">
+        <args ArrayName="colind"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="src/integrated-gcn/integrated_gcn.cpp:310:0" msg_body="Skipping array undecay on variable length array 'values'.">
+        <args ArrayName="values"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="src/integrated-gcn/integrated_gcn.cpp:310:0" msg_body="Skipping array undecay on variable length array 'H_temp'.">
+        <args ArrayName="H_temp"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="src/integrated-gcn/integrated_gcn.cpp:310:0" msg_body="Skipping array undecay on variable length array 'H_out'.">
+        <args ArrayName="H_out"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="src/integrated-gcn/integrated_gcn.cpp:185:0" msg_body="Skipping array undecay on variable length array 'X'.">
+        <args ArrayName="X"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="src/integrated-gcn/integrated_gcn.cpp:185:0" msg_body="Skipping array undecay on variable length array 'W'.">
+        <args ArrayName="W"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-464" msg_severity="WARNING" msg_loc="src/integrated-gcn/integrated_gcn.cpp:185:0" msg_body="Skipping array undecay on variable length array 'H_temp'.">
+        <args ArrayName="H_temp"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:78:13" msg_body="Applying array_partition to 'XW_block': Cyclic partitioning with factor 4 on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Factor="4" Mode="islist Cyclic Complete" UOName="XW_block"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:79:11" msg_body="Applying array_partition to 'W_line': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="W_line"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:80:11" msg_body="Applying array_partition to 'X_line': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="X_line"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:230:13" msg_body="Applying array_partition to 'acc': Cyclic partitioning with factor 32 on dimension 1.">
+        <args Dim="1" Factor="32" Mode="Cyclic" UOName="acc"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:231:11" msg_body="Applying array_partition to 'h_buf': Cyclic partitioning with factor 32 on dimension 1.">
+        <args Dim="1" Factor="32" Mode="Cyclic" UOName="h_buf"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:189:44" msg_body="Aggregating fifo (hls::stream) variable 'XW_stream' with compact=bit mode in 512-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="512" HwTyName="fifo (hls::stream)" Name="XW_stream"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:188:44" msg_body="Aggregating fifo (hls::stream) variable 'W_stream' with compact=bit mode in 512-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="512" HwTyName="fifo (hls::stream)" Name="W_stream"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:187:44" msg_body="Aggregating fifo (hls::stream) variable 'X_stream' with compact=bit mode in 512-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="512" HwTyName="fifo (hls::stream)" Name="X_stream"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:344:0" msg_body="Aggregating maxi variable 'X' with compact=none mode in 512-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="512" HwTyName="maxi" Name="X"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:344:0" msg_body="Aggregating maxi variable 'W' with compact=none mode in 512-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="512" HwTyName="maxi" Name="W"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:344:0" msg_body="Aggregating maxi variable 'H_temp' with compact=none mode in 512-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="512" HwTyName="maxi" Name="H_temp"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:344:0" msg_body="Aggregating maxi variable 'H_out' with compact=none mode in 512-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="512" HwTyName="maxi" Name="H_out"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="src/integrated-gcn/integrated_gcn.cpp:286:31" msg_body="Aggregating scalar variable 'out_vec' with compact=bit mode in 512-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="512" HwTyName="scalar" Name="out_vec"/>
+    </msg>
+</xilinx:hls_fe_msgs>

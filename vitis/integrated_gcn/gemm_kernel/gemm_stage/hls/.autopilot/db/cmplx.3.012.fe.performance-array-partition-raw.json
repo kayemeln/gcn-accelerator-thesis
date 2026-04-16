@@ -1,0 +1,68 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "4 3 1 2",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "gemm_stage.cpp",
+    "fileloc": 154,
+    "instructions": 20,
+    "memory_accesses": 0,
+    "name": "gemm_stage",
+    "total_instructions": 8450
+  },
+  "1": {
+    "basicblocks": 534,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 37,
+    "file": "gemm_stage.cpp",
+    "fileloc": 56,
+    "instructions": 6468,
+    "loads": {
+      "L": 512
+    },
+    "memory_accesses": 1028,
+    "name": "gemm_compute",
+    "stores": {
+      "L": 768
+    },
+    "total_instructions": 7077
+  },
+  "2": {
+    "basicblocks": 9,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 5,
+    "file": "gemm_stage.cpp",
+    "fileloc": 134,
+    "instructions": 34,
+    "memory_accesses": 2,
+    "name": "gemm_write",
+    "total_instructions": 451
+  },
+  "3": {
+    "basicblocks": 9,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 7,
+    "file": "gemm_stage.cpp",
+    "fileloc": 36,
+    "instructions": 33,
+    "memory_accesses": 2,
+    "name": "gemm_read_W",
+    "total_instructions": 450
+  },
+  "4": {
+    "basicblocks": 9,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 6,
+    "file": "gemm_stage.cpp",
+    "fileloc": 16,
+    "instructions": 35,
+    "memory_accesses": 2,
+    "name": "gemm_read_X",
+    "total_instructions": 452
+  }
+}

@@ -1,0 +1,24 @@
+
+
+Implementation tool: Xilinx Vivado v.2025.2
+Project:             naive_spmm_stage
+Solution:            hls
+Device target:       xck26-sfvc784-2LV-c
+Report date:         Wed Apr 15 15:25:22 IST 2026
+
+#=== Post-Implementation Resource usage ===
+SLICE:            0
+LUT:           8053
+FF:           10107
+DSP:              2
+BRAM:             6
+URAM:             0
+LATCH:            0
+SRL:            299
+CLB:           1692
+
+#=== Final timing ===
+CP required:                     10.000
+CP achieved post-synthesis:      5.825
+CP achieved post-implementation: 7.595
+Timing met

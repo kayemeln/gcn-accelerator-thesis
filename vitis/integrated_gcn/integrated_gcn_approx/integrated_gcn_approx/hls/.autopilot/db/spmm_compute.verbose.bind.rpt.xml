@@ -1,0 +1,50 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'spmm_compute'" level="0">
+<item name = "Date">Thu Apr 16 10:08:42 2026
+</item>
+<item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
+<item name = "Project">integrated_gcn_approx</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.300 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">251845, 8844329, 2.518 ms, 88.443 ms, 251845, 8844329, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_spmm_compute_Pipeline_SPMM_INIT_fu_1451">spmm_compute_Pipeline_SPMM_INIT, 4, 4, 40.000 ns, 40.000 ns, 0, 0, loop pipeline stp</column>
+<column name="grp_spmm_compute_Pipeline_SPMM_WRITE_fu_1487">spmm_compute_Pipeline_SPMM_WRITE, 66, 66, 0.660 us, 0.660 us, 0, 0, loop pipeline stp</column>
+<column name="grp_spmm_compute_Pipeline_SPMM_MAC_fu_1525">spmm_compute_Pipeline_SPMM_MAC, 6, 6, 60.000 ns, 60.000 ns, 0, 0, loop pipeline stp</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- SPMM_ROW">251844, 8844328, 93 ~ 3266, -, -, 2708, no</column>
+<column name=" + SPMM_NNZ">19, 3192, 19, -, -, 1 ~ 168, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

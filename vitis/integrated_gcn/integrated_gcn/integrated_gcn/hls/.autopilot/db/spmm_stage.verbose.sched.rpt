@@ -1,0 +1,185 @@
+
+
+================================================================
+== Vitis HLS Report for 'spmm_stage'
+================================================================
+* Date:           Thu Apr 16 11:31:53 2026
+
+* Version:        2025.2 (Build 6295257 on Nov 14 2025)
+* Project:        integrated_gcn
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xck26-sfvc784-2LV-c
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  7.300 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|  dataflow|
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 6, States = { 1 2 3 4 5 6 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 7.30>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%nnz_total_read = read i32 @_ssdm_op_Read.ap_auto.i32, i32 %nnz_total"   --->   Operation 7 'read' 'nnz_total_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%values_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %values"   --->   Operation 8 'read' 'values_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%colind_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %colind"   --->   Operation 9 'read' 'colind_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%row_length_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %row_length"   --->   Operation 10 'read' 'row_length_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%row_fifo = alloca i64 1" [src/integrated-gcn/integrated_gcn.cpp:313]   --->   Operation 11 'alloca' 'row_fifo' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 2.04> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 16> <FIFO>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%col_fifo = alloca i64 1" [src/integrated-gcn/integrated_gcn.cpp:314]   --->   Operation 12 'alloca' 'col_fifo' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.65> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 256> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%val_fifo = alloca i64 1" [src/integrated-gcn/integrated_gcn.cpp:315]   --->   Operation 13 'alloca' 'val_fifo' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO">   --->   Core 77 'FIFO' <Latency = 0> <II = 1> <Delay = 1.65> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 256> <FIFO>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%result_fifo = alloca i64 1" [src/integrated-gcn/integrated_gcn.cpp:316]   --->   Operation 14 'alloca' 'result_fifo' <Predicate = true> <Delay = 0.00> <CoreInst = "FIFO_SRL">   --->   Core 80 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 1.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 16> <Depth = 32> <FIFO>
+ST_1 : Operation 15 [2/2] (7.30ns)   --->   "%call_ln323 = call void @spmm_load_csr, i32 %gmem3, i64 %row_length_read, i32 %gmem4, i64 %colind_read, i16 %gmem5, i64 %values_read, i32 %nnz_total_read, i32 %row_fifo, i32 %col_fifo, i16 %val_fifo" [src/integrated-gcn/integrated_gcn.cpp:323]   --->   Operation 15 'call' 'call_ln323' <Predicate = true> <Delay = 7.30> <CoreType = "Generic">   --->   Generic Core
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 16 [1/2] (0.00ns)   --->   "%call_ln323 = call void @spmm_load_csr, i32 %gmem3, i64 %row_length_read, i32 %gmem4, i64 %colind_read, i16 %gmem5, i64 %values_read, i32 %nnz_total_read, i32 %row_fifo, i32 %col_fifo, i16 %val_fifo" [src/integrated-gcn/integrated_gcn.cpp:323]   --->   Operation 16 'call' 'call_ln323' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 17 [1/1] (0.00ns)   --->   "%H_temp_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %H_temp"   --->   Operation 17 'read' 'H_temp_read' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 18 [2/2] (0.00ns)   --->   "%call_ln326 = call void @spmm_compute, i512 %gmem2, i64 %H_temp_read, i32 %row_fifo, i32 %col_fifo, i16 %val_fifo, i16 %result_fifo" [src/integrated-gcn/integrated_gcn.cpp:326]   --->   Operation 18 'call' 'call_ln326' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+
+State 4 <SV = 3> <Delay = 0.80>
+ST_4 : Operation 19 [1/2] (0.80ns)   --->   "%call_ln326 = call void @spmm_compute, i512 %gmem2, i64 %H_temp_read, i32 %row_fifo, i32 %col_fifo, i16 %val_fifo, i16 %result_fifo" [src/integrated-gcn/integrated_gcn.cpp:326]   --->   Operation 19 'call' 'call_ln326' <Predicate = true> <Delay = 0.80> <CoreType = "Generic">   --->   Generic Core
+
+State 5 <SV = 4> <Delay = 1.08>
+ST_5 : Operation 20 [1/1] (0.00ns)   --->   "%H_out_read = read i64 @_ssdm_op_Read.ap_auto.i64, i64 %H_out"   --->   Operation 20 'read' 'H_out_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 21 [2/2] (1.08ns)   --->   "%call_ln328 = call void @spmm_store, i512 %gmem6, i64 %H_out_read, i16 %result_fifo" [src/integrated-gcn/integrated_gcn.cpp:328]   --->   Operation 21 'call' 'call_ln328' <Predicate = true> <Delay = 1.08> <CoreType = "Generic">   --->   Generic Core
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 22 [1/1] (0.00ns)   --->   "%specstablecontent_ln311 = specstablecontent void @_ssdm_op_SpecStableContent, i64 %H_out, i1 1, void @p_str" [src/integrated-gcn/integrated_gcn.cpp:311]   --->   Operation 22 'specstablecontent' 'specstablecontent_ln311' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 23 [1/1] (0.00ns)   --->   "%specstablecontent_ln311 = specstablecontent void @_ssdm_op_SpecStableContent, i32 %nnz_total, i1 1, void @p_str" [src/integrated-gcn/integrated_gcn.cpp:311]   --->   Operation 23 'specstablecontent' 'specstablecontent_ln311' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 24 [1/1] (0.00ns)   --->   "%specstablecontent_ln311 = specstablecontent void @_ssdm_op_SpecStableContent, i64 %H_temp, i1 1, void @p_str" [src/integrated-gcn/integrated_gcn.cpp:311]   --->   Operation 24 'specstablecontent' 'specstablecontent_ln311' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 25 [1/1] (0.00ns)   --->   "%specstablecontent_ln311 = specstablecontent void @_ssdm_op_SpecStableContent, i512 %gmem2, i1 1, void @p_str" [src/integrated-gcn/integrated_gcn.cpp:311]   --->   Operation 25 'specstablecontent' 'specstablecontent_ln311' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 26 [1/1] (0.00ns)   --->   "%specstablecontent_ln311 = specstablecontent void @_ssdm_op_SpecStableContent, i64 %values, i1 1, void @p_str" [src/integrated-gcn/integrated_gcn.cpp:311]   --->   Operation 26 'specstablecontent' 'specstablecontent_ln311' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 27 [1/1] (0.00ns)   --->   "%specstablecontent_ln311 = specstablecontent void @_ssdm_op_SpecStableContent, i16 %gmem5, i1 1, void @p_str" [src/integrated-gcn/integrated_gcn.cpp:311]   --->   Operation 27 'specstablecontent' 'specstablecontent_ln311' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 28 [1/1] (0.00ns)   --->   "%specstablecontent_ln311 = specstablecontent void @_ssdm_op_SpecStableContent, i64 %colind, i1 1, void @p_str" [src/integrated-gcn/integrated_gcn.cpp:311]   --->   Operation 28 'specstablecontent' 'specstablecontent_ln311' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 29 [1/1] (0.00ns)   --->   "%specstablecontent_ln311 = specstablecontent void @_ssdm_op_SpecStableContent, i32 %gmem4, i1 1, void @p_str" [src/integrated-gcn/integrated_gcn.cpp:311]   --->   Operation 29 'specstablecontent' 'specstablecontent_ln311' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 30 [1/1] (0.00ns)   --->   "%specstablecontent_ln311 = specstablecontent void @_ssdm_op_SpecStableContent, i64 %row_length, i1 1, void @p_str" [src/integrated-gcn/integrated_gcn.cpp:311]   --->   Operation 30 'specstablecontent' 'specstablecontent_ln311' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 31 [1/1] (0.00ns)   --->   "%specstablecontent_ln311 = specstablecontent void @_ssdm_op_SpecStableContent, i32 %gmem3, i1 1, void @p_str" [src/integrated-gcn/integrated_gcn.cpp:311]   --->   Operation 31 'specstablecontent' 'specstablecontent_ln311' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 32 [1/1] (0.00ns)   --->   "%specdataflowpipeline_ln311 = specdataflowpipeline void @_ssdm_op_SpecDataflowPipeline, i32 4294967295, i32 0, void @empty_23" [src/integrated-gcn/integrated_gcn.cpp:311]   --->   Operation 32 'specdataflowpipeline' 'specdataflowpipeline_ln311' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 33 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem6, void @empty_12, i32 0, i32 0, void @empty_23, i32 0, i32 0, void @empty, void @empty_32, void @empty_23, i32 16, i32 16, i32 16, i32 16, void @empty_23, void @empty_23, i32 4294967295, i32 0, i32 0, i32 64"   --->   Operation 33 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 34 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %gmem5, void @empty_12, i32 0, i32 0, void @empty_23, i32 0, i32 0, void @empty_31, void @empty_32, void @empty_23, i32 16, i32 16, i32 16, i32 16, void @empty_23, void @empty_23, i32 4294967295, i32 0, i32 0, i32 2"   --->   Operation 34 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 35 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem4, void @empty_12, i32 0, i32 0, void @empty_23, i32 0, i32 0, void @empty_3, void @empty_32, void @empty_23, i32 16, i32 16, i32 16, i32 16, void @empty_23, void @empty_23, i32 4294967295, i32 0, i32 0, i32 4"   --->   Operation 35 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 36 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %gmem3, void @empty_12, i32 0, i32 0, void @empty_23, i32 0, i32 0, void @empty_2, void @empty_32, void @empty_23, i32 16, i32 16, i32 16, i32 16, void @empty_23, void @empty_23, i32 4294967295, i32 0, i32 0, i32 4"   --->   Operation 36 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 37 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %gmem2, void @empty_12, i32 0, i32 0, void @empty_23, i32 0, i32 0, void @empty_21, void @empty_32, void @empty_23, i32 16, i32 16, i32 16, i32 16, void @empty_23, void @empty_23, i32 4294967295, i32 0, i32 0, i32 64"   --->   Operation 37 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 38 [1/1] (0.00ns)   --->   "%empty = specchannel i32 @_ssdm_op_SpecChannel, void @row_fifo_str, i32 1, void @p_str, void @p_str, i32 16, i32 16, i32 %row_fifo, i32 %row_fifo"   --->   Operation 38 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 39 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %row_fifo, void @empty_8, i32 0, i32 0, void @empty_23, i32 0, i32 0, void @empty_23, void @empty_23, void @empty_23, i32 0, i32 0, i32 0, i32 0, void @empty_23, void @empty_23, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 39 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 40 [1/1] (0.00ns)   --->   "%empty_110 = specchannel i32 @_ssdm_op_SpecChannel, void @col_fifo_str, i32 1, void @p_str, void @p_str, i32 256, i32 256, i32 %col_fifo, i32 %col_fifo"   --->   Operation 40 'specchannel' 'empty_110' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 41 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 %col_fifo, void @empty_8, i32 0, i32 0, void @empty_23, i32 0, i32 0, void @empty_23, void @empty_23, void @empty_23, i32 0, i32 0, i32 0, i32 0, void @empty_23, void @empty_23, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 41 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 42 [1/1] (0.00ns)   --->   "%empty_111 = specchannel i32 @_ssdm_op_SpecChannel, void @val_fifo_str, i32 1, void @p_str, void @p_str, i32 256, i32 256, i16 %val_fifo, i16 %val_fifo"   --->   Operation 42 'specchannel' 'empty_111' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 43 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %val_fifo, void @empty_8, i32 0, i32 0, void @empty_23, i32 0, i32 0, void @empty_23, void @empty_23, void @empty_23, i32 0, i32 0, i32 0, i32 0, void @empty_23, void @empty_23, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 43 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 44 [1/1] (0.00ns)   --->   "%empty_112 = specchannel i32 @_ssdm_op_SpecChannel, void @result_fifo_str, i32 1, void @p_str, void @p_str, i32 32, i32 32, i16 %result_fifo, i16 %result_fifo"   --->   Operation 44 'specchannel' 'empty_112' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 45 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %result_fifo, void @empty_8, i32 0, i32 0, void @empty_23, i32 0, i32 0, void @empty_23, void @empty_23, void @empty_23, i32 0, i32 0, i32 0, i32 0, void @empty_23, void @empty_23, i32 4294967295, i32 0, i32 0, i32 0"   --->   Operation 45 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 46 [1/2] (0.00ns)   --->   "%call_ln328 = call void @spmm_store, i512 %gmem6, i64 %H_out_read, i16 %result_fifo" [src/integrated-gcn/integrated_gcn.cpp:328]   --->   Operation 46 'call' 'call_ln328' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Generic Core
+ST_6 : Operation 47 [1/1] (0.00ns)   --->   "%ret_ln329 = ret" [src/integrated-gcn/integrated_gcn.cpp:329]   --->   Operation 47 'ret' 'ret_ln329' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 7.300ns
+The critical path consists of the following:
+	wire read operation ('nnz_total_read') on port 'nnz_total' [29]  (0.000 ns)
+	'call' operation ('call_ln323', src/integrated-gcn/integrated_gcn.cpp:323) to 'spmm_load_csr' [46]  (7.300 ns)
+
+ <State 2>: 0.000ns
+The critical path consists of the following:
+
+ <State 3>: 0.000ns
+The critical path consists of the following:
+
+ <State 4>: 0.809ns
+The critical path consists of the following:
+	'call' operation ('call_ln326', src/integrated-gcn/integrated_gcn.cpp:326) to 'spmm_compute' [47]  (0.809 ns)
+
+ <State 5>: 1.085ns
+The critical path consists of the following:
+	wire read operation ('H_out_read') on port 'H_out' [28]  (0.000 ns)
+	'call' operation ('call_ln328', src/integrated-gcn/integrated_gcn.cpp:328) to 'spmm_store' [48]  (1.085 ns)
+
+ <State 6>: 0.000ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,302 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I'" level="0">
+<item name = "Date">Thu Apr 16 10:08:40 2026
+</item>
+<item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
+<item name = "Project">integrated_gcn_approx</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.888 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">23557, 23557, 0.236 ms, 0.236 ms, 0, 0, loop pipeline stp</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_mul8s_1KV8_fu_5246">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5252">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5258">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5264">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5270">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5276">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5282">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5288">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5294">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5300">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5306">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5312">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5318">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5324">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5330">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5336">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5342">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5348">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5354">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5360">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5366">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5372">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5378">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5384">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5390">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5396">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5402">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5408">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5414">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5420">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5426">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5432">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5438">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5444">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5450">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5456">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5462">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5468">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5474">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5480">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5486">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5492">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5498">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5504">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5510">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5516">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5522">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5528">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5534">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5540">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5546">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5552">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5558">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5564">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5570">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5576">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5582">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5588">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5594">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5600">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5606">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5612">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5618">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5624">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5630">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5636">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5642">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5648">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5654">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5660">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5666">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5672">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5678">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5684">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5690">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5696">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5702">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5708">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5714">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5720">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5726">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5732">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5738">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5744">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5750">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5756">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5762">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5768">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5774">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5780">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5786">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5792">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5798">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5804">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5810">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5816">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5822">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5828">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5834">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5840">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5846">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5852">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5858">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5864">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5870">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5876">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5882">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5888">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5894">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5900">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5906">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5912">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5918">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5924">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5930">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5936">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5942">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5948">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5954">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5960">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5966">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5972">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5978">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5984">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5990">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_5996">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6002">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6008">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6014">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6020">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6026">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6032">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6038">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6044">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6050">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6056">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6062">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6068">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6074">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6080">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6086">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6092">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6098">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6104">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6110">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6116">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6122">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6128">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6134">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6140">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6146">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6152">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6158">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6164">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6170">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6176">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6182">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6188">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6194">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6200">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6206">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6212">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6218">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6224">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6230">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6236">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6242">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6248">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6254">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6260">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6266">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6272">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6278">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6284">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6290">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6296">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6302">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6308">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6314">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6320">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6326">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6332">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6338">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6344">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6350">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6356">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6362">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6368">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6374">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6380">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6386">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6392">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6398">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6404">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6410">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6416">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6422">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6428">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6434">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6440">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6446">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6452">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6458">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6464">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6470">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6476">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6482">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6488">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6494">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6500">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6506">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6512">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6518">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6524">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6530">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6536">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6542">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6548">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6554">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6560">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6566">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6572">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6578">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6584">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6590">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6596">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6602">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6608">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6614">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6620">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6626">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6632">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6638">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6644">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6650">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6656">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6662">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6668">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6674">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6680">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6686">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6692">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6698">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6704">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6710">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6716">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6722">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6728">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6734">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6740">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6746">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6752">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6758">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6764">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6770">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_6776">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- COMP_KB_COMP_K_COMP_I">23555, 23555, 5, 1, 1, 23552, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

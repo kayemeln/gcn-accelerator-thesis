@@ -1,0 +1,56 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1 2 3",
+    "control_depth": 0,
+    "def_use_depth": 1,
+    "file": "spmm_stage.cpp",
+    "fileloc": 108,
+    "instructions": 42,
+    "memory_accesses": 0,
+    "name": "spmm_stage",
+    "total_instructions": 1707
+  },
+  "1": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 0,
+    "def_use_depth": 3,
+    "file": "spmm_stage.cpp",
+    "fileloc": 7,
+    "instructions": 33,
+    "memory_accesses": 6,
+    "name": "spmm_load_csr",
+    "total_instructions": 33
+  },
+  "2": {
+    "basicblocks": 78,
+    "calls": "",
+    "control_depth": 4,
+    "def_use_depth": 7,
+    "file": "spmm_stage.cpp",
+    "fileloc": 30,
+    "instructions": 1177,
+    "loads": {
+      "L": 96
+    },
+    "memory_accesses": 226,
+    "name": "spmm_compute",
+    "stores": {
+      "L": 128
+    },
+    "total_instructions": 1370
+  },
+  "3": {
+    "basicblocks": 7,
+    "calls": "",
+    "control_depth": 2,
+    "def_use_depth": 41,
+    "file": "spmm_stage.cpp",
+    "fileloc": 87,
+    "instructions": 135,
+    "memory_accesses": 2,
+    "name": "spmm_store",
+    "total_instructions": 262
+  }
+}

@@ -1,0 +1,424 @@
+---
+MainSourceFile:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+Diagnostics:
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_676_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/etc/ap_int_ref.h'
+      FileOffset:      676
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          280175
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_676_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_690_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/etc/ap_int_ref.h'
+      FileOffset:      690
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          280646
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_690_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_704_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/etc/ap_int_ref.h'
+      FileOffset:      704
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          281118
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_704_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_1251_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/etc/ap_fixed_base.h'
+      FileOffset:      1251
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          627614
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_1251_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_176_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      176
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2352912
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_176_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_192_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      192
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2353394
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_192_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_206_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      206
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2353785
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_206_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_232_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      232
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2354328
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_232_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_233_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      233
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2354660
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_233_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_261_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      261
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2355465
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_261_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_262_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      262
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2355835
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_262_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_263_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      263
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2356205
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_263_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_264_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      264
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2356575
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_264_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_265_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      265
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2356945
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_265_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_266_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      266
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2357315
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_266_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_267_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      267
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2357685
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_267_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_268_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      268
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2358055
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_268_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_269_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      269
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2358426
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_269_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_270_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      270
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2358798
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_270_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_285_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      285
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2359230
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_285_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_286_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      286
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2359583
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_286_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_287_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      287
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2359935
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_287_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_288_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      288
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2360286
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_288_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_289_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      289
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2360638
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_289_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_320_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      320
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2361103
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_320_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_321_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      321
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2361543
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_321_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_322_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      322
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2361985
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_322_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_323_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      323
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2362427
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_323_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_324_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      324
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2362869
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_324_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_325_1:  '
+      FilePath:        '/opt/Xilinx/2025.2/Vitis/common/technology/autopilot/hls_vector.h'
+      FileOffset:      325
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2363310
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_325_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-label-all-loops
+    DiagnosticMessage:
+      Message:         'Added loop label VITIS_LOOP_65_1:  '
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/spmm_stage.cpp'
+      FileOffset:      65
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2367711
+          Length:          0
+          ReplacementText: 'VITIS_LOOP_65_1: '
+    Level:           Remark
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    DiagnosticMessage:
+      Message:         ' hls::vector type top function variable H_temp requires aggregation'
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/spmm_stage.cpp'
+      FileOffset:      112
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2368942
+          Length:          0
+          ReplacementText: "\n#pragma HLS aggregate variable = H_temp\n"
+    Level:           Warning
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    DiagnosticMessage:
+      Message:         ' hls::vector type top function variable H_temp requires align attribute'
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/spmm_stage.cpp'
+      FileOffset:      112
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2368882
+          Length:          0
+          ReplacementText: ' __attribute__((align_value(alignof(hls::vector<DTYPE, DSIZE>)))) '
+    Level:           Warning
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    DiagnosticMessage:
+      Message:         ' hls::vector type top function variable H_out requires aggregation'
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/spmm_stage.cpp'
+      FileOffset:      114
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2368942
+          Length:          0
+          ReplacementText: "\n#pragma HLS aggregate variable = H_out\n"
+    Level:           Warning
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+  - DiagnosticName:  xilinx-aggregate-on-hls-vector
+    DiagnosticMessage:
+      Message:         ' hls::vector type top function variable H_out requires align attribute'
+      FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/spmm_stage.cpp'
+      FileOffset:      114
+      Replacements:
+        - FilePath:        '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel/spmm_stage/hls/.autopilot/db/spmm_stage.pp.0.cpp'
+          Offset:          2368939
+          Length:          0
+          ReplacementText: ' __attribute__((align_value(alignof(hls::vector<DTYPE, DSIZE>)))) '
+    Level:           Warning
+    BuildDirectory:  '/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/spmm_kernel'
+...

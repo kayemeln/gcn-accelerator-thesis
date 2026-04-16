@@ -1,0 +1,41 @@
+# ---------------------------------------------------------------------------
+# Created on Thu Apr 16 10:29:18 IST 2026 with report_failfast (2023.09.14)
+# ---------------------------------------------------------------------------
+
+ +------+
+ | DONT_TOUCH (Hierarchical Cells) |
+ | 0 module(s) |
+ +------+
+ | Cell |
+ +------+
+ +------+
+ +----------------------------------------------------------------------------------------------+
+ | DONT_TOUCH (Leaf Cells)                                                                      |
+ | 8 cell(s)                                                                                    |
+ +----------------------------------------------------------------------------------------------+
+ | Cell                                                                                         |
+ +----------------------------------------------------------------------------------------------+
+ | bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/first_sect_reg  |
+ | bd_0_i/hls_inst/inst/gmem1_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/first_sect_reg  |
+ | bd_0_i/hls_inst/inst/gmem2_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/first_sect_reg  |
+ | bd_0_i/hls_inst/inst/gmem2_m_axi_U/bus_write/wreq_burst_conv/burst_sequential/first_sect_reg |
+ | bd_0_i/hls_inst/inst/gmem3_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/first_sect_reg  |
+ | bd_0_i/hls_inst/inst/gmem4_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/first_sect_reg  |
+ | bd_0_i/hls_inst/inst/gmem5_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/first_sect_reg  |
+ | bd_0_i/hls_inst/inst/gmem6_m_axi_U/bus_write/wreq_burst_conv/burst_sequential/first_sect_reg |
+ +----------------------------------------------------------------------------------------------+
+ +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+ | DONT_TOUCH (Nets)                                                                                                                                                                                                                       |
+ | 8 net(s)                                                                                                                                                                                                                                |
+ +------------------------------------------------------------------------------------------+--------+-------+------------+----------------------------------------------------------------------------------------------------------------+
+ | Net                                                                                      | Fanout | Slack | Driver Pin | Load Pins                                                                                                      |
+ +------------------------------------------------------------------------------------------+--------+-------+------------+----------------------------------------------------------------------------------------------------------------+
+ | bd_0_i/hls_inst/inst/gmem3_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/first_sect  | 106    | 8.285 | FDRE/Q     | LUT2/I0 (10) LUT3/I0 (1) LUT3/I1 (76) LUT5/I0 (1) LUT5/I2 (2) LUT5/I3 (3) LUT6/I1 (2) LUT6/I3 (10) LUT6/I4 (1) |
+ | bd_0_i/hls_inst/inst/gmem4_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/first_sect  | 106    | 7.962 | FDRE/Q     | LUT2/I0 (10) LUT3/I0 (1) LUT3/I1 (76) LUT5/I0 (1) LUT5/I2 (2) LUT5/I3 (3) LUT6/I1 (2) LUT6/I3 (10) LUT6/I4 (1) |
+ | bd_0_i/hls_inst/inst/gmem5_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/first_sect  | 106    | 8.264 | FDRE/Q     | LUT2/I0 (10) LUT3/I0 (1) LUT3/I1 (76) LUT5/I0 (1) LUT5/I2 (2) LUT5/I3 (3) LUT6/I1 (2) LUT6/I3 (10) LUT6/I4 (1) |
+ | bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/first_sect  | 98     | 8.032 | FDRE/Q     | LUT2/I0 (6) LUT3/I1 (77) LUT5/I0 (1) LUT5/I2 (2) LUT5/I3 (3) LUT6/I1 (2) LUT6/I3 (6) LUT6/I4 (1)               |
+ | bd_0_i/hls_inst/inst/gmem1_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/first_sect  | 98     | 7.456 | FDRE/Q     | LUT2/I0 (6) LUT3/I1 (77) LUT5/I0 (1) LUT5/I2 (2) LUT5/I3 (3) LUT6/I1 (2) LUT6/I3 (6) LUT6/I4 (1)               |
+ | bd_0_i/hls_inst/inst/gmem2_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/first_sect  | 98     | 7.374 | FDRE/Q     | LUT2/I0 (6) LUT3/I1 (73) LUT3/I2 (1) LUT5/I2 (9) LUT5/I4 (1) LUT6/I0 (2) LUT6/I3 (6)                           |
+ | bd_0_i/hls_inst/inst/gmem6_m_axi_U/bus_write/wreq_burst_conv/burst_sequential/first_sect | 98     | 8.493 | FDRE/Q     | LUT2/I0 (6) LUT3/I1 (77) LUT5/I0 (1) LUT5/I2 (2) LUT5/I3 (3) LUT6/I1 (2) LUT6/I3 (6) LUT6/I4 (1)               |
+ | bd_0_i/hls_inst/inst/gmem2_m_axi_U/bus_write/wreq_burst_conv/burst_sequential/first_sect | 97     | 5.871 | FDRE/Q     | LUT2/I0 (6) LUT3/I1 (76) LUT5/I0 (1) LUT5/I3 (1) LUT6/I1 (3) LUT6/I2 (1) LUT6/I3 (8) LUT6/I4 (1)               |
+ +------------------------------------------------------------------------------------------+--------+-------+------------+----------------------------------------------------------------------------------------------------------------+

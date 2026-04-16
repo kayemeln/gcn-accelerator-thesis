@@ -1,0 +1,20 @@
+{
+  "0": {
+    "basicblocks": 15,
+    "calls": "",
+    "control_depth": 1,
+    "def_use_depth": 9,
+    "file": "naive_spmm_stage.cpp",
+    "fileloc": 8,
+    "instructions": 1065,
+    "loads": {
+      "L": 65
+    },
+    "memory_accesses": 70,
+    "name": "naive_spmm_stage",
+    "stores": {
+      "L": 65
+    },
+    "total_instructions": 1065
+  }
+}

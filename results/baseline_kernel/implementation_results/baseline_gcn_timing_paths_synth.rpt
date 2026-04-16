@@ -1,0 +1,972 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date              : Tue Apr 14 23:20:27 2026
+| Host              : nat-Yoga-Pro-9-16IAH10 running 64-bit Ubuntu 24.04.3 LTS
+| Command           : report_timing -max_paths 10 -file ./report/baseline_gcn_timing_paths_synth.rpt
+| Design            : bd_0_wrapper
+| Device            : xck26-sfvc784
+| Speed File        : -2LV  PRODUCTION 1.30 05-15-2022
+| Design State      : Synthesized
+| Temperature Grade : C
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             4.839ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[62]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.157ns  (logic 3.484ns (67.559%)  route 1.673ns (32.441%))
+  Logic Levels:           19  (CARRY8=7 DSP_A_B_DATA=1 DSP_ALU=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=1 DSP_PREADD_DATA=1 LUT2=2 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.030ns = ( 10.030 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.043     0.043    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.116     0.159 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/Q
+                         net (fo=3, unplaced)         0.180     0.339    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/indvar_flatten20_fu_128_reg[14]
+                         LUT6 (Prop_LUT6_I0_O)        0.225     0.564 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9/O
+                         net (fo=1, unplaced)         0.211     0.775    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.833 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_3/O
+                         net (fo=47, unplaced)        0.279     1.112    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/icmp_ln28_fu_251_p2[0]
+                         LUT6 (Prop_LUT6_I3_O)        0.058     1.170 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0/O
+                         net (fo=6, unplaced)         0.233     1.403    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.058     1.461 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0/O
+                         net (fo=2, unplaced)         0.211     1.672    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.095     1.767 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_2__0/O
+                         net (fo=2, unplaced)         0.194     1.961    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/A[10]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[10]_A2_DATA[10])
+                                                      0.258     2.219 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA_INST/A2_DATA[10]
+                         net (fo=1, unplaced)         0.000     2.219    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA.A2_DATA<10>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[10]_A2A1[10])
+                                                      0.114     2.333 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA_INST/A2A1[10]
+                         net (fo=1, unplaced)         0.000     2.333    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA.A2A1<10>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[10]_U[13])
+                                                      0.700     3.033 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER_INST/U[13]
+                         net (fo=1, unplaced)         0.000     3.033    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER.U<13>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[13]_U_DATA[13])
+                                                      0.067     3.100 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA_INST/U_DATA[13]
+                         net (fo=1, unplaced)         0.000     3.100    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA.U_DATA<13>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[13]_ALU_OUT[13])
+                                                      0.727     3.827 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU_INST/ALU_OUT[13]
+                         net (fo=1, unplaced)         0.000     3.827    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU.ALU_OUT<13>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[13]_P[13])
+                                                      0.146     3.973 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_OUTPUT_INST/P[13]
+                         net (fo=2, unplaced)         0.258     4.231    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13_n_10
+                         LUT2 (Prop_LUT2_I0_O)        0.080     4.311 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4/O
+                         net (fo=1, unplaced)         0.037     4.348    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4_n_0
+                         CARRY8 (Prop_CARRY8_S[5]_CO[7])
+                                                      0.246     4.594 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.600    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.673 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.679    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.752 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.758    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.831 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.837    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.910 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.916    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.989 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.995    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[7])
+                                                      0.171     5.166 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[62]_i_1/O[7]
+                         net (fo=1, unplaced)         0.034     5.200    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/add_ln31_fu_345_p2[63]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[62]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.030    10.030    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[62]/C
+                         clock pessimism              0.000    10.030    
+                         clock uncertainty           -0.035     9.995    
+                         FDRE (Setup_FDRE_C_D)        0.044    10.039    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[62]
+  -------------------------------------------------------------------
+                         required time                         10.039    
+                         arrival time                          -5.200    
+  -------------------------------------------------------------------
+                         slack                                  4.839    
+
+Slack (MET) :             4.849ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[60]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.146ns  (logic 3.474ns (67.509%)  route 1.672ns (32.491%))
+  Logic Levels:           19  (CARRY8=7 DSP_A_B_DATA=1 DSP_ALU=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=1 DSP_PREADD_DATA=1 LUT2=2 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.030ns = ( 10.030 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.043     0.043    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.116     0.159 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/Q
+                         net (fo=3, unplaced)         0.180     0.339    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/indvar_flatten20_fu_128_reg[14]
+                         LUT6 (Prop_LUT6_I0_O)        0.225     0.564 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9/O
+                         net (fo=1, unplaced)         0.211     0.775    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.833 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_3/O
+                         net (fo=47, unplaced)        0.279     1.112    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/icmp_ln28_fu_251_p2[0]
+                         LUT6 (Prop_LUT6_I3_O)        0.058     1.170 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0/O
+                         net (fo=6, unplaced)         0.233     1.403    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.058     1.461 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0/O
+                         net (fo=2, unplaced)         0.211     1.672    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.095     1.767 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_2__0/O
+                         net (fo=2, unplaced)         0.194     1.961    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/A[10]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[10]_A2_DATA[10])
+                                                      0.258     2.219 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA_INST/A2_DATA[10]
+                         net (fo=1, unplaced)         0.000     2.219    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA.A2_DATA<10>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[10]_A2A1[10])
+                                                      0.114     2.333 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA_INST/A2A1[10]
+                         net (fo=1, unplaced)         0.000     2.333    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA.A2A1<10>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[10]_U[13])
+                                                      0.700     3.033 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER_INST/U[13]
+                         net (fo=1, unplaced)         0.000     3.033    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER.U<13>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[13]_U_DATA[13])
+                                                      0.067     3.100 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA_INST/U_DATA[13]
+                         net (fo=1, unplaced)         0.000     3.100    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA.U_DATA<13>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[13]_ALU_OUT[13])
+                                                      0.727     3.827 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU_INST/ALU_OUT[13]
+                         net (fo=1, unplaced)         0.000     3.827    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU.ALU_OUT<13>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[13]_P[13])
+                                                      0.146     3.973 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_OUTPUT_INST/P[13]
+                         net (fo=2, unplaced)         0.258     4.231    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13_n_10
+                         LUT2 (Prop_LUT2_I0_O)        0.080     4.311 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4/O
+                         net (fo=1, unplaced)         0.037     4.348    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4_n_0
+                         CARRY8 (Prop_CARRY8_S[5]_CO[7])
+                                                      0.246     4.594 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.600    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.673 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.679    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.752 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.758    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.831 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.837    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.910 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.916    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.989 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.995    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.161     5.156 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[62]_i_1/O[5]
+                         net (fo=1, unplaced)         0.033     5.189    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/add_ln31_fu_345_p2[61]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[60]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.030    10.030    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[60]/C
+                         clock pessimism              0.000    10.030    
+                         clock uncertainty           -0.035     9.995    
+                         FDRE (Setup_FDRE_C_D)        0.043    10.038    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[60]
+  -------------------------------------------------------------------
+                         required time                         10.038    
+                         arrival time                          -5.189    
+  -------------------------------------------------------------------
+                         slack                                  4.849    
+
+Slack (MET) :             4.852ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[61]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.143ns  (logic 3.470ns (67.470%)  route 1.673ns (32.530%))
+  Logic Levels:           19  (CARRY8=7 DSP_A_B_DATA=1 DSP_ALU=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=1 DSP_PREADD_DATA=1 LUT2=2 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.030ns = ( 10.030 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.043     0.043    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.116     0.159 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/Q
+                         net (fo=3, unplaced)         0.180     0.339    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/indvar_flatten20_fu_128_reg[14]
+                         LUT6 (Prop_LUT6_I0_O)        0.225     0.564 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9/O
+                         net (fo=1, unplaced)         0.211     0.775    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.833 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_3/O
+                         net (fo=47, unplaced)        0.279     1.112    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/icmp_ln28_fu_251_p2[0]
+                         LUT6 (Prop_LUT6_I3_O)        0.058     1.170 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0/O
+                         net (fo=6, unplaced)         0.233     1.403    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.058     1.461 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0/O
+                         net (fo=2, unplaced)         0.211     1.672    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.095     1.767 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_2__0/O
+                         net (fo=2, unplaced)         0.194     1.961    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/A[10]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[10]_A2_DATA[10])
+                                                      0.258     2.219 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA_INST/A2_DATA[10]
+                         net (fo=1, unplaced)         0.000     2.219    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA.A2_DATA<10>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[10]_A2A1[10])
+                                                      0.114     2.333 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA_INST/A2A1[10]
+                         net (fo=1, unplaced)         0.000     2.333    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA.A2A1<10>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[10]_U[13])
+                                                      0.700     3.033 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER_INST/U[13]
+                         net (fo=1, unplaced)         0.000     3.033    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER.U<13>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[13]_U_DATA[13])
+                                                      0.067     3.100 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA_INST/U_DATA[13]
+                         net (fo=1, unplaced)         0.000     3.100    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA.U_DATA<13>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[13]_ALU_OUT[13])
+                                                      0.727     3.827 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU_INST/ALU_OUT[13]
+                         net (fo=1, unplaced)         0.000     3.827    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU.ALU_OUT<13>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[13]_P[13])
+                                                      0.146     3.973 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_OUTPUT_INST/P[13]
+                         net (fo=2, unplaced)         0.258     4.231    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13_n_10
+                         LUT2 (Prop_LUT2_I0_O)        0.080     4.311 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4/O
+                         net (fo=1, unplaced)         0.037     4.348    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4_n_0
+                         CARRY8 (Prop_CARRY8_S[5]_CO[7])
+                                                      0.246     4.594 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.600    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.673 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.679    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.752 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.758    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.831 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.837    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.910 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.916    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.989 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.995    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[6])
+                                                      0.157     5.152 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[62]_i_1/O[6]
+                         net (fo=1, unplaced)         0.034     5.186    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/add_ln31_fu_345_p2[62]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[61]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.030    10.030    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[61]/C
+                         clock pessimism              0.000    10.030    
+                         clock uncertainty           -0.035     9.995    
+                         FDRE (Setup_FDRE_C_D)        0.043    10.038    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[61]
+  -------------------------------------------------------------------
+                         required time                         10.038    
+                         arrival time                          -5.186    
+  -------------------------------------------------------------------
+                         slack                                  4.852    
+
+Slack (MET) :             4.893ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[59]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.103ns  (logic 3.432ns (67.255%)  route 1.671ns (32.745%))
+  Logic Levels:           19  (CARRY8=7 DSP_A_B_DATA=1 DSP_ALU=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=1 DSP_PREADD_DATA=1 LUT2=2 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.030ns = ( 10.030 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.043     0.043    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.116     0.159 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/Q
+                         net (fo=3, unplaced)         0.180     0.339    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/indvar_flatten20_fu_128_reg[14]
+                         LUT6 (Prop_LUT6_I0_O)        0.225     0.564 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9/O
+                         net (fo=1, unplaced)         0.211     0.775    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.833 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_3/O
+                         net (fo=47, unplaced)        0.279     1.112    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/icmp_ln28_fu_251_p2[0]
+                         LUT6 (Prop_LUT6_I3_O)        0.058     1.170 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0/O
+                         net (fo=6, unplaced)         0.233     1.403    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.058     1.461 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0/O
+                         net (fo=2, unplaced)         0.211     1.672    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.095     1.767 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_2__0/O
+                         net (fo=2, unplaced)         0.194     1.961    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/A[10]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[10]_A2_DATA[10])
+                                                      0.258     2.219 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA_INST/A2_DATA[10]
+                         net (fo=1, unplaced)         0.000     2.219    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA.A2_DATA<10>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[10]_A2A1[10])
+                                                      0.114     2.333 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA_INST/A2A1[10]
+                         net (fo=1, unplaced)         0.000     2.333    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA.A2A1<10>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[10]_U[13])
+                                                      0.700     3.033 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER_INST/U[13]
+                         net (fo=1, unplaced)         0.000     3.033    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER.U<13>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[13]_U_DATA[13])
+                                                      0.067     3.100 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA_INST/U_DATA[13]
+                         net (fo=1, unplaced)         0.000     3.100    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA.U_DATA<13>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[13]_ALU_OUT[13])
+                                                      0.727     3.827 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU_INST/ALU_OUT[13]
+                         net (fo=1, unplaced)         0.000     3.827    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU.ALU_OUT<13>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[13]_P[13])
+                                                      0.146     3.973 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_OUTPUT_INST/P[13]
+                         net (fo=2, unplaced)         0.258     4.231    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13_n_10
+                         LUT2 (Prop_LUT2_I0_O)        0.080     4.311 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4/O
+                         net (fo=1, unplaced)         0.037     4.348    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4_n_0
+                         CARRY8 (Prop_CARRY8_S[5]_CO[7])
+                                                      0.246     4.594 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.600    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.673 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.679    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.752 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.758    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.831 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.837    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.910 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.916    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.989 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.995    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[4])
+                                                      0.119     5.114 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[62]_i_1/O[4]
+                         net (fo=1, unplaced)         0.032     5.146    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/add_ln31_fu_345_p2[60]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[59]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.030    10.030    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[59]/C
+                         clock pessimism              0.000    10.030    
+                         clock uncertainty           -0.035     9.995    
+                         FDRE (Setup_FDRE_C_D)        0.044    10.039    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[59]
+  -------------------------------------------------------------------
+                         required time                         10.039    
+                         arrival time                          -5.146    
+  -------------------------------------------------------------------
+                         slack                                  4.893    
+
+Slack (MET) :             4.895ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[58]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.100ns  (logic 3.427ns (67.196%)  route 1.673ns (32.804%))
+  Logic Levels:           19  (CARRY8=7 DSP_A_B_DATA=1 DSP_ALU=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=1 DSP_PREADD_DATA=1 LUT2=2 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.030ns = ( 10.030 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.043     0.043    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.116     0.159 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/Q
+                         net (fo=3, unplaced)         0.180     0.339    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/indvar_flatten20_fu_128_reg[14]
+                         LUT6 (Prop_LUT6_I0_O)        0.225     0.564 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9/O
+                         net (fo=1, unplaced)         0.211     0.775    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.833 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_3/O
+                         net (fo=47, unplaced)        0.279     1.112    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/icmp_ln28_fu_251_p2[0]
+                         LUT6 (Prop_LUT6_I3_O)        0.058     1.170 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0/O
+                         net (fo=6, unplaced)         0.233     1.403    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.058     1.461 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0/O
+                         net (fo=2, unplaced)         0.211     1.672    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.095     1.767 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_2__0/O
+                         net (fo=2, unplaced)         0.194     1.961    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/A[10]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[10]_A2_DATA[10])
+                                                      0.258     2.219 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA_INST/A2_DATA[10]
+                         net (fo=1, unplaced)         0.000     2.219    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA.A2_DATA<10>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[10]_A2A1[10])
+                                                      0.114     2.333 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA_INST/A2A1[10]
+                         net (fo=1, unplaced)         0.000     2.333    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA.A2A1<10>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[10]_U[13])
+                                                      0.700     3.033 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER_INST/U[13]
+                         net (fo=1, unplaced)         0.000     3.033    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER.U<13>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[13]_U_DATA[13])
+                                                      0.067     3.100 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA_INST/U_DATA[13]
+                         net (fo=1, unplaced)         0.000     3.100    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA.U_DATA<13>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[13]_ALU_OUT[13])
+                                                      0.727     3.827 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU_INST/ALU_OUT[13]
+                         net (fo=1, unplaced)         0.000     3.827    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU.ALU_OUT<13>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[13]_P[13])
+                                                      0.146     3.973 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_OUTPUT_INST/P[13]
+                         net (fo=2, unplaced)         0.258     4.231    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13_n_10
+                         LUT2 (Prop_LUT2_I0_O)        0.080     4.311 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4/O
+                         net (fo=1, unplaced)         0.037     4.348    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4_n_0
+                         CARRY8 (Prop_CARRY8_S[5]_CO[7])
+                                                      0.246     4.594 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.600    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.673 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.679    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.752 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.758    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.831 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.837    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.910 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.916    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.989 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.995    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[3])
+                                                      0.114     5.109 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[62]_i_1/O[3]
+                         net (fo=1, unplaced)         0.034     5.143    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/add_ln31_fu_345_p2[59]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[58]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.030    10.030    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[58]/C
+                         clock pessimism              0.000    10.030    
+                         clock uncertainty           -0.035     9.995    
+                         FDRE (Setup_FDRE_C_D)        0.043    10.038    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[58]
+  -------------------------------------------------------------------
+                         required time                         10.038    
+                         arrival time                          -5.143    
+  -------------------------------------------------------------------
+                         slack                                  4.895    
+
+Slack (MET) :             4.904ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[56]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.091ns  (logic 3.419ns (67.158%)  route 1.672ns (32.842%))
+  Logic Levels:           19  (CARRY8=7 DSP_A_B_DATA=1 DSP_ALU=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=1 DSP_PREADD_DATA=1 LUT2=2 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.030ns = ( 10.030 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.043     0.043    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.116     0.159 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/Q
+                         net (fo=3, unplaced)         0.180     0.339    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/indvar_flatten20_fu_128_reg[14]
+                         LUT6 (Prop_LUT6_I0_O)        0.225     0.564 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9/O
+                         net (fo=1, unplaced)         0.211     0.775    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.833 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_3/O
+                         net (fo=47, unplaced)        0.279     1.112    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/icmp_ln28_fu_251_p2[0]
+                         LUT6 (Prop_LUT6_I3_O)        0.058     1.170 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0/O
+                         net (fo=6, unplaced)         0.233     1.403    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.058     1.461 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0/O
+                         net (fo=2, unplaced)         0.211     1.672    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.095     1.767 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_2__0/O
+                         net (fo=2, unplaced)         0.194     1.961    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/A[10]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[10]_A2_DATA[10])
+                                                      0.258     2.219 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA_INST/A2_DATA[10]
+                         net (fo=1, unplaced)         0.000     2.219    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA.A2_DATA<10>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[10]_A2A1[10])
+                                                      0.114     2.333 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA_INST/A2A1[10]
+                         net (fo=1, unplaced)         0.000     2.333    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA.A2A1<10>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[10]_U[13])
+                                                      0.700     3.033 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER_INST/U[13]
+                         net (fo=1, unplaced)         0.000     3.033    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER.U<13>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[13]_U_DATA[13])
+                                                      0.067     3.100 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA_INST/U_DATA[13]
+                         net (fo=1, unplaced)         0.000     3.100    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA.U_DATA<13>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[13]_ALU_OUT[13])
+                                                      0.727     3.827 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU_INST/ALU_OUT[13]
+                         net (fo=1, unplaced)         0.000     3.827    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU.ALU_OUT<13>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[13]_P[13])
+                                                      0.146     3.973 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_OUTPUT_INST/P[13]
+                         net (fo=2, unplaced)         0.258     4.231    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13_n_10
+                         LUT2 (Prop_LUT2_I0_O)        0.080     4.311 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4/O
+                         net (fo=1, unplaced)         0.037     4.348    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4_n_0
+                         CARRY8 (Prop_CARRY8_S[5]_CO[7])
+                                                      0.246     4.594 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.600    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.673 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.679    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.752 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.758    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.831 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.837    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.910 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.916    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.989 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.995    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[1])
+                                                      0.106     5.101 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[62]_i_1/O[1]
+                         net (fo=1, unplaced)         0.033     5.134    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/add_ln31_fu_345_p2[57]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[56]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.030    10.030    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[56]/C
+                         clock pessimism              0.000    10.030    
+                         clock uncertainty           -0.035     9.995    
+                         FDRE (Setup_FDRE_C_D)        0.043    10.038    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[56]
+  -------------------------------------------------------------------
+                         required time                         10.038    
+                         arrival time                          -5.134    
+  -------------------------------------------------------------------
+                         slack                                  4.904    
+
+Slack (MET) :             4.916ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[57]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.079ns  (logic 3.406ns (67.060%)  route 1.673ns (32.940%))
+  Logic Levels:           19  (CARRY8=7 DSP_A_B_DATA=1 DSP_ALU=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=1 DSP_PREADD_DATA=1 LUT2=2 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.030ns = ( 10.030 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.043     0.043    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.116     0.159 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/Q
+                         net (fo=3, unplaced)         0.180     0.339    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/indvar_flatten20_fu_128_reg[14]
+                         LUT6 (Prop_LUT6_I0_O)        0.225     0.564 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9/O
+                         net (fo=1, unplaced)         0.211     0.775    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.833 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_3/O
+                         net (fo=47, unplaced)        0.279     1.112    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/icmp_ln28_fu_251_p2[0]
+                         LUT6 (Prop_LUT6_I3_O)        0.058     1.170 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0/O
+                         net (fo=6, unplaced)         0.233     1.403    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.058     1.461 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0/O
+                         net (fo=2, unplaced)         0.211     1.672    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.095     1.767 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_2__0/O
+                         net (fo=2, unplaced)         0.194     1.961    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/A[10]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[10]_A2_DATA[10])
+                                                      0.258     2.219 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA_INST/A2_DATA[10]
+                         net (fo=1, unplaced)         0.000     2.219    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA.A2_DATA<10>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[10]_A2A1[10])
+                                                      0.114     2.333 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA_INST/A2A1[10]
+                         net (fo=1, unplaced)         0.000     2.333    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA.A2A1<10>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[10]_U[13])
+                                                      0.700     3.033 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER_INST/U[13]
+                         net (fo=1, unplaced)         0.000     3.033    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER.U<13>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[13]_U_DATA[13])
+                                                      0.067     3.100 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA_INST/U_DATA[13]
+                         net (fo=1, unplaced)         0.000     3.100    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA.U_DATA<13>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[13]_ALU_OUT[13])
+                                                      0.727     3.827 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU_INST/ALU_OUT[13]
+                         net (fo=1, unplaced)         0.000     3.827    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU.ALU_OUT<13>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[13]_P[13])
+                                                      0.146     3.973 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_OUTPUT_INST/P[13]
+                         net (fo=2, unplaced)         0.258     4.231    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13_n_10
+                         LUT2 (Prop_LUT2_I0_O)        0.080     4.311 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4/O
+                         net (fo=1, unplaced)         0.037     4.348    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4_n_0
+                         CARRY8 (Prop_CARRY8_S[5]_CO[7])
+                                                      0.246     4.594 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.600    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.673 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.679    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.752 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.758    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.831 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.837    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.910 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.916    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.989 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.995    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[2])
+                                                      0.093     5.088 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[62]_i_1/O[2]
+                         net (fo=1, unplaced)         0.034     5.122    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/add_ln31_fu_345_p2[58]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[57]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.030    10.030    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[57]/C
+                         clock pessimism              0.000    10.030    
+                         clock uncertainty           -0.035     9.995    
+                         FDRE (Setup_FDRE_C_D)        0.043    10.038    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[57]
+  -------------------------------------------------------------------
+                         required time                         10.038    
+                         arrival time                          -5.122    
+  -------------------------------------------------------------------
+                         slack                                  4.916    
+
+Slack (MET) :             4.918ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.078ns  (logic 3.411ns (67.172%)  route 1.667ns (32.828%))
+  Logic Levels:           18  (CARRY8=6 DSP_A_B_DATA=1 DSP_ALU=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=1 DSP_PREADD_DATA=1 LUT2=2 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.030ns = ( 10.030 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.043     0.043    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.116     0.159 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/Q
+                         net (fo=3, unplaced)         0.180     0.339    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/indvar_flatten20_fu_128_reg[14]
+                         LUT6 (Prop_LUT6_I0_O)        0.225     0.564 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9/O
+                         net (fo=1, unplaced)         0.211     0.775    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.833 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_3/O
+                         net (fo=47, unplaced)        0.279     1.112    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/icmp_ln28_fu_251_p2[0]
+                         LUT6 (Prop_LUT6_I3_O)        0.058     1.170 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0/O
+                         net (fo=6, unplaced)         0.233     1.403    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.058     1.461 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0/O
+                         net (fo=2, unplaced)         0.211     1.672    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.095     1.767 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_2__0/O
+                         net (fo=2, unplaced)         0.194     1.961    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/A[10]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[10]_A2_DATA[10])
+                                                      0.258     2.219 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA_INST/A2_DATA[10]
+                         net (fo=1, unplaced)         0.000     2.219    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA.A2_DATA<10>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[10]_A2A1[10])
+                                                      0.114     2.333 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA_INST/A2A1[10]
+                         net (fo=1, unplaced)         0.000     2.333    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA.A2A1<10>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[10]_U[13])
+                                                      0.700     3.033 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER_INST/U[13]
+                         net (fo=1, unplaced)         0.000     3.033    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER.U<13>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[13]_U_DATA[13])
+                                                      0.067     3.100 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA_INST/U_DATA[13]
+                         net (fo=1, unplaced)         0.000     3.100    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA.U_DATA<13>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[13]_ALU_OUT[13])
+                                                      0.727     3.827 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU_INST/ALU_OUT[13]
+                         net (fo=1, unplaced)         0.000     3.827    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU.ALU_OUT<13>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[13]_P[13])
+                                                      0.146     3.973 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_OUTPUT_INST/P[13]
+                         net (fo=2, unplaced)         0.258     4.231    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13_n_10
+                         LUT2 (Prop_LUT2_I0_O)        0.080     4.311 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4/O
+                         net (fo=1, unplaced)         0.037     4.348    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4_n_0
+                         CARRY8 (Prop_CARRY8_S[5]_CO[7])
+                                                      0.246     4.594 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.600    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.673 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.679    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.752 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.758    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.831 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.837    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.910 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.916    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[7])
+                                                      0.171     5.087 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]_i_1/O[7]
+                         net (fo=1, unplaced)         0.034     5.121    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/add_ln31_fu_345_p2[55]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.030    10.030    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]/C
+                         clock pessimism              0.000    10.030    
+                         clock uncertainty           -0.035     9.995    
+                         FDRE (Setup_FDRE_C_D)        0.044    10.039    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]
+  -------------------------------------------------------------------
+                         required time                         10.039    
+                         arrival time                          -5.121    
+  -------------------------------------------------------------------
+                         slack                                  4.918    
+
+Slack (MET) :             4.928ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[52]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.067ns  (logic 3.401ns (67.121%)  route 1.666ns (32.879%))
+  Logic Levels:           18  (CARRY8=6 DSP_A_B_DATA=1 DSP_ALU=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=1 DSP_PREADD_DATA=1 LUT2=2 LUT5=1 LUT6=3)
+  Clock Path Skew:        -0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.030ns = ( 10.030 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.043     0.043    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.116     0.159 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/indvar_flatten20_fu_128_reg[14]/Q
+                         net (fo=3, unplaced)         0.180     0.339    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/indvar_flatten20_fu_128_reg[14]
+                         LUT6 (Prop_LUT6_I0_O)        0.225     0.564 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9/O
+                         net (fo=1, unplaced)         0.211     0.775    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_9_n_0
+                         LUT5 (Prop_LUT5_I4_O)        0.058     0.833 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/k_fu_120[3]_i_3/O
+                         net (fo=47, unplaced)        0.279     1.112    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/icmp_ln28_fu_251_p2[0]
+                         LUT6 (Prop_LUT6_I3_O)        0.058     1.170 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0/O
+                         net (fo=6, unplaced)         0.233     1.403    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_14__0_n_0
+                         LUT6 (Prop_LUT6_I2_O)        0.058     1.461 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0/O
+                         net (fo=2, unplaced)         0.211     1.672    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_13__0_n_0
+                         LUT2 (Prop_LUT2_I0_O)        0.095     1.767 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product_i_2__0/O
+                         net (fo=2, unplaced)         0.194     1.961    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/A[10]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[10]_A2_DATA[10])
+                                                      0.258     2.219 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA_INST/A2_DATA[10]
+                         net (fo=1, unplaced)         0.000     2.219    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_A_B_DATA.A2_DATA<10>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[10]_A2A1[10])
+                                                      0.114     2.333 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA_INST/A2A1[10]
+                         net (fo=1, unplaced)         0.000     2.333    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_PREADD_DATA.A2A1<10>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[10]_U[13])
+                                                      0.700     3.033 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER_INST/U[13]
+                         net (fo=1, unplaced)         0.000     3.033    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_MULTIPLIER.U<13>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[13]_U_DATA[13])
+                                                      0.067     3.100 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA_INST/U_DATA[13]
+                         net (fo=1, unplaced)         0.000     3.100    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_M_DATA.U_DATA<13>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[13]_ALU_OUT[13])
+                                                      0.727     3.827 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU_INST/ALU_OUT[13]
+                         net (fo=1, unplaced)         0.000     3.827    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_ALU.ALU_OUT<13>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[13]_P[13])
+                                                      0.146     3.973 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13/tmp_product/DSP_OUTPUT_INST/P[13]
+                         net (fo=2, unplaced)         0.258     4.231    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/mul_12ns_13ns_24_1_1_U13_n_10
+                         LUT2 (Prop_LUT2_I0_O)        0.080     4.311 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4/O
+                         net (fo=1, unplaced)         0.037     4.348    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587[14]_i_4_n_0
+                         CARRY8 (Prop_CARRY8_S[5]_CO[7])
+                                                      0.246     4.594 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.600    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[14]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.673 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.679    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[22]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.752 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.758    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[30]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.831 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.837    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[38]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.910 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.916    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[46]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[5])
+                                                      0.161     5.077 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[54]_i_1/O[5]
+                         net (fo=1, unplaced)         0.033     5.110    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/add_ln31_fu_345_p2[53]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[52]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.030    10.030    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[52]/C
+                         clock pessimism              0.000    10.030    
+                         clock uncertainty           -0.035     9.995    
+                         FDRE (Setup_FDRE_C_D)        0.043    10.038    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_27_4_VITIS_LOOP_28_5_VITIS_LOOP_30_6_fu_157/gmem3_addr_reg_587_reg[52]
+  -------------------------------------------------------------------
+                         required time                         10.038    
+                         arrival time                          -5.110    
+  -------------------------------------------------------------------
+                         slack                                  4.928    
+
+Slack (MET) :             4.929ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/indvar_flatten_fu_126_reg[12]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603_reg[62]/D
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        5.067ns  (logic 3.575ns (70.555%)  route 1.492ns (29.445%))
+  Logic Levels:           19  (CARRY8=7 DSP_A_B_DATA=1 DSP_ALU=1 DSP_M_DATA=1 DSP_MULTIPLIER=1 DSP_OUTPUT=1 DSP_PREADD_DATA=1 LUT2=1 LUT3=1 LUT4=1 LUT5=1 LUT6=2)
+  Clock Path Skew:        -0.013ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.030ns = ( 10.030 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.043     0.043    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/indvar_flatten_fu_126_reg[12]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_FDRE_C_Q)         0.113     0.156 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/indvar_flatten_fu_126_reg[12]/Q
+                         net (fo=2, unplaced)         0.107     0.263    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/indvar_flatten_fu_126_reg[12]
+                         LUT4 (Prop_LUT4_I0_O)        0.152     0.415 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/icmp_ln19_reg_584[0]_i_2/O
+                         net (fo=1, unplaced)         0.117     0.532    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/icmp_ln19_reg_584[0]_i_2_n_0
+                         LUT6 (Prop_LUT6_I0_O)        0.225     0.757 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/icmp_ln19_reg_584[0]_i_1/O
+                         net (fo=25, unplaced)        0.265     1.022    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/icmp_ln19_fu_246_p2[0]
+                         LUT6 (Prop_LUT6_I3_O)        0.058     1.080 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/tmp_product_i_14/O
+                         net (fo=6, unplaced)         0.233     1.313    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/tmp_product_i_14_n_0
+                         LUT5 (Prop_LUT5_I3_O)        0.058     1.371 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/tmp_product_i_13/O
+                         net (fo=2, unplaced)         0.211     1.582    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/tmp_product_i_13_n_0
+                         LUT3 (Prop_LUT3_I1_O)        0.095     1.677 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/tmp_product_i_2/O
+                         net (fo=2, unplaced)         0.194     1.871    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/tmp_product/A[10]
+                         DSP_A_B_DATA (Prop_DSP_A_B_DATA_A[10]_A2_DATA[10])
+                                                      0.258     2.129 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/tmp_product/DSP_A_B_DATA_INST/A2_DATA[10]
+                         net (fo=1, unplaced)         0.000     2.129    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/tmp_product/DSP_A_B_DATA.A2_DATA<10>
+                         DSP_PREADD_DATA (Prop_DSP_PREADD_DATA_A2_DATA[10]_A2A1[10])
+                                                      0.114     2.243 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/tmp_product/DSP_PREADD_DATA_INST/A2A1[10]
+                         net (fo=1, unplaced)         0.000     2.243    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/tmp_product/DSP_PREADD_DATA.A2A1<10>
+                         DSP_MULTIPLIER (Prop_DSP_MULTIPLIER_A2A1[10]_U[13])
+                                                      0.700     2.943 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/tmp_product/DSP_MULTIPLIER_INST/U[13]
+                         net (fo=1, unplaced)         0.000     2.943    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/tmp_product/DSP_MULTIPLIER.U<13>
+                         DSP_M_DATA (Prop_DSP_M_DATA_U[13]_U_DATA[13])
+                                                      0.067     3.010 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/tmp_product/DSP_M_DATA_INST/U_DATA[13]
+                         net (fo=1, unplaced)         0.000     3.010    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/tmp_product/DSP_M_DATA.U_DATA<13>
+                         DSP_ALU (Prop_DSP_ALU_U_DATA[13]_ALU_OUT[13])
+                                                      0.727     3.737 f  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/tmp_product/DSP_ALU_INST/ALU_OUT[13]
+                         net (fo=1, unplaced)         0.000     3.737    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/tmp_product/DSP_ALU.ALU_OUT<13>
+                         DSP_OUTPUT (Prop_DSP_OUTPUT_ALU_OUT[13]_P[13])
+                                                      0.146     3.883 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1/tmp_product/DSP_OUTPUT_INST/P[13]
+                         net (fo=2, unplaced)         0.258     4.141    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/mul_12ns_14ns_25_1_1_U1_n_11
+                         LUT2 (Prop_LUT2_I0_O)        0.080     4.221 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603[14]_i_4/O
+                         net (fo=1, unplaced)         0.037     4.258    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603[14]_i_4_n_0
+                         CARRY8 (Prop_CARRY8_S[5]_CO[7])
+                                                      0.246     4.504 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603_reg[14]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.510    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603_reg[14]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.583 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603_reg[22]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.589    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603_reg[22]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.662 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603_reg[30]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.668    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603_reg[30]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.741 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603_reg[38]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.747    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603_reg[38]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.820 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603_reg[46]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.826    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603_reg[46]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_CO[7])
+                                                      0.073     4.899 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603_reg[54]_i_1/CO[7]
+                         net (fo=1, unplaced)         0.006     4.905    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603_reg[54]_i_1_n_0
+                         CARRY8 (Prop_CARRY8_CI_O[7])
+                                                      0.171     5.076 r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603_reg[62]_i_1/O[7]
+                         net (fo=1, unplaced)         0.034     5.110    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/add_ln22_fu_318_p2[63]
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603_reg[62]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=8098, unset)         0.030    10.030    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/ap_clk
+                         FDRE                                         r  bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603_reg[62]/C
+                         clock pessimism              0.000    10.030    
+                         clock uncertainty           -0.035     9.995    
+                         FDRE (Setup_FDRE_C_D)        0.044    10.039    bd_0_i/hls_inst/inst/grp_baseline_gcn_Pipeline_VITIS_LOOP_18_1_VITIS_LOOP_19_2_VITIS_LOOP_21_3_fu_144/gmem0_addr_reg_603_reg[62]
+  -------------------------------------------------------------------
+                         required time                         10.039    
+                         arrival time                          -5.110    
+  -------------------------------------------------------------------
+                         slack                                  4.929    
+
+
+
+

@@ -1,0 +1,15 @@
+[
+  {
+    "directory": "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/gemm_kernel",
+    "arguments": [
+      "/opt/Xilinx/2025.2/Vitis/lnx64/tools/vcxx/libexec/clang++",
+      "--gcc-toolchain=/opt/Xilinx/2025.2/Vitis/tps/lnx64/gcc-8.3.0",
+      "-fhls",
+      "-hls-syn-headers-dir=/opt/Xilinx/2025.2/Vitis/common/technology/autopilot",
+      "-fhlstoplevel=gemm_stage",
+      "-c",
+      "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/gemm_stage.cpp"
+    ],
+    "file": "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/integrated-gcn/gemm_stage.cpp"
+  }
+]

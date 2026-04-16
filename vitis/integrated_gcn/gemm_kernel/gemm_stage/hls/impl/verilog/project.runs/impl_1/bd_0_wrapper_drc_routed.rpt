@@ -1,0 +1,94 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Wed Apr 15 13:16:20 2026
+| Host         : nat-Yoga-Pro-9-16IAH10 running 64-bit Ubuntu 24.04.3 LTS
+| Command      : report_drc -file bd_0_wrapper_drc_routed.rpt -pb bd_0_wrapper_drc_routed.pb -rpx bd_0_wrapper_drc_routed.rpx
+| Design       : bd_0_wrapper
+| Device       : xck26-sfvc784-2LV-c
+| Speed File   : -2LV
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: checkpoint_bd_0_wrapper
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max checks: <unlimited>
+             Checks found: 8
++-----------+----------+------------------------+--------+
+| Rule      | Severity | Description            | Checks |
++-----------+----------+------------------------+--------+
+| DPIP-2    | Warning  | Input pipelining       | 3      |
+| DPOP-3    | Warning  | PREG Output pipelining | 2      |
+| DPOP-4    | Warning  | MREG Output pipelining | 2      |
+| RTSTAT-10 | Warning  | No routable loads      | 1      |
++-----------+----------+------------------------+--------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-2#1 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/gemm_read_X_U0/mac_muladd_7ns_7ns_17s_17_1_1_U4/gemm_stage_mac_muladd_7ns_7ns_17s_17_1_1_DSP48_0_U/p input bd_0_i/hls_inst/inst/gemm_read_X_U0/mac_muladd_7ns_7ns_17s_17_1_1_U4/gemm_stage_mac_muladd_7ns_7ns_17s_17_1_1_DSP48_0_U/p/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#2 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/gemm_read_X_U0/mac_muladd_7ns_7ns_17s_17_1_1_U4/gemm_stage_mac_muladd_7ns_7ns_17s_17_1_1_DSP48_0_U/p input bd_0_i/hls_inst/inst/gemm_read_X_U0/mac_muladd_7ns_7ns_17s_17_1_1_U4/gemm_stage_mac_muladd_7ns_7ns_17s_17_1_1_DSP48_0_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-2#3 Warning
+Input pipelining  
+DSP bd_0_i/hls_inst/inst/gemm_read_X_U0/mul_5ns_14ns_17_1_1_U3/tmp_product input bd_0_i/hls_inst/inst/gemm_read_X_U0/mul_5ns_14ns_17_1_1_U3/tmp_product/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-3#1 Warning
+PREG Output pipelining  
+DSP bd_0_i/hls_inst/inst/gemm_read_X_U0/mac_muladd_7ns_7ns_17s_17_1_1_U4/gemm_stage_mac_muladd_7ns_7ns_17s_17_1_1_DSP48_0_U/p output bd_0_i/hls_inst/inst/gemm_read_X_U0/mac_muladd_7ns_7ns_17s_17_1_1_U4/gemm_stage_mac_muladd_7ns_7ns_17s_17_1_1_DSP48_0_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-3#2 Warning
+PREG Output pipelining  
+DSP bd_0_i/hls_inst/inst/gemm_read_X_U0/mul_5ns_14ns_17_1_1_U3/tmp_product output bd_0_i/hls_inst/inst/gemm_read_X_U0/mul_5ns_14ns_17_1_1_U3/tmp_product/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-4#1 Warning
+MREG Output pipelining  
+DSP bd_0_i/hls_inst/inst/gemm_read_X_U0/mac_muladd_7ns_7ns_17s_17_1_1_U4/gemm_stage_mac_muladd_7ns_7ns_17s_17_1_1_DSP48_0_U/p multiplier stage bd_0_i/hls_inst/inst/gemm_read_X_U0/mac_muladd_7ns_7ns_17s_17_1_1_U4/gemm_stage_mac_muladd_7ns_7ns_17s_17_1_1_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-4#2 Warning
+MREG Output pipelining  
+DSP bd_0_i/hls_inst/inst/gemm_read_X_U0/mul_5ns_14ns_17_1_1_U3/tmp_product multiplier stage bd_0_i/hls_inst/inst/gemm_read_X_U0/mul_5ns_14ns_17_1_1_U3/tmp_product/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+793 net(s) have no routable loads. The problem bus(es) and/or net(s) are bd_0_i/hls_inst/inst/gemm_read_W_U0/ap_idle,
+bd_0_i/hls_inst/inst/gemm_read_X_U0/ap_ready,
+bd_0_i/hls_inst/inst/gemm_write_U0/ap_done,
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[0],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[10],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[11],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[12],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[1],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[2],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[3],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[6],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[7],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[8],
+bd_0_i/hls_inst/inst/gmem0_m_axi_U/bus_read/rreq_burst_conv/burst_sequential/m_axi_gmem0_ARADDR[9],
+bd_0_i/hls_inst/inst/gmem2_m_axi_U/bus_write/wreq_throttle/rs_req/data_p1_reg[67]_0[61:0]
+ (the first 15 of 121 listed nets/buses).
+Related violations: <none>
+
+

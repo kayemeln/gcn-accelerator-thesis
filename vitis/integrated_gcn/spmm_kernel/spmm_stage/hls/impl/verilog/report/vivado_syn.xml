@@ -1,0 +1,460 @@
+<profile>
+<RunData>
+  <RUN_TYPE>synth</RUN_TYPE>
+  <VIVADO_VERSION>v.2025.2</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>10.000</TargetClockPeriod>
+  <AchievedClockPeriod>4.600</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>4.600</CP_FINAL>
+  <CP_ROUTE>NA</CP_ROUTE>
+  <CP_SYNTH>4.600</CP_SYNTH>
+  <CP_TARGET>10.000</CP_TARGET>
+  <SLACK_FINAL>5.400</SLACK_FINAL>
+  <SLACK_ROUTE></SLACK_ROUTE>
+  <SLACK_SYNTH>5.400</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>NA</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>5.400</WNS_FINAL>
+  <WNS_ROUTE>NA</WNS_ROUTE>
+  <WNS_SYNTH>5.400</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>19</BRAM>
+    <CLB>0</CLB>
+    <DSP>64</DSP>
+    <FF>9946</FF>
+    <LATCH>0</LATCH>
+    <LUT>9626</LUT>
+    <SRL>1127</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>288</BRAM>
+    <CLB>0</CLB>
+    <DSP>1248</DSP>
+    <FF>234240</FF>
+    <LUT>117120</LUT>
+    <URAM>64</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="spmm_stage" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="16">H_out_c_U col_fifo_U control_s_axi_U entry_proc_U0 gmem0_m_axi_U gmem1_m_axi_U gmem2_m_axi_U gmem3_m_axi_U gmem4_m_axi_U result_fifo_U row_fifo_U spmm_compute_U0 spmm_load_csr_U0 spmm_store_U0 start_for_spmm_store_U0_U val_fifo_U</SubModules>
+    <Resources BRAM="19" DSP="64" FF="9946" LUT="9626" LUTRAM="2256" LogicLUT="6243" RAMB18="5" RAMB36="7" SRL="1127"/>
+  </RtlModule>
+  <RtlModule CELL="inst/H_out_c_U" DEPTH="1" FILE_NAME="spmm_stage.v" ORIG_REF_NAME="spmm_stage_fifo_w64_d4_S">
+    <Resources FF="7" LUT="68" LogicLUT="9" SRL="59"/>
+  </RtlModule>
+  <RtlModule CELL="inst/col_fifo_U" DEPTH="1" FILE_NAME="spmm_stage.v" ORIG_REF_NAME="spmm_stage_fifo_w32_d256_A">
+  </RtlModule>
+  <RtlModule CELL="inst/control_s_axi_U" DEPTH="1" FILE_NAME="spmm_stage.v" ORIG_REF_NAME="spmm_stage_control_s_axi">
+    <Resources FF="362" LUT="431" LogicLUT="431"/>
+  </RtlModule>
+  <RtlModule CELL="inst/entry_proc_U0" DEPTH="1" FILE_NAME="spmm_stage.v" ORIG_REF_NAME="spmm_stage_entry_proc">
+  </RtlModule>
+  <RtlModule CELL="inst/gmem0_m_axi_U" DEPTH="1" FILE_NAME="spmm_stage.v" ORIG_REF_NAME="spmm_stage_gmem0_m_axi">
+    <Resources BRAM="1" FF="772" LUT="484" LogicLUT="417" RAMB18="1" SRL="67"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem1_m_axi_U" DEPTH="1" FILE_NAME="spmm_stage.v" ORIG_REF_NAME="spmm_stage_gmem1_m_axi">
+    <Resources BRAM="1" FF="861" LUT="565" LogicLUT="472" RAMB18="1" SRL="93"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem2_m_axi_U" DEPTH="1" FILE_NAME="spmm_stage.v" ORIG_REF_NAME="spmm_stage_gmem2_m_axi">
+    <Resources BRAM="1" FF="994" LUT="689" LogicLUT="593" RAMB18="1" SRL="96"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem3_m_axi_U" DEPTH="1" FILE_NAME="spmm_stage.v" ORIG_REF_NAME="spmm_stage_gmem3_m_axi">
+    <Resources BRAM="15" FF="1669" LUT="931" LogicLUT="871" RAMB18="1" RAMB36="7" SRL="60"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem4_m_axi_U" DEPTH="1" FILE_NAME="spmm_stage.v" ORIG_REF_NAME="spmm_stage_gmem4_m_axi">
+    <Resources FF="2043" LUT="1195" LogicLUT="496" SRL="699"/>
+  </RtlModule>
+  <RtlModule CELL="inst/result_fifo_U" DEPTH="1" FILE_NAME="spmm_stage.v" ORIG_REF_NAME="spmm_stage_fifo_w16_d32_S">
+  </RtlModule>
+  <RtlModule CELL="inst/row_fifo_U" DEPTH="1" FILE_NAME="spmm_stage.v" ORIG_REF_NAME="spmm_stage_fifo_w32_d16_S">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0" DEPTH="1" FILE_NAME="spmm_stage.v" ORIG_REF_NAME="spmm_stage_spmm_compute">
+    <SubModules count="68">acc_10_U acc_11_U acc_12_U acc_13_U acc_14_U acc_15_U acc_16_U acc_17_U acc_18_U acc_19_U acc_1_U acc_20_U acc_21_U acc_22_U acc_23_U acc_24_U acc_25_U acc_26_U acc_27_U acc_28_U acc_29_U acc_2_U acc_30_U acc_31_U acc_3_U acc_4_U acc_5_U acc_6_U acc_7_U acc_8_U acc_9_U acc_U grp_spmm_compute_Pipeline_SPMM_INIT_fu_396 grp_spmm_compute_Pipeline_SPMM_LOAD_H_fu_470 grp_spmm_compute_Pipeline_SPMM_MAC_fu_509 grp_spmm_compute_Pipeline_SPMM_WRITE_fu_432 h_buf_10_U h_buf_11_U h_buf_12_U h_buf_13_U h_buf_14_U h_buf_15_U h_buf_16_U h_buf_17_U h_buf_18_U h_buf_19_U h_buf_1_U h_buf_20_U h_buf_21_U h_buf_22_U h_buf_23_U h_buf_24_U h_buf_25_U h_buf_26_U h_buf_27_U h_buf_28_U h_buf_29_U h_buf_2_U h_buf_30_U h_buf_31_U h_buf_3_U h_buf_4_U h_buf_5_U h_buf_6_U h_buf_7_U h_buf_8_U h_buf_9_U h_buf_U</SubModules>
+    <Resources DSP="64" FF="1683" LUT="4196" LUTRAM="2176" LogicLUT="2020"/>
+    <LocalResources FF="296" LUT="118" LogicLUT="118"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_10_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_11_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_12_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_13_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_14_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_15_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_16_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_17_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_18_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_19_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_1_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_20_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_21_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_22_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_23_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_24_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_25_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_26_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_27_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_28_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_29_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_2_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_30_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_31_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="53" LUTRAM="52" LogicLUT="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_3_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_4_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_5_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_6_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_7_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_8_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_9_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/acc_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_acc_RAM_AUTO_1R1W">
+    <Resources FF="42" LUT="52" LUTRAM="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_INIT_fu_396" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_INIT">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_INIT_fu_396/flow_control_loop_pipe_sequential_init_U" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_INIT.v" ORIG_REF_NAME="spmm_stage_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_LOAD_H_fu_470" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_LOAD_H">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_LOAD_H_fu_470/flow_control_loop_pipe_sequential_init_U" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_LOAD_H.v" ORIG_REF_NAME="spmm_stage_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC">
+    <SubModules count="33">flow_control_loop_pipe_sequential_init_U mul_26s_26s_52_1_1_U100 mul_26s_26s_52_1_1_U101 mul_26s_26s_52_1_1_U102 mul_26s_26s_52_1_1_U103 mul_26s_26s_52_1_1_U104 mul_26s_26s_52_1_1_U105 mul_26s_26s_52_1_1_U106 mul_26s_26s_52_1_1_U107 mul_26s_26s_52_1_1_U108 mul_26s_26s_52_1_1_U109 mul_26s_26s_52_1_1_U110 mul_26s_26s_52_1_1_U111 mul_26s_26s_52_1_1_U112 mul_26s_26s_52_1_1_U113 mul_26s_26s_52_1_1_U114 mul_26s_26s_52_1_1_U115 mul_26s_26s_52_1_1_U116 mul_26s_26s_52_1_1_U117 mul_26s_26s_52_1_1_U118 mul_26s_26s_52_1_1_U119 mul_26s_26s_52_1_1_U120 mul_26s_26s_52_1_1_U89 mul_26s_26s_52_1_1_U90 mul_26s_26s_52_1_1_U91 mul_26s_26s_52_1_1_U92 mul_26s_26s_52_1_1_U93 mul_26s_26s_52_1_1_U94 mul_26s_26s_52_1_1_U95 mul_26s_26s_52_1_1_U96 mul_26s_26s_52_1_1_U97 mul_26s_26s_52_1_1_U98 mul_26s_26s_52_1_1_U99</SubModules>
+    <Resources DSP="64" FF="6" LUT="1689" LogicLUT="1689"/>
+    <LocalResources FF="4" LUT="1568" LogicLUT="1568"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/flow_control_loop_pipe_sequential_init_U" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U100" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U101" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U102" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U103" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U104" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U105" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U106" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U107" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U108" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U109" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U110" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U111" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U112" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U113" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U114" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U115" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U116" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U117" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U118" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U119" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U120" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U89" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U90" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U91" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U92" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U93" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U94" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U95" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U96" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U97" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U98" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U99" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="spmm_stage_mul_26s_26s_52_1_1">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_WRITE_fu_432" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_WRITE">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="15" LUT="172" LogicLUT="172"/>
+    <LocalResources FF="13" LUT="146" LogicLUT="146"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_WRITE_fu_432/flow_control_loop_pipe_sequential_init_U" DEPTH="3" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_WRITE.v" ORIG_REF_NAME="spmm_stage_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_10_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_11_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_12_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_13_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_14_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_15_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_16_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_17_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_18_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_19_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_1_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_20_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_21_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_22_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_23_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_24_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_25_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_26_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_27_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_28_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_29_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_2_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_30_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_31_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_3_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_4_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_5_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_6_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_7_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_8_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_9_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_compute_U0/h_buf_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_compute.v" ORIG_REF_NAME="spmm_stage_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_load_csr_U0" DEPTH="1" FILE_NAME="spmm_stage.v" ORIG_REF_NAME="spmm_stage_spmm_load_csr">
+    <SubModules count="2">grp_spmm_load_csr_Pipeline_LOAD_NNZ_fu_124 grp_spmm_load_csr_Pipeline_LOAD_ROWS_fu_115</SubModules>
+    <Resources FF="213" LUT="164" LogicLUT="164"/>
+    <LocalResources FF="78" LUT="41" LogicLUT="41"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_load_csr_U0/grp_spmm_load_csr_Pipeline_LOAD_NNZ_fu_124" DEPTH="2" FILE_NAME="spmm_stage_spmm_load_csr.v" ORIG_REF_NAME="spmm_stage_spmm_load_csr_Pipeline_LOAD_NNZ">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="86" LUT="90" LogicLUT="90"/>
+    <LocalResources FF="84" LUT="16" LogicLUT="16"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_load_csr_U0/grp_spmm_load_csr_Pipeline_LOAD_NNZ_fu_124/flow_control_loop_pipe_sequential_init_U" DEPTH="3" FILE_NAME="spmm_stage_spmm_load_csr_Pipeline_LOAD_NNZ.v" ORIG_REF_NAME="spmm_stage_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="74" LogicLUT="74"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_load_csr_U0/grp_spmm_load_csr_Pipeline_LOAD_ROWS_fu_115" DEPTH="2" FILE_NAME="spmm_stage_spmm_load_csr.v" ORIG_REF_NAME="spmm_stage_spmm_load_csr_Pipeline_LOAD_ROWS">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_load_csr_U0/grp_spmm_load_csr_Pipeline_LOAD_ROWS_fu_115/flow_control_loop_pipe_sequential_init_U" DEPTH="3" FILE_NAME="spmm_stage_spmm_load_csr_Pipeline_LOAD_ROWS.v" ORIG_REF_NAME="spmm_stage_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_store_U0" DEPTH="1" FILE_NAME="spmm_stage.v" ORIG_REF_NAME="spmm_stage_spmm_store">
+    <SubModules count="1">flow_control_loop_delay_pipe_U</SubModules>
+    <Resources FF="1219" LUT="616" LogicLUT="614" SRL="2"/>
+    <LocalResources FF="1217" LUT="581" LogicLUT="579" SRL="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/spmm_store_U0/flow_control_loop_delay_pipe_U" DEPTH="2" FILE_NAME="spmm_stage_spmm_store.v" ORIG_REF_NAME="spmm_stage_flow_control_loop_delay_pipe">
+  </RtlModule>
+  <RtlModule CELL="inst/start_for_spmm_store_U0_U" DEPTH="1" FILE_NAME="spmm_stage.v" ORIG_REF_NAME="spmm_stage_start_for_spmm_store_U0">
+  </RtlModule>
+  <RtlModule CELL="inst/val_fifo_U" DEPTH="1" FILE_NAME="spmm_stage.v" ORIG_REF_NAME="spmm_stage_fifo_w16_d256_A">
+    <Resources FF="53" LUT="145" LUTRAM="80" LogicLUT="65"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="4.413" DATAPATH_LOGIC_DELAY="3.616" DATAPATH_NET_DELAY="0.797" ENDPOINT_PIN="bd_0_i/hls_inst/inst/spmm_compute_U0/acc_10_U/ram_reg_0_1_24_24/DP/I" LOGIC_LEVELS="13" MAX_FANOUT="2" SLACK="5.400" STARTPOINT_PIN="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U99/tmp_product/DSP_A_B_DATA_INST/CLK">
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U99/tmp_product/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U99/tmp_product/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U99/tmp_product/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U99/tmp_product/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U99/tmp_product/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U99/tmp_product/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U99/tmp_product__0/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U99/tmp_product__0/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_0_0_i_5__20" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2978"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_0_0_i_2__18" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2978"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_7_7_i_2__19" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2978"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_15_15_i_2__18" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2978"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_23_23_i_2__20" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2978"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U99/ram_reg_0_1_24_24_i_1__9" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="spmm_stage_spmm_compute.v" LINE_NUMBER="3019"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/acc_10_U/ram_reg_0_1_24_24/DP" PRIMITIVE_TYPE="CLB.LUTRAM.RAM32X1D" FILE_NAME="" LINE_NUMBER=""/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="4.413" DATAPATH_LOGIC_DELAY="3.616" DATAPATH_NET_DELAY="0.797" ENDPOINT_PIN="bd_0_i/hls_inst/inst/spmm_compute_U0/acc_11_U/ram_reg_0_1_24_24/DP/I" LOGIC_LEVELS="13" MAX_FANOUT="2" SLACK="5.400" STARTPOINT_PIN="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U100/tmp_product/DSP_A_B_DATA_INST/CLK">
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U100/tmp_product/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U100/tmp_product/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U100/tmp_product/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U100/tmp_product/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U100/tmp_product/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U100/tmp_product/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U100/tmp_product__0/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U100/tmp_product__0/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_0_0_i_5__19" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2980"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_0_0_i_2__17" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2980"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_7_7_i_2__18" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2980"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_15_15_i_2__17" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2980"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_23_23_i_2__19" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2980"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U100/ram_reg_0_1_24_24_i_1__10" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="spmm_stage_spmm_compute.v" LINE_NUMBER="3019"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/acc_11_U/ram_reg_0_1_24_24/DP" PRIMITIVE_TYPE="CLB.LUTRAM.RAM32X1D" FILE_NAME="" LINE_NUMBER=""/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="4.413" DATAPATH_LOGIC_DELAY="3.616" DATAPATH_NET_DELAY="0.797" ENDPOINT_PIN="bd_0_i/hls_inst/inst/spmm_compute_U0/acc_12_U/ram_reg_0_1_24_24/DP/I" LOGIC_LEVELS="13" MAX_FANOUT="2" SLACK="5.400" STARTPOINT_PIN="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U101/tmp_product/DSP_A_B_DATA_INST/CLK">
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U101/tmp_product/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U101/tmp_product/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U101/tmp_product/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U101/tmp_product/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U101/tmp_product/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U101/tmp_product/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U101/tmp_product__0/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U101/tmp_product__0/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_0_0_i_5__18" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2982"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_0_0_i_2__16" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2982"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_7_7_i_2__17" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2982"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_15_15_i_2__16" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2982"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_23_23_i_2__18" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2982"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U101/ram_reg_0_1_24_24_i_1__11" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="spmm_stage_spmm_compute.v" LINE_NUMBER="3019"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/acc_12_U/ram_reg_0_1_24_24/DP" PRIMITIVE_TYPE="CLB.LUTRAM.RAM32X1D" FILE_NAME="" LINE_NUMBER=""/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="4.413" DATAPATH_LOGIC_DELAY="3.616" DATAPATH_NET_DELAY="0.797" ENDPOINT_PIN="bd_0_i/hls_inst/inst/spmm_compute_U0/acc_13_U/ram_reg_0_1_24_24/DP/I" LOGIC_LEVELS="13" MAX_FANOUT="2" SLACK="5.400" STARTPOINT_PIN="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U102/tmp_product/DSP_A_B_DATA_INST/CLK">
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U102/tmp_product/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U102/tmp_product/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U102/tmp_product/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U102/tmp_product/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U102/tmp_product/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U102/tmp_product/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U102/tmp_product__0/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U102/tmp_product__0/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_0_0_i_5__17" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2984"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_0_0_i_2__15" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2984"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_7_7_i_2__16" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2984"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_15_15_i_2__15" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2984"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_23_23_i_2__17" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2984"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U102/ram_reg_0_1_24_24_i_1__12" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="spmm_stage_spmm_compute.v" LINE_NUMBER="3019"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/acc_13_U/ram_reg_0_1_24_24/DP" PRIMITIVE_TYPE="CLB.LUTRAM.RAM32X1D" FILE_NAME="" LINE_NUMBER=""/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="4.413" DATAPATH_LOGIC_DELAY="3.616" DATAPATH_NET_DELAY="0.797" ENDPOINT_PIN="bd_0_i/hls_inst/inst/spmm_compute_U0/acc_14_U/ram_reg_0_1_24_24/DP/I" LOGIC_LEVELS="13" MAX_FANOUT="2" SLACK="5.400" STARTPOINT_PIN="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U103/tmp_product/DSP_A_B_DATA_INST/CLK">
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U103/tmp_product/DSP_A_B_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U103/tmp_product/DSP_PREADD_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U103/tmp_product/DSP_MULTIPLIER_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U103/tmp_product/DSP_M_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U103/tmp_product/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U103/tmp_product/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U103/tmp_product__0/DSP_ALU_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U103/tmp_product__0/DSP_OUTPUT_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_0_0_i_5__16" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2986"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_0_0_i_2__14" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2986"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_7_7_i_2__15" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2986"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_15_15_i_2__14" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2986"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/ram_reg_0_1_23_23_i_2__16" PRIMITIVE_TYPE="CLB.CARRY.CARRY8" FILE_NAME="spmm_stage_spmm_compute_Pipeline_SPMM_MAC.v" LINE_NUMBER="2986"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_509/mul_26s_26s_52_1_1_U103/ram_reg_0_1_24_24_i_1__13" PRIMITIVE_TYPE="CLB.LUT.LUT2" FILE_NAME="spmm_stage_spmm_compute.v" LINE_NUMBER="3019"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/spmm_compute_U0/acc_14_U/ram_reg_0_1_24_24/DP" PRIMITIVE_TYPE="CLB.LUTRAM.RAM32X1D" FILE_NAME="" LINE_NUMBER=""/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/spmm_stage_design_analysis_synth.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/spmm_stage_failfast_synth.rpt"/>
+  <ReportFile TYPE="power" PATH="verilog/report/spmm_stage_power_synth.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/spmm_stage_timing_synth.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/spmm_stage_timing_paths_synth.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/spmm_stage_utilization_synth.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/spmm_stage_utilization_hierarchical_synth.rpt"/>
+</VivadoReportFiles>
+</profile>

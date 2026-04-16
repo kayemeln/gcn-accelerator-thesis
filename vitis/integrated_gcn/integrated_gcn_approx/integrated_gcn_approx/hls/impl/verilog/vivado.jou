@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Apr 16 10:17:05 2026
+# Process ID         : 41714
+# Current directory  : /home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn_approx/integrated_gcn_approx/hls/impl/verilog
+# Command line       : vivado -mode batch -source run_vivado.tcl
+# Log file           : /home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn_approx/integrated_gcn_approx/hls/impl/verilog/vivado.log
+# Journal file       : /home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/vitis/integrated_gcn/integrated_gcn_approx/integrated_gcn_approx/hls/impl/verilog/vivado.jou
+# Running On         : nat-Yoga-Pro-9-16IAH10
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.3 LTS
+# Processor Detail   : Intel(R) Core(TM) Ultra 9 285H
+# CPU Frequency      : 1797.551 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 16
+# Host memory        : 66985 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 75575 MB
+# Available Virtual  : 67735 MB
+#-----------------------------------------------------------
+source run_vivado.tcl

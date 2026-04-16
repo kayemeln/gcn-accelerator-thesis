@@ -1,0 +1,24 @@
+
+
+Implementation tool: Xilinx Vivado v.2025.2
+Project:             integrated_gcn_approx
+Solution:            hls
+Device target:       xck26-sfvc784-2LV-c
+Report date:         Thu Apr 16 10:29:28 IST 2026
+
+#=== Post-Implementation Resource usage ===
+SLICE:            0
+LUT:          49627
+FF:           31161
+DSP:              1
+BRAM:            81
+URAM:             0
+LATCH:            0
+SRL:           1601
+CLB:           9331
+
+#=== Final timing ===
+CP required:                     10.000
+CP achieved post-synthesis:      2.821
+CP achieved post-implementation: 8.735
+Timing met

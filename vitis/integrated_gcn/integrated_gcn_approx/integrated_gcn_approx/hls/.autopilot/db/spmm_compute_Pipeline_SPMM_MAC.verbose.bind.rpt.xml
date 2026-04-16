@@ -1,0 +1,78 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'spmm_compute_Pipeline_SPMM_MAC'" level="0">
+<item name = "Date">Thu Apr 16 10:08:42 2026
+</item>
+<item name = "Version">2025.2 (Build 6295257 on Nov 14 2025)</item>
+<item name = "Project">integrated_gcn_approx</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">zynquplus</item>
+<item name = "Target device">xck26-sfvc784-2LV-c</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.888 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">6, 6, 60.000 ns, 60.000 ns, 0, 0, loop pipeline stp</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_mul8s_1KV8_fu_1102">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1108">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1114">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1120">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1126">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1132">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1138">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1144">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1150">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1156">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1162">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1168">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1174">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1180">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1186">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1192">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1198">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1204">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1210">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1216">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1222">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1228">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1234">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1240">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1246">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1252">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1258">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1264">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1270">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1276">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1282">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+<column name="grp_mul8s_1KV8_fu_1288">mul8s_1KV8, 1, 1, 10.000 ns, 10.000 ns, 1, 1, yes</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- SPMM_MAC">4, 4, 4, 1, 1, 2, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>
