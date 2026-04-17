@@ -19,10 +19,10 @@ dimension and the SpMM then operates on the reduced intermediate. The
 accelerator uses fixed-point arithmetic (`ap_fixed`) with an output scaling
 factor to keep activations within range.
 
-The design supports:
+The design supports the following datasets:
 
-- **Amazon Photo** (7650 nodes, 745 features, 8 classes)
-- **Cora** (Planetoid split)
+- **Amazon Photo** 
+- **Cora** 
 
 Both datasets can optionally be sparsified using
 [DSpar](https://github.com/zirui-ray-liu/DSpar_tmlr) before being fed to the
@@ -51,9 +51,15 @@ source venv/bin/activate
 ./install.sh
 ```
 
-`install.sh` installs everything in `requirements.txt` then installs DSpar
-in editable mode from the sibling checkout (`../../DSpar_tmlr/src`), so local
-edits to the sparsification code propagate without reinstalling.
+`install.sh` will clone DSpar into `./DSpar_tmlr/` if it isn't already
+present.
+
+`install.sh` installs everything in `requirements.txt`, applies
+`patches/dspar-seed-epsilon.patch` to the `DSpar_tmlr/` checkout (adds the
+`seed` and `epsilon` arguments this project relies on), then installs DSpar
+in editable mode with `--no-build-isolation` so its `setup.py` can see the
+venv's torch. DSpar stays editable — further changes propagate without
+reinstalling.
 
 ## Running the Python flow
 

@@ -1,0 +1,80 @@
+diff --git a/src/dspar/__init__.py b/src/dspar/__init__.py
+index ef34da0..4336634 100644
+--- a/src/dspar/__init__.py
++++ b/src/dspar/__init__.py
+@@ -1,2 +1,2 @@
+ from .utils import get_memory_usage, compute_tensor_bytes, exp_recorder, cast_adj, cast_low_bit_int
+-from .gatconv import CustomGATConv, QCustomGATConv
+\ No newline at end of file
++#from .gatconv import CustomGATConv, QCustomGATConv
+diff --git a/src/dspar/sparsification.py b/src/dspar/sparsification.py
+index a6dac1c..2198f01 100644
+--- a/src/dspar/sparsification.py
++++ b/src/dspar/sparsification.py
+@@ -8,22 +8,25 @@ import dspar.cpp_extension.sampler as sampler
+ from torch_geometric.utils import degree, to_undirected
+ 
+ 
+-def maybe_sparsfication(data, dataset, follow_by_subgraph_sampling, random=False, is_undirected=True, reweighted=True):
++def maybe_sparsfication(data, random=False, is_directed=True, reweighted=True, epsilon=0.25, seed=42):
+     N, E = data.num_nodes, data.num_edges
+     src, dst = data.edge_index
+-    if dataset == 'ogbn-arxiv':
+-        epsilon = 0.25 if not random else 0.35
+-    elif dataset == 'reddit2':
+-        epsilon = 0.3 if not random else 0.32
+-    elif dataset == 'ogbn-products':
+-        epsilon = 0.4 if not random else 0.45
+-    elif dataset == 'yelp':
+-        epsilon = 0.5 if not random else 0.6
+-    elif dataset == 'ogbn-proteins':
+-        epsilon = 0.25
++    #if dataset == 'ogbn-arxiv':
++    #    epsilon = 0.25 if not random else 0.35
++    #    #epsilon = 0.9 if not random else 0.35
++    #elif dataset == 'reddit2':
++    #    epsilon = 0.3 if not random else 0.32
++    #elif dataset == 'ogbn-products':
++    #    epsilon = 0.4 if not random else 0.45
++    #elif dataset == 'yelp':
++    #    epsilon = 0.5 if not random else 0.6
++    #elif dataset == 'ogbn-proteins':
++    #    epsilon = 0.25
++    #elif dataset == 'flickr':
++    #    epsilon = 0.8
+ 
+-    if follow_by_subgraph_sampling and dataset == 'ogbn-products':
+-        epsilon = 0.15 if not random else 0.2
++    #if follow_by_subgraph_sampling and dataset == 'ogbn-products':
++    #    epsilon = 0.15 if not random else 0.2
+ 
+     print(f'epsilon: {epsilon}')
+     Q = int(0.16 * N * np.log(N) / epsilon ** 2)
+@@ -43,9 +46,9 @@ def maybe_sparsfication(data, dataset, follow_by_subgraph_sampling, random=False
+         pe = pe / torch.sum(pe)
+     p_cumsum = torch.cumsum(pe, 0)
+     print(f'cal edge distribution used {time.time() - s} sec')
+-    # For reproducibility, we manually set the seed of graph sparsification to 42. We note that this seed is only effective for the graph sparsification, 
++    # For reproducibility, the seed of graph sparsification is configurable (default 42). This seed is only effective for graph sparsification,
+     # it does not impact any following process.
+-    seed_val = 42
++    seed_val = seed
+     s = time.time()
+     sampled = sampler.edge_sample(p_cumsum, Q, seed_val)
+     print(f'sample edge used {time.time() - s} sec')
+@@ -54,7 +57,7 @@ def maybe_sparsfication(data, dataset, follow_by_subgraph_sampling, random=False
+     new_src, new_dst = src[e_indices], dst[e_indices]
+     edge_index = torch.cat([new_src.view(1, -1), new_dst.view(1, -1)], dim=0)
+     edge_attr = new_graph.float()
+-    if is_undirected:
++    if is_directed:
+         data.edge_index, data.edge_attr = to_undirected(edge_index, edge_attr)
+     else:
+         data.edge_index, data.edge_attr = edge_index, edge_attr 
+@@ -62,4 +65,4 @@ def maybe_sparsfication(data, dataset, follow_by_subgraph_sampling, random=False
+         print('not reweight')
+         data.edge_attr = None
+     print(f'before sparsification, num_edges: {E}, after sparsification, num_edges: {new_src.shape[0]}, ratio: {new_src.shape[0] / E}')
+-    return data
+\ No newline at end of file
++    return data
