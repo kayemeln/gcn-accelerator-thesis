@@ -9,10 +9,19 @@
 #include "hls_stream.h"
 #include "hls_vector.h"
 
+
 // ---------- Data types ----------
+// --- Layer 1
+//typedef ap_fixed<8, 3, AP_RND, AP_SAT>  DTYPE;
+//typedef ap_fixed<16, 7, AP_RND, AP_SAT>  acc32_t;
+typedef int              idx_t;
+// --- Layer 2
 typedef ap_fixed<16, 8, AP_RND, AP_SAT>  DTYPE;
 typedef ap_fixed<32, 16, AP_RND, AP_SAT>  acc32_t;
-typedef int              idx_t;
+//
+
+// Scaling factor
+static const acc32_t H_OUT_SCALE = acc32_t(0.0625);
 
 // ---------- Graph / layer dimensions ----------
 // Uncomment ONE layer configuration:

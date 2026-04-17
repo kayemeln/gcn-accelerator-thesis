@@ -259,7 +259,9 @@ static void spmm_compute(
         SPMM_WRITE:
         for (int f = 0; f < F_OUT; f++) {
 #pragma HLS PIPELINE II=1
-            result_fifo.write((DTYPE)acc[f]);
+            // Testing scaling the output
+            acc32_t scaled = acc[f] * H_OUT_SCALE;
+            result_fifo.write((DTYPE)scaled);
         }
     }
 }

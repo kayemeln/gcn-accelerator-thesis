@@ -18,7 +18,7 @@ NODES = 7650
 F_OUT = 64
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-BIN_DIR = os.path.join(SCRIPT_DIR, "photo_bin_sparse")
+BIN_DIR = os.path.join(SCRIPT_DIR, "photo_bin")
 WEIGHTS_PATH = os.path.join(SCRIPT_DIR, "gcn_weights.pt")
 DATA_FILE = "H_out_integrated.bin"
 
@@ -26,6 +26,11 @@ DATA_FILE = "H_out_integrated.bin"
 h_out = np.fromfile(os.path.join(BIN_DIR, DATA_FILE), dtype=np.float32)
 h_out = h_out.reshape(NODES, F_OUT)
 print(f"Loaded {DATA_FILE}: shape={h_out.shape}, range=[{h_out.min():.4f}, {h_out.max():.4f}]")
+
+# Dequantise: DUT applied H_OUT_SCALE=0.25 in integrated_gcn_photo.h
+H_OUT_SCALE = 0.0625
+h_out = h_out / H_OUT_SCALE
+print(f"After dequantise (/ {H_OUT_SCALE}): range=[{h_out.min():.4f}, {h_out.max():.4f}]")
 
 # Load batch norm parameters
 weights = torch.load(WEIGHTS_PATH, map_location="cpu", weights_only=True)

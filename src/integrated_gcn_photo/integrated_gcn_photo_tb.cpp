@@ -80,10 +80,10 @@ int compare(const char* label, float* dut, float* ref,
 
 int main(int argc, char* argv[]) {
     // Unsparsified
-    // const char* data_dir = "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/photo_scripts/photo_bin";
+    const char* data_dir = "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/photo_scripts/photo_bin";
 
     // Sparsified
-    const char* data_dir = "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/photo_scripts/photo_bin_sparse";
+    // const char* data_dir = "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/photo_scripts/photo_bin_sparse";
 
     // ----------------------------------------------------------
     // 1. Load CSR arrays

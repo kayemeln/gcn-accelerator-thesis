@@ -7,11 +7,11 @@ from typing import Tuple
 import argparse
 import os
 
-def get_photo(enable_sparsify: bool):
+def get_photo(enable_sparsify: bool, seed: int = 42, epsilon: float = 0.35):
     dataset = Amazon(root='Photo', name='Photo')
     data = dataset[0]
     if enable_sparsify:
-        data = maybe_sparsfication(data, is_directed=False, reweighted=False, epsilon=0.35)
+        data = maybe_sparsfication(data, is_directed=False, reweighted=False, epsilon=epsilon, seed=seed)
     return data, dataset.num_node_features, dataset.num_classes
 
 def edge_index_to_csr(edge_index, num_nodes):
@@ -50,9 +50,11 @@ def save_bin(filename, arr):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', '--sparsify', action='store_true')
+    parser.add_argument('--seed', type=int, default=42, help='Seed for sparsification sampling')
+    parser.add_argument('--epsilon', type=float, default=0.35, help='Sparsification epsilon')
     args = parser.parse_args()
     print(args.sparsify)
-    data, _, _ = get_photo(args.sparsify)
+    data, _, _ = get_photo(args.sparsify, seed=args.seed, epsilon=args.epsilon)
     num_nodes = data.num_nodes
     A = edge_index_to_csr(data.edge_index, num_nodes)
     A_hat = gcn_norm(A, True)
@@ -73,11 +75,21 @@ def main():
     print(f"X shape: {X.shape}")
     print(f"W1 shape: {W1.shape}, W2 shape: {W2.shape}")
     print(f"W1 dtype: {W1.dtype}, W2 dtype: {W2.dtype}, X dtype: {X.dtype}")
+    unique_X = np.unique(X)
+    is_binary = np.array_equal(unique_X, np.array([0, 1], dtype=X.dtype)) or np.array_equal(unique_X, np.array([0], dtype=X.dtype)) or np.array_equal(unique_X, np.array([1], dtype=X.dtype))
+    print(f"X binary? {is_binary}, unique values: {len(unique_X)}, first few: {unique_X[:10]}")
 
     # Layer 1
     H_AX, H = gcn_layer(A_hat, X, W1)
-    H1_out = H.astype(np.float32)
+    # Match HLS DUT H_OUT_SCALE in integrated_gcn_photo.h
+    H_OUT_SCALE = 0.0625
+    H1_out = (H * H_OUT_SCALE).astype(np.float32)
     print(f"H mean: {np.mean(H)}, H std: {np.std(H)}")
+    print(f"H range: [{np.min(H)}, {np.max(H)}]")
+    print(f"H range (2.5-97.5 percentile): [{np.percentile(H, 2.5)}, {np.percentile(H, 97.5)}]")
+    print(f"H_scaled mean: {np.mean(H1_out)}, H std: {np.std(H1_out)}")
+    print(f"H_scaled range: [{np.min(H1_out)}, {np.max(H1_out)}]")
+    print(f"H_scaled range (2.5-97.5 percentile): [{np.percentile(H1_out, 2.5)}, {np.percentile(H1_out, 97.5)}]")
     H = batch_norm(H, weights['norm.weight'].numpy(), weights['norm.bias'].numpy(),
                    weights['norm.running_mean'].numpy(), weights['norm.running_var'].numpy())
     H = np.maximum(H, 0)
@@ -89,7 +101,7 @@ def main():
     print('Predictions:', pred)
 
     # Output binary files
-    A_dense = A_hat.todense(order='C').astype(np.float32)
+    #A_dense = A_hat.todense(order='C').astype(np.float32)
     A_hat = A_hat.tocsr()
     A_hat.sort_indices()
     rowptr = A_hat.indptr.astype(np.int32)
@@ -104,7 +116,7 @@ def main():
 
     folder_suffix = '_sparse' if args.sparsify else ''
     os.makedirs(f'photo_bin{folder_suffix}', exist_ok=True)
-    save_bin(f'photo_bin{folder_suffix}/A_dense.bin', A_dense)
+    #save_bin(f'photo_bin{folder_suffix}/A_dense.bin', A_dense)
     save_bin(f'photo_bin{folder_suffix}/A_rowptr.bin', rowptr)
     save_bin(f'photo_bin{folder_suffix}/A_colind.bin', colind)
     save_bin(f'photo_bin{folder_suffix}/A_values.bin', values)

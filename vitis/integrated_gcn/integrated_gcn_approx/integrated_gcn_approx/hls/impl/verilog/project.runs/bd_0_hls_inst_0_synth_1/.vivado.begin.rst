@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="nat" Host="nat-Yoga-Pro-9-16IAH10" Pid="41943" HostCore="16" HostMemory="65415928">
-    </Process>
-</ProcessHandle>

@@ -8,11 +8,11 @@ from typing import Tuple
 import argparse
 import os
 
-def get_cora(enable_sparsify: bool):
+def get_cora(enable_sparsify: bool, seed: int = 42, epsilon: float = 0.5):
     dataset = Planetoid(root='Cora', name='Cora')
     data = dataset[0]
     if enable_sparsify:
-        data = maybe_sparsfication(data, is_directed=False, reweighted=False, epsilon=0.5)
+        data = maybe_sparsfication(data, is_directed=False, reweighted=False, epsilon=epsilon, seed=seed)
     return data, dataset.num_features, dataset.num_classes
 
 def edge_index_to_csr(edge_index, num_nodes):
@@ -51,9 +51,11 @@ def save_bin(filename, arr):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', '--sparsify', action='store_true')
+    parser.add_argument('--seed', type=int, default=42, help='Seed for sparsification sampling')
+    parser.add_argument('--epsilon', type=float, default=0.5, help='Sparsification epsilon')
     args = parser.parse_args()
     print(args.sparsify)
-    data, _, _ = get_cora(args.sparsify)
+    data, _, _ = get_cora(args.sparsify, seed=args.seed, epsilon=args.epsilon)
     #print(data)
     num_nodes = data.num_nodes
     A = edge_index_to_csr(data.edge_index, num_nodes)
@@ -62,7 +64,10 @@ def main():
     print(f"Min degree: {degrees.min()}, Max degree: {degrees.max()}")
     A_hat = gcn_norm(A, True)
 
-    weights = torch.load('gcn_weights.pt', weights_only=True)
+    weights_suffix = '_sparse' if args.sparsify else ''
+    weights_file = f'gcn_weights{weights_suffix}.pt'
+    print(f"Loading weights from {weights_file}")
+    weights = torch.load(weights_file, weights_only=True)
     W1 = weights['conv1.lin.weight'].numpy()
     W2 = weights['conv2.lin.weight'].numpy()
     X = data.x.numpy()
@@ -83,7 +88,7 @@ def main():
     print('Predictions:', pred)
 
     # Output binary files
-    A_dense = A_hat.todense(order='C').astype(np.float32)
+    #A_dense = A_hat.todense(order='C').astype(np.float32)
     A_hat = A_hat.tocsr()
     A_hat.sort_indices()
     rowptr = A_hat.indptr.astype(np.int32)
@@ -99,7 +104,7 @@ def main():
     folder_suffix = '_sparse' if args.sparsify else ''
     os.makedirs(f'cora_bin{folder_suffix}', exist_ok=True)
     # Also need dense matrix here
-    save_bin(f'cora_bin{folder_suffix}/A_dense.bin', A_dense)
+    #save_bin(f'cora_bin{folder_suffix}/A_dense.bin', A_dense)
     save_bin(f'cora_bin{folder_suffix}/A_rowptr.bin', rowptr)
     save_bin(f'cora_bin{folder_suffix}/A_colind.bin', colind)
     save_bin(f'cora_bin{folder_suffix}/A_values.bin', values)

@@ -1,0 +1,27 @@
+# Python dependencies for the GCN photo/cora scripts.
+#
+# Prefer the install.sh script in this directory — it handles the two-step
+# install (deps first, then dspar with --no-build-isolation so its setup.py
+# can see torch).
+#
+# Torch wheels come from the PyTorch CUDA 12.9 index; PyG extension wheels
+# (pyg_lib, torch_scatter, torch_sparse, torch_cluster, torch_spline_conv)
+# come from the matching data.pyg.org wheel index.
+
+--extra-index-url https://download.pytorch.org/whl/cu129
+-f https://data.pyg.org/whl/torch-2.8.0+cu129.html
+
+torch==2.8.0+cu129
+torchvision==0.23.0+cu129
+torchaudio==2.8.0+cu129
+
+torch-geometric==2.7.0
+pyg_lib==0.5.0+pt28cu129
+torch_scatter==2.1.2+pt28cu129
+torch_sparse==0.6.18+pt28cu129
+torch_cluster==1.6.3+pt28cu129
+torch_spline_conv==1.2.2+pt28cu129
+
+numpy
+scipy
+ogb

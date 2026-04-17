@@ -47,12 +47,12 @@ def generate_splits(data, num_classes, train_per_class=20, val_per_class=10):
     return data
 
 
-def load_data(enable_sparsify=False):
+def load_data(enable_sparsify=False, seed=42, epsilon=0.35):
     dataset = Amazon(root='./Photo/', name='Photo')
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     data = dataset[0]
     if enable_sparsify:
-        data = maybe_sparsfication(data, is_directed=False, reweighted=False, epsilon=0.35)
+        data = maybe_sparsfication(data, is_directed=False, reweighted=False, epsilon=epsilon, seed=seed)
     data = generate_splits(data, dataset.num_classes)
     data = data.to(device)
     return data, dataset.num_node_features, dataset.num_classes
@@ -83,11 +83,13 @@ def test(model, data):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', '--sparsify', action='store_true')
+    parser.add_argument('--seed', type=int, default=42, help='Seed for sparsification sampling')
+    parser.add_argument('--epsilon', type=float, default=0.35, help='Sparsification epsilon')
     args = parser.parse_args()
 
     print('Amazon Photo...')
     print(f'Sparsify: {args.sparsify}')
-    data, num_node_features, num_classes = load_data(args.sparsify)
+    data, num_node_features, num_classes = load_data(args.sparsify, seed=args.seed, epsilon=args.epsilon)
     print(f"Nodes: {data.num_nodes}, Features: {num_node_features}, Classes: {num_classes}")
     print(f"Edges: {data.edge_index.shape[1]}")
     print(f"Train: {data.train_mask.sum()}, Val: {data.val_mask.sum()}, Test: {data.test_mask.sum()}")

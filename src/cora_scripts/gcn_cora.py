@@ -2,8 +2,10 @@
 
 import torch
 from torch_geometric.datasets import Planetoid, NELL
+from dspar.sparsification import maybe_sparsfication
 import torch.nn.functional as F
 from torch_geometric.nn import GCNConv
+import argparse
 
 
 class GCN(torch.nn.Module):
@@ -24,7 +26,7 @@ class GCN(torch.nn.Module):
         return x
 
 
-def load_data(name):
+def load_data(name, enable_sparsify=False, seed=42, epsilon=0.5):
     if name == 'NELL':
         print('./' + name + '/')
         dataset = NELL(root='./' + name + '/')
@@ -33,7 +35,10 @@ def load_data(name):
     else:
         dataset = Planetoid(root='./' + name + '/', name=name)
         _device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    data = dataset[0].to(_device)
+    data = dataset[0]
+    if enable_sparsify:
+        data = maybe_sparsfication(data, is_directed=False, reweighted=False, epsilon=epsilon, seed=seed)
+    data = data.to(_device)
     if name == 'NELL':
         data.x = data.x.to_dense()
         num_node_features = data.x.shape[1]
@@ -65,9 +70,16 @@ def test(model, data):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-s', '--sparsify', action='store_true')
+    parser.add_argument('--seed', type=int, default=42, help='Seed for sparsification sampling')
+    parser.add_argument('--epsilon', type=float, default=0.5, help='Sparsification epsilon')
+    args = parser.parse_args()
+
     name = 'Cora'
     print(name + '...')
-    data, num_node_features, num_classes = load_data(name)
+    print(f'Sparsify: {args.sparsify}')
+    data, num_node_features, num_classes = load_data(name, enable_sparsify=args.sparsify, seed=args.seed, epsilon=args.epsilon)
     print(data, num_node_features, num_classes)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = GCN(num_node_features, num_classes).to(device)
@@ -75,10 +87,12 @@ def main():
     test(model, data)
 
     weights = {k: v.detach().cpu() for k, v in model.state_dict().items()}
-    torch.save(weights, 'gcn_weights.pt')
-    print('Saved weights to gcn_weights.pt')
-    for name, param in weights.items():
-        print(f'  {name}: {param.shape}')
+    suffix = '_sparse' if args.sparsify else ''
+    out_file = f'gcn_weights{suffix}.pt'
+    torch.save(weights, out_file)
+    print(f'Saved weights to {out_file}')
+    for key, param in weights.items():
+        print(f'  {key}: {param.shape}')
 
 
 if __name__ == '__main__':
