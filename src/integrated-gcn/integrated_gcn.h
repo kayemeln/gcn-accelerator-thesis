@@ -13,6 +13,10 @@ typedef ap_fixed<8, 3, AP_RND, AP_SAT>  DTYPE;      // range [-8, +8)
 typedef ap_fixed<16, 6>  acc32_t;    // wider accumulator
 typedef int              idx_t;
 
+// Unquantised
+//typedef ap_fixed<16, 8, AP_RND, AP_SAT>  DTYPE;      // range [-8, +8)
+//typedef ap_fixed<32, 16>  acc32_t;    // wider accumulator
+
 // ---------- Graph / layer dimensions ----------
 // Uncomment ONE layer configuration:
 

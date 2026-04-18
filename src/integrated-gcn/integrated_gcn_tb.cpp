@@ -79,7 +79,7 @@ int compare(const char* label, float* dut, float* ref,
 }
 
 int main(int argc, char* argv[]) {
-    const char* data_dir = "/home/nat/dev/trinners/mai_proj/hls/gcn_hls/cora_bin";
+    const char* data_dir = "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/cora_scripts/cora_bin_sparse";
 
     // ----------------------------------------------------------
     // 1. Load CSR arrays

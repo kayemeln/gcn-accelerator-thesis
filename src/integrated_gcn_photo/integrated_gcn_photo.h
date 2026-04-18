@@ -12,12 +12,12 @@
 
 // ---------- Data types ----------
 // --- Layer 1
-typedef ap_fixed<8, 3, AP_RND, AP_SAT>  DTYPE;
-typedef ap_fixed<16, 6, AP_RND, AP_SAT>  acc32_t;
+//typedef ap_fixed<8, 3, AP_RND, AP_SAT>  DTYPE;
+//typedef ap_fixed<16, 6>  acc32_t;
 typedef int              idx_t;
 // --- Layer 2
-//typedef ap_fixed<16, 10, AP_RND, AP_SAT>  DTYPE;
-//typedef ap_fixed<32, 18, AP_RND, AP_SAT>  acc32_t;
+typedef ap_fixed<16, 10, AP_RND, AP_SAT>  DTYPE;
+typedef ap_fixed<32, 18, AP_RND, AP_SAT>  acc32_t;
 //
 
 // Scaling factor
@@ -27,18 +27,18 @@ static const acc32_t H_OUT_SCALE = acc32_t(0.0625);
 // Uncomment ONE layer configuration:
 
 // --- Layer 1: X(7650x745) * W(745x64) ---
-#define LAYER_2_ACTIVE 0
-#define NODES    7650
-#define F_IN     745
-#define F_OUT    64
-#define F_IN_PAD_GEMM  768   // ceil(745/64)*64
+//#define LAYER_2_ACTIVE 0
+//#define NODES    7650
+//#define F_IN     745
+//#define F_OUT    64
+//#define F_IN_PAD_GEMM  768   // ceil(745/64)*64
 
 // --- Layer 2: H_bn_relu(7650x64) * W(64x8) ---
-//#define LAYER_2_ACTIVE 1
-//#define NODES    7650
-//#define F_IN     64
-//#define F_OUT    8
-//#define F_IN_PAD_GEMM  64   // ceil(64/64)*64
+#define LAYER_2_ACTIVE 1
+#define NODES    7650
+#define F_IN     64
+#define F_OUT    8
+#define F_IN_PAD_GEMM  64   // ceil(64/64)*64
 
 // ---------- Vectorisation (512-bit AXI / 16-bit = 32 elements) ----------
 const int DSIZE = 64/sizeof(DTYPE);

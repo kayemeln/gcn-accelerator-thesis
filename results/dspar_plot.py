@@ -8,19 +8,18 @@ import numpy as np
 epsilon       = [0.1, 0.2, 0.35, 0.5, 0.7]
 
 # Node classification accuracy (%) at each epsilon
-accuracy      = [78.7, 76.7, 77.6, 71.8, 62.4]   # e.g. [77.2, 76.8, 76.1, 74.5, 71.3]
+accuracy      = [90.8, 88.2, 88.6, 86.8, 85.4]
 
-# Hardware latency (ms or cycles — pick one unit and label accordingly)
-latency       = [103.2, 98.3, 73.9, 58.2, 40.3]   # e.g. [112, 98, 84, 71, 58]
-latency_unit  = "Latency (ms)"                   # change unit label here if using cycles
+latency       = [1759.4, 963.1, 442.9, 247.0, 155.2]
+latency_unit  = "Latency (ms)"
 
 # Baseline accuracy (horizontal dashed reference line)
-baseline_acc  = 77.9    # e.g. 77.9  (trained on full unsparsified graph)
-baseline_latency = 103.2
+baseline_acc  = 89.06
+baseline_latency = 2216.1
 
 # ── STYLE ─────────────────────────────────────────────────────────────────────
-ACC_COLOR     = "#1b9e77"   # blue  — accuracy
-LAT_COLOR     = "#7570b3"   # red   — latency
+ACC_COLOR     = "#1b9e77"
+LAT_COLOR     = "#7570b3"
 BASELINE_COLOR= "#d95f02"
 BASELINE_LATENCY_COLOR = "#e7298a"
 
@@ -53,12 +52,11 @@ ax1.yaxis.set_minor_locator(ticker.AutoMinorLocator())
 ax1.grid(True, which="major", axis="both", alpha=0.25, linewidth=0.6)
 
 for x, y in zip(epsilon, accuracy):
-    edit = -0.5 if x == 0.7 or x == 0.1 else 1
-    ax1.annotate(f"{y:.1f}", xy=(x, y), xytext=(0, edit * -11),
+    ax1.annotate(f"{y:.1f}", xy=(x, y), xytext=(0, -11),
                  textcoords="offset points", ha="center", fontsize=6.5,
                  color=ACC_COLOR)
 
-ax1.set_ylim(58, 84)
+ax1.set_ylim(70, 100)
 
 # --- Latency (right axis) ---
 ax2 = ax1.twinx()
@@ -77,12 +75,11 @@ if baseline_latency is not None:
 ax2.yaxis.set_minor_locator(ticker.AutoMinorLocator())
 
 for x, y in zip(epsilon, latency):
-    edit = -1.5 if x == 0.7 else 1
-    ax2.annotate(f"{y:g}", xy=(x, y), xytext=(0, edit * 6),
+    ax2.annotate(f"{y:g}", xy=(x, y), xytext=(0, 7),
                  textcoords="offset points", ha="center", fontsize=6.5,
                  color=LAT_COLOR)
 
-ax2.set_ylim(30, 115)
+ax2.set_ylim(0, 2400)
 
 # --- Legend (combined from both axes) ---
 lines1, labels1 = ax1.get_legend_handles_labels()
@@ -91,7 +88,7 @@ ax1.legend(lines1 + lines2, labels1 + labels2,
            loc="lower left", framealpha=0.9, fontsize=9)
 
 # --- Dataset annotation (optional — remove if not wanted) ---
-ax1.set_title("Effect of DSpar sparsification (Cora)", fontsize=10, pad=6)
+ax1.set_title("Effect of DSpar sparsification (Amazon Photo)", fontsize=10, pad=6)
 
 plt.tight_layout()
 plt.savefig("dspar_results.pdf", dpi=300, bbox_inches="tight")

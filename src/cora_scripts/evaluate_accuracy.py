@@ -17,11 +17,11 @@ import os
 NODES = 2708
 NUM_CLASSES = 7
 
-DATA_DIR = "/home/nat/dev/trinners/mai_proj/hls/gcn_hls/cora_bin"
+DATA_DIR = "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/cora_scripts/cora_bin_sparse"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Load HLS output (raw logits)
-h_out = np.fromfile(os.path.join(DATA_DIR, "H_out_layer2.bin"), dtype=np.float32)
+h_out = np.fromfile(os.path.join(DATA_DIR, "H_out_integrated_layer2.bin"), dtype=np.float32)
 h_out = h_out.reshape(NODES, NUM_CLASSES)
 print(f"Loaded H_out_layer2.bin: shape={h_out.shape}, range=[{h_out.min():.4f}, {h_out.max():.4f}]")
 

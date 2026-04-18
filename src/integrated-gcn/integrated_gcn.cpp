@@ -246,7 +246,7 @@ static void spmm_compute(
 
         SPMM_NNZ:
         for (idx_t jj = 0; jj < rl; jj++) {
-#pragma HLS LOOP_TRIPCOUNT min=0 max=52 avg=2
+#pragma HLS LOOP_TRIPCOUNT min=0 max=114 avg=3
 
             idx_t col = col_fifo.read();
             DTYPE val = val_fifo.read();

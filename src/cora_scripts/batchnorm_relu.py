@@ -17,12 +17,13 @@ import os
 NODES = 2708
 F_OUT = 64
 
-DATA_DIR = "/home/nat/dev/trinners/mai_proj/hls/gcn_hls/cora_bin"
+DATA_DIR = "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/cora_scripts/cora_bin_sparse"
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-WEIGHTS_PATH = os.path.join(SCRIPT_DIR, "gcn_weights.pt")
+WEIGHTS_PATH = os.path.join(SCRIPT_DIR, "gcn_weights_sparse.pt")
+DATA_FILE = "H_out_integrated.bin"
 
 # Load HLS output
-h_out = np.fromfile(os.path.join(DATA_DIR, "H_out_design3.bin"), dtype=np.float32)
+h_out = np.fromfile(os.path.join(DATA_DIR, DATA_FILE), dtype=np.float32)
 h_out = h_out.reshape(NODES, F_OUT)
 print(f"Loaded H_out_design3.bin: shape={h_out.shape}, range=[{h_out.min():.4f}, {h_out.max():.4f}]")
 
