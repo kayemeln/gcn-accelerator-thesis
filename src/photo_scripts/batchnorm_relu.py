@@ -18,8 +18,8 @@ NODES = 7650
 F_OUT = 64
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-BIN_DIR = os.path.join(SCRIPT_DIR, "photo_bin")
-WEIGHTS_PATH = os.path.join(SCRIPT_DIR, "gcn_weights.pt")
+BIN_DIR = os.path.join(SCRIPT_DIR, "photo_bin_sparse")
+WEIGHTS_PATH = os.path.join(SCRIPT_DIR, "gcn_weights_sparse.pt")
 DATA_FILE = "H_out_integrated.bin"
 
 # Load HLS output

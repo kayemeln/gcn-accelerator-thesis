@@ -80,7 +80,7 @@ int compare(const char* label, float* dut, float* ref,
 
 int main(int argc, char* argv[]) {
     // Unsparsified
-    const char* data_dir = "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/photo_scripts/photo_bin";
+    const char* data_dir = "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/photo_scripts/photo_bin_sparse";
 
     // Sparsified
     // const char* data_dir = "/home/nat/dev/trinners/mai_proj/hls/thesis-gcn-accelerator/src/photo_scripts/photo_bin_sparse";
@@ -110,17 +110,17 @@ int main(int argc, char* argv[]) {
     float* W_f32   = new float[F_IN * F_OUT];
     float* H1_ref  = new float[NODES * F_OUT];
 
-    // --- Layer 1 ---
-    // const char* X_file   = "/X.bin";
-    // const char* W_file   = "/W1.bin";
-    // const char* ref_file = "/H1.bin";
-    // const char* out_file = "/H_out_integrated.bin";
+    //--- Layer 1 ---
+    const char* X_file   = "/X.bin";
+    const char* W_file   = "/W1.bin";
+    const char* ref_file = "/H1.bin";
+    const char* out_file = "/H_out_integrated.bin";
 
     // --- Layer 2 ---
-    const char* X_file   = "/H1_bn_relu.bin";
-    const char* W_file   = "/W2.bin";
-    const char* ref_file = "/H2.bin";
-    const char* out_file = "/H_out_integrated_layer2.bin";
+    // const char* X_file   = "/H1_bn_relu.bin";
+    // const char* W_file   = "/W2.bin";
+    // const char* ref_file = "/H2.bin";
+    // const char* out_file = "/H_out_integrated_layer2.bin";
 
     if (!load_bin((std::string(data_dir) + X_file).c_str(),
                   X_f32, NODES * F_IN)) return 1;

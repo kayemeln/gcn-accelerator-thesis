@@ -18,7 +18,7 @@
 #include "ap_int.h"
 
 #ifndef APPROX_MUL_VARIANT
-#define APPROX_MUL_VARIANT 2
+#define APPROX_MUL_VARIANT 0
 #endif
 
 // ---------- Gate-level multiplier implementations ----------

@@ -1,0 +1,566 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date              : Fri Apr 17 19:40:53 2026
+| Host              : nat-Yoga-Pro-9-16IAH10 running 64-bit Ubuntu 24.04.3 LTS
+| Command           : report_timing -max_paths 10 -file ./report/integrated_gcn_approx_timing_paths_routed.rpt
+| Design            : bd_0_wrapper
+| Device            : xck26-sfvc784
+| Speed File        : -2LV  PRODUCTION 1.30 05-15-2022
+| Design State      : Routed
+| Temperature Grade : C
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             2.163ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/A[21]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.306ns  (logic 0.420ns (5.749%)  route 6.886ns (94.251%))
+  Logic Levels:           3  (LUT6=1 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.043     0.043    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/ap_clk
+    SLICE_X38Y123        FDRE                                         r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y123        FDRE (Prop_HFF_SLICEM_C_Q)
+                                                      0.114     0.157 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/Q
+                         net (fo=129, routed)         1.638     1.795    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/Q[0]
+    SLICE_X50Y139        LUT6 (Prop_A6LUT_SLICEL_I4_O)
+                                                      0.188     1.983 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_28__0/O
+                         net (fo=1, routed)           0.014     1.997    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_28__0_n_4
+    SLICE_X50Y139        MUXF7 (Prop_F7MUX_AB_SLICEL_I1_O)
+                                                      0.088     2.085 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_10__0/O
+                         net (fo=1, routed)           0.000     2.085    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_10__0_n_4
+    SLICE_X50Y139        MUXF8 (Prop_F8MUX_BOT_SLICEL_I1_O)
+                                                      0.030     2.115 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_1__25/O
+                         net (fo=1472, routed)        5.234     7.349    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/A[21]
+    DSP48E2_X7Y12        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/A[21]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.055    10.055    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+    DSP48E2_X7Y12        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X7Y12        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[21])
+                                                     -0.508     9.512    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.512    
+                         arrival time                          -7.349    
+  -------------------------------------------------------------------
+                         slack                                  2.163    
+
+Slack (MET) :             2.194ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/A[19]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.286ns  (logic 0.420ns (5.764%)  route 6.866ns (94.236%))
+  Logic Levels:           3  (LUT6=1 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.043     0.043    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/ap_clk
+    SLICE_X38Y123        FDRE                                         r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y123        FDRE (Prop_HFF_SLICEM_C_Q)
+                                                      0.114     0.157 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/Q
+                         net (fo=129, routed)         1.638     1.795    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/Q[0]
+    SLICE_X50Y139        LUT6 (Prop_A6LUT_SLICEL_I4_O)
+                                                      0.188     1.983 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_28__0/O
+                         net (fo=1, routed)           0.014     1.997    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_28__0_n_4
+    SLICE_X50Y139        MUXF7 (Prop_F7MUX_AB_SLICEL_I1_O)
+                                                      0.088     2.085 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_10__0/O
+                         net (fo=1, routed)           0.000     2.085    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_10__0_n_4
+    SLICE_X50Y139        MUXF8 (Prop_F8MUX_BOT_SLICEL_I1_O)
+                                                      0.030     2.115 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_1__25/O
+                         net (fo=1472, routed)        5.214     7.329    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/A[19]
+    DSP48E2_X7Y12        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/A[19]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.055    10.055    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+    DSP48E2_X7Y12        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X7Y12        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[19])
+                                                     -0.497     9.523    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.523    
+                         arrival time                          -7.329    
+  -------------------------------------------------------------------
+                         slack                                  2.194    
+
+Slack (MET) :             2.196ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U375/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/A[3]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.284ns  (logic 0.462ns (6.343%)  route 6.822ns (93.657%))
+  Logic Levels:           3  (LUT6=1 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.043     0.043    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/ap_clk
+    SLICE_X38Y123        FDRE                                         r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y123        FDRE (Prop_GFF_SLICEM_C_Q)
+                                                      0.116     0.159 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[3]/Q
+                         net (fo=129, routed)         1.583     1.742    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/Q[1]
+    SLICE_X52Y145        LUT6 (Prop_H6LUT_SLICEL_I2_O)
+                                                      0.227     1.969 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_41__0/O
+                         net (fo=1, routed)           0.015     1.984    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_41__0_n_4
+    SLICE_X52Y145        MUXF7 (Prop_F7MUX_GH_SLICEL_I0_O)
+                                                      0.088     2.072 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_17__0/O
+                         net (fo=1, routed)           0.000     2.072    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_17__0_n_4
+    SLICE_X52Y145        MUXF8 (Prop_F8MUX_TOP_SLICEL_I0_O)
+                                                      0.031     2.103 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_5__0/O
+                         net (fo=64, routed)          5.224     7.327    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U375/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/A[3]
+    DSP48E2_X5Y23        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U375/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/A[3]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.055    10.055    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U375/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+    DSP48E2_X5Y23        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U375/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X5Y23        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[3])
+                                                     -0.497     9.523    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U375/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.523    
+                         arrival time                          -7.327    
+  -------------------------------------------------------------------
+                         slack                                  2.196    
+
+Slack (MET) :             2.248ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/A[22]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.243ns  (logic 0.420ns (5.799%)  route 6.823ns (94.201%))
+  Logic Levels:           3  (LUT6=1 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.043     0.043    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/ap_clk
+    SLICE_X38Y123        FDRE                                         r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y123        FDRE (Prop_HFF_SLICEM_C_Q)
+                                                      0.114     0.157 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/Q
+                         net (fo=129, routed)         1.638     1.795    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/Q[0]
+    SLICE_X50Y139        LUT6 (Prop_A6LUT_SLICEL_I4_O)
+                                                      0.188     1.983 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_28__0/O
+                         net (fo=1, routed)           0.014     1.997    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_28__0_n_4
+    SLICE_X50Y139        MUXF7 (Prop_F7MUX_AB_SLICEL_I1_O)
+                                                      0.088     2.085 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_10__0/O
+                         net (fo=1, routed)           0.000     2.085    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_10__0_n_4
+    SLICE_X50Y139        MUXF8 (Prop_F8MUX_BOT_SLICEL_I1_O)
+                                                      0.030     2.115 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_1__25/O
+                         net (fo=1472, routed)        5.171     7.286    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/A[22]
+    DSP48E2_X7Y12        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/A[22]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.055    10.055    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+    DSP48E2_X7Y12        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X7Y12        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[22])
+                                                     -0.486     9.534    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.534    
+                         arrival time                          -7.286    
+  -------------------------------------------------------------------
+                         slack                                  2.248    
+
+Slack (MET) :             2.270ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U376/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/A[18]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.200ns  (logic 0.420ns (5.833%)  route 6.780ns (94.167%))
+  Logic Levels:           3  (LUT6=1 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.043     0.043    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/ap_clk
+    SLICE_X38Y123        FDRE                                         r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y123        FDRE (Prop_HFF_SLICEM_C_Q)
+                                                      0.114     0.157 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/Q
+                         net (fo=129, routed)         1.638     1.795    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/Q[0]
+    SLICE_X50Y139        LUT6 (Prop_A6LUT_SLICEL_I4_O)
+                                                      0.188     1.983 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_28__0/O
+                         net (fo=1, routed)           0.014     1.997    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_28__0_n_4
+    SLICE_X50Y139        MUXF7 (Prop_F7MUX_AB_SLICEL_I1_O)
+                                                      0.088     2.085 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_10__0/O
+                         net (fo=1, routed)           0.000     2.085    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_10__0_n_4
+    SLICE_X50Y139        MUXF8 (Prop_F8MUX_BOT_SLICEL_I1_O)
+                                                      0.030     2.115 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_1__25/O
+                         net (fo=1472, routed)        5.128     7.243    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U376/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/A[18]
+    DSP48E2_X5Y26        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U376/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/A[18]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.055    10.055    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U376/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+    DSP48E2_X5Y26        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U376/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X5Y26        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[18])
+                                                     -0.507     9.513    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U376/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.513    
+                         arrival time                          -7.243    
+  -------------------------------------------------------------------
+                         slack                                  2.270    
+
+Slack (MET) :             2.287ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U370/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/A[15]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.164ns  (logic 0.420ns (5.863%)  route 6.744ns (94.137%))
+  Logic Levels:           3  (LUT6=1 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.043     0.043    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/ap_clk
+    SLICE_X38Y123        FDRE                                         r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y123        FDRE (Prop_HFF_SLICEM_C_Q)
+                                                      0.114     0.157 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/Q
+                         net (fo=129, routed)         1.638     1.795    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/Q[0]
+    SLICE_X50Y139        LUT6 (Prop_A6LUT_SLICEL_I4_O)
+                                                      0.188     1.983 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_28__0/O
+                         net (fo=1, routed)           0.014     1.997    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_28__0_n_4
+    SLICE_X50Y139        MUXF7 (Prop_F7MUX_AB_SLICEL_I1_O)
+                                                      0.088     2.085 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_10__0/O
+                         net (fo=1, routed)           0.000     2.085    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_10__0_n_4
+    SLICE_X50Y139        MUXF8 (Prop_F8MUX_BOT_SLICEL_I1_O)
+                                                      0.030     2.115 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_1__25/O
+                         net (fo=1472, routed)        5.092     7.207    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U370/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/A[15]
+    DSP48E2_X7Y14        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U370/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/A[15]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.055    10.055    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U370/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+    DSP48E2_X7Y14        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U370/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X7Y14        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[15])
+                                                     -0.526     9.494    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U370/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.494    
+                         arrival time                          -7.207    
+  -------------------------------------------------------------------
+                         slack                                  2.287    
+
+Slack (MET) :             2.313ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U370/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/A[13]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.138ns  (logic 0.420ns (5.884%)  route 6.718ns (94.116%))
+  Logic Levels:           3  (LUT6=1 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.043     0.043    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/ap_clk
+    SLICE_X38Y123        FDRE                                         r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y123        FDRE (Prop_HFF_SLICEM_C_Q)
+                                                      0.114     0.157 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[2]/Q
+                         net (fo=129, routed)         1.638     1.795    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/Q[0]
+    SLICE_X50Y139        LUT6 (Prop_A6LUT_SLICEL_I4_O)
+                                                      0.188     1.983 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_28__0/O
+                         net (fo=1, routed)           0.014     1.997    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_28__0_n_4
+    SLICE_X50Y139        MUXF7 (Prop_F7MUX_AB_SLICEL_I1_O)
+                                                      0.088     2.085 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_10__0/O
+                         net (fo=1, routed)           0.000     2.085    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_10__0_n_4
+    SLICE_X50Y139        MUXF8 (Prop_F8MUX_BOT_SLICEL_I1_O)
+                                                      0.030     2.115 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_1__25/O
+                         net (fo=1472, routed)        5.066     7.181    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U370/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/A[13]
+    DSP48E2_X7Y14        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U370/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/A[13]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.055    10.055    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U370/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+    DSP48E2_X7Y14        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U370/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X7Y14        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[13])
+                                                     -0.526     9.494    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U370/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.494    
+                         arrival time                          -7.181    
+  -------------------------------------------------------------------
+                         slack                                  2.313    
+
+Slack (MET) :             2.330ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/lshr_ln3_reg_10341_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U520/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST/C[37]
+                            (rising edge-triggered cell DSP_C_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.239ns  (logic 0.305ns (4.213%)  route 6.934ns (95.787%))
+  Logic Levels:           1  (RAMD32=1)
+  Clock Path Skew:        0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.043     0.043    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/ap_clk
+    SLICE_X38Y134        FDRE                                         r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/lshr_ln3_reg_10341_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y134        FDRE (Prop_FFF2_SLICEM_C_Q)
+                                                      0.116     0.159 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/lshr_ln3_reg_10341_reg[1]/Q
+                         net (fo=4097, routed)        6.257     6.416    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_251_U/ram_reg_0_15_15_15/DPRA1
+    SLICE_X20Y121        RAMD32 (Prop_A6LUT_SLICEM_RADR1_O)
+                                                      0.189     6.605 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_251_U/ram_reg_0_15_15_15/DP/O
+                         net (fo=33, routed)          0.677     7.282    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U520/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/C[37]
+    DSP48E2_X5Y49        DSP_C_DATA                                   r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U520/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST/C[37]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.055    10.055    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U520/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+    DSP48E2_X5Y49        DSP_C_DATA                                   r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U520/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X5Y49        DSP_C_DATA (Setup_DSP_C_DATA_DSP48E2_CLK_C[37])
+                                                     -0.407     9.613    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U520/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.613    
+                         arrival time                          -7.282    
+  -------------------------------------------------------------------
+                         slack                                  2.330    
+
+Slack (MET) :             2.333ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/lshr_ln3_reg_10341_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U520/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST/C[35]
+                            (rising edge-triggered cell DSP_C_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.250ns  (logic 0.305ns (4.207%)  route 6.945ns (95.793%))
+  Logic Levels:           1  (RAMD32=1)
+  Clock Path Skew:        0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.043     0.043    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/ap_clk
+    SLICE_X38Y134        FDRE                                         r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/lshr_ln3_reg_10341_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y134        FDRE (Prop_FFF2_SLICEM_C_Q)
+                                                      0.116     0.159 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/lshr_ln3_reg_10341_reg[1]/Q
+                         net (fo=4097, routed)        6.257     6.416    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_251_U/ram_reg_0_15_15_15/DPRA1
+    SLICE_X20Y121        RAMD32 (Prop_A6LUT_SLICEM_RADR1_O)
+                                                      0.189     6.605 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_251_U/ram_reg_0_15_15_15/DP/O
+                         net (fo=33, routed)          0.688     7.293    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U520/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/C[35]
+    DSP48E2_X5Y49        DSP_C_DATA                                   r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U520/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST/C[35]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.055    10.055    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U520/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+    DSP48E2_X5Y49        DSP_C_DATA                                   r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U520/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X5Y49        DSP_C_DATA (Setup_DSP_C_DATA_DSP48E2_CLK_C[35])
+                                                     -0.393     9.627    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U520/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.627    
+                         arrival time                          -7.293    
+  -------------------------------------------------------------------
+                         slack                                  2.333    
+
+Slack (MET) :             2.336ns  (required time - arrival time)
+  Source:                 bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U306/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/A[20]
+                            (rising edge-triggered cell DSP_A_B_DATA clocked by ap_clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             ap_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (ap_clk rise@10.000ns - ap_clk rise@0.000ns)
+  Data Path Delay:        7.126ns  (logic 0.422ns (5.922%)  route 6.704ns (94.078%))
+  Logic Levels:           3  (LUT6=1 MUXF7=1 MUXF8=1)
+  Clock Path Skew:        0.012ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.055ns = ( 10.055 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.043ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock ap_clk rise edge)     0.000     0.000 r  
+                                                      0.000     0.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.043     0.043    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/ap_clk
+    SLICE_X38Y123        FDRE                                         r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X38Y123        FDRE (Prop_GFF_SLICEM_C_Q)
+                                                      0.116     0.159 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/select_ln100_reg_9819_pp0_iter2_reg_reg[3]/Q
+                         net (fo=129, routed)         1.400     1.559    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U332/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/Q[1]
+    SLICE_X50Y135        LUT6 (Prop_F6LUT_SLICEL_I2_O)
+                                                      0.187     1.746 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U332/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_29/O
+                         net (fo=1, routed)           0.015     1.761    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U332/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_29_n_4
+    SLICE_X50Y135        MUXF7 (Prop_F7MUX_EF_SLICEL_I0_O)
+                                                      0.088     1.849 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U332/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_12/O
+                         net (fo=1, routed)           0.000     1.849    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U332/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_12_n_4
+    SLICE_X50Y135        MUXF8 (Prop_F8MUX_TOP_SLICEL_I1_O)
+                                                      0.031     1.880 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U332/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg_i_3/O
+                         net (fo=1472, routed)        5.289     7.169    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U306/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/A[20]
+    DSP48E2_X6Y14        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U306/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/A[20]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock ap_clk rise edge)    10.000    10.000 r  
+                                                      0.000    10.000 r  ap_clk (IN)
+                         net (fo=36171, unset)        0.055    10.055    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U306/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/CLK
+    DSP48E2_X6Y14        DSP_A_B_DATA                                 r  bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U306/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST/CLK
+                         clock pessimism              0.000    10.055    
+                         clock uncertainty           -0.035    10.020    
+    DSP48E2_X6Y14        DSP_A_B_DATA (Setup_DSP_A_B_DATA_DSP48E2_CLK_A[20])
+                                                     -0.515     9.505    bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U306/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_A_B_DATA_INST
+  -------------------------------------------------------------------
+                         required time                          9.505    
+                         arrival time                          -7.169    
+  -------------------------------------------------------------------
+                         slack                                  2.336    
+
+
+
+

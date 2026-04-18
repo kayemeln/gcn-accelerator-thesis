@@ -9,8 +9,8 @@
 #include "hls_vector.h"
 
 // ---------- Data types ----------
-typedef ap_fixed<16, 6, AP_RND, AP_SAT>  DTYPE;      // range [-8, +8)
-typedef ap_fixed<32, 12>  acc32_t;    // wider accumulator
+typedef ap_fixed<8, 3, AP_RND, AP_SAT>  DTYPE;      // range [-8, +8)
+typedef ap_fixed<16, 6>  acc32_t;    // wider accumulator
 typedef int              idx_t;
 
 // ---------- Graph / layer dimensions ----------

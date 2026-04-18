@@ -1,0 +1,1402 @@
+<profile>
+<RunData>
+  <RUN_TYPE>impl</RUN_TYPE>
+  <VIVADO_VERSION>v.2025.2</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>10.000</TargetClockPeriod>
+  <AchievedClockPeriod>7.949</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>7.949</CP_FINAL>
+  <CP_ROUTE>7.949</CP_ROUTE>
+  <CP_SYNTH>3.971</CP_SYNTH>
+  <CP_TARGET>10.000</CP_TARGET>
+  <SLACK_FINAL>2.051</SLACK_FINAL>
+  <SLACK_ROUTE>2.051</SLACK_ROUTE>
+  <SLACK_SYNTH>6.029</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>0.000</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>2.051</WNS_FINAL>
+  <WNS_ROUTE>2.051</WNS_ROUTE>
+  <WNS_SYNTH>6.029</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>81</BRAM>
+    <CLB>4555</CLB>
+    <DSP>257</DSP>
+    <FF>21072</FF>
+    <LATCH>0</LATCH>
+    <LUT>19804</LUT>
+    <SRL>1601</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>288</BRAM>
+    <CLB>14640</CLB>
+    <DSP>1248</DSP>
+    <FF>234240</FF>
+    <LUT>117120</LUT>
+    <URAM>64</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="integrated_gcn_approx" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="10">control_s_axi_U gmem0_m_axi_U gmem1_m_axi_U gmem2_m_axi_U gmem3_m_axi_U gmem4_m_axi_U gmem5_m_axi_U gmem6_m_axi_U grp_gemm_stage_fu_148 grp_spmm_stage_fu_164</SubModules>
+    <Resources BRAM="81" DSP="257" FF="21072" LUT="19804" LUTRAM="5420" LogicLUT="12783" RAMB18="39" RAMB36="21" SRL="1601"/>
+    <LocalResources FF="465" LUT="11" LogicLUT="5" SRL="6"/>
+  </RtlModule>
+  <RtlModule CELL="inst/control_s_axi_U" DEPTH="1" FILE_NAME="integrated_gcn_approx.v" ORIG_REF_NAME="integrated_gcn_approx_control_s_axi">
+    <Resources FF="490" LUT="437" LogicLUT="437"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem0_m_axi_U" DEPTH="1" FILE_NAME="integrated_gcn_approx.v" ORIG_REF_NAME="integrated_gcn_approx_gmem0_m_axi">
+    <Resources BRAM="15" FF="1669" LUT="890" LogicLUT="857" RAMB18="1" RAMB36="7" SRL="33"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem1_m_axi_U" DEPTH="1" FILE_NAME="integrated_gcn_approx.v" ORIG_REF_NAME="integrated_gcn_approx_gmem1_m_axi">
+    <Resources BRAM="15" FF="1686" LUT="905" LogicLUT="869" RAMB18="1" RAMB36="7" SRL="36"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem2_m_axi_U" DEPTH="1" FILE_NAME="integrated_gcn_approx.v" ORIG_REF_NAME="integrated_gcn_approx_gmem2_m_axi">
+    <Resources BRAM="15" FF="3717" LUT="2024" LogicLUT="1344" RAMB18="1" RAMB36="7" SRL="680"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem3_m_axi_U" DEPTH="1" FILE_NAME="integrated_gcn_approx.v" ORIG_REF_NAME="integrated_gcn_approx_gmem3_m_axi">
+    <Resources BRAM="1" FF="772" LUT="450" LogicLUT="413" RAMB18="1" SRL="37"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem4_m_axi_U" DEPTH="1" FILE_NAME="integrated_gcn_approx.v" ORIG_REF_NAME="integrated_gcn_approx_gmem4_m_axi">
+    <Resources BRAM="1" FF="861" LUT="517" LogicLUT="469" RAMB18="1" SRL="48"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem5_m_axi_U" DEPTH="1" FILE_NAME="integrated_gcn_approx.v" ORIG_REF_NAME="integrated_gcn_approx_gmem5_m_axi">
+    <Resources BRAM="1" FF="968" LUT="626" LogicLUT="574" RAMB18="1" SRL="52"/>
+  </RtlModule>
+  <RtlModule CELL="inst/gmem6_m_axi_U" DEPTH="1" FILE_NAME="integrated_gcn_approx.v" ORIG_REF_NAME="integrated_gcn_approx_gmem6_m_axi">
+    <Resources FF="2043" LUT="1126" LogicLUT="479" SRL="647"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148" DEPTH="1" FILE_NAME="integrated_gcn_approx.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_stage">
+    <SubModules count="9">W_stream_U XW_stream_U X_stream_U gemm_compute_U0 gemm_read_W_U0 gemm_read_X_U0 gemm_write_U0 start_for_gemm_compute_U0_U start_for_gemm_write_U0_U</SubModules>
+    <Resources DSP="257" FF="6375" LUT="9885" LUTRAM="4984" LogicLUT="4865" SRL="36"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/W_stream_U" DEPTH="2" FILE_NAME="integrated_gcn_approx_gemm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_fifo_w512_d16_A">
+    <Resources FF="537" LUT="316" LUTRAM="296" LogicLUT="20"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/XW_stream_U" DEPTH="2" FILE_NAME="integrated_gcn_approx_gemm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_fifo_w512_d16_A">
+    <Resources FF="533" LUT="309" LUTRAM="296" LogicLUT="13"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/X_stream_U" DEPTH="2" FILE_NAME="integrated_gcn_approx_gemm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_fifo_w512_d16_A">
+    <Resources FF="539" LUT="317" LUTRAM="296" LogicLUT="21"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0" DEPTH="2" FILE_NAME="integrated_gcn_approx_gemm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute">
+    <SubModules count="259">XW_block_100_U XW_block_101_U XW_block_102_U XW_block_103_U XW_block_104_U XW_block_105_U XW_block_106_U XW_block_107_U XW_block_108_U XW_block_109_U XW_block_10_U XW_block_110_U XW_block_111_U XW_block_112_U XW_block_113_U XW_block_114_U XW_block_115_U XW_block_116_U XW_block_117_U XW_block_118_U XW_block_119_U XW_block_11_U XW_block_120_U XW_block_121_U XW_block_122_U XW_block_123_U XW_block_124_U XW_block_125_U XW_block_126_U XW_block_127_U XW_block_128_U XW_block_129_U XW_block_12_U XW_block_130_U XW_block_131_U XW_block_132_U XW_block_133_U XW_block_134_U XW_block_135_U XW_block_136_U XW_block_137_U XW_block_138_U XW_block_139_U XW_block_13_U XW_block_140_U XW_block_141_U XW_block_142_U XW_block_143_U XW_block_144_U XW_block_145_U XW_block_146_U XW_block_147_U XW_block_148_U XW_block_149_U XW_block_14_U XW_block_150_U XW_block_151_U XW_block_152_U XW_block_153_U XW_block_154_U XW_block_155_U XW_block_156_U XW_block_157_U XW_block_158_U XW_block_159_U XW_block_15_U XW_block_160_U XW_block_161_U XW_block_162_U XW_block_163_U XW_block_164_U XW_block_165_U XW_block_166_U XW_block_167_U XW_block_168_U XW_block_169_U XW_block_16_U XW_block_170_U XW_block_171_U XW_block_172_U XW_block_173_U XW_block_174_U XW_block_175_U XW_block_176_U XW_block_177_U XW_block_178_U XW_block_179_U XW_block_17_U XW_block_180_U XW_block_181_U XW_block_182_U XW_block_183_U XW_block_184_U XW_block_185_U XW_block_186_U XW_block_187_U XW_block_188_U XW_block_189_U XW_block_18_U XW_block_190_U XW_block_191_U XW_block_192_U XW_block_193_U XW_block_194_U XW_block_195_U XW_block_196_U XW_block_197_U XW_block_198_U XW_block_199_U XW_block_19_U XW_block_1_U XW_block_200_U XW_block_201_U XW_block_202_U XW_block_203_U XW_block_204_U XW_block_205_U XW_block_206_U XW_block_207_U XW_block_208_U XW_block_209_U XW_block_20_U XW_block_210_U XW_block_211_U XW_block_212_U XW_block_213_U XW_block_214_U XW_block_215_U XW_block_216_U XW_block_217_U XW_block_218_U XW_block_219_U XW_block_21_U XW_block_220_U XW_block_221_U XW_block_222_U XW_block_223_U XW_block_224_U XW_block_225_U XW_block_226_U XW_block_227_U XW_block_228_U XW_block_229_U XW_block_22_U XW_block_230_U XW_block_231_U XW_block_232_U XW_block_233_U XW_block_234_U XW_block_235_U XW_block_236_U XW_block_237_U XW_block_238_U XW_block_239_U XW_block_23_U XW_block_240_U XW_block_241_U XW_block_242_U XW_block_243_U XW_block_244_U XW_block_245_U XW_block_246_U XW_block_247_U XW_block_248_U XW_block_249_U XW_block_24_U XW_block_250_U XW_block_251_U XW_block_252_U XW_block_253_U XW_block_254_U XW_block_255_U XW_block_25_U XW_block_26_U XW_block_27_U XW_block_28_U XW_block_29_U XW_block_2_U XW_block_30_U XW_block_31_U XW_block_32_U XW_block_33_U XW_block_34_U XW_block_35_U XW_block_36_U XW_block_37_U XW_block_38_U XW_block_39_U XW_block_3_U XW_block_40_U XW_block_41_U XW_block_42_U XW_block_43_U XW_block_44_U XW_block_45_U XW_block_46_U XW_block_47_U XW_block_48_U XW_block_49_U XW_block_4_U XW_block_50_U XW_block_51_U XW_block_52_U XW_block_53_U XW_block_54_U XW_block_55_U XW_block_56_U XW_block_57_U XW_block_58_U XW_block_59_U XW_block_5_U XW_block_60_U XW_block_61_U XW_block_62_U XW_block_63_U XW_block_64_U XW_block_65_U XW_block_66_U XW_block_67_U XW_block_68_U XW_block_69_U XW_block_6_U XW_block_70_U XW_block_71_U XW_block_72_U XW_block_73_U XW_block_74_U XW_block_75_U XW_block_76_U XW_block_77_U XW_block_78_U XW_block_79_U XW_block_7_U XW_block_80_U XW_block_81_U XW_block_82_U XW_block_83_U XW_block_84_U XW_block_85_U XW_block_86_U XW_block_87_U XW_block_88_U XW_block_89_U XW_block_8_U XW_block_90_U XW_block_91_U XW_block_92_U XW_block_93_U XW_block_94_U XW_block_95_U XW_block_96_U XW_block_97_U XW_block_98_U XW_block_99_U XW_block_9_U XW_block_U grp_gemm_compute_Pipeline_COMP_EMIT_fu_1594 grp_gemm_compute_Pipeline_COMP_INIT_fu_1070 grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330</SubModules>
+    <Resources DSP="256" FF="3842" LUT="8670" LUTRAM="4096" LogicLUT="4573" SRL="1"/>
+    <LocalResources FF="50" LUT="2079" LogicLUT="2079"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_100_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_101_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_102_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_103_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_104_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_105_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_106_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_107_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_108_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_109_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_10_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_110_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_111_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_112_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_113_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_114_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_115_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_116_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_117_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_118_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_119_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_11_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_120_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_121_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_122_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_123_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_124_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_125_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_126_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_127_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_128_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_129_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_12_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_130_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_131_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_132_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_133_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_134_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_135_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_136_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_137_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_138_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_139_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_13_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_140_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_141_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_142_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_143_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_144_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_145_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_146_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_147_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_148_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_149_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_14_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_150_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_151_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_152_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_153_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_154_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_155_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_156_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_157_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_158_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_159_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_15_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_160_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_161_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_162_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_163_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_164_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_165_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_166_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_167_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_168_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_169_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_16_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_170_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_171_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_172_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_173_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_174_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_175_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_176_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_177_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_178_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_179_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_17_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_180_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_181_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_182_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_183_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_184_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_185_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_186_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_187_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_188_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_189_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_18_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_190_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_191_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_192_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_193_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_194_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_195_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_196_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_197_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_198_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_199_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_19_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_1_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_200_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_201_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_202_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_203_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_204_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_205_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_206_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_207_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_208_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_209_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_20_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_210_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_211_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_212_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_213_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_214_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_215_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_216_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_217_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_218_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_219_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_21_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_220_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_221_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_222_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_223_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_224_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_225_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_226_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_227_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_228_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_229_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_22_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_230_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_231_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_232_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_233_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_234_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_235_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_236_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_237_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_238_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_239_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_23_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_240_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_241_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_242_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_243_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_244_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_245_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_246_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_247_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_248_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_249_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_24_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_250_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_251_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_252_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_253_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_254_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_255_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_25_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_26_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_27_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_28_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_29_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_2_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_30_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_31_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_32_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_33_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_34_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_35_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_36_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_37_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_38_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_39_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_3_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_40_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_41_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_42_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_43_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_44_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_45_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_46_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_47_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_48_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_49_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_4_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_50_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_51_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_52_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_53_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_54_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_55_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_56_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_57_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_58_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_59_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_5_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_60_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_61_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_62_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_63_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_64_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_65_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_66_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_67_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_68_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_69_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_6_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_70_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_71_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_72_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_73_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_74_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_75_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_76_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_77_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_78_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_79_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_7_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_80_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_81_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_82_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_83_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_84_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_85_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_86_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_87_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_88_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_89_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_8_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_90_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_91_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_92_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_93_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_94_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_95_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_96_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_97_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_98_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_99_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_9_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_XW_block_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_EMIT_fu_1594" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_EMIT">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="30" LUT="1947" LogicLUT="1947"/>
+    <LocalResources FF="28" LUT="1857" LogicLUT="1857"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_EMIT_fu_1594/flow_control_loop_pipe_sequential_init_U" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_EMIT.v" ORIG_REF_NAME="integrated_gcn_approx_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="90" LogicLUT="90"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_INIT_fu_1070" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_INIT">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="9" LUT="222" LogicLUT="222"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_INIT_fu_1070/flow_control_loop_pipe_sequential_init_U" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_INIT.v" ORIG_REF_NAME="integrated_gcn_approx_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="220" LogicLUT="220"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I">
+    <SubModules count="257">flow_control_loop_pipe_sequential_init_U mac_muladd_8s_8s_16s_16_4_1_U269 mac_muladd_8s_8s_16s_16_4_1_U270 mac_muladd_8s_8s_16s_16_4_1_U271 mac_muladd_8s_8s_16s_16_4_1_U272 mac_muladd_8s_8s_16s_16_4_1_U273 mac_muladd_8s_8s_16s_16_4_1_U274 mac_muladd_8s_8s_16s_16_4_1_U275 mac_muladd_8s_8s_16s_16_4_1_U276 mac_muladd_8s_8s_16s_16_4_1_U277 mac_muladd_8s_8s_16s_16_4_1_U278 mac_muladd_8s_8s_16s_16_4_1_U279 mac_muladd_8s_8s_16s_16_4_1_U280 mac_muladd_8s_8s_16s_16_4_1_U281 mac_muladd_8s_8s_16s_16_4_1_U282 mac_muladd_8s_8s_16s_16_4_1_U283 mac_muladd_8s_8s_16s_16_4_1_U284 mac_muladd_8s_8s_16s_16_4_1_U285 mac_muladd_8s_8s_16s_16_4_1_U286 mac_muladd_8s_8s_16s_16_4_1_U287 mac_muladd_8s_8s_16s_16_4_1_U288 mac_muladd_8s_8s_16s_16_4_1_U289 mac_muladd_8s_8s_16s_16_4_1_U290 mac_muladd_8s_8s_16s_16_4_1_U291 mac_muladd_8s_8s_16s_16_4_1_U292 mac_muladd_8s_8s_16s_16_4_1_U293 mac_muladd_8s_8s_16s_16_4_1_U294 mac_muladd_8s_8s_16s_16_4_1_U295 mac_muladd_8s_8s_16s_16_4_1_U296 mac_muladd_8s_8s_16s_16_4_1_U297 mac_muladd_8s_8s_16s_16_4_1_U298 mac_muladd_8s_8s_16s_16_4_1_U299 mac_muladd_8s_8s_16s_16_4_1_U300 mac_muladd_8s_8s_16s_16_4_1_U301 mac_muladd_8s_8s_16s_16_4_1_U302 mac_muladd_8s_8s_16s_16_4_1_U303 mac_muladd_8s_8s_16s_16_4_1_U304 mac_muladd_8s_8s_16s_16_4_1_U305 mac_muladd_8s_8s_16s_16_4_1_U306 mac_muladd_8s_8s_16s_16_4_1_U307 mac_muladd_8s_8s_16s_16_4_1_U308 mac_muladd_8s_8s_16s_16_4_1_U309 mac_muladd_8s_8s_16s_16_4_1_U310 mac_muladd_8s_8s_16s_16_4_1_U311 mac_muladd_8s_8s_16s_16_4_1_U312 mac_muladd_8s_8s_16s_16_4_1_U313 mac_muladd_8s_8s_16s_16_4_1_U314 mac_muladd_8s_8s_16s_16_4_1_U315 mac_muladd_8s_8s_16s_16_4_1_U316 mac_muladd_8s_8s_16s_16_4_1_U317 mac_muladd_8s_8s_16s_16_4_1_U318 mac_muladd_8s_8s_16s_16_4_1_U319 mac_muladd_8s_8s_16s_16_4_1_U320 mac_muladd_8s_8s_16s_16_4_1_U321 mac_muladd_8s_8s_16s_16_4_1_U322 mac_muladd_8s_8s_16s_16_4_1_U323 mac_muladd_8s_8s_16s_16_4_1_U324 mac_muladd_8s_8s_16s_16_4_1_U325 mac_muladd_8s_8s_16s_16_4_1_U326 mac_muladd_8s_8s_16s_16_4_1_U327 mac_muladd_8s_8s_16s_16_4_1_U328 mac_muladd_8s_8s_16s_16_4_1_U329 mac_muladd_8s_8s_16s_16_4_1_U330 mac_muladd_8s_8s_16s_16_4_1_U331 mac_muladd_8s_8s_16s_16_4_1_U332 mac_muladd_8s_8s_16s_16_4_1_U333 mac_muladd_8s_8s_16s_16_4_1_U334 mac_muladd_8s_8s_16s_16_4_1_U335 mac_muladd_8s_8s_16s_16_4_1_U336 mac_muladd_8s_8s_16s_16_4_1_U337 mac_muladd_8s_8s_16s_16_4_1_U338 mac_muladd_8s_8s_16s_16_4_1_U339 mac_muladd_8s_8s_16s_16_4_1_U340 mac_muladd_8s_8s_16s_16_4_1_U341 mac_muladd_8s_8s_16s_16_4_1_U342 mac_muladd_8s_8s_16s_16_4_1_U343 mac_muladd_8s_8s_16s_16_4_1_U344 mac_muladd_8s_8s_16s_16_4_1_U345 mac_muladd_8s_8s_16s_16_4_1_U346 mac_muladd_8s_8s_16s_16_4_1_U347 mac_muladd_8s_8s_16s_16_4_1_U348 mac_muladd_8s_8s_16s_16_4_1_U349 mac_muladd_8s_8s_16s_16_4_1_U350 mac_muladd_8s_8s_16s_16_4_1_U351 mac_muladd_8s_8s_16s_16_4_1_U352 mac_muladd_8s_8s_16s_16_4_1_U353 mac_muladd_8s_8s_16s_16_4_1_U354 mac_muladd_8s_8s_16s_16_4_1_U355 mac_muladd_8s_8s_16s_16_4_1_U356 mac_muladd_8s_8s_16s_16_4_1_U357 mac_muladd_8s_8s_16s_16_4_1_U358 mac_muladd_8s_8s_16s_16_4_1_U359 mac_muladd_8s_8s_16s_16_4_1_U360 mac_muladd_8s_8s_16s_16_4_1_U361 mac_muladd_8s_8s_16s_16_4_1_U362 mac_muladd_8s_8s_16s_16_4_1_U363 mac_muladd_8s_8s_16s_16_4_1_U364 mac_muladd_8s_8s_16s_16_4_1_U365 mac_muladd_8s_8s_16s_16_4_1_U366 mac_muladd_8s_8s_16s_16_4_1_U367 mac_muladd_8s_8s_16s_16_4_1_U368 mac_muladd_8s_8s_16s_16_4_1_U369 mac_muladd_8s_8s_16s_16_4_1_U370 mac_muladd_8s_8s_16s_16_4_1_U371 mac_muladd_8s_8s_16s_16_4_1_U372 mac_muladd_8s_8s_16s_16_4_1_U373 mac_muladd_8s_8s_16s_16_4_1_U374 mac_muladd_8s_8s_16s_16_4_1_U375 mac_muladd_8s_8s_16s_16_4_1_U376 mac_muladd_8s_8s_16s_16_4_1_U377 mac_muladd_8s_8s_16s_16_4_1_U378 mac_muladd_8s_8s_16s_16_4_1_U379 mac_muladd_8s_8s_16s_16_4_1_U380 mac_muladd_8s_8s_16s_16_4_1_U381 mac_muladd_8s_8s_16s_16_4_1_U382 mac_muladd_8s_8s_16s_16_4_1_U383 mac_muladd_8s_8s_16s_16_4_1_U384 mac_muladd_8s_8s_16s_16_4_1_U385 mac_muladd_8s_8s_16s_16_4_1_U386 mac_muladd_8s_8s_16s_16_4_1_U387 mac_muladd_8s_8s_16s_16_4_1_U388 mac_muladd_8s_8s_16s_16_4_1_U389 mac_muladd_8s_8s_16s_16_4_1_U390 mac_muladd_8s_8s_16s_16_4_1_U391 mac_muladd_8s_8s_16s_16_4_1_U392 mac_muladd_8s_8s_16s_16_4_1_U393 mac_muladd_8s_8s_16s_16_4_1_U394 mac_muladd_8s_8s_16s_16_4_1_U395 mac_muladd_8s_8s_16s_16_4_1_U396 mac_muladd_8s_8s_16s_16_4_1_U397 mac_muladd_8s_8s_16s_16_4_1_U398 mac_muladd_8s_8s_16s_16_4_1_U399 mac_muladd_8s_8s_16s_16_4_1_U400 mac_muladd_8s_8s_16s_16_4_1_U401 mac_muladd_8s_8s_16s_16_4_1_U402 mac_muladd_8s_8s_16s_16_4_1_U403 mac_muladd_8s_8s_16s_16_4_1_U404 mac_muladd_8s_8s_16s_16_4_1_U405 mac_muladd_8s_8s_16s_16_4_1_U406 mac_muladd_8s_8s_16s_16_4_1_U407 mac_muladd_8s_8s_16s_16_4_1_U408 mac_muladd_8s_8s_16s_16_4_1_U409 mac_muladd_8s_8s_16s_16_4_1_U410 mac_muladd_8s_8s_16s_16_4_1_U411 mac_muladd_8s_8s_16s_16_4_1_U412 mac_muladd_8s_8s_16s_16_4_1_U413 mac_muladd_8s_8s_16s_16_4_1_U414 mac_muladd_8s_8s_16s_16_4_1_U415 mac_muladd_8s_8s_16s_16_4_1_U416 mac_muladd_8s_8s_16s_16_4_1_U417 mac_muladd_8s_8s_16s_16_4_1_U418 mac_muladd_8s_8s_16s_16_4_1_U419 mac_muladd_8s_8s_16s_16_4_1_U420 mac_muladd_8s_8s_16s_16_4_1_U421 mac_muladd_8s_8s_16s_16_4_1_U422 mac_muladd_8s_8s_16s_16_4_1_U423 mac_muladd_8s_8s_16s_16_4_1_U424 mac_muladd_8s_8s_16s_16_4_1_U425 mac_muladd_8s_8s_16s_16_4_1_U426 mac_muladd_8s_8s_16s_16_4_1_U427 mac_muladd_8s_8s_16s_16_4_1_U428 mac_muladd_8s_8s_16s_16_4_1_U429 mac_muladd_8s_8s_16s_16_4_1_U430 mac_muladd_8s_8s_16s_16_4_1_U431 mac_muladd_8s_8s_16s_16_4_1_U432 mac_muladd_8s_8s_16s_16_4_1_U433 mac_muladd_8s_8s_16s_16_4_1_U434 mac_muladd_8s_8s_16s_16_4_1_U435 mac_muladd_8s_8s_16s_16_4_1_U436 mac_muladd_8s_8s_16s_16_4_1_U437 mac_muladd_8s_8s_16s_16_4_1_U438 mac_muladd_8s_8s_16s_16_4_1_U439 mac_muladd_8s_8s_16s_16_4_1_U440 mac_muladd_8s_8s_16s_16_4_1_U441 mac_muladd_8s_8s_16s_16_4_1_U442 mac_muladd_8s_8s_16s_16_4_1_U443 mac_muladd_8s_8s_16s_16_4_1_U444 mac_muladd_8s_8s_16s_16_4_1_U445 mac_muladd_8s_8s_16s_16_4_1_U446 mac_muladd_8s_8s_16s_16_4_1_U447 mac_muladd_8s_8s_16s_16_4_1_U448 mac_muladd_8s_8s_16s_16_4_1_U449 mac_muladd_8s_8s_16s_16_4_1_U450 mac_muladd_8s_8s_16s_16_4_1_U451 mac_muladd_8s_8s_16s_16_4_1_U452 mac_muladd_8s_8s_16s_16_4_1_U453 mac_muladd_8s_8s_16s_16_4_1_U454 mac_muladd_8s_8s_16s_16_4_1_U455 mac_muladd_8s_8s_16s_16_4_1_U456 mac_muladd_8s_8s_16s_16_4_1_U457 mac_muladd_8s_8s_16s_16_4_1_U458 mac_muladd_8s_8s_16s_16_4_1_U459 mac_muladd_8s_8s_16s_16_4_1_U460 mac_muladd_8s_8s_16s_16_4_1_U461 mac_muladd_8s_8s_16s_16_4_1_U462 mac_muladd_8s_8s_16s_16_4_1_U463 mac_muladd_8s_8s_16s_16_4_1_U464 mac_muladd_8s_8s_16s_16_4_1_U465 mac_muladd_8s_8s_16s_16_4_1_U466 mac_muladd_8s_8s_16s_16_4_1_U467 mac_muladd_8s_8s_16s_16_4_1_U468 mac_muladd_8s_8s_16s_16_4_1_U469 mac_muladd_8s_8s_16s_16_4_1_U470 mac_muladd_8s_8s_16s_16_4_1_U471 mac_muladd_8s_8s_16s_16_4_1_U472 mac_muladd_8s_8s_16s_16_4_1_U473 mac_muladd_8s_8s_16s_16_4_1_U474 mac_muladd_8s_8s_16s_16_4_1_U475 mac_muladd_8s_8s_16s_16_4_1_U476 mac_muladd_8s_8s_16s_16_4_1_U477 mac_muladd_8s_8s_16s_16_4_1_U478 mac_muladd_8s_8s_16s_16_4_1_U479 mac_muladd_8s_8s_16s_16_4_1_U480 mac_muladd_8s_8s_16s_16_4_1_U481 mac_muladd_8s_8s_16s_16_4_1_U482 mac_muladd_8s_8s_16s_16_4_1_U483 mac_muladd_8s_8s_16s_16_4_1_U484 mac_muladd_8s_8s_16s_16_4_1_U485 mac_muladd_8s_8s_16s_16_4_1_U486 mac_muladd_8s_8s_16s_16_4_1_U487 mac_muladd_8s_8s_16s_16_4_1_U488 mac_muladd_8s_8s_16s_16_4_1_U489 mac_muladd_8s_8s_16s_16_4_1_U490 mac_muladd_8s_8s_16s_16_4_1_U491 mac_muladd_8s_8s_16s_16_4_1_U492 mac_muladd_8s_8s_16s_16_4_1_U493 mac_muladd_8s_8s_16s_16_4_1_U494 mac_muladd_8s_8s_16s_16_4_1_U495 mac_muladd_8s_8s_16s_16_4_1_U496 mac_muladd_8s_8s_16s_16_4_1_U497 mac_muladd_8s_8s_16s_16_4_1_U498 mac_muladd_8s_8s_16s_16_4_1_U499 mac_muladd_8s_8s_16s_16_4_1_U500 mac_muladd_8s_8s_16s_16_4_1_U501 mac_muladd_8s_8s_16s_16_4_1_U502 mac_muladd_8s_8s_16s_16_4_1_U503 mac_muladd_8s_8s_16s_16_4_1_U504 mac_muladd_8s_8s_16s_16_4_1_U505 mac_muladd_8s_8s_16s_16_4_1_U506 mac_muladd_8s_8s_16s_16_4_1_U507 mac_muladd_8s_8s_16s_16_4_1_U508 mac_muladd_8s_8s_16s_16_4_1_U509 mac_muladd_8s_8s_16s_16_4_1_U510 mac_muladd_8s_8s_16s_16_4_1_U511 mac_muladd_8s_8s_16s_16_4_1_U512 mac_muladd_8s_8s_16s_16_4_1_U513 mac_muladd_8s_8s_16s_16_4_1_U514 mac_muladd_8s_8s_16s_16_4_1_U515 mac_muladd_8s_8s_16s_16_4_1_U516 mac_muladd_8s_8s_16s_16_4_1_U517 mac_muladd_8s_8s_16s_16_4_1_U518 mac_muladd_8s_8s_16s_16_4_1_U519 mac_muladd_8s_8s_16s_16_4_1_U520 mac_muladd_8s_8s_16s_16_4_1_U521 mac_muladd_8s_8s_16s_16_4_1_U522 mac_muladd_8s_8s_16s_16_4_1_U523 mac_muladd_8s_8s_16s_16_4_1_U524</SubModules>
+    <Resources DSP="256" FF="681" LUT="327" LogicLUT="326" SRL="1"/>
+    <LocalResources FF="679" LUT="144" LogicLUT="143" SRL="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/flow_control_loop_pipe_sequential_init_U" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U269" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U270" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U271" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U272" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U273" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U274" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U275" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U276" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U277" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U278" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U279" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U280" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U281" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U282" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U283" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U284" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U285" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U286" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U287" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U288" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U289" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U290" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U291" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U292" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U293" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U294" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U295" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U296" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U297" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U298" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U299" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U300" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U301" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U302" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U303" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U304" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U305" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U306" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U307" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U308" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U309" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U310" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U311" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U312" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U313" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U314" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U315" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U316" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U317" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U318" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U319" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U320" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U321" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U322" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U323" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U324" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U325" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U326" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U327" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U328" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U329" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U330" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U331" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U332" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U333" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U334" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U335" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U336" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U337" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U338" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U339" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U340" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U341" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U342" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U343" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U344" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U345" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U346" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U347" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U348" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U349" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U350" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U351" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U352" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U353" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U354" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U355" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U356" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U357" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U358" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U359" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U360" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U361" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U362" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U363" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U364" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U365" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U366" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U367" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U368" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U369" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U370" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U371" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U372" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U373" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U374" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U375" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U376" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U377" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U378" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U379" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U380" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U381" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U382" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U383" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U384" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U385" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U386" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U387" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U388" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U389" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U390" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U391" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U392" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U393" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U394" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U395" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U396" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U397" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U398" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U399" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U400" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U401" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U402" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U403" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U404" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U405" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U406" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U407" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U408" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U409" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U410" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U411" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U412" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U413" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U414" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U415" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U416" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U417" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U418" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U419" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U420" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U421" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U422" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U423" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U424" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U425" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U426" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U427" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U428" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U429" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U430" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U431" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U432" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U433" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U434" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U435" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U436" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U437" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U438" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U439" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U440" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U441" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U442" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U443" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U444" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U445" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U446" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U447" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U448" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U449" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U450" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U451" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U452" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U453" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U454" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U455" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U456" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U457" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U458" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U459" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U460" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U461" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U462" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U463" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U464" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U465" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U466" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U467" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U468" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U469" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U470" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U471" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U472" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U473" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U474" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U475" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U476" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U477" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U478" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U479" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U480" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U481" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U482" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U483" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U484" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U485" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U486" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U487" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U488" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U489" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U490" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U491" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U492" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U493" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U494" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U495" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U496" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U497" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U498" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U499" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U500" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U501" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U502" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U503" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U504" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U505" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U506" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U507" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U508" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U509" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U510" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U511" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U512" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U513" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U514" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U515" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U516" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U517" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U518" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U519" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U520" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U521" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U522" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U523" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U524" DEPTH="4" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_read_W_U0" DEPTH="2" FILE_NAME="integrated_gcn_approx_gemm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_read_W">
+    <SubModules count="1">flow_control_loop_pipe_U</SubModules>
+    <Resources FF="117" LUT="68" LogicLUT="67" SRL="1"/>
+    <LocalResources FF="116" LUT="16" LogicLUT="15" SRL="1"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_read_W_U0/flow_control_loop_pipe_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_read_W.v" ORIG_REF_NAME="integrated_gcn_approx_flow_control_loop_pipe">
+    <Resources FF="1" LUT="54" LogicLUT="54"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_read_X_U0" DEPTH="2" FILE_NAME="integrated_gcn_approx_gemm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_read_X">
+    <SubModules count="2">flow_control_loop_pipe_U mac_muladd_11ns_6ns_6ns_16_4_1_U1</SubModules>
+    <Resources DSP="1" FF="188" LUT="128" LogicLUT="96" SRL="32"/>
+    <LocalResources FF="187" LUT="63" LogicLUT="31" SRL="32"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_read_X_U0/flow_control_loop_pipe_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_read_X.v" ORIG_REF_NAME="integrated_gcn_approx_flow_control_loop_pipe">
+    <Resources FF="1" LUT="55" LogicLUT="55"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_read_X_U0/mac_muladd_11ns_6ns_6ns_16_4_1_U1" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_read_X.v" ORIG_REF_NAME="integrated_gcn_approx_mac_muladd_11ns_6ns_6ns_16_4_1">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_write_U0" DEPTH="2" FILE_NAME="integrated_gcn_approx_gemm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_gemm_write">
+    <SubModules count="1">flow_control_loop_pipe_U</SubModules>
+    <Resources FF="608" LUT="69" LogicLUT="67" SRL="2"/>
+    <LocalResources FF="607" LUT="32" LogicLUT="30" SRL="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/gemm_write_U0/flow_control_loop_pipe_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_gemm_write.v" ORIG_REF_NAME="integrated_gcn_approx_flow_control_loop_pipe">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/start_for_gemm_compute_U0_U" DEPTH="2" FILE_NAME="integrated_gcn_approx_gemm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_start_for_gemm_compute_U0">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_gemm_stage_fu_148/start_for_gemm_write_U0_U" DEPTH="2" FILE_NAME="integrated_gcn_approx_gemm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_start_for_gemm_write_U0">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164" DEPTH="1" FILE_NAME="integrated_gcn_approx.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_stage">
+    <SubModules count="9">col_fifo_U result_fifo_U row_fifo_U spmm_compute_U0 spmm_load_csr_U0 spmm_store_U0 start_for_spmm_compute_U0_U start_for_spmm_store_U0_U val_fifo_U</SubModules>
+    <Resources BRAM="33" FF="2026" LUT="2944" LUTRAM="436" LogicLUT="2482" RAMB18="33" SRL="26"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/col_fifo_U" DEPTH="2" FILE_NAME="integrated_gcn_approx_spmm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_fifo_w32_d256_A">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/result_fifo_U" DEPTH="2" FILE_NAME="integrated_gcn_approx_spmm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_fifo_w8_d32_S">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/row_fifo_U" DEPTH="2" FILE_NAME="integrated_gcn_approx_spmm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_fifo_w32_d16_S">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0" DEPTH="2" FILE_NAME="integrated_gcn_approx_spmm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute">
+    <SubModules count="67">acc_10_U acc_11_U acc_12_U acc_13_U acc_14_U acc_15_U acc_16_U acc_17_U acc_18_U acc_19_U acc_1_U acc_20_U acc_21_U acc_22_U acc_23_U acc_24_U acc_25_U acc_26_U acc_27_U acc_28_U acc_29_U acc_2_U acc_30_U acc_31_U acc_3_U acc_4_U acc_5_U acc_6_U acc_7_U acc_8_U acc_9_U acc_U grp_spmm_compute_Pipeline_SPMM_INIT_fu_1451 grp_spmm_compute_Pipeline_SPMM_MAC_fu_1525 grp_spmm_compute_Pipeline_SPMM_WRITE_fu_1487 h_buf_10_U h_buf_11_U h_buf_12_U h_buf_13_U h_buf_14_U h_buf_15_U h_buf_16_U h_buf_17_U h_buf_18_U h_buf_19_U h_buf_1_U h_buf_20_U h_buf_21_U h_buf_22_U h_buf_23_U h_buf_24_U h_buf_25_U h_buf_26_U h_buf_27_U h_buf_28_U h_buf_29_U h_buf_2_U h_buf_30_U h_buf_31_U h_buf_3_U h_buf_4_U h_buf_5_U h_buf_6_U h_buf_7_U h_buf_8_U h_buf_9_U h_buf_U</SubModules>
+    <Resources BRAM="32" FF="1080" LUT="1913" LUTRAM="404" LogicLUT="1509" RAMB18="32"/>
+    <LocalResources FF="287" LUT="92" LogicLUT="92"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_10_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_11_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_12_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_13_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_14_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_15_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_16_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_17_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_18_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_19_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_1_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_20_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_21_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_22_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_23_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_24_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_25_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_26_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_27_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_28_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_29_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_2_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_30_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_31_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_3_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_4_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_5_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_6_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_7_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_8_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_9_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/acc_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_acc_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_INIT_fu_1451" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_Pipeline_SPMM_INIT">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_INIT_fu_1451/flow_control_loop_pipe_sequential_init_U" DEPTH="4" FILE_NAME="integrated_gcn_approx_spmm_compute_Pipeline_SPMM_INIT.v" ORIG_REF_NAME="integrated_gcn_approx_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_1525" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_Pipeline_SPMM_MAC">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="6" LUT="441" LogicLUT="441"/>
+    <LocalResources FF="4" LUT="429" LogicLUT="429"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_MAC_fu_1525/flow_control_loop_pipe_sequential_init_U" DEPTH="4" FILE_NAME="integrated_gcn_approx_spmm_compute_Pipeline_SPMM_MAC.v" ORIG_REF_NAME="integrated_gcn_approx_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_WRITE_fu_1487" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_Pipeline_SPMM_WRITE">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="15" LUT="144" LogicLUT="144"/>
+    <LocalResources FF="13" LUT="125" LogicLUT="125"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/grp_spmm_compute_Pipeline_SPMM_WRITE_fu_1487/flow_control_loop_pipe_sequential_init_U" DEPTH="4" FILE_NAME="integrated_gcn_approx_spmm_compute_Pipeline_SPMM_WRITE.v" ORIG_REF_NAME="integrated_gcn_approx_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_10_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_11_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_12_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_13_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_14_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_15_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_16_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_17_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_18_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_19_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_1_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_20_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_21_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_22_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_23_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_24_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_25_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_26_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_27_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_28_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_29_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_2_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_30_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_31_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_3_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_4_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_5_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_6_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_7_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_8_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_9_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_compute_U0/h_buf_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_compute.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_compute_h_buf_RAM_AUTO_1R1W">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_load_csr_U0" DEPTH="2" FILE_NAME="integrated_gcn_approx_spmm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_load_csr">
+    <SubModules count="2">grp_spmm_load_csr_Pipeline_LOAD_NNZ_fu_128 grp_spmm_load_csr_Pipeline_LOAD_ROWS_fu_119</SubModules>
+    <Resources FF="203" LUT="243" LogicLUT="243"/>
+    <LocalResources FF="79" LUT="134" LogicLUT="134"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_load_csr_U0/grp_spmm_load_csr_Pipeline_LOAD_NNZ_fu_128" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_load_csr.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_load_csr_Pipeline_LOAD_NNZ">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+    <Resources FF="75" LUT="82" LogicLUT="82"/>
+    <LocalResources FF="73" LUT="10" LogicLUT="10"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_load_csr_U0/grp_spmm_load_csr_Pipeline_LOAD_NNZ_fu_128/flow_control_loop_pipe_sequential_init_U" DEPTH="4" FILE_NAME="integrated_gcn_approx_spmm_load_csr_Pipeline_LOAD_NNZ.v" ORIG_REF_NAME="integrated_gcn_approx_flow_control_loop_pipe_sequential_init">
+    <Resources FF="2" LUT="73" LogicLUT="73"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_load_csr_U0/grp_spmm_load_csr_Pipeline_LOAD_ROWS_fu_119" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_load_csr.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_load_csr_Pipeline_LOAD_ROWS">
+    <SubModules count="1">flow_control_loop_pipe_sequential_init_U</SubModules>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_load_csr_U0/grp_spmm_load_csr_Pipeline_LOAD_ROWS_fu_119/flow_control_loop_pipe_sequential_init_U" DEPTH="4" FILE_NAME="integrated_gcn_approx_spmm_load_csr_Pipeline_LOAD_ROWS.v" ORIG_REF_NAME="integrated_gcn_approx_flow_control_loop_pipe_sequential_init">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_store_U0" DEPTH="2" FILE_NAME="integrated_gcn_approx_spmm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_spmm_store">
+    <SubModules count="1">flow_control_loop_pipe_U</SubModules>
+    <Resources FF="632" LUT="597" LogicLUT="595" SRL="2"/>
+    <LocalResources FF="631" LUT="532" LogicLUT="530" SRL="2"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/spmm_store_U0/flow_control_loop_pipe_U" DEPTH="3" FILE_NAME="integrated_gcn_approx_spmm_store.v" ORIG_REF_NAME="integrated_gcn_approx_flow_control_loop_pipe">
+    <Resources FF="1" LUT="66" LogicLUT="66"/>
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/start_for_spmm_compute_U0_U" DEPTH="2" FILE_NAME="integrated_gcn_approx_spmm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_start_for_spmm_compute_U0">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/start_for_spmm_store_U0_U" DEPTH="2" FILE_NAME="integrated_gcn_approx_spmm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_start_for_spmm_store_U0">
+  </RtlModule>
+  <RtlModule CELL="inst/grp_spmm_stage_fu_164/val_fifo_U" DEPTH="2" FILE_NAME="integrated_gcn_approx_spmm_stage.v" ORIG_REF_NAME="integrated_gcn_approx_fifo_w8_d256_A">
+    <Resources FF="42" LUT="83" LUTRAM="32" LogicLUT="51"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="7.532" DATAPATH_LOGIC_DELAY="0.334" DATAPATH_NET_DELAY="7.198" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U478/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST/C[13]" LOGIC_LEVELS="1" MAX_FANOUT="4097" SLACK="2.051" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/lshr_ln3_reg_10341_reg[0]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/lshr_ln3_reg_10341_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" LINE_NUMBER="11569"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_209_U/ram_reg_0_15_13_13/DP" PRIMITIVE_TYPE="CLB.LUTRAM.RAM32X1D" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U478/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="7.510" DATAPATH_LOGIC_DELAY="0.337" DATAPATH_NET_DELAY="7.173" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U478/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST/C[14]" LOGIC_LEVELS="1" MAX_FANOUT="4097" SLACK="2.070" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/lshr_ln3_reg_10341_reg[0]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/lshr_ln3_reg_10341_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" LINE_NUMBER="11569"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_209_U/ram_reg_0_15_14_14/DP" PRIMITIVE_TYPE="CLB.LUTRAM.RAM32X1D" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U478/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="7.511" DATAPATH_LOGIC_DELAY="0.339" DATAPATH_NET_DELAY="7.172" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U478/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST/C[12]" LOGIC_LEVELS="1" MAX_FANOUT="4097" SLACK="2.100" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/lshr_ln3_reg_10341_reg[0]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/lshr_ln3_reg_10341_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" LINE_NUMBER="11569"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_209_U/ram_reg_0_15_12_12/DP" PRIMITIVE_TYPE="CLB.LUTRAM.RAM32X1D" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U478/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="7.458" DATAPATH_LOGIC_DELAY="0.253" DATAPATH_NET_DELAY="7.205" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U275/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST/C[9]" LOGIC_LEVELS="1" MAX_FANOUT="4097" SLACK="2.116" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/lshr_ln3_reg_10341_reg[3]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/lshr_ln3_reg_10341_reg[3]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" LINE_NUMBER="11569"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_6_U/ram_reg_0_15_9_9/DP" PRIMITIVE_TYPE="CLB.LUTRAM.RAM32X1D" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U275/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="7.463" DATAPATH_LOGIC_DELAY="0.340" DATAPATH_NET_DELAY="7.123" ENDPOINT_PIN="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U478/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST/C[2]" LOGIC_LEVELS="1" MAX_FANOUT="4097" SLACK="2.138" STARTPOINT_PIN="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/lshr_ln3_reg_10341_reg[0]/C">
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/lshr_ln3_reg_10341_reg[0]" PRIMITIVE_TYPE="REGISTER.SDR.FDRE" FILE_NAME="integrated_gcn_approx_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I.v" LINE_NUMBER="11569"/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/XW_block_209_U/ram_reg_0_15_2_2/DP" PRIMITIVE_TYPE="CLB.LUTRAM.RAM32X1D" FILE_NAME="" LINE_NUMBER=""/>
+    <CELL NAME="bd_0_i/hls_inst/inst/grp_gemm_stage_fu_148/gemm_compute_U0/grp_gemm_compute_Pipeline_COMP_KB_COMP_K_COMP_I_fu_1330/mac_muladd_8s_8s_16s_16_4_1_U478/integrated_gcn_approx_mac_muladd_8s_8s_16s_16_4_1_DSP48_0_U/p_reg_reg/DSP_C_DATA_INST" PRIMITIVE_TYPE="ARITHMETIC.DSP.DSP48E2" FILE_NAME="" LINE_NUMBER=""/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/integrated_gcn_approx_design_analysis_routed.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/integrated_gcn_approx_failfast_routed.rpt"/>
+  <ReportFile TYPE="power" PATH="verilog/report/integrated_gcn_approx_power_routed.rpt"/>
+  <ReportFile TYPE="status" PATH="verilog/report/integrated_gcn_approx_status_routed.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/integrated_gcn_approx_timing_routed.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/integrated_gcn_approx_timing_paths_routed.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/integrated_gcn_approx_utilization_routed.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/integrated_gcn_approx_utilization_hierarchical_routed.rpt"/>
+</VivadoReportFiles>
+</profile>

@@ -21,7 +21,7 @@ NODES = 7650
 NUM_CLASSES = 8
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-BIN_DIR = os.path.join(SCRIPT_DIR, "photo_bin")
+BIN_DIR = os.path.join(SCRIPT_DIR, "photo_bin_sparse")
 
 # Load HLS output (raw logits)
 h_out = np.fromfile(os.path.join(BIN_DIR, "H_out_integrated_layer2.bin"), dtype=np.float32)

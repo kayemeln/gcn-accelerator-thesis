@@ -84,6 +84,7 @@ def main():
     # Match HLS DUT H_OUT_SCALE in integrated_gcn_photo.h
     H_OUT_SCALE = 0.0625
     H1_out = (H * H_OUT_SCALE).astype(np.float32)
+    #H1_out = H.astype(np.float32)
     print(f"H mean: {np.mean(H)}, H std: {np.std(H)}")
     print(f"H range: [{np.min(H)}, {np.max(H)}]")
     print(f"H range (2.5-97.5 percentile): [{np.percentile(H, 2.5)}, {np.percentile(H, 97.5)}]")
