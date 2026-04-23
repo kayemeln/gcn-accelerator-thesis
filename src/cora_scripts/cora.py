@@ -41,8 +41,8 @@ def batch_norm(H, weight, bias, running_mean, running_var, eps=1e-5):
 
 
 def gcn_layer(A_hat, X, W):
-    H_AX = A_hat @ X
-    return H_AX, H_AX @ W.T
+    H_XW = X @ W.T
+    return H_XW, A_hat @ H_XW
 
 def save_bin(filename, arr):
     arr.tofile(filename)
@@ -72,11 +72,20 @@ def main():
     W2 = weights['conv2.lin.weight'].numpy()
     X = data.x.numpy()
     print(f"W1 dtype: {W1.dtype}, W2 dtype: {W2.dtype}, X dtype: {X.dtype}")
+    print(f"X density: {np.count_nonzero(X) / X.size:.6f} ({np.count_nonzero(X)}/{X.size})")
+    print(f"X avg non-zeros per row: {np.count_nonzero(X) / X.shape[0]:.2f}")
 
     # Layer 1
-    H_AX, H = gcn_layer(A_hat, X, W1)
+    H_XW, H = gcn_layer(A_hat, X, W1)
     H1_out = H.astype(np.float32)
+    print(f"H_XW density: {np.count_nonzero(H_XW) / H_XW.size:.6f} ({np.count_nonzero(H_XW)}/{H_XW.size})")
+    print(f"H_XW avg non-zeros per col: {np.count_nonzero(H_XW) / H_XW.shape[1]:.2f}")
+    print(f"H_XW mean: {np.mean(H_XW)}, H_XW std: {np.std(H_XW)}")
+    print(f"H_XW range: [{np.min(H_XW)}, {np.max(H_XW)}]")
+    print(f"H_XW range (2.5-97.5 percentile): [{np.percentile(H_XW, 2.5)}, {np.percentile(H_XW, 97.5)}]")
     print(f"H mean: {np.mean(H)}, H std: {np.std(H)}")
+    print(f"H range: [{np.min(H)}, {np.max(H)}]")
+    print(f"H range (2.5-97.5 percentile): [{np.percentile(H, 2.5)}, {np.percentile(H, 97.5)}]")
     H = batch_norm(H, weights['norm.weight'].numpy(), weights['norm.bias'].numpy(),
                    weights['norm.running_mean'].numpy(), weights['norm.running_var'].numpy())
     H = np.maximum(H, 0)
@@ -115,7 +124,7 @@ def main():
     save_bin(f'cora_bin{folder_suffix}/X.bin', X_out)
     save_bin(f'cora_bin{folder_suffix}/W1.bin', W1_out)
     save_bin(f'cora_bin{folder_suffix}/W2.bin', W2_out)
-    save_bin(f'cora_bin{folder_suffix}/H_AX.bin', H_AX.astype(np.float32))
+    save_bin(f'cora_bin{folder_suffix}/H_AX.bin', H_XW.astype(np.float32))
     save_bin(f'cora_bin{folder_suffix}/H1.bin', H1_out)
     save_bin(f'cora_bin{folder_suffix}/H2.bin', H2_out)
 

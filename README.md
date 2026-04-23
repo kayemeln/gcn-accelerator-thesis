@@ -2,7 +2,7 @@
 
 FPGA-based Graph Convolutional Network (GCN) accelerator developed as part of
 my MAI thesis (Trinity College Dublin). The project targets Xilinx Vitis HLS
-and evaluates the design on citation / product-graph datasets.
+and evaluates the design on the Cora and Amazon Photos datasets.
 
 ## Overview
 
@@ -61,7 +61,7 @@ in editable mode with `--no-build-isolation` so its `setup.py` can see the
 venv's torch. DSpar stays editable — further changes propagate without
 reinstalling.
 
-## Running the Python flow
+## Running the Python scripts 
 
 ### Amazon Photo
 
@@ -85,25 +85,3 @@ python gcn_cora.py [-s] [--seed 42] [--epsilon 0.5]
 python cora.py     [-s] [--seed 42] [--epsilon 0.5]
 ```
 
-### CLI flags
-
-| Flag         | Meaning                                           |
-|--------------|---------------------------------------------------|
-| `-s`         | Enable DSpar sparsification                       |
-| `--seed`     | Seed for sparsification sampling (default 42)     |
-| `--epsilon`  | DSpar epsilon parameter                           |
-
-## Running the HLS testbench
-
-Open the HLS project in Vitis HLS and run C simulation. The testbench
-(`src/integrated_gcn_photo/integrated_gcn_photo_tb.cpp`) loads the `.bin`
-files produced by the Python flow, runs the DUT, compares against the golden
-`H1.bin` / `H2.bin`, and writes `H_out_integrated*.bin` for downstream
-Python-side post-processing.
-
-## Notes
-
-- The Layer 1 golden reference (`H1.bin`) is pre-scaled by `H_OUT_SCALE` in
-  `photo.py` so it matches the DUT's quantised output; `batchnorm_relu.py`
-  dequantises before applying batch-norm.
-- Layer 2 is currently unquantised, so `H2.bin` is not scaled.

@@ -40,8 +40,8 @@ def batch_norm(H, weight, bias, running_mean, running_var, eps=1e-5):
 
 
 def gcn_layer(A_hat, X, W):
-    H_AX = A_hat @ X
-    return H_AX, H_AX @ W.T
+    H_XW = X @ W.T
+    return H_XW, A_hat @ H_XW 
 
 def save_bin(filename, arr):
     arr.tofile(filename)
@@ -75,22 +75,29 @@ def main():
     print(f"X shape: {X.shape}")
     print(f"W1 shape: {W1.shape}, W2 shape: {W2.shape}")
     print(f"W1 dtype: {W1.dtype}, W2 dtype: {W2.dtype}, X dtype: {X.dtype}")
+    print(f"X density: {np.count_nonzero(X) / X.size:.6f} ({np.count_nonzero(X)}/{X.size})")
+    print(f"X avg non-zeros per row: {np.count_nonzero(X) / X.shape[0]:.2f}")
     unique_X = np.unique(X)
     is_binary = np.array_equal(unique_X, np.array([0, 1], dtype=X.dtype)) or np.array_equal(unique_X, np.array([0], dtype=X.dtype)) or np.array_equal(unique_X, np.array([1], dtype=X.dtype))
     print(f"X binary? {is_binary}, unique values: {len(unique_X)}, first few: {unique_X[:10]}")
 
     # Layer 1
-    H_AX, H = gcn_layer(A_hat, X, W1)
+    H_XW, H = gcn_layer(A_hat, X, W1)
     # Match HLS DUT H_OUT_SCALE in integrated_gcn_photo.h
     H_OUT_SCALE = 0.0625
     H1_out = (H * H_OUT_SCALE).astype(np.float32)
     #H1_out = H.astype(np.float32)
+    print(f"H_XW density: {np.count_nonzero(H_XW) / H_XW.size:.6f} ({np.count_nonzero(H_XW)}/{H_XW.size})")
+    print(f"H_XW avg non-zeros per col: {np.count_nonzero(H_XW) / H_XW.shape[1]:.2f}")
+    print(f"H_XW mean: {np.mean(H_XW)}, H_XW std: {np.std(H_XW)}")
+    print(f"H_XW range: [{np.min(H_XW)}, {np.max(H_XW)}]")
+    print(f"H_XW range (2.5-97.5 percentile): [{np.percentile(H_XW, 2.5)}, {np.percentile(H_XW, 97.5)}]")
     print(f"H mean: {np.mean(H)}, H std: {np.std(H)}")
     print(f"H range: [{np.min(H)}, {np.max(H)}]")
     print(f"H range (2.5-97.5 percentile): [{np.percentile(H, 2.5)}, {np.percentile(H, 97.5)}]")
-    print(f"H_scaled mean: {np.mean(H1_out)}, H std: {np.std(H1_out)}")
-    print(f"H_scaled range: [{np.min(H1_out)}, {np.max(H1_out)}]")
-    print(f"H_scaled range (2.5-97.5 percentile): [{np.percentile(H1_out, 2.5)}, {np.percentile(H1_out, 97.5)}]")
+    #print(f"H_scaled mean: {np.mean(H1_out)}, H std: {np.std(H1_out)}")
+    #print(f"H_scaled range: [{np.min(H1_out)}, {np.max(H1_out)}]")
+    #print(f"H_scaled range (2.5-97.5 percentile): [{np.percentile(H1_out, 2.5)}, {np.percentile(H1_out, 97.5)}]")
     H = batch_norm(H, weights['norm.weight'].numpy(), weights['norm.bias'].numpy(),
                    weights['norm.running_mean'].numpy(), weights['norm.running_var'].numpy())
     H = np.maximum(H, 0)
@@ -128,7 +135,7 @@ def main():
     save_bin(f'photo_bin{folder_suffix}/X.bin', X_out)
     save_bin(f'photo_bin{folder_suffix}/W1.bin', W1_out)
     save_bin(f'photo_bin{folder_suffix}/W2.bin', W2_out)
-    save_bin(f'photo_bin{folder_suffix}/H_AX.bin', H_AX.astype(np.float32))
+    save_bin(f'photo_bin{folder_suffix}/H_AX.bin', H_XW.astype(np.float32))
     save_bin(f'photo_bin{folder_suffix}/H1.bin', H1_out)
     save_bin(f'photo_bin{folder_suffix}/H2.bin', H2_out)
 
